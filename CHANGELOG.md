@@ -32,6 +32,7 @@
 
 **Bugfix:**
 * Support expected passing of id parameter
+* Scroll offset fix
 
 ## [1.9.12] - 09/18/2024
 
