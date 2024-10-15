@@ -25,6 +25,11 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
+## [1.9.14] - XX/XX/2024
+
+**Bugfix:**
+* Added missing Markdown Prism language file
+
 ## [1.9.13] - 10/14/2024🍁
 
 **Improved:**
