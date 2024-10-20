@@ -1271,9 +1271,12 @@
                         if (targetElement) {
                             // Use requestAnimationFrame for immediate scroll to the element
                             requestAnimationFrame(() => {
-                                // Scroll to the element's top position using scrollTo
-                                window.scrollTo(0, targetElement.offsetTop);
+                            // Scroll smoothly to the element's top position
+                            window.scrollTo({
+                                top: targetElement.offsetTop,
+                                behavior: 'smooth'  // Add smooth scrolling
                             });
+                        });
                         } else {
                             dd && console.log('Element not found');
                         }
