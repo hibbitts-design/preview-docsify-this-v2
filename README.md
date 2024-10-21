@@ -159,7 +159,8 @@ Docsify-This has been recognized as a finalist in the Open Infrastructure catego
 ### 2. Publishing with Docsify-This
 
 * [Overview](#overview)
-* [Page Appearance URL Parameters](#page-appearance-url-parameters)
+* [Page Appearance URL Parameters (Basic)](#page-appearance-url-parameters-basic)
+* [Page Appearance URL Parameters (Supplemental)](#page-appearance-url-parameters-supplemental)
 * [Embedding Docsify-This Pages into Other Platforms](#embedding-docsify-this-pages-into-other-platforms)
 * [Ready-to-Use Docsify-This Markdown Templates](#ready-to-use-docsify-this-markdown-templates)
 * [Example Content Workflows](#example-content-workflows)
@@ -185,11 +186,11 @@ And here’s how Docsify-This.net displays the same URL:
 ![Example Docsify-This URL displayed by Docsify-This](docs/images/docsify-this-example-page-readme.png ':class=docsify-this-screenshot')
 _The web page displayed by Docsify-This.net, showing the Markdown file with a sidebar that includes headings up to 3 levels, as specified by the Docsify-This URL._
 
-#### Page Appearance URL Parameters
+#### Page Appearance URL Parameters (Basic)
 
-Learn more about each of the available Docsify-This URL parameters below, and discover what is possible when combining URL parameters and online Markdown files with a set of [ready-to-use Docsify-This markdown templates](#ready-to-use-docsify-this-markdown-templates).
+Learn more about each of the basic Docsify-This URL parameters below, and discover what is possible when combining URL parameters and online Markdown files with a set of [ready-to-use Docsify-This markdown templates](#ready-to-use-docsify-this-markdown-templates).
 
-**Core URL Parameters (included in the standard Web Page Builder)**  
+**Basic URL Parameters (included in the standard Web Page Builder)**  
 
 * [browser-tab-title](#browser-tab-title)
 * [edit-link](#edit-link)
@@ -277,9 +278,11 @@ https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubuser
 Enable image zoom (tapping on page images to enlarge them) with the optional **zoom-images** Docsify parameter, for example:  
 https://paulhibbitts.github.io/test-docsify-this/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-markdown-content-demo/main&zoom-images=true. To exclude images, use `![](image.png ":no-zoom")`.  
 
-**Additional URL Parameters (included in the Advanced Web Page Builder)**  
+#### Page Appearance URL Parameters (Supplemental)
 
-The following additional URL parameters are also available for use in Docsify-This URLs, and are included in the [Advanced Web Page Builder](https://paulhibbitts.github.io/test-docsify-this/?advanced=true) unless otherwise indicated.
+The following additional URL parameters are available for use in Docsify-This URLs, and are included in the [Advanced Web Page Builder](https://paulhibbitts.github.io/test-docsify-this/?advanced=true) unless otherwise indicated.
+
+**Supplemental URL Parameters (included in the Advanced Web Page Builder)**  
 
 * [coverpage](#coverpage)
 * [coverpage-color](#coverpage-color)
