@@ -1225,7 +1225,7 @@ The display of [Font Awesome Free](https://fontawesome.com/icons) icons within M
 
 The above Markdown is equivalent to the HTML markup `<i class="fas fa-home fa-fw" aria-hidden="true"></i>`.
 
-When using the above shortcode for Font Awesome icons, it is assumed to be for decorative purposes, and so for improved accessibility an `aria-hidden="true"` attribute is automatically added to the icon. For semantic purposes, it is recommended you refer to the [Font Awesome Icons and Accessibility](https://docs.fontawesome.com/Web/dig-deeper/accessibility) guidelines.
+When using the above shortcode for Font Awesome icons, it is assumed to be for decorative purposes, and so for improved accessibility an `aria-hidden="true"` attribute is automatically added to the icon. For semantic purposes, it is recommended you refer to the [Font Awesome Icons and Accessibility](https://docs.fontawesome.com/web/dig-deeper/accessibility) guidelines.
 
 The following style prefixes are available with Docsify-This:
 
@@ -1234,7 +1234,7 @@ The following style prefixes are available with Docsify-This:
 
 ---
 
-#### Additional Docsify-This Learning Materials
+#### Additional Docsify-This Markdown Files
 
 * [Examples](#examples)
 * [Templates](#templates)
@@ -1487,7 +1487,7 @@ Due to not being able to update Navbar or custom Sidebar links before page rende
 ##### Updated Markdown file not Displayed in the Browser
 Docsify is likely displaying the last cached version. To ensure the most recent version of a file is loaded, do a [hard refresh of your Browser cache](https://www.makeuseof.com/hard-refresh-browser/).
 
-##### Embedded Image not Displayed  
+##### Embedded Image not Displayed
 The most likely cause for embedded images in Markdown not being displayed as expected is the use of relative paths (i.e. `![Alt Text](images/filename.jpg)`) - review image paths and ensure the full path to each image is used (i.e. `![Alt Text](/folder/images/filename.jpg)`). Likewise, if images in HTML are not being displayed as expected the likely cause is again the use of relative paths (i.e. `<img src="images/filename.jpg" alt="Alt Text">`) - use absolute URLs for HTML image sources (i.e. `<img src="https://raw.githubusercontent.com/user/repository/main/images/filename.jpg" alt="Alt Text">`).
 
 ##### Embedded iFrame not Displayed
