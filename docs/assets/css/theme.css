@@ -242,7 +242,7 @@ body {
   top: 0;
   background-color: inherit;
   z-index: 10; /* Keeps it above other items */
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .pagination-item:not(:last-child) a .pagination-item-label,
