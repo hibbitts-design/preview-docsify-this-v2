@@ -25,11 +25,12 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.9.15] - XX/XX/2024
+## [1.9.15] - 11/18/2024
 
 **New:**
 * Support for SVG icons via optional `svg-icons` URL parameter (with thanks and appreciation to @erickjx for the updated Font Awesome plugin)
 * Support for prefixing Markdown file URLs with Docsify-This.net to load the Web Page Builder with that URL, for example https://docsify-this.net?https://github.com/hibbitts-design/docsify-this-one-page-course/blob/main/home.md
+* Support for flexible alerts plugin (with thanks and appreciation to @fzankl)
 
 **Improved:**
 * Use of window.matchMedia.addListener replaced with window.matchMedia.addEventListener
