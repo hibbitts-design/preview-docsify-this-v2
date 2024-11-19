@@ -25,6 +25,11 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
+## [1.9.16] - XX/XX/2024
+
+**Bugfix:**
+* More robust handling of of Web Page Builder custom settings
+
 ## [1.9.15] - 11/18/2024
 
 **New:**
