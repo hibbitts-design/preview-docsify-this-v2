@@ -305,6 +305,7 @@ The following additional URL parameters are available for use in Docsify-This UR
 * [pagination](#pagination)
 * [searchbox](#searchbox)
 * [submaxLevel](#subMaxLevel)
+* [svg-icons](#svg-icons)
 
 ##### coverpage
 Display a [Docsify custom coverpage](https://docsify.js.org/#/configuration?id=coverpage) with the optional **coverpage** parameter, for example:  

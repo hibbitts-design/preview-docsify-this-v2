@@ -481,6 +481,7 @@ The following additional URL parameters are available for use in Docsify-This UR
 * [pagination](/?id=pagination)
 * [searchbox](/?id=searchbox)
 * [subMaxLevel](/?id=subMaxLevel)
+* [svg-icons](/?id=svg-icons)
 
 ##### coverpage
 Display a [Docsify custom coverpage](https://docsify.js.org/#/configuration?id=coverpage) with the optional **coverpage** parameter, for example:  
