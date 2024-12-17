@@ -412,6 +412,12 @@
             URLparms = URLparms + `&name=` + siteName;
           }
 
+          var getSiteLogo = document.getElementById("siteLogo");
+          var siteLogo = getSiteLogo.value;
+          if (!(siteLogo == "")) { 
+            URLparms = URLparms + `&logo=` + siteLogo;
+          }
+
           const cb14 = document.querySelector('#enableSidebarsearch');
           if (cb14.checked) {
             var URLparms = URLparms + `&searchbox=true`;
@@ -1462,6 +1468,11 @@
               document.getElementById("siteName").value = siteName;
             }
 
+            siteLogo = getURLParameterByName('logo', null, null, window.location.href, true);
+            if (siteLogo) {
+              document.getElementById("siteLogo").value = siteLogo;
+            }
+            
             subMaxLevel = getURLParameterByName('subMaxLevel', null, null, window.location.href, true);
             if (subMaxLevel) {
               document.getElementById('subMaxLevel').value = subMaxLevel;
