@@ -56,6 +56,7 @@ input[type="url"],
 input[type="color"] {
   overflow: hidden;
   background-color: #white;
+  height: 1.9rem;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 6px;
@@ -182,7 +183,7 @@ span #docsifythisurlfield {
 
 #docsifythisurlbuilder input[type="number"] {
   border: 1px solid #000;
-  height: 2rem;
+  height: 1.9rem;
   padding-left: 0.3rem;
   margin-top: 4px;
   margin-bottom: 6px;
@@ -212,7 +213,7 @@ span #docsifythisurlfield {
 
 #docsifythisurlbuilder input[type="number"] {
   border: 1px solid #000;
-  height: 2rem;
+  height: 1.9rem;
   padding-left: 0.3rem;
   margin-top: 4px;
   margin-bottom: 6px;
@@ -249,34 +250,63 @@ span #docsifythisurlfield {
 }
 
 #docsifythisurlbuilder #linkcolorpreview {
-  width: 30px;
   border: solid 4px #0374b5;
   background-color: #0374b5;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
+  margin-left: 4px;
+}
+
+#docsifythisurlbuilder #linkhovercolorpreview {
+  border: solid 4px transparent;
+  background-color: transparent;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
   margin-left: 4px;
 }
 
 #docsifythisurlbuilder #coverpagecolorpreview {
-  width: 30px;
   border: solid 4px #c1e1f6;
   background-color: #c1e1f6;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
   margin-left: 4px;
 }
 
 #docsifythisurlbuilder #linkcolordarkmodepreview {
-  width: 30px;
   border: solid 4px #0374b5;
   background-color: #0374b5;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
+  margin-left: 4px;
+}
+
+#docsifythisurlbuilder #linkhovercolordarkmodepreview {
+  width: 30px;
+  border: solid 4px transparent;
+  background-color: transparent;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
   margin-left: 4px;
 }
 
 #docsifythisurlbuilder #coverpagecolordarkmodepreview {
-  width: 30px;
   border: solid 4px #20587d;
   background-color: #20587d;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px;
+  outline: solid 1px #777777;
+  outline-offset: 0px;
+  padding-bottom:4px;
   margin-left: 4px;
 }
 
@@ -316,7 +346,7 @@ span #docsifythisurlfield {
   margin-top: -5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768) {
   .markdown-section .docsifythiscolumn35 {
     width: 100%;
     margin-right: 0px;

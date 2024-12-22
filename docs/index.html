@@ -362,7 +362,6 @@
           if (hexCode === '') {
             hexCode = '#0374B5';
             document.getElementById("linkcolor").value = hexCode;
-            document.getElementById("linkcolorpreview").style.visibility = "visible";
             document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
             document.getElementById("linkcolorpreview").style.backgroundColor = '#0374B5';
           }
@@ -438,6 +437,31 @@
             URLparms = URLparms + `&page-title=` + pageTitle;
           }
 
+          var getlinktextdecoration = document.getElementById("linktextdecoration");
+          var linktextdecoration = getlinktextdecoration.value;
+          if (!(linktextdecoration === 'underline')) {
+            URLparms = URLparms + `&link-text-decoration=` + linktextdecoration;
+          }
+
+          var getColor = document.getElementById("linkhovercolor");
+          var hexCode = getColor.value;
+          if (hexCode.charAt(0) == "#") {
+            hexCode = hexCode.substring(1);
+          }
+          if (!(hexCode == "")) {
+            URLparms = URLparms + `&link-color-hover=` + hexCode;
+          }
+
+          var linkhovertextdecoration = document.getElementById("linkhovertextdecoration").value;
+          if (!(linkhovertextdecoration === 'none')) {
+            URLparms = URLparms + `&link-text-decoration-hover=` + linkhovertextdecoration;
+          }
+
+          var externalLinkTarget = document.getElementById("externalLinkTarget").value;
+          if (!(externalLinkTarget === '_top')) {
+            URLparms = URLparms + `&externalLinkTarget=` + externalLinkTarget;
+          }
+
           const cb17 = document.querySelector('#pagination');
           if (cb17.checked) {
             var URLparms = URLparms + `&pagination=true`;
@@ -463,7 +487,6 @@
           if (hexCode === '') {
             hexCode = '#C1E1F6';
             document.getElementById("coverpagecolor").value = hexCode;
-            document.getElementById("coverpagecolorpreview").style.visibility = "visible";
             document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
             document.getElementById("coverpagecolorpreview").style.backgroundColor = '#C1E1F6';
           }
@@ -484,7 +507,6 @@
           if (hexCode === '') {
             hexCode = '#0685D7';
             document.getElementById("linkcolordarkmode").value = hexCode;
-            document.getElementById("linkcolordarkmodepreview").style.visibility = "visible";
             document.getElementById("linkcolordarkmodepreview").style.borderColor = '#0685D7';
             document.getElementById("linkcolordarkmodepreview").style.backgroundColor = '#0685D7';
           }
@@ -495,12 +517,20 @@
             URLparms = URLparms + `&link-color-dark-mode=` + hexCode;
           }
 
+          var getColor = document.getElementById("linkhovercolordarkmode");
+          var hexCode = getColor.value;
+          if (hexCode.charAt(0) == "#") {
+            hexCode = hexCode.substring(1);
+          }
+          if (!(hexCode == "")) {
+            URLparms = URLparms + `&link-color-hover-dark-mode=` + hexCode;
+          }
+
           var getColor = document.getElementById("coverpagecolordarkmode");
           var hexCode = getColor.value;
           if (hexCode === '') {
             hexCode = '#20587D';
             document.getElementById("coverpagecolordarkmode").value = hexCode;
-            document.getElementById("coverpagecolordarkmodepreview").style.visibility = "visible";
             document.getElementById("coverpagecolordarkmodepreview").style.borderColor = '#20587D';
             document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = '#20587D';
           }
@@ -595,14 +625,10 @@
         document.getElementById(inputId).value = hexCode.slice(0, -1);
       }
 
-      if (isHexadecimalColor(hexCode.substring(1))) {
-        document.getElementById(previewId).style.visibility = "visible";
-      } else {
-        if (isHexadecimalColor(document.getElementById(inputId).value)) {
-          document.getElementById(previewId).style.visibility = "visible";
-        } else {
-          document.getElementById(previewId).style.visibility = "hidden";
-        }
+      if (!isHexadecimalColor(hexCode.substring(1)) && !isHexadecimalColor(document.getElementById(inputId).value)) {
+        const previewElement = document.getElementById(previewId);
+        previewElement.style.border = "4px solid transparent";
+        previewElement.style.backgroundColor = "transparent";
       }
 
       if (!(hexCode.charAt(0) == "#")) {
@@ -627,7 +653,6 @@
       document.getElementById("fontsize").value = '18px';
       document.getElementById("lineheight").value = '1.4';
       document.getElementById("linkcolor").value = '#0374B5';
-      document.getElementById("linkcolorpreview").style.visibility = "visible";
       document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
       document.getElementById("linkcolorpreview").style.backgroundColor = '#0374B5';
       document.getElementById("editLinkText").value = 'Edit this Page';
@@ -649,21 +674,22 @@
       document.getElementById("enableSidebarsearch").checked = false;
       document.getElementById("subMaxLevel").value = 2;
       document.getElementById("pageTitle").value = '';
+      document.getElementById("linkhovertextdecoration").value = 'none';
       document.getElementById("pagination").checked = false;
       document.getElementById("mergeNavbar").checked = false;
       document.getElementById("headerweight").value = 400;
       document.getElementById("zoomimages").checked = false;
       document.getElementById("coverpagecolor").value = '#C1E1F6';
-      document.getElementById("coverpagecolorpreview").style.visibility = "visible";
       document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
       document.getElementById("coverpagecolorpreview").style.backgroundColor = '#C1E1F6';
       document.getElementById("enableDarkmode").checked = false;
       document.getElementById("linkcolordarkmode").value = '#0685D7';
-      document.getElementById("linkcolordarkmodepreview").style.visibility = "visible";
       document.getElementById("linkcolordarkmodepreview").style.borderColor = '#0685D7';
       document.getElementById("linkcolordarkmodepreview").style.backgroundColor = '#0685D7';
+      document.getElementById("linkhovercolordarkmode").value = '';
+      document.getElementById("linkhovercolordarkmodepreview").style.border = "4px solid transparent";
+      document.getElementById("linkhovercolordarkmodepreview").style.backgroundColor = "transparent";
       document.getElementById("coverpagecolordarkmode").value = '#20587D';
-      document.getElementById("coverpagecolordarkmodepreview").style.visibility = "visible";
       document.getElementById("coverpagecolordarkmodepreview").style.borderColor = '#20587D';
       document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = '#20587D';
     }
@@ -671,7 +697,6 @@
     function setColorProperties(color) {
       document.documentElement.style.setProperty('--theme-color', color);
       document.documentElement.style.setProperty('--link-color', color);
-      document.documentElement.style.setProperty('--link-underline-color', color);
     }
 
     function updateThemeModeLinkColors() {
@@ -696,6 +721,11 @@
           }
         }
 
+        const linkHoverColorDarkMode = getURLParameterByName(['link-color-hover-dark-mode', 'linkColorHoverDarkMode'], null, null, window.location.href, true);
+        if (linkHoverColorDarkMode !== false) {
+          document.documentElement.style.setProperty('--link-color-hover',  '#' + linkHoverColorDarkMode);
+          document.documentElement.style.setProperty('--link-underline-color-hover',  '#' + linkHoverColorDarkMode);
+        }
         const coverPageColorDarkMode = getURLParameterByName(['coverpage-color-dark-mode', 'coverpageColorDarkMode'], null, null, window.location.href, true);
 
         if (coverPageColorDarkMode !== false) {
@@ -717,6 +747,11 @@
           document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
         }
 
+        const linkHoverColor = getURLParameterByName(['link-color-hover', 'linkColorHover'], null, null, window.location.href, true);
+        if (linkHoverColor !== false) {
+          document.documentElement.style.setProperty('--link-color-hover',  '#' + linkHoverColor);
+          document.documentElement.style.setProperty('--link-underline-color-hover',  '#' + linkHoverColor);
+        }
         const coverPageColor = getURLParameterByName(['coverpage-color', 'coverpageColor'], null, null, window.location.href, true);
 
         if (coverPageColor !== false) {
@@ -1331,7 +1366,7 @@
 
             // console.log(getURLParameterByName(['page-title','header-weight','zoom-images','loadFavicon','coverpage','loadSidebar','loadNavbar','loadFooter','searchbox','coverpage-color','dark-mode','link-color-dark-mode','coverpage-color-dark-mode']));
 
-            if (getURLParameterByName('advanced') === true || getURLParameterByName(['page-title', 'pageTitle', 'header-weight', 'headerWeight', 'zoom-images', 'zoomImages', 'loadFavicon', 'coverpage', 'loadSidebar', 'loadNavbar', 'loadFooter', 'mergeNavbar', 'name', 'subMaxLevel', 'searchbox', 'pagination', 'coverpage-color', 'coverpageColor', 'dark-mode', 'darkMode', 'link-color-dark-mode', 'linkColorDarkMode', 'coverpage-color-dark-mode', 'coverpageColorDarkMode'])) {
+            if (getURLParameterByName('advanced') === true ) {
               // console.log("show advanced options!");
               document.getElementById("btn_2").style.display = "none";
               var theDiv = document.getElementById("docsifythisurlbuilderoptionsDiv");
@@ -1383,7 +1418,6 @@
             if (linkcolor) {
               linkcolor = '#' + linkcolor;
               document.getElementById('linkcolor').value = linkcolor;
-              document.getElementById("linkcolorpreview").style.visibility = "visible";
               document.getElementById("linkcolorpreview").style.borderColor = linkcolor;
               document.getElementById("linkcolorpreview").style.backgroundColor = linkcolor;
             }
@@ -1432,6 +1466,29 @@
               document.getElementById('pageTitle').value = decodeURI(pageTitle);
             }
 
+            linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
+            if (linktextdecoration) {
+              document.getElementById('linktextdecoration').value = linktextdecoration;
+            }
+
+            linkhovercolor = getURLParameterByName(['link-color-hover', 'linkColorHover'], null, null, window.location.href, true);
+            if (linkhovercolor) {
+              linkhovercolor = '#' + linkhovercolor;
+              document.getElementById('linkhovercolor').value = linkhovercolor;
+              document.getElementById("linkhovercolorpreview").style.borderColor = linkhovercolor;
+              document.getElementById("linkhovercolorpreview").style.backgroundColor = linkhovercolor;
+            }
+
+            linktextdecorationhover = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
+            if (linktextdecorationhover) {
+              document.getElementById('linkhovertextdecoration').value = linktextdecorationhover;
+            }
+
+            externalLinkTarget = getURLParameterByName(['external-link-target', 'externalLinkTarget'], null, null, window.location.href, true);
+            if (externalLinkTarget) {
+              document.getElementById('externalLinkTarget').value = externalLinkTarget;
+            }
+
             headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
             if (headerweight) {
               // console.log(headerweight);
@@ -1471,7 +1528,7 @@
             if (siteLogo) {
               document.getElementById("siteLogo").value = siteLogo;
             }
-            
+
             subMaxLevel = getURLParameterByName('subMaxLevel', null, null, window.location.href, true);
             if (subMaxLevel) {
               document.getElementById('subMaxLevel').value = subMaxLevel;
@@ -1493,7 +1550,6 @@
             if (coverpagecolor) {
               coverpagecolor = '#' + coverpagecolor;
               document.getElementById('coverpagecolor').value = coverpagecolor;
-              document.getElementById("coverpagecolorpreview").style.visibility = "visible";
               document.getElementById("coverpagecolorpreview").style.borderColor = coverpagecolor;
               document.getElementById("coverpagecolorpreview").style.backgroundColor = coverpagecolor;
             }
@@ -1506,16 +1562,22 @@
             if (linkcolordarkmode) {
               linkcolordarkmode = '#' + linkcolordarkmode;
               document.getElementById('linkcolordarkmode').value = linkcolordarkmode;
-              document.getElementById("linkcolordarkmodepreview").style.visibility = "visible";
               document.getElementById("linkcolordarkmodepreview").style.borderColor = linkcolordarkmode;
               document.getElementById("linkcolordarkmodepreview").style.backgroundColor = linkcolordarkmode;
+            }
+
+            linkhovercolordarkmode = getURLParameterByName(['link-color-hover-dark-mode', 'linkColorHoverDarkMode'], null, null, window.location.href, true);
+            if (linkhovercolordarkmode) {
+              linkhovercolordarkmode = '#' + linkhovercolordarkmode;
+              document.getElementById('linkhovercolordarkmode').value = linkhovercolordarkmode;
+              document.getElementById("linkhovercolordarkmodepreview").style.borderColor = linkhovercolordarkmode;
+              document.getElementById("linkhovercolordarkmodepreview").style.backgroundColor = linkhovercolordarkmode;
             }
 
             coverpagecolordarkmode = getURLParameterByName(['coverpage-color-dark-mode', 'coverpageColorDarkMode'], null, null, window.location.href, true);
             if (coverpagecolordarkmode) {
               coverpagecolordarkmode = '#' + coverpagecolordarkmode;
               document.getElementById('coverpagecolordarkmode').value = coverpagecolordarkmode;
-              document.getElementById("coverpagecolordarkmodepreview").style.visibility = "visible";
               document.getElementById("coverpagecolordarkmodepreview").style.borderColor = coverpagecolordarkmode;
               document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = coverpagecolordarkmode;
             }
@@ -1761,6 +1823,28 @@
       lineheight = getURLParameterByName(['line-height', 'lineHeight'], null, null, window.location.href, true);
       if (!(lineheight === false)) {
         document.documentElement.style.setProperty('--line-height', lineheight);
+      }
+
+      // Change link text decoration if link-text-decoration parameter present
+      linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
+      if (!(linktextdecoration === false)) {
+        if (linktextdecoration === 'none') {
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
+        } else if (linktextdecoration === 'underline') {
+          document.documentElement.style.setProperty('--link-underline-color', '--link-color');
+          document.documentElement.style.setProperty('--link-underline-thickness', '1px');
+        }
+      }
+
+      // Change link hover text decoration if link-text-decoration-hover parameter present
+      linkhovertextdecoration = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
+      if (!(linkhovertextdecoration === false)) {
+        if (linkhovertextdecoration === 'none') {
+          document.documentElement.style.setProperty('--link-underline-thickness-hover', '0px');
+        } else if (linkhovertextdecoration === 'underline') {
+          document.documentElement.style.setProperty('--link-underline-color-hover', '--link-color-hover');
+          document.documentElement.style.setProperty('--link-underline-thickness-hover', '1px');
+        }
       }
 
       updateThemeModeLinkColors();
