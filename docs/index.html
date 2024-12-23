@@ -1829,10 +1829,11 @@
       linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
       if (!(linktextdecoration === false)) {
         if (linktextdecoration === 'none') {
-          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px'); 
+          document.documentElement.style.setProperty('--link-underline-color', 'transparent');      
         } else if (linktextdecoration === 'underline') {
-          document.documentElement.style.setProperty('--link-underline-color', '--link-color');
           document.documentElement.style.setProperty('--link-underline-thickness', '1px');
+          document.documentElement.style.setProperty('--link-underline-color', '--link-color');
         }
       }
 
@@ -1840,10 +1841,11 @@
       linkhovertextdecoration = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
       if (!(linkhovertextdecoration === false)) {
         if (linkhovertextdecoration === 'none') {
-          document.documentElement.style.setProperty('--link-underline-thickness-hover', '0px');
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');  
+          document.documentElement.style.setProperty('--link-underline-color', 'transparent');
         } else if (linkhovertextdecoration === 'underline') {
-          document.documentElement.style.setProperty('--link-underline-color-hover', '--link-color-hover');
           document.documentElement.style.setProperty('--link-underline-thickness-hover', '1px');
+          document.documentElement.style.setProperty('--link-underline-color-hover', '--link-color-hover');
         }
       }
 
