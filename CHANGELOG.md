@@ -34,6 +34,7 @@
 * Updated ReadMe
 * Updated example custom CSS for Moodle LMS
 * Updated to latest verified Docsify preview build (including Marked 4.2.12)
+* Minor Web Page Builder UI updates
 
 **Bugfix:**
 * Restored missing Website logo support in Web Page Builder
