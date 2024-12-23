@@ -84,6 +84,7 @@ Page layout:
     <option value="18px">18px</option>
     <option disabled="disabled">----</option>
     <option value="14px">14px</option>
+    <option value="15px">14px</option>
     <option value="16px">16px</option>
     <option value="20px">20px</option>
   </select>
