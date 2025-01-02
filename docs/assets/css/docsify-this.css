@@ -29,6 +29,16 @@
   font-weight: 600;
 }
 
+.markdown-section #docsifythisdocscontent code {
+  white-space: pre-wrap !important;
+  overflow-wrap: break-word;
+}
+
+.markdown-section #docsifythisdocscontent pre code {
+  white-space: pre-wrap !important;
+  overflow-wrap: break-word;
+}
+
 #docsifythisurlbuilder {
   overflow: visible;
   margin: 1.5em 0;
