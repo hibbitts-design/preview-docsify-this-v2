@@ -5,7 +5,7 @@
 **New:**
 * Docsify v5 is now used for all Markdown file rendering
 * Adoption of the new and improved theme system in Docsify v5
-* Integration of Marked.js v14+ from Docsify v5
+* Integration of Marked.js v15+ from Docsify v5
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to use new Docsify v5 core (default) theme
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
 
@@ -25,7 +25,7 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.1] - XX/XX/XXXX
+## [1.10.1] - XX/XX/2025
 
 **Improved:**
 * Updated ReadMe
