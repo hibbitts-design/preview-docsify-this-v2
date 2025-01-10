@@ -1271,6 +1271,7 @@
             let dd = false;
             let TARGET_QUERY = 'id';
             let SCROLL_DELAY = 750; // in milliseconds
+            let EXCLUDED_PARENT_CLASS = 'cover'; // Class of parent to exclude
             let location = window.location;
 
             dd && console.log('custom scroll plugin called!');
@@ -1301,16 +1302,23 @@
                     dd && console.log('will scroll now!');
                     try {
                         let targetElement = document.getElementById(urlId); // Use `getElementById` to directly reference the element
-                        dd && console.log(urlId);
+                        dd && console.log('Target element ID:', urlId);
                         if (targetElement) {
-                            // Use requestAnimationFrame for immediate scroll to the element
-                            requestAnimationFrame(() => {
-                            // Scroll smoothly to the element's top position
-                            window.scrollTo({
-                                top: targetElement.offsetTop,
-                                behavior: 'smooth'  // Add smooth scrolling
-                            });
-                        });
+                            // Check if the target element is within an excluded parent
+                            let excludedParent = targetElement.closest('.' + EXCLUDED_PARENT_CLASS);
+                            
+                            if (!excludedParent) {
+                                // Use requestAnimationFrame for immediate scroll to the element
+                                requestAnimationFrame(() => {
+                                    // Scroll smoothly to the element's top position
+                                    window.scrollTo({
+                                        top: targetElement.offsetTop,
+                                        behavior: 'smooth'  // Add smooth scrolling
+                                    });
+                                });
+                            } else {
+                                dd && console.log('Target is within an excluded parent:', excludedParent);
+                            }
                         } else {
                             dd && console.log('Element not found');
                         }
