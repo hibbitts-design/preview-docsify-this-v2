@@ -43,7 +43,12 @@
   <!-- <link rel="stylesheet" href="assets/vendor/themes/core.min.css" /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/>
+  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css" data-sheet="dark-theme"
+  disabled/>
+  <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/> -->
+
+  <!-- Core Dark (add-on) -->
+  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)" data-sheet="dark-theme-auto"/>
   <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/> -->
 
   <link rel="stylesheet" href="assets/css/docsify-this.css">
@@ -497,9 +502,9 @@
             URLparms = URLparms + `&coverpage-color=` + hexCode;
           }
 
-          const cb16 = document.querySelector('#enableDarkmode');
-          if (cb16.checked) {
-            var URLparms = URLparms + `&dark-mode=true`;
+          var getenabledarkmode = document.getElementById('enableDarkmode').value;
+          if (!(getenabledarkmode == "false")) {
+            var URLparms = URLparms + `&dark-mode=` + getenabledarkmode
           }
 
           var getColor = document.getElementById("linkcolordarkmode");
@@ -682,7 +687,7 @@
       document.getElementById("coverpagecolor").value = '#C1E1F6';
       document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
       document.getElementById("coverpagecolorpreview").style.backgroundColor = '#C1E1F6';
-      document.getElementById("enableDarkmode").checked = false;
+      document.getElementById("enableDarkmode").value = false;
       document.getElementById("linkcolordarkmode").value = '#0685D7';
       document.getElementById("linkcolordarkmodepreview").style.borderColor = '#0685D7';
       document.getElementById("linkcolordarkmodepreview").style.backgroundColor = '#0685D7';
@@ -703,7 +708,7 @@
       // Update link colors based on current theme mode
       const darkModeEnabled = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true) || darkmode;
 
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && darkModeEnabled) {
+      if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && darkModeEnabled === 'auto') || darkModeEnabled === 'on') {
         // dark mode
         const linkColorDarkMode = getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'], null, null, window.location.href, true);
 
@@ -1564,8 +1569,15 @@
               document.getElementById("coverpagecolorpreview").style.backgroundColor = coverpagecolor;
             }
 
-            if (getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true) === 'true') {
-              document.getElementById("enableDarkmode").checked = true;
+            enableDarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
+            if (enableDarkmode) {
+              if (enableDarkmode === 'true') {
+                enableDarkmode = 'auto';
+              }
+              if (enableDarkmode === 'off') {
+                enableDarkmode = 'false';
+              }
+              document.getElementById('enableDarkmode').value = enableDarkmode;
             }
 
             linkcolordarkmode = getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'], null, null, window.location.href, true);
@@ -1861,13 +1873,17 @@
 
       updateThemeModeLinkColors();
 
-      // Keep dark theme CSS files loaded if dark-mode parameter is true
-      var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true) === 'true';
-      if (enabledarkmode === false && darkmode === false) {
-        var linkNode = document.querySelector('link[href*="core-dark.min.css"]');
-        linkNode.parentNode.removeChild(linkNode);
+      // Enable dark theme CSS files loaded if dark-mode parameter is true
+      var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
+      if (enabledarkmode === 'auto' || enabledarkmode === 'true' || darkmode === 'auto' ) {
+        document.querySelector('link[data-sheet="dark-theme-auto"]').disabled = false;
+      } else if (enabledarkmode === 'on' || darkmode === 'on' ) {
+        document.querySelector('link[data-sheet="dark-theme"]').disabled = false;
+      } else {
+        document.querySelector('link[data-sheet="dark-theme"]').disabled = true;
+        document.querySelector('link[data-sheet="dark-theme-auto"]').disabled = true;
       }
-
+      
     }
   </script>
 
@@ -1891,7 +1907,8 @@
   <script>
     if (!(window.$docsify['basePath'] === undefined)) {
       if (getURLParameterByName(['zoom-images', 'zoomImages'], null, null, window.location.href, true) === 'true') {
-        document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>');
+        // document.write('<script src="https://docsify-preview-docsifyjs.vercel.app/dist/plugins/zoom-image.min.js"><\/script>');
+        document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>'); 
       }
     }
   </script>
