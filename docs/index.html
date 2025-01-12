@@ -1013,10 +1013,10 @@
               /* JS to change Embedly cards to light or dark theme based on system theme */
               const embeds = Array.from(htmlElement.querySelectorAll('.embedly-card'))
               if (!(embeds.length === 0)) {
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
+                if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && enabledarkmode === 'auto') || enabledarkmode === 'on') {
                   // dark mode
                   // console.log("dark");
-                  var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true) === 'true';
                   if (enabledarkmode || darkmode) {
                     embeds.forEach(embed => {
                       embed.setAttribute('data-card-theme', 'dark');
