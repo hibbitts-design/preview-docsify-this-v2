@@ -153,6 +153,24 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Title added to the top of page as H1 level header:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Title added to the top of page as H1 level header" type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"></div>
 
+<h3>Dark Theme Mode and Link Colors</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
+  <label for="enableDarkmode">Dark theme mode:</label>
+  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
+    <option value="false">Off</option>
+    <option disabled="disabled">----</option>
+    <option value="on">On</option>
+    <option value="auto">Match System Setting</option>
+  </select>
+</div></div>
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#0685D7" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris><span id="linkcolordarkmodepreview"></span></div>
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris><span id="linkhovercolordarkmodepreview"></span></div>
+
 <h3>Link Styles and Behavior</h3>
 
 <hr>
@@ -226,31 +244,13 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar" unchecked><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
-<h3>Docsify Custom Coverpage Color</h3>
+<h3>Docsify Custom Coverpage Colors</h3>
 
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris><span id="coverpagecolorpreview"></span></div>
 
-<h3>Dark Theme Support and Colors</h3>
-
-<hr>
-
-<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
-  <label for="enableDarkmode">Dark theme mode:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
-    <option value="false">Off</option>
-    <option disabled="disabled">----</option>
-    <option value="on">On</option>
-    <option value="auto">Match System Setting</option>
-  </select>
-</div></div>
-
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Page link color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#0685D7" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris><span id="linkcolordarkmodepreview"></span></div>
-
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Page link hover color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris><span id="linkhovercolordarkmodepreview"></span></div>
-
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Coverpage color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris><span id="coverpagecolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris><span id="coverpagecolordarkmodepreview"></span></div>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;margin-bottom: 8px;" type="button" id="btn_3" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
@@ -1634,13 +1634,13 @@ There are multiple ways to get a raw Markdown file available online, here are th
 1. Create a gist with your Markdown file at https://gist.github.com
 1. Enter a filename ending with `.md` (e.g. `myfile.md`)
 1. Choose **Create public gist** and tap on that button
-1. Tap on **Raw** button in the upper right of your Gist field and copy/paste that URL into the Docsify-This **Markdown File URL** field
+1. Tap on **Raw** button in the upper right of your Gist field and copy/paste that URL into the Docsify-This **Markdown File URL** field
 
 **Personal or Organizational Website:**
 
 1. Obtain login information for your server
 2. Upload the Markdown file to your server
-3. Navigate to the location of that file, view the contents in your Browser, and copy/paste that URL into the Docsify-This **Markdown File URL** field
+3. Navigate to the location of that file, view the contents in your Browser, and copy/paste that URL into the Docsify-This **Markdown File URL** field
 
 ---
 
