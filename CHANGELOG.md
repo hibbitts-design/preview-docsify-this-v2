@@ -38,7 +38,7 @@
 * Updated ReadMe
 * Support horizontal scrolling in code blocks
 * Adjusted bottom margin for summary elements
-* Minor Web Page Builder UI updates
+* Various Web Page Builder UI updates
 
 ## [1.10.0] - 01/01/2025🎉
 
