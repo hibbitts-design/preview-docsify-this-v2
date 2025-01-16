@@ -42,7 +42,7 @@
 
 **Bugfix:**
 * Fixed URL parameter handling of dark mode colors for links and link hovers
-* Set correct default link color for dark mode
+* Set correct default link color for dark mode (with contrast ratio for WCAG)
 
 ## [1.10.0] - 01/01/2025🎉
 
