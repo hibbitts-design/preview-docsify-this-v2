@@ -1933,6 +1933,13 @@
   <!-- Image Grid Plugin -->
   <script src="assets/vendor/docsify/plugins/docsify-img-grid.js"></script>
 
+  <!-- Image Captions Plugin -->
+  <script>
+    if (getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true) === 'true') {
+      document.write('<script src="https://gllmar.github.io/docsify-img-caption/docsify-img-caption.js"><\/script>');
+    }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics, only loaded for docsify-this.net homepage -->
 
   <script>

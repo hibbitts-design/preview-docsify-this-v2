@@ -33,6 +33,7 @@
 
 **New:**
 * Always on option for dark theme
+* Support for image grid plugin (with thanks and appreciation to @glimAR)
 
 **Improved:**
 * Updated ReadMe
