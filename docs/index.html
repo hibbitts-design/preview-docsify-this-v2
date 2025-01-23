@@ -267,6 +267,11 @@
             URLparms = URLparms + `&browser-tab-title=` + browserTabTitle;
           }
 
+          const cb16 = document.querySelector('#imageCaptions');
+          if (cb16.checked) {
+            var URLparms = URLparms + `&image-captions=true`;
+          }
+
           var getEditThisPage = document.getElementById("editLinkText");
           var editlinktext = getEditThisPage.value;
           if (editlinktext === '') {
@@ -658,6 +663,7 @@
       document.getElementById("linkcolor").value = '#0374B5';
       document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
       document.getElementById("linkcolorpreview").style.backgroundColor = '#0374B5';
+      document.getElementById("imageCaptions").checked = false;
       document.getElementById("editLinkText").value = 'Edit this Page';
       document.getElementById("editLinkTopCheck").checked = false;
       document.getElementById("narrowToC").checked = false;
@@ -898,10 +904,10 @@
       },
 
       imageCaption: {
-        textAlign: 'center',   // Caption alignment (default: 'center')
-        fontStyle: 'normal',   // Caption font style (default: 'italic')
+        textAlign: (getURLParameterByName('image-captions-text-align', null, null, window.location.href, true) || 'left'),   // Caption alignment (default: 'left')
+        fontStyle: (getURLParameterByName('image-captions-font-style', null, null, window.location.href, true) || 'italic'),   // Caption font style (default: 'italic')
         wrapInFigure: true,    // Use figure/figcaption (default: true)
-        imageAlign: 'right'    // Image alignment: 'left', 'center', or 'right' (default: 'center')
+        imageAlign: (getURLParameterByName('image-captions-image-align', null, null, window.location.href, true) || 'left'),   // Caption alignment (default: 'left')    // Image alignment: 'left', 'center', or 'right' (default: 'center')
       },
 
       markdown: {
@@ -1441,6 +1447,10 @@
               document.getElementById("linkcolorpreview").style.backgroundColor = linkcolor;
             }
 
+            if (getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true) === 'true') {
+              document.getElementById("imageCaptions").checked = true;
+            }
+
             editLinkText = getURLParameterByName(['edit-link-text', 'editLinkText'], null, null, window.location.href, true);
             if (editLinkText) {
               document.getElementById('editLinkText').value = decodeURI(editLinkText);
@@ -1942,8 +1952,11 @@
 
   <!-- Image Captions Plugin -->
   <script>
-    if (getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true) === 'true') {
-      document.write('<script src="https://gllmar.github.io/docsify-img-caption/docsify-img-caption.js"><\/script>');
+    if (!(window.$docsify['basePath'] === undefined)) {
+      imagecaptions = getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true);
+      if (!(imagecaptions === false)) {
+        document.write('<script src="assets/vendor/docsify/plugins/docsify-img-caption.js"><\/script>');
+      }
     }
   </script>
 

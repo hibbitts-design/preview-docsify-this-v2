@@ -204,6 +204,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [header-weight](#header-weight)
 - [hide-credits](#hide-credits)
 - [hypothesis](#hypothesis)
+- [image-captions](#image-captions)
 - [line-height](#line-height)
 - [link-color](#link-color)
 - [maxLevel](#maxLevel)
@@ -258,6 +259,11 @@ https://v2.preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Enable page annotation with [Hypothes.is](https://hypothes.is) with the optional **hypothesis** parameter, for example:  
 https://v2.preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hypothesis=true.
 
+##### image-captions
+
+Turn alt text into image captions (using the semantic HTML `<figure>` and `<figcaption>` structure) with the optional **image-captions** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
+
 ##### line-height
 
 Set a custom line height for your web pages with the optional **line-height** parameter, for example:  
@@ -309,6 +315,9 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [coverpage-color-dark-mode](#coverpage-color-dark-mode)
 - [dark-mode](#dark-mode)
 - [edit-link-emoji](#edit-link-emoji)
+- [image-captions-font-style](#image-captions-font-style)
+- [image-captions-image-align](#image-captions-image-align)
+- [text-captions-image-align](#text-captions-image-align)
 - [link-color-dark-mode](#link-color-dark-mode)
 - [link-color-hover](#link-color-hover)
 - [link-color-hover-dark-mode](#link-color-hover-dark-mode)
@@ -356,6 +365,21 @@ https://v2.preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 Change the default emoji for a "Edit this Page" link with the optional **edit-link-emoji** parameter (not included in the Advanced Web Page Builder), for example:  
 https://v2.preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder:
+
+##### image-captions-font-style
+
+Set the font style of image captions with the optional **image-captions-font-style** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
+
+##### image-captions-image-align
+
+Align image caption images with the optional **image-captions-image-align** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-text-align=right&image-captions-image-align=right.
+
+##### image-captions-text-align
+
+Align image caption text with the optional **image-captions-text-align** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
 ##### lazy-load-images
 

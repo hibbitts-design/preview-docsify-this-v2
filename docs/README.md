@@ -19,7 +19,7 @@ This open-source web app, built with magical documentation site generator [Docsi
 <p style="margin-bottom:-8px;">Enter the URL of a Markdown file and view that file as a web page in a new Browser tab. The resulting Docsify-This page URL can be copied and shared or used as an iFrame source URL.</p>
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
-<input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)" name="markdownFileURL" aria-label="markdown file url" id="docsifythisurlfield" type="url" onfocus="this.select()" onkeypress="checkKey(event);" size="200px" value="https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md" />
+<input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)" name="markdownFileURL" aria-label="markdown file url" id="docsifythisurlfield" type="url" onfocus="this.select()" onkeypress="checkKey(event);" size="200px" value="https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md" />
 <input class="docsifythisurlbuilderprimarybutton" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
 
 Page layout:
@@ -119,6 +119,8 @@ Page layout:
 </div></div>
 
 </div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show alternative text of images as captions</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
@@ -451,6 +453,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [header-weight](/?id=header-weight)
 - [hide-credits](/?id=hide-credits)
 - [hypothesis](/?id=hypothesis)
+- [image-captions](/?id=image-captions)
 - [line-height](/?id=line-height)
 - [link-color](/?id=link-color)
 - [maxLevel](/?id=maxLevel)
@@ -505,6 +508,11 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Enable page annotation with [Hypothes.is](https://hypothes.is) with the optional **hypothesis** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hypothesis=true.
 
+##### image-captions
+
+Turn alt text into image captions (using the semantic HTML `<figure>` and `<figcaption>` structure) with the optional **image-captions** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
+
 ##### line-height
 
 Set a custom line height for your web pages with the optional **line-height** parameter, for example:  
@@ -556,6 +564,9 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [coverpage-color-dark-mode](/?id=coverpage-color-dark-mode)
 - [dark-mode](/?id=dark-mode)
 - [edit-link-emoji](/?id=edit-link-emoji)
+- [image-captions](/?id=image-captions-font-style)
+- [image-captions](/?id=image-captions-image-align)
+- [image-captions](/?id=image-captions-text-align)
 - [link-color-dark-mode](/?id=link-color-dark-mode)
 - [link-color-hover](/?id=link-color-hover)
 - [link-color-hover-dark-mode](/?id=link-color-hover-dark-mode)
@@ -603,6 +614,21 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 Change the default emoji for a "Edit this Page" link with the optional **edit-link-emoji** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder:
+
+##### image-captions-font-style
+
+Set the font style of image captions with the optional **image-captions-font-style** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
+
+##### image-captions-image-align
+
+Align image caption images with the optional **image-captions-image-align** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-text-align=right&image-captions-image-align=right.
+
+##### image-captions-text-align
+
+Align image caption text with the optional **image-captions-text-align** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
 ##### lazy-load-images
 
