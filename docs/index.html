@@ -903,6 +903,11 @@
         insertAfter: '.app-name',
       },
 
+      imgGrid: {
+        columns: (getURLParameterByName('image-grid-columns', null, null, window.location.href, true) || 3), // Default number of columns
+        minItems: (getURLParameterByName('image-grid-minItems', null, null, window.location.href, true) || 3) // Minimum number of items to create a grid
+      },
+      
       imageCaption: {
         textAlign: (getURLParameterByName('image-captions-text-align', null, null, window.location.href, true) || 'left'),   // Caption alignment (default: 'left')
         fontStyle: (getURLParameterByName('image-captions-font-style', null, null, window.location.href, true) || 'italic'),   // Caption font style (default: 'italic')
