@@ -564,9 +564,9 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [coverpage-color-dark-mode](/?id=coverpage-color-dark-mode)
 - [dark-mode](/?id=dark-mode)
 - [edit-link-emoji](/?id=edit-link-emoji)
-- [image-captions](/?id=image-captions-font-style)
-- [image-captions](/?id=image-captions-image-align)
-- [image-captions](/?id=image-captions-text-align)
+- [image-captions-font-style](/?id=image-captions-font-style)
+- [image-captions-image-align](/?id=image-captions-image-align)
+- [image-captions-text-align](/?id=image-captions-text-align)
 - [link-color-dark-mode](/?id=link-color-dark-mode)
 - [link-color-hover](/?id=link-color-hover)
 - [link-color-hover-dark-mode](/?id=link-color-hover-dark-mode)
@@ -1567,6 +1567,7 @@ An overview to self-publishing with Markdown using the open source project Docsi
 - [Matching Fonts with Your Destination Platform Content](/?id=matching-fonts-with-your-destination-platform-content)
 - [Providing a Page Table of Contents within a Smaller Area](/?id=providing-a-page-table-of-contents-within-a-smaller-area)
 - [Including Code Blocks](/?id=including-code-blocks)
+- [Displaying Images in a Grid](/?id=displaying-images-in-a-grid)
 - [Including External Markdown Content](/?id=including-external-markdown-content)
 - [Use of WikiLinks](/?id=use-of-wikilinks)
 - [Display of AsciiDoc Files (file extension .adoc)](/?id=display-of-asciidoc-files-file-extension-adoc)
@@ -1603,6 +1604,19 @@ function test() {
   console.log("Hello world!");
 }
 ```
+
+##### Displaying Images in a Grid 
+
+3 or more images can be transformed into a responsive grid gallery by including them in lists. For example:
+
+```markdown
+- ![image1](path/to/image1.jpg)
+- ![image2](path/to/image2.jpg)
+- ![image3](path/to/image3.jpg)
+```
+
+Change the number of columns with the optional **image-grid-columns** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/paulhibbitts/Markdown-File-Tests/main&homepage=image-grid.md&image-grid-columns=4
 
 ##### Including External Markdown Content
 

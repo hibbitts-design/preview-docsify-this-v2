@@ -1179,6 +1179,7 @@ An overview to self-publishing with Markdown using the open source project Docsi
 - [Matching Fonts with Your Destination Platform Content](#matching-fonts-with-your-destination-platform-content)
 - [Providing a Page Table of Contents within a Smaller Area](#providing-a-page-table-of-contents-within-a-smaller-area)
 - [Including Code Blocks](#including-code-blocks)
+- [Displaying Images in a Grid](#displaying-images-in-a-grid)
 - [Including External Markdown Content](#including-external-markdown-content)
 - [Use of WikiLinks](#use-of-wikilinks)
 - [Display of AsciiDoc Files (file extension .adoc)](#display-of-asciidoc-files-file-extension-adoc)
@@ -1215,6 +1216,19 @@ function test() {
   console.log("Hello world!");
 }
 ```
+
+##### Displaying Images in a Grid 
+
+3 or more images can be transformed into a responsive grid gallery by including them in lists. For example:
+
+```markdown
+- ![image1](path/to/image1.jpg)
+- ![image2](path/to/image2.jpg)
+- ![image3](path/to/image3.jpg)
+```
+
+Change the number of columns with the optional **image-grid-columns** parameter, for example:  
+https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/paulhibbitts/Markdown-File-Tests/main&homepage=image-grid.md&image-grid-columns=4
 
 ##### Including External Markdown Content
 
