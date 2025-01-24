@@ -905,7 +905,8 @@
 
       imgGrid: {
         columns: (getURLParameterByName('image-grid-columns', null, null, window.location.href, true) || 3), // Default number of columns
-        minItems: (getURLParameterByName('image-grid-minItems', null, null, window.location.href, true) || 3) // Minimum number of items to create a grid
+        minItems: (getURLParameterByName('image-grid-minItems', null, null, window.location.href, true) || 3), // Minimum number of items to create a grid
+        minWidth: (getURLParameterByName('image-grid-minWidth', null, null, window.location.href, true) || 200) // Minimum number of items to create a grid
       },
       
       imageCaption: {

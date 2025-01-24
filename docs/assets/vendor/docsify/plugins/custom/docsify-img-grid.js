@@ -1,12 +1,15 @@
+// Original source plugin 'img-grid' by @glimAR
+// This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
 (function () {
     const DEFAULT_CONFIG = {
-        columns: 3, // Default number of columns
-        minItems: 3 // Minimum number of items to create a grid
+        columns: 3,
+        minItems: 3,
+        minWidth: 200
     };
 
     const config = Object.assign({}, DEFAULT_CONFIG, (window.$docsify && window.$docsify.imgGrid) || {});
 
-    function createImageGrid(images, columns = config.columns) {
+    function createImageGrid(images, columns = config.columns, minWidth = config.minWidth) {
         const gridContainer = document.createElement('div');
         gridContainer.className = 'img-grid';
         gridContainer.style.cssText = `
@@ -22,9 +25,9 @@
             wrapper.className = 'img-grid-item';
             wrapper.style.cssText = `
                 flex: 0 1 calc(${100 / columns}% - 10px);
-                min-width: 200px;
+                min-width: ${minWidth}px;
             `;
-            
+
             const parentAnchor = img.closest('a');
             if (parentAnchor) {
                 const anchorClone = parentAnchor.cloneNode(false);
@@ -45,7 +48,7 @@
                 `;
                 wrapper.appendChild(clone);
             }
-            
+
             gridContainer.appendChild(wrapper);
         });
 
@@ -59,10 +62,11 @@
         const lists = container.getElementsByTagName('ul');
         Array.from(lists).forEach(list => {
             const images = Array.from(list.getElementsByTagName('img'));
-            
+
             if (images.length >= config.minItems && images.length === list.children.length) {
                 const columns = list.getAttribute('data-columns') || config.columns;
-                const grid = createImageGrid(images, parseInt(columns));
+                const minWidth = config.minWidth;
+                const grid = createImageGrid(images, parseInt(columns), minWidth);
                 list.parentNode.replaceChild(grid, list);
             }
         });
