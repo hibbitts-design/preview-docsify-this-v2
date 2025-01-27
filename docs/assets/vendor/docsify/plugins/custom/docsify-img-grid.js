@@ -1,4 +1,4 @@
-// Original source plugin 'img-grid' by @glimAR
+// Original source plugin 'img-grid' by @gllmAR
 // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
 (function () {
     const DEFAULT_CONFIG = {

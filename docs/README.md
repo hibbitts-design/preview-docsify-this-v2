@@ -617,17 +617,17 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 ##### image-captions-font-style
 
-Set the font style of image captions with the optional **image-captions-font-style** parameter, for example:  
+Set the font style of image captions with the optional **image-captions-font-style** parameter (not included in the Advanced Web Page Builder), for example:  
 https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
 
 ##### image-captions-image-align
 
-Align image caption images with the optional **image-captions-image-align** parameter, for example:  
+Align image caption images with the optional **image-captions-image-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-text-align=right&image-captions-image-align=right.
 
 ##### image-captions-text-align
 
-Align image caption text with the optional **image-captions-text-align** parameter, for example:  
+Align image caption text with the optional **image-captions-text-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://paulhibbitts.github.io/test-docsify-this?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
 ##### lazy-load-images
