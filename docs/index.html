@@ -267,11 +267,6 @@
             URLparms = URLparms + `&browser-tab-title=` + browserTabTitle;
           }
 
-          const cb16 = document.querySelector('#imageCaptions');
-          if (cb16.checked) {
-            var URLparms = URLparms + `&image-captions=true`;
-          }
-
           var getEditThisPage = document.getElementById("editLinkText");
           var editlinktext = getEditThisPage.value;
           if (editlinktext === '') {
@@ -485,6 +480,11 @@
           var getheaderweight = document.getElementById('headerweight').value;
           if (!(getheaderweight == "400")) {
             var URLparms = URLparms + `&header-weight=` + getheaderweight
+          }
+
+          const cb16 = document.querySelector('#imageCaptions');
+          if (cb16.checked) {
+            var URLparms = URLparms + `&image-captions=true`;
           }
 
           const cb15 = document.querySelector('#zoomimages');
@@ -1453,10 +1453,6 @@
               document.getElementById("linkcolorpreview").style.backgroundColor = linkcolor;
             }
 
-            if (getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true) === 'true') {
-              document.getElementById("imageCaptions").checked = true;
-            }
-
             editLinkText = getURLParameterByName(['edit-link-text', 'editLinkText'], null, null, window.location.href, true);
             if (editLinkText) {
               document.getElementById('editLinkText').value = decodeURI(editLinkText);
@@ -1528,6 +1524,10 @@
             if (headerweight) {
               // console.log(headerweight);
               document.getElementById('headerweight').value = headerweight;
+            }
+
+            if (getURLParameterByName(['image-captions', 'imageCaptions'], null, null, window.location.href, true) === 'true') {
+              document.getElementById("imageCaptions").checked = true;
             }
 
             if (getURLParameterByName(['zoom-images', 'zoomImages'], null, null, window.location.href, true) === 'true') {
