@@ -1236,6 +1236,9 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/p
 Use with the optional **zoom-images** parameter for the ability to view unlinked images at a larger size, for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/Markdown-File-Tests/main&homepage=image-grid.md&image-grid-columns=4&zoom-images=true
 
+Use the optional **image-captions** parameter to display alt text below images, for example:  
+https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/Markdown-File-Tests/main&homepage=image-grid.md&image-grid-columns=4&zoom-images=true&image-captions=true&image-captions-text-align=center&image-captions-font-style=normal
+
 ##### Including External Markdown Content
 
 The content of external Markdown files can be embedded into Docisfy-This web pages with the following:
