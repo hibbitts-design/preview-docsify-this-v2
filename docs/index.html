@@ -29,12 +29,18 @@
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
   <!-- Preload Default Source Sans 3 Fonts -->
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-700italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-regular.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-600.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-600italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-700.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/source-sans-3-v15-latin-700italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
 
   <!-- Stylesheets -->
 
@@ -43,12 +49,13 @@
   <!-- <link rel="stylesheet" href="assets/vendor/themes/core.min.css" /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css" data-sheet="dark-mode"
-  disabled/>
+  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+    data-sheet="dark-mode" disabled />
   <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto"/>
+  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+    media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
   <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/> -->
 
   <link rel="stylesheet" href="assets/css/docsify-this.css">
@@ -85,7 +92,7 @@
 <body class="sidebar-chevron-right sidebar-toggle-kebab">
   <div id="app"></div>
   <script>
-    if (getURLParameterByName(['docsify-theme','docsifytheme'], null, null, window.location.href, true) === 'true') {
+    if (getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true') {
       document.querySelectorAll('style').forEach(style => style.remove());
     } else {
       document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="assets/css/theme.css" />');
@@ -417,7 +424,7 @@
 
           var getSiteLogo = document.getElementById("siteLogo");
           var siteLogo = getSiteLogo.value;
-          if (!(siteLogo == "")) { 
+          if (!(siteLogo == "")) {
             URLparms = URLparms + `&logo=` + siteLogo;
           }
 
@@ -732,8 +739,8 @@
 
         const linkHoverColorDarkMode = getURLParameterByName(['link-color-hover-dark-mode', 'linkColorHoverDarkMode'], null, null, window.location.href, true);
         if (linkHoverColorDarkMode !== false) {
-          document.documentElement.style.setProperty('--link-color-hover',  '#' + linkHoverColorDarkMode);
-          document.documentElement.style.setProperty('--link-underline-color-hover',  '#' + linkHoverColorDarkMode);
+          document.documentElement.style.setProperty('--link-color-hover', '#' + linkHoverColorDarkMode);
+          document.documentElement.style.setProperty('--link-underline-color-hover', '#' + linkHoverColorDarkMode);
         }
         const coverPageColorDarkMode = getURLParameterByName(['coverpage-color-dark-mode', 'coverpageColorDarkMode'], null, null, window.location.href, true);
 
@@ -758,8 +765,8 @@
 
         const linkHoverColor = getURLParameterByName(['link-color-hover', 'linkColorHover'], null, null, window.location.href, true);
         if (linkHoverColor !== false) {
-          document.documentElement.style.setProperty('--link-color-hover',  '#' + linkHoverColor);
-          document.documentElement.style.setProperty('--link-underline-color-hover',  '#' + linkHoverColor);
+          document.documentElement.style.setProperty('--link-color-hover', '#' + linkHoverColor);
+          document.documentElement.style.setProperty('--link-underline-color-hover', '#' + linkHoverColor);
         }
         const coverPageColor = getURLParameterByName(['coverpage-color', 'coverpageColor'], null, null, window.location.href, true);
 
@@ -838,10 +845,10 @@
     // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
     // Function to check and set the href attribute
     function checkAndSetDisplayedSiteName() {
-        const appNameLink = document.querySelector('a.app-name-link');
-        if (appNameLink && appNameLink.getAttribute('href') !== '#/') {
-            appNameLink.setAttribute('href', '#/');
-        }
+      const appNameLink = document.querySelector('a.app-name-link');
+      if (appNameLink && appNameLink.getAttribute('href') !== '#/') {
+        appNameLink.setAttribute('href', '#/');
+      }
     }
     // Set up a MutationObserver to monitor the entire body for added nodes or attribute changes
     // This assumes that the 'a.app-name-link' might be added dynamically or its attributes changed
@@ -908,7 +915,7 @@
         minItems: (getURLParameterByName('image-grid-minItems', null, null, window.location.href, true) || 3), // Minimum number of items to create a grid
         minWidth: (getURLParameterByName('image-grid-minWidth', null, null, window.location.href, true) || 200) // Minimum number of items to create a grid
       },
-      
+
       imageCaption: {
         textAlign: (getURLParameterByName('image-captions-text-align', null, null, window.location.href, true) || 'left'),   // Caption alignment (default: 'left')
         fontStyle: (getURLParameterByName('image-captions-font-style', null, null, window.location.href, true) || 'italic'),   // Caption font style (default: 'italic')
@@ -922,9 +929,9 @@
             if (lang === 'mermaid') {
               return /* html */ `
                 <div class="mermaid">${mermaid.render(
-                  'mermaid-svg-' + num++,
-                  text,
-                )}</div>
+                'mermaid-svg-' + num++,
+                text,
+              )}</div>
               `;
             }
             return this.origin.code.apply(this, arguments);
@@ -1073,7 +1080,7 @@
               }
 
               /* Support Browser-level image lazy loading of images */
-              if (getURLParameterByName(['lazy-load-images', 'lazyLoadImages'], null, null, window.location.href, true) === 'true' ) {
+              if (getURLParameterByName(['lazy-load-images', 'lazyLoadImages'], null, null, window.location.href, true) === 'true') {
                 htmlElement.innerHTML = htmlElement.innerHTML.replace(/<img(.*?)>/g, function (match, p1) {
                   if (p1.indexOf('loading=') === -1) {
                     return match.replace('>', ' loading="lazy">');
@@ -1300,8 +1307,8 @@
 
             // Build the current URL without the hash
             let currentUrlWithoutHash = new URL(
-                location.origin + location.pathname +
-                location.search
+              location.origin + location.pathname +
+              location.search
             );
 
             // Get the search parameters from the URL (before the hash)
@@ -1314,40 +1321,40 @@
 
             // Check if the URL contains the 'id' query parameter in either search or hash
             if (isUrlHasIdQuery || isHashHasIdQuery) {
-                dd && console.log('url or hash has id, will scroll to element');
-                
-                // Get the 'id' from either search or hash
-                let urlId = isUrlHasIdQuery ? urlQueryParam.get(TARGET_QUERY) : hashParams.get(TARGET_QUERY);
+              dd && console.log('url or hash has id, will scroll to element');
 
-                // Delay the scrolling to ensure everything is loaded
-                setTimeout(function () {
-                    dd && console.log('will scroll now!');
-                    try {
-                        let targetElement = document.getElementById(urlId); // Use `getElementById` to directly reference the element
-                        dd && console.log('Target element ID:', urlId);
-                        if (targetElement) {
-                            // Check if the target element is within an excluded parent
-                            let excludedParent = targetElement.closest('.' + EXCLUDED_PARENT_CLASS);
-                            
-                            if (!excludedParent) {
-                                // Use requestAnimationFrame for immediate scroll to the element
-                                requestAnimationFrame(() => {
-                                    // Scroll smoothly to the element's top position
-                                    window.scrollTo({
-                                        top: targetElement.offsetTop,
-                                        behavior: 'smooth'  // Add smooth scrolling
-                                    });
-                                });
-                            } else {
-                                dd && console.log('Target is within an excluded parent:', excludedParent);
-                            }
-                        } else {
-                            dd && console.log('Element not found');
-                        }
-                    } catch (e) {
-                        dd && console.log('custom scroll failed', e);
+              // Get the 'id' from either search or hash
+              let urlId = isUrlHasIdQuery ? urlQueryParam.get(TARGET_QUERY) : hashParams.get(TARGET_QUERY);
+
+              // Delay the scrolling to ensure everything is loaded
+              setTimeout(function () {
+                dd && console.log('will scroll now!');
+                try {
+                  let targetElement = document.getElementById(urlId); // Use `getElementById` to directly reference the element
+                  dd && console.log('Target element ID:', urlId);
+                  if (targetElement) {
+                    // Check if the target element is within an excluded parent
+                    let excludedParent = targetElement.closest('.' + EXCLUDED_PARENT_CLASS);
+
+                    if (!excludedParent) {
+                      // Use requestAnimationFrame for immediate scroll to the element
+                      requestAnimationFrame(() => {
+                        // Scroll smoothly to the element's top position
+                        window.scrollTo({
+                          top: targetElement.offsetTop,
+                          behavior: 'smooth'  // Add smooth scrolling
+                        });
+                      });
+                    } else {
+                      dd && console.log('Target is within an excluded parent:', excludedParent);
                     }
-                }, SCROLL_DELAY);
+                  } else {
+                    dd && console.log('Element not found');
+                  }
+                } catch (e) {
+                  dd && console.log('custom scroll failed', e);
+                }
+              }, SCROLL_DELAY);
             }
 
             if (window.$docsify['basePath']) {
@@ -1358,7 +1365,7 @@
             // Check for valid URL parms or a URL-like pattern after a '?' by using RegEx
             if (getURLParameterByName(['url-field', 'urlField']) || (window.location.href.includes('?') && /[?&](url-field|urlField|https?:\/\/[^\s]+|www\.[^\s]+|[a-z0-9.-]+\.[a-z]{2,})/i.test(window.location.href))) {
               var markdownFileURL = '';
-              
+
               // Check if the URL has only a '?' followed by content, without any '='
               if (!(getURLParameterByName(['url-field', 'urlField']))) {
                 // Extract everything after the '?' as the URL, up to the first '&'
@@ -1367,17 +1374,17 @@
                 // Use getURLParameterByName for 'url-field' or 'urlField'
                 markdownFileURL = getURLParameterByName(['url-field', 'urlField'], '', null, window.location.href, true);
               }
-              
+
               // If URL was 'empty', reset it to an empty string
               if (markdownFileURL === "empty") {
                 markdownFileURL = '';
               }
-              
+
               // Prefix 'https://' if not already present
               if (markdownFileURL && !markdownFileURL.startsWith('http://') && !markdownFileURL.startsWith('https://')) {
                 markdownFileURL = 'https://' + markdownFileURL;
               }
-              
+
               // Remove any '#' and everything after it from the markdownFileURL
               markdownFileURL = markdownFileURL.split('#')[0];
 
@@ -1395,7 +1402,7 @@
 
             // console.log(getURLParameterByName(['page-title','header-weight','zoom-images','loadFavicon','coverpage','loadSidebar','loadNavbar','loadFooter','searchbox','coverpage-color','dark-mode','link-color-dark-mode','coverpage-color-dark-mode']));
 
-            if (getURLParameterByName('advanced') === true ) {
+            if (getURLParameterByName('advanced') === true) {
               // console.log("show advanced options!");
               document.getElementById("btn_2").style.display = "none";
               var theDiv = document.getElementById("docsifythisurlbuilderoptionsDiv");
@@ -1706,6 +1713,10 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
   <script src="assets/vendor/docsify/plugins/docsify-tabs.min.js"></script>
 
+  <!-- flexible-alerts -->
+  <!-- <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script> -->
+  <script src="assets/vendor/docsify/plugins/docsify-plugin-flexible-alerts.min.js"></script>
+  
   <!-- Load custom.css file only when displaying Markdown files -->
   <script>
     if (window.$docsify['basePath']) {
@@ -1745,7 +1756,7 @@
   <!-- Font Awesome Plugin -->
   <!-- <script src="https://unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script> -->
   <script src="assets/vendor/docsify/plugins/custom/docsify-fontawesome.min.js"></script>
-  
+
   <!-- Footnotes Plugin -->
   <!-- <script src="//cdn.jsdelivr.net/npm/@sy-records/docsify-footnotes/lib/index.min.js"></script> -->
   <script src="assets/vendor/docsify/plugins/docsify-footnotes.min.js"></script>
@@ -1784,7 +1795,7 @@
       link.href = "assets/vendor/fontawesome/css/svg-with-js.css";
       // Append the link to the head
       document.head.appendChild(link);
-      
+
       // Create the script element
       const script = document.createElement("script");
       script.src = "assets/vendor/fontawesome/js/all.js";
@@ -1793,13 +1804,13 @@
       // Append the script to the body
       document.body.appendChild(script);
 
-      } else {
+    } else {
 
       document.write('<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome/css/fontawesome.css" />');
       document.write('<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome/css/brands.css" />');
       document.write('<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome/css/regular.css" />');
       document.write('<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome/css/solid.css" />');
-      
+
     }
   </script>
 
@@ -1853,7 +1864,7 @@
       // Change body font size if fontSize parameter present
       fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
       if (!(fontsize === false)) {
-        if (!(fontsize.includes("px"))) {    
+        if (!(fontsize.includes("px"))) {
           // Convert rem values to pixel values
           fontsize = (fontsize * 16) + "px";
         }
@@ -1871,8 +1882,8 @@
       linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
       if (!(linktextdecoration === false)) {
         if (linktextdecoration === 'none') {
-          document.documentElement.style.setProperty('--link-underline-thickness', '0px'); 
-          document.documentElement.style.setProperty('--link-underline-color', 'transparent');      
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
+          document.documentElement.style.setProperty('--link-underline-color', 'transparent');
         } else if (linktextdecoration === 'underline') {
           document.documentElement.style.setProperty('--link-underline-thickness', '1px');
           document.documentElement.style.setProperty('--link-underline-color', '--link-color');
@@ -1883,7 +1894,7 @@
       linkhovertextdecoration = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
       if (!(linkhovertextdecoration === false)) {
         if (linkhovertextdecoration === 'none') {
-          document.documentElement.style.setProperty('--link-underline-thickness', '0px');  
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
           document.documentElement.style.setProperty('--link-underline-color', 'transparent');
         } else if (linkhovertextdecoration === 'underline') {
           document.documentElement.style.setProperty('--link-underline-thickness-hover', '1px');
@@ -1896,15 +1907,15 @@
       // Enable dark theme CSS files loaded if dark-mode parameter is true
       // Enable dark theme CSS files loaded if dark-mode parameter is true
       var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
-      if (enabledarkmode === 'auto' || enabledarkmode === 'true' || darkmode === 'auto' ) {
+      if (enabledarkmode === 'auto' || enabledarkmode === 'true' || darkmode === 'auto') {
         document.querySelector('link[data-sheet="dark-mode-auto"]').disabled = false;
-      } else if (enabledarkmode === 'on' || darkmode === 'on' ) {
+      } else if (enabledarkmode === 'on' || darkmode === 'on') {
         document.querySelector('link[data-sheet="dark-mode"]').disabled = false;
       } else {
         document.querySelector('link[data-sheet="dark-mode"]').disabled = true;
         document.querySelector('link[data-sheet="dark-mode-auto"]').disabled = true;
       }
-      
+
     }
   </script>
 
@@ -1929,7 +1940,7 @@
     if (!(window.$docsify['basePath'] === undefined)) {
       if (getURLParameterByName(['zoom-images', 'zoomImages'], null, null, window.location.href, true) === 'true') {
         // document.write('<script src="https://docsify-preview-docsifyjs.vercel.app/dist/plugins/zoom-image.min.js"><\/script>');
-        document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>'); 
+        document.write('<script src="assets/vendor/docsify/plugins/zoom-image.min.js"><\/script>');
       }
     }
   </script>
