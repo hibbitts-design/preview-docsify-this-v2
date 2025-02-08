@@ -29,6 +29,11 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
+## [1.10.2] - XX/XX/XXXX
+
+**Improved:**
+* Various minor enhancments to Search plugin
+
 ## [1.10.1] - 02/01/2025🍁
 
 **New:**
