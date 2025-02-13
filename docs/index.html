@@ -1669,9 +1669,21 @@
             window.$docsify[key] = convertToBoolean(value);
           }
         } else {
+          if (key === 'name') {
+            window.$docsify[key] = replaceUnderscores(value);
+          } else {
           window.$docsify[key] = convertToBoolean(value);
+          }
         }
       });
+    }
+
+    // Replace underscores with spaces
+    function replaceUnderscores(value) {
+      if (typeof value === 'string') {
+        return value.replace(/_/g, ' ');
+      }
+      return value; // Return the original value if it's not a string
     }
 
     // Convert to Boolean if true or false, otherwise return original value
