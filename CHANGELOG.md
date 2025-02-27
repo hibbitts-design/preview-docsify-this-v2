@@ -29,12 +29,15 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.2] - XX/XX/XXXX
+## [1.10.2] - XX/XX/2025
 
 **Improved:**
 * Various minor enhancements to Search plugin
 * Updated ReadMe
-* Underscores may be used to represent spaces in URL parameters, in addition to the standard encoded value of %20
+* Underscores may be used to represent spaces in URL parameters, in addition to the standard encoded value of %20 (thanks to a helpful discussion with @davidmalawey)
+
+**Bugfix:**
+* Fixed incorrect theme CSS with regards to image scaling (with thanks and appreciation to @harlows for the PR)
 
 ## [1.10.1] - 02/01/2025🍁
 
