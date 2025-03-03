@@ -222,6 +222,14 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* Fix for preview build of Docsify v5 theme */
+.cover h1 a {
+  color: var(--cover-title-color);
+}
+.cover h1 a .hover {
+  color: var(--link-color) !important;
+}
+
 body {
   display: flex;
   flex-wrap: wrap; 
