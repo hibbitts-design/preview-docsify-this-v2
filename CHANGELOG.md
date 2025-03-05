@@ -3,7 +3,7 @@
 ## [2.0.0] - XX/XX/2025
 
 **New:**
-* Migrated to the modernized and refactored Docsify v5 platform
+* Built with the modernized and refactored Docsify v5 platform
 * Adoption of Docsify v5's new theme system for enhanced customization and a modern user interface
 * Use of Marked.js v15+ (from Docsify v5) for markdown rendering, providing improved compatibility and rendering capabilities
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to use new Docsify v5 core (default) theme
@@ -29,7 +29,7 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.2] - XX/XX/2025
+## [1.10.2] - 03/04/2025
 
 **Improved:**
 * Various minor enhancements to Search plugin
