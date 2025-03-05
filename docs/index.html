@@ -94,6 +94,10 @@
   <script>
     if (getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true') {
       document.querySelectorAll('style').forEach(style => style.remove());
+      const bodyElement = document.body;
+      if (bodyElement) {
+        bodyElement.style.fontFamily = 'system-ui, sans-serif';
+      }
     } else {
       document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="assets/css/theme.css" />');
     }
