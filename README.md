@@ -15,7 +15,7 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 <div style="display: none;">
 
-_**Check out what Docsify-This can do by [viewing this ReadMe file as a web page with an optional Sidebar that includes headings up to 4 levels!](https://v2.preview.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&edit-link=https://github.com/hibbitts-design/docsify-this/blob/main/README.md&sidebar=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&header-weight=600&zoom-images=true&dark-mode=auto)**_
+_**Check out what Docsify-This can do by [viewing this ReadMe file as a web page with an optional Sidebar that includes headings up to 4 levels!](https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this/main&homepage=README.md&edit-link=https://github.com/hibbitts-design/docsify-this/blob/main/README.md&sidebar=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&header-weight=600&zoom-images=true&dark-mode=auto)**_
 
 </div>
 
