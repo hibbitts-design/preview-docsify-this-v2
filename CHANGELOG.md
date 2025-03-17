@@ -29,6 +29,11 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
+## [1.10.3] - XX/XX/2025
+
+**Improved:**
+* Updated ReadMe
+
 ## [1.10.2] - 03/04/2025
 
 **Improved:**
