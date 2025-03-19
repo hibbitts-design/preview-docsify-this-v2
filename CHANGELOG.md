@@ -33,6 +33,7 @@
 
 **Improved:**
 * Updated ReadMe
+* Minor Web Page Builder UI updates
 
 ## [1.10.2] - 03/04/2025
 
