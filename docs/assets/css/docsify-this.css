@@ -50,6 +50,7 @@
   border-radius: 16px;
   background: #f2f2fd; /* Previous colors #f2f4fD #ecf4fe */
   background: linear-gradient(to right, #f7f8fc, #e2e4f6);
+  border: 1px solid #e2e4f6; /* Light border */
 }
 
 #docsifythisurlbuilder h2 {
@@ -429,7 +430,8 @@ span #docsifythisurlfield {
   #docsifythisurlbuilder {
     background: #36416d; /* Original color #1f4b66 */
     background: linear-gradient(to right, #2b2e3b, #1f1f2f);
-  }
+    border: 1px solid #3b3f4a; /* Dark border */
+  } 
 
   #docsifythisurlfield {
     background-color: #273338;
