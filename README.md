@@ -19,8 +19,13 @@ _**Check out what Docsify-This can do by [viewing this ReadMe file as a web page
 
 </div>
 
-![ Docsify-This](https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/docsify-this-v2-web-page-builder.png)
-_Figure 1. [Docsify-This.net](https://docsify-this.net) Web Page Builder._
+<picture>
+  <source srcset="https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/docsify-this-v2-web-page-builder-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/docsify-this-v2-web-page-builder.png" alt="Docsify-This">
+</picture>
+<p>
+  <em>Figure 1. <a href="https://docsify-this.net">Docsify-This.net</a> Web Page Builder.</em>
+</p>
 
 ## All About Docsify-This
 
