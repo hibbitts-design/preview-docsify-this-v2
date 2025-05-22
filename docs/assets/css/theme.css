@@ -222,12 +222,30 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* Fix for preview build of Docsify v5 theme */
+/* Fix for Coverpage title link colors with preview build of Docsify v5 theme */
 .cover h1 a {
   color: var(--cover-title-color);
 }
 .cover h1 a .hover {
   color: var(--link-color) !important;
+}
+
+/* Fix for Transparent iframe support for both light and dark modes with preview build of Docsify v5 theme */
+iframe,
+iframe *,
+iframe[src],
+iframe[src] * {
+    color-scheme: light dark !important;
+}
+
+/* Ensure transparency in dark mode */
+@media (prefers-color-scheme: dark) {
+    iframe,
+    iframe *,
+    iframe[src],
+    iframe[src] * {
+        color-scheme: light !important;
+    }
 }
 
 body {
