@@ -248,7 +248,7 @@ iframe[src] * {
 
 /* Fix for inline codeblock contrast within shaded table rows with preview build of Docsify v5 theme */
 .markdown-section code {
-  background: var(--color-mono-3);
+  background: var(--color-mono-2);
 }
 
 body {
