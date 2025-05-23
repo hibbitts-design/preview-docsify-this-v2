@@ -31,6 +31,9 @@
 
 ## [1.10.4] - XX/XX/2025
 
+**Improved:**
+* Updated ReadMe
+
 **Bugfix:**
 * Fix for supporting footnotes syntax with inline code (with thanks and appreciation to @sy-records)
 
