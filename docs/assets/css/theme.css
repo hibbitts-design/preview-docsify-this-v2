@@ -237,8 +237,6 @@ iframe[src],
 iframe[src] * {
     color-scheme: light dark !important;
 }
-
-/* Ensure transparency in dark mode */
 @media (prefers-color-scheme: dark) {
     iframe,
     iframe *,
@@ -246,6 +244,11 @@ iframe[src] * {
     iframe[src] * {
         color-scheme: light !important;
     }
+}
+
+/* Fix for codeblocks within shaded table rows with preview build of Docsify v5 theme */
+.markdown-section code {
+  background: var(--color-mono-3);
 }
 
 body {

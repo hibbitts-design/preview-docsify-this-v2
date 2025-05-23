@@ -29,6 +29,11 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
+## [1.10.4] - XX/XX/2025
+
+**Bugfix:**
+* Fix for supporting footnotes syntax with inline code (with thanks and appreciation to @sy-records)
+
 ## [1.10.3] - 04/09/2025
 
 **Improved:**
