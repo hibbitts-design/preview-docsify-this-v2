@@ -1866,7 +1866,7 @@
 
   <!-- Check for headerweight, fontfamily, fontsize, fontweight, lineheight, theme colors, and darkmode parameters -->
   <script>
-    if (!(window.$docsify['basePath'] === undefined)) {
+    if (!(window.$docsify['basePath'] === undefined) && (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true'))) {
 
       // Change header weight if headerweight parameter present
       headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
