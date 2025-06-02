@@ -92,7 +92,7 @@
 <body class="sidebar-chevron-right sidebar-toggle-kebab">
   <div id="app"></div>
   <script>
-    if (getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true') {
+    if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
       document.querySelectorAll('style').forEach(style => style.remove());
       const bodyElement = document.body;
       if (bodyElement) {
@@ -716,7 +716,7 @@
 
     function setColorProperties(color) {
         document.documentElement.style.setProperty('--theme-color', color);
-        if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
+        if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true'))) {
           document.documentElement.style.setProperty('--link-color', color);
         }
     }
@@ -728,19 +728,29 @@
       if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && (darkModeEnabled === 'auto' || darkModeEnabled === 'true')) || darkModeEnabled === 'on') {
         // dark mode
         const linkColorDarkMode = getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'], null, null, window.location.href, true);
+        const themeColorDarkMode = getURLParameterByName(['theme-color-dark-mode', 'themeColorDarkMode'], null, null, window.location.href, true);
 
-        if (linkColorDarkMode !== false) {
-          setColorProperties('#' + linkColorDarkMode);
-          document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
+        if ((linkColorDarkMode !== false) || (themeColorDarkMode !== false)) {
+          if (themeColorDarkMode !== false) {
+            setColorProperties('#' + themeColorDarkMode);
+          }
+          if ((linkColorDarkMode !== false) && (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true'))) {
+            setColorProperties('#' + linkColorDarkMode);
+            document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
+          }
         } else {
           const linkColor = getURLParameterByName(['link-color', 'linkColor'], null, null, window.location.href, true);
+          const themeColor = getURLParameterByName(['theme-color', 'themeColor'], null, null, window.location.href, true);
 
+          if (themeColor !== false) {
+            setColorProperties('#' + themeColor);
+          }
           if (linkColor !== false) {
             setColorProperties('#' + linkColor);
           } else {
-            if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
-            setColorProperties('#1BA1EE');
-            document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
+            if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
+              setColorProperties('#1BA1EE');
+              document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
             }
           }
         }
@@ -760,14 +770,17 @@
       } else {
         // light mode
         const linkColor = getURLParameterByName(['link-color', 'linkColor'], null, null, window.location.href, true);
+        const themeColor = getURLParameterByName(['theme-color', 'themeColor'], null, null, window.location.href, true);
 
         document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
 
+        if (themeColor !== false) {
+          setColorProperties('#' + themeColor);
+        }
         if (linkColor !== false) {
           setColorProperties('#' + linkColor);
-
         } else {
-          if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
+          if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
             setColorProperties('#0374B5');
             document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
           }
@@ -783,7 +796,9 @@
         if (coverPageColor !== false) {
           document.documentElement.style.setProperty('--cover-bg', '#' + coverPageColor);
         } else {
-          document.documentElement.style.setProperty('--cover-bg', '#C1E1F6');
+          if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
+            document.documentElement.style.setProperty('--cover-bg', '#C1E1F6');
+          }
         }
 
       }

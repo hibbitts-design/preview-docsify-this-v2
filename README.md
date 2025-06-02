@@ -341,6 +341,8 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [searchbox](#searchbox)
 - [submaxLevel](#subMaxLevel)
 - [svg-icons](#svg-icons)
+- [theme-color](#theme-color)
+- [theme-color-dark-mode](#theme-color-dark-mode)
 
 ##### coverpage
 
@@ -394,7 +396,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 ##### link-color-dark-mode
 
-Set a custom color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
+Set a custom color for all links c, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
 https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000&dark-mode=auto&link-color-dark-mode=FF9E9E.
 
 ##### link-color-hover
@@ -481,6 +483,16 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 Use the SVG version of Font Awesome icons instead of Web Fonts with the optional **svg-icons** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-lms-content-pages/main&homepage=schedule.md&svg-icons=true
+
+##### theme-color
+
+Set a custom theme color, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color** parameter (not included in the Advanced Web Page Builder), for example:  
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-theme=true&theme-color=CC0000. This parameter can be particularly valuable when using the default `docsify-theme` and wanting to retain the default link color.  
+
+##### theme-color-dark-mode
+
+Set a custom theme color in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color-dark-mode** parameter (not included in the Advanced Web Page Builder), for example:  
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-theme=true&theme-color=CC0000. This parameter can be particularly valuable when using the default `docsify-theme` and wanting to retain the default link color.  
 
 ---
 
