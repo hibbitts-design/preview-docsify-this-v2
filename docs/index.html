@@ -92,7 +92,7 @@
 <body class="sidebar-chevron-right sidebar-toggle-kebab">
   <div id="app"></div>
   <script>
-    if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+    if ((getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') && (getURLParameterByName('basePath'))) {
       document.querySelectorAll('style').forEach(style => style.remove());
       const bodyElement = document.body;
       if (bodyElement) {
