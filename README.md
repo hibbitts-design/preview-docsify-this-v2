@@ -447,7 +447,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 ##### max-width
 
 Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-theme=true&max-width=910px. This parameter can be particularly valuable when using the default `docsify-theme` and embedding the resulting page.
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&docsify-theme=true&max-width=910px. This parameter can be particularly valuable when using the default `docsify-theme` and embedding the resulting page.
 
 ##### mergeNavbar
 
