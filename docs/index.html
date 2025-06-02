@@ -715,10 +715,8 @@
     }
 
     function setColorProperties(color) {
-      if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
         document.documentElement.style.setProperty('--theme-color', color);
         document.documentElement.style.setProperty('--link-color', color);
-      }
     }
 
     function updateThemeModeLinkColors() {
@@ -738,8 +736,10 @@
           if (linkColor !== false) {
             setColorProperties('#' + linkColor);
           } else {
+            if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
             setColorProperties('#1BA1EE');
             document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
+            }
           }
         }
 
@@ -765,8 +765,10 @@
           setColorProperties('#' + linkColor);
 
         } else {
-          setColorProperties('#0374B5');
-          document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
+          if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
+            setColorProperties('#0374B5');
+            document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
+          }
         }
 
         const linkHoverColor = getURLParameterByName(['link-color-hover', 'linkColorHover'], null, null, window.location.href, true);
@@ -1870,72 +1872,77 @@
   <script>
     if (!(window.$docsify['basePath'] === undefined)) {
 
-      if (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true')) {
-
-        // Change header weight if headerweight parameter present
-        headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
-        if (!(headerweight === false)) {
-          // console.log(headerweight);
-          document.documentElement.style.setProperty('--heading-font-weight', headerweight);
+      // Change content max width if maxwidth parameter present
+      maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
+      if (!(maxwidth === false)) {
+        if (!(isNaN(maxwidth))) {
+          maxwidth += 'px'; // Append 'px' if no unit is provided
         }
-
-        // Change body font if fontFamily parameter present
-        fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
-        if (!(fontfamily === false)) {
-          // console.log(fontfamily);
-          document.documentElement.style.setProperty('--font-family', fontfamily);
-        } else {
-          document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
-        }
-
-        // Change body font size if fontSize parameter present
-        fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
-        if (!(fontsize === false)) {
-          if (!(fontsize.includes("px"))) {
-            // Convert rem values to pixel values
-            fontsize = (fontsize * 16) + "px";
-          }
-          // console.log(fontsize);
-          document.documentElement.style.setProperty('--font-size', fontsize);
-        }
-
-        // Change line height if lineheight parameter present
-        lineheight = getURLParameterByName(['line-height', 'lineHeight'], null, null, window.location.href, true);
-        if (!(lineheight === false)) {
-          document.documentElement.style.setProperty('--line-height', lineheight);
-        }
-
-        // Change link text decoration if link-text-decoration parameter present
-        linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
-        if (!(linktextdecoration === false)) {
-          if (linktextdecoration === 'none') {
-            document.documentElement.style.setProperty('--link-underline-thickness', '0px');
-            document.documentElement.style.setProperty('--link-underline-color', 'transparent');
-          } else if (linktextdecoration === 'underline') {
-            document.documentElement.style.setProperty('--link-underline-thickness', '1px');
-            document.documentElement.style.setProperty('--link-underline-color', '--link-color');
-          }
-        }
-
-        // Change link hover text decoration if link-text-decoration-hover parameter present
-        linkhovertextdecoration = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
-        if (!(linkhovertextdecoration === false)) {
-          if (linkhovertextdecoration === 'none') {
-            document.documentElement.style.setProperty('--link-underline-thickness', '0px');
-            document.documentElement.style.setProperty('--link-underline-color', 'transparent');
-          } else if (linkhovertextdecoration === 'underline') {
-            document.documentElement.style.setProperty('--link-underline-thickness-hover', '1px');
-            document.documentElement.style.setProperty('--link-underline-color-hover', '--link-color-hover');
-          }
-        }
-
-        updateThemeModeLinkColors();
-
+        document.documentElement.style.setProperty('--content-max-width', maxwidth);
       }
+
+      // Change header weight if headerweight parameter present
+      headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
+      if (!(headerweight === false)) {
+        // console.log(headerweight);
+        document.documentElement.style.setProperty('--heading-font-weight', headerweight);
+      }
+
+      // Change body font if fontFamily parameter present
+      fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
+      if (!(fontfamily === false)) {
+        // console.log(fontfamily);
+        document.documentElement.style.setProperty('--font-family', fontfamily);
+      } else {
+        document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
+      }
+
+      // Change body font size if fontSize parameter present
+      fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
+      if (!(fontsize === false)) {
+        if (!(fontsize.includes("px"))) {
+          // Convert rem values to pixel values
+          fontsize = (fontsize * 16) + "px";
+        }
+        // console.log(fontsize);
+        document.documentElement.style.setProperty('--font-size', fontsize);
+      }
+
+      // Change line height if lineheight parameter present
+      lineheight = getURLParameterByName(['line-height', 'lineHeight'], null, null, window.location.href, true);
+      if (!(lineheight === false)) {
+        document.documentElement.style.setProperty('--line-height', lineheight);
+      }
+
+      // Change link text decoration if link-text-decoration parameter present
+      linktextdecoration = getURLParameterByName(['link-text-decoration', 'linkTextDecoration'], null, null, window.location.href, true);
+      if (!(linktextdecoration === false)) {
+        if (linktextdecoration === 'none') {
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
+          document.documentElement.style.setProperty('--link-underline-color', 'transparent');
+        } else if (linktextdecoration === 'underline') {
+          document.documentElement.style.setProperty('--link-underline-thickness', '1px');
+          document.documentElement.style.setProperty('--link-underline-color', '--link-color');
+        }
+      }
+
+      // Change link hover text decoration if link-text-decoration-hover parameter present
+      linkhovertextdecoration = getURLParameterByName(['link-text-decoration-hover', 'linkTextDecorationHover'], null, null, window.location.href, true);
+      if (!(linkhovertextdecoration === false)) {
+        if (linkhovertextdecoration === 'none') {
+          document.documentElement.style.setProperty('--link-underline-thickness', '0px');
+          document.documentElement.style.setProperty('--link-underline-color', 'transparent');
+        } else if (linkhovertextdecoration === 'underline') {
+          document.documentElement.style.setProperty('--link-underline-thickness-hover', '1px');
+          document.documentElement.style.setProperty('--link-underline-color-hover', '--link-color-hover');
+        }
+      }
+
+      updateThemeModeLinkColors();
     
       // Enable dark theme CSS files loaded if dark-mode parameter is true
       var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
-      console.log(enabledarkmode);
+      // console.log(enabledarkmode);
       if (enabledarkmode === 'auto' || enabledarkmode === 'true' || darkmode === 'auto') {
         document.querySelector('link[data-sheet="dark-mode-auto"]').disabled = false;
       } else if (enabledarkmode === 'on' || darkmode === 'on') {

@@ -577,6 +577,7 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [loadNavbar](/?id=loadNavbar)
 - [loadSidebar](/?id=loadSidebar)
 - [logo](/?id=logo)
+- [max-width](/?id=max-width)
 - [mergeNavbar](/?id=mergeNavbar)
 - [name](/?id=name)
 - [page-title](/?id=page-title)
@@ -684,6 +685,11 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 Display a logo image for the website name in a Docsify custom Sidebar (i.e. file 'logo.png) with the optional **logo** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=CPT-363&logo=/images/logo.png The full folder path and filename must be provided. A website name must also be provided, and will be used as the alt text for the logo.
+
+##### max-width
+
+Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-theme=true&max-width=910px. This parameter can be particularly valuable when using the default `docsify-theme` and embedding the resulting page.
 
 ##### mergeNavbar
 
