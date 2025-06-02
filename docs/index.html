@@ -774,11 +774,13 @@
 
         document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
 
-        if (themeColor !== false) {
-          setColorProperties('#' + themeColor);
-        }
-        if (linkColor !== false) {
-          setColorProperties('#' + linkColor);
+        if ((themeColor !== false) || (linkColor !== false)) {
+          if (themeColor !== false) {
+            setColorProperties('#' + themeColor);
+          }
+          if (linkColor !== false) {
+            setColorProperties('#' + linkColor);
+          }
         } else {
           if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
             setColorProperties('#0374B5');
