@@ -1,3 +1,8 @@
+/* Fix to handle a variety of fonts with core Docsify v5 theme */
+:root {
+  --heading-line-height: calc(2ex + 9px); /* Unit required */
+}
+
 /* DOCSIFY THIS */
 
 #docsifythis .docsifythisheader .logoandtext img {
