@@ -1,691 +1,223 @@
-body {
-  display: flex;
-  flex-wrap: wrap; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+/* https://gwfh.mranftl.com/fonts/source-sans-3?subsets=latin */
+/* source-sans-3-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-sans-3-v15-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.app-nav:not(:empty) ~ main .markdown-section {
-  padding-top: .25rem;
+/* source-sans-3-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/source-sans-3-v15-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.active:is(:is(.app-nav-merged,.sidebar-nav) li)>a {
-  font-weight: bold;
+/* source-sans-3-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/source-sans-3-v15-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.pagination-item:not(:last-child) a .pagination-item-label,
-.pagination-item:not(:last-child) a .pagination-item-subtitle,
-.pagination-item:not(:last-child) a .pagination-item-title {
-  opacity: 1 !important;
-  transition: all 0.2s;
+/* source-sans-3-600italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/source-sans-3-v15-latin-600italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.pagination-item {
-  color: var(--link-color);
-}
-
-.pagination-item-title {
-  font-size: 1.4em!important;
-}
-
-.markdown-section {
-  margin-top: 1.4rem;
-}
-
-.markdown-section .alert,
-.markdown-section blockquote {
-  overflow: visible;
-  margin: 1em 0;
-  padding: 1em;
-}
-
-.markdown-section ul {
-  list-style: square outside none;
-}
-
-.markdown-section .alert ul,
-.markdown-section blockquote ul {
-  list-style: none;
-  margin-top: 0.8em;
-}
-
-.markdown-section .alert ul li,
-.markdown-section blockquote ul li {
-  margin: 2px 0;
-}
-
-.markdown-section .alert ul li:before,
-.markdown-section blockquote ul li:before {
-  position: absolute;
-  content: "\2B29";
-  margin-left: -18px;
-}
-
-.markdown-section .button[class="button"] {
-  cursor: pointer !important;
-  color: var(--color-mono-min);
-  height: auto !important;
-  display: inline-block !important;
-  padding: 10px !important;
-  font-family: system-ui, sans-serif !important;
-  line-height: 1.2rem !important;
-  background-color: var(--link-color);
-  text-decoration: none !important;
-  border: 1px solid var(--link-color);
-  border-radius: 0.25rem !important;
-}
-
-.markdown-section .button[class="button"]:focus {
-  outline: 2px solid var(--link-color);
-}
-
-.markdown-section a.button[class="button"] {
-  cursor: pointer;
-  color: var(--color-mono-min);
-  text-decoration: none !important;
-  outline: transparent !important;
-}
-
-.markdown-section .button-secondary {
-  cursor: pointer;
-  color: var(--link-color);
-  height: auto;
-  display: inline-block;
-  padding: 10px;
-  font-family: system-ui, sans-serif;
-  line-height: 1.2rem;
-  background-color: transparent;
-  text-decoration: none;
-  border: 1px solid var(--link-color) !important;
-  border-radius: 0.25rem;
-}
-
-.markdown-section a.button-secondary {
-  cursor: pointer;
-  color: var(--link-color);
-  text-decoration: none !important;
-}
-
-.markdown-section .button-rounded {
-  cursor: pointer;
-  color: var(--color-mono-min);
-  height: auto;
-  display: inline-block;
-  padding: 10px min(20px, 5%) 10px min(20px, 5%);
-  font-family: system-ui, sans-serif;
-  line-height: 1.2rem;
-  background-color: var(--link-color);
-  text-decoration: none;
-  border-radius: 1.2rem;
-}
-
-.markdown-section a.button-rounded {
-  cursor: pointer;
-  color: var(--color-mono-min);
-  text-decoration: none !important;
-}
-
-.markdown-section .button-secondary-rounded {
-  cursor: pointer;
-  color: var(--link-color);
-  height: auto;
-  display: inline-block;
-  padding: 10px min(20px, 5%) 10px min(20px, 5%);
-  font-family: system-ui, sans-serif;
-  line-height: 1.2rem;
-  background-color: transparent;
-  text-decoration: none;
-  border: 1px solid var(--link-color) !important;
-  border-radius: 1.4rem;
-}
-
-.markdown-section a.button-secondary-rounded {
-  cursor: pointer;
-  color: var(--link-color);
-  text-decoration: none !important;
-}
-
-.markdown-section .navpill {
-  cursor: pointer;
-  color: var(--color-mono-max) !important;
-  height: auto;
-  display: inline-block;
-  border: 1px solid var(--color-mono-max);
-  border-radius: 4rem;
-  padding: 4px 14px 4px 14px;
-  margin-bottom: 4px;
-  margin-right: 6px;
-  font-size: 0.8rem;
-  line-height: 0.9rem;
-  background-color: var(--color-mono-min);
-  font-family: system-ui, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.markdown-section a.navpill {
-  cursor: pointer;
-  color: var(--color-mono-max);
-  border: 1px solid var(--color-mono-max);
-  text-decoration: none !important;
-}
-
-.markdown-section .badge {
-  color: var(--badge-text-color, var(--color-mono-min));
-  background-color: var(
-    --badge-bg-color,
-    color-mix(in srgb, var(--color-mono-max) 60%, transparent)
-  );
-
-  display: inline-block;
-  padding: 0.25em 0.4em 0.25em 0.4em;
-  font-family: system-ui, sans-serif;
-  font-size: 75%;
+/* source-sans-3-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
   font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  margin-top: -0.4em;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  text-decoration: none;
+  src: url("../fonts/source-sans-3-v15-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .badge a {
-  color: var(--badge-text-color, var(--color-mono-min)) !important;
-  text-decoration: none !important;
+/* source-sans-3-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/source-sans-3-v15-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .accordion {
-  margin-top: 1.05rem;
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-clip: border-box;
-  border-top: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  border-radius: 0.15rem;
+/* https://gwfh.mranftl.com/fonts/lato?subsets=latin */
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .accordion details {
-  padding: 0 1.25rem 1rem 1.25rem;
-  margin-bottom: 0;
-  border-bottom: 1px solid #cccccc;
+/* lato-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/lato-v24-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section summary {
-  cursor: pointer;
-  color: var(--link-color);
-  padding: 0;
+/* lato-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v24-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section summary h1,
-.markdown-section summary h2,
-.markdown-section summary h3 {
-  margin: 0;
-  display: inline-block;
+/* lato-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/lato-v24-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section pre {
-  margin-top: 1rem;
-  overflow: auto;
+/* https://gwfh.mranftl.com/fonts/open-sans?subsets=latin */
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v40-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section pre {
-  white-space: pre-wrap !important;
-  overflow-wrap: break-word;
+/* open-sans-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v40-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section a {
-  overflow-wrap: anywhere;
+/* open-sans-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v40-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* Included to support earlier Markdown Schedule templates */
-.markdown-section h2 .fa-fw {
-  text-align: left;
+/* open-sans-600italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v40-latin-600italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .video-container-4by3 {
-  position: relative;
-  padding-bottom: 75%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v40-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .video-container-16by9 {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
+/* open-sans-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v40-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.video-container-16by9 iframe,
-.video-container-4by3 iframe,
-.embed-container object,
-.embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 93%;
+/* https://gwfh.mranftl.com/fonts/merriweather?subsets=latin */
+/* merriweather-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/merriweather-v30-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .responsive-container iframe {
-  max-width: 100%;
+/* merriweather-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/merriweather-v30-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .responsive {
-  max-width: 100%;
-  height: auto;
+/* merriweather-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/merriweather-v30-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.markdown-section .banner-image {
-  width: 100%;
-  height: 125px;
-  object-fit: cover;
-  object-position: 50% 50%;
+/* merriweather-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/merriweather-v30-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-@media (min-width: 576px) {
-  .markdown-section .banner-image {
-    height: 250px;
-  }
-}
-
-.markdown-section .banner-tall-image {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-@media (min-width: 576px) {
-  .markdown-section .banner-tall-image {
-    height: 350px;
-  }
-}
-
-.markdown-section .header-image-fade {
-  width: 100%;
-  margin: 0px auto;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)),
-    to(rgba(0, 0, 0, 0))
-  );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  opacity: 0.4;
-  z-index: -1;
-}
-
-/* CSS currently only works with sidebar and standalone pages */
-.markdown-section .header-image-fade-full-width {
-  margin-top: -2rem;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  position: absolute;
-  width: 100vw;
-  max-width: 100vw;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)),
-    to(rgba(0, 0, 0, 0))
-  );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  opacity: 0.4;
-  z-index: -1;
-}
-
-/* CSS currently only works with sidebar and standalone pages */
-.markdown-section .header-image-full-width {
-  margin-top: -2rem;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
-  height: 30dvh;
-  object-fit: cover;
-  object-position: center 50%;
-}
-
-.markdown-section .header-tall-image-full-width {
-  margin-top: -2rem;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
-  height: 40dvh;
-  object-fit: cover;
-  object-position: center 50%;
-}
-
-.markdown-section .image-75 {
-  width: 75%;
-  height: auto;
-}
-
-.markdown-section .image-50 {
-  width: 50%;
-  height: auto;
-}
-
-.markdown-section .image-25 {
-  width: 25%;
-  height: auto;
-}
-
-.markdown-section .image-75-border {
-  width: 75%;
-  height: auto;
-  border: 1px solid #dfdfdf;
-}
-
-.markdown-section .image-50-border {
-  width: 50%;
-  height: auto;
-  border: 1px solid #dfdfdf;
-}
-
-.markdown-section .image-25-border {
-  width: 25%;
-  height: auto;
-  border: 1px solid #dfdfdf;
-}
-
-.markdown-section .image-border {
-  border: 1px solid #dfdfdf;
-}
-
-.markdown-section .image-border-rounded {
-  border-radius: 0.35em;
-  border: 1px solid #dfdfdf;
-}
-
-.markdown-section .column {
-  float: left;
-  padding-right: 1rem;
-  width: 50%;
-}
-
-.markdown-section .column-right {
-  float: right;
-  padding-left: 1rem;
-  width: 50%;
-}
-
-.markdown-section .column img {
-  margin-top: 0.35rem;
-}
-
-.markdown-section .column-right img {
-  margin-top: 0.35rem;
-}
-
-.markdown-section .reverse-columns .column {
-  float: right;
-}
-
-.markdown-section .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 768px) {
-  .markdown-section .column,
-  .markdown-section .column-right {
-    width: 100%;
-    padding-right: 0rem;
-    padding-left: 0rem;
-  }
-
-  .markdown-section .image-75,
-  .markdown-section .image-50,
-  .markdown-section .image-25,
-  .markdown-section .image-75-border,
-  .markdown-section .image-50-border,
-  .markdown-section .image-25-border {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.markdown-section figure,
-.markdown-section p,
-.markdown-section ol,
-.markdown-section ul {
-  margin: 0.75em 0em 0.5em 0em;
-}
-
-.markdown-section li:not(:last-child) {
-  margin-bottom: .08em;
-}
-
-:is(.markdown-section ol,.markdown-section ul) :is(.markdown-section ol,.markdown-section ul) {
-  margin-top: .08em!important;
-}
-
-.markdown-section hr {
-  margin-top: 1.2rem;
-}
-
-:is(.markdown-section h6), :is(.markdown-section h6)+:not(h1,h2,h3,h4,h5) {
-  font-size: 1em;
-}
-
-.markdown-section h1 {
-  font-size: 1.65rem;
-  line-height: 2.1rem;
-  margin-top: 1.1rem;
-  margin-bottom: -0.35rem;
-  padding-bottom: 0;
-}
-
-.markdown-section h2 {
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  margin-top: 0.9rem;
-  margin-bottom: -0.15rem;
-  padding-bottom: 0;
-  border-style: none;
-}
-
-.markdown-section h3 {
-  font-size: 1.35rem;
-  line-height: 1.65rem;
-  margin-top: 0.7rem;
-  margin-bottom: -0.1rem;
-  padding-bottom: 0;
-}
-
-.markdown-section h4 {
-  font-size: 1.25rem;
-  line-height: 1.4rem;
-  margin-top: 0.6rem;
-  margin-bottom: -0.1rem;
-  padding-bottom: 0;
-}
-
-.markdown-section h5 {
-  font-size: 1.15rem;
-  line-height: 1.3rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0rem;
-  padding-bottom: 0;
-}
-
-.markdown-section h6 {
-  font-size: 1.1rem;
-  line-height: 1.3rem;
-  margin-top: 0.4rem;
-  margin-bottom: -0.1rem;
-  padding-bottom: 0;
-}
-
-.markdown-section .alert hr,
-.markdown-section blockquote hr {
-  margin: 1em 0;
-}
-
-.markdown-section .alert h1,
-.markdown-section blockquote h1 {
-  font-size: 1.45rem;
-  line-height: 1.8rem;
-}
-
-.markdown-section .alert h2,
-.markdown-section blockquote h2 {
-  font-size: 1.35rem;
-  line-height: 1.7rem;
-}
-
-.markdown-section .alert h3,
-.markdown-section blockquote h3 {
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-}
-
-.markdown-section .alert h4,
-.markdown-section blockquote h4 {
-  font-size: 1.15rem;
-  line-height: 1.3rem;
-}
-
-.markdown-section .alert h5,
-.markdown-section blockquote h5 {
-  font-size: 1.1rem;
-  line-height: 1.25rem;
-}
-
-.markdown-section .alert h6,
-.markdown-section blockquote h6 {
-  font-size: 1rem;
-  line-height: 1.1rem;
-}
-
-.markdown-section .align-items-vertically {
-  display: inline-flex;
-  align-items: center;
-}
-
-.markdown-section .align-items-vertically .emoji {
-  margin-right: 2px;
-}
-
-body .app-nav a {
-  text-decoration: none;
-}
-
-body .docsify-pagination-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden;
-  margin: 3em 0 1em;
-  border-top: 0px solid rgba(0, 0, 0, 0.07);
-}
-
-@media only screen and (max-width: 480px) {
-  .markdown-section h1 {
-    font-size: 1.45rem;
-    line-height: 1.8rem;
-  }
-
-  .markdown-section h2 {
-    font-size: 1.35rem;
-    line-height: 1.5rem;
-  }
-
-  .markdown-section h3 {
-    font-size: 1.25rem;
-    line-height: 1.45rem;
-  }
-
-  .markdown-section h4 {
-    font-size: 1.17rem;
-    line-height: 1.37rem;
-  }
-
-  .markdown-section h5 {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
-  }
-
-  .markdown-section h6 {
-    font-size: 1rem;
-    line-height: 1.2rem;
-  }
-
-  .markdown-section .alert h1,
-  .markdown-section blockquote h1 {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-  }
-
-  .markdown-section .alert h2,
-  .markdown-section blockquote h2 {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-  }
-
-  .markdown-section .alert h3,
-  .markdown-section blockquote h3 {
-    font-size: 1.15rem;
-    line-height: 1.4rem;
-  }
-
-  .markdown-section .alert h4,
-  .markdown-section blockquote h4 {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
-  }
-
-  .markdown-section .alert h5,
-  .markdown-section blockquote h5 {
-    font-size: 1.05rem;
-    line-height: 1.3rem;
-  }
-
-  .markdown-section .alert h6,
-  .markdown-section blockquote h6 {
-    font-size: 1rem;
-    line-height: 1.15rem;
-  }
-}
-
-/* Dark mode custom colours for use with Core Dark Theme (uncomment to use, and remove @media statement and matching closing bracket for dark mode only) */
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-
-    --theme-color: #1BA1EE!important;
-    --link-color: #1BA1EE!important;
-
-  }
-}
-*/
