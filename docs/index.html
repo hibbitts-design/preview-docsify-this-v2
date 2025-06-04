@@ -941,7 +941,8 @@
         depth: 6,
         namespace: "docsify-this-" + Date.now(),
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-        insertAfter: '.app-name',
+        insertBefore: '.app-name',
+        insertBefore: getURLParameterByName(['docsify-theme','docsifyTheme'], '.sidebar-nav', null, window.location.href)
       },
 
       imgGrid: {
