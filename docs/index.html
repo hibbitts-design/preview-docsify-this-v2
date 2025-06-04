@@ -1756,7 +1756,7 @@
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
-    if ((getURLParameterByName(['standalone', 'embedded']) || standalone)) {
+    if (((getURLParameterByName(['standalone', 'embedded']) || standalone)) && (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true'))) {
       const root_theme = document.querySelector(':root');
       root_theme.style.setProperty('--content-margin-inline', '14px');
     }
