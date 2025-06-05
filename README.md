@@ -201,6 +201,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 **Basic URL Parameters (included in the standard Web Page Builder)**
 
 - [browser-tab-title](#browser-tab-title)
+- [docsify-theme](#docsify-theme)
 - [edit-link](#edit-link)
 - [edit-link-text](#edit-link-text)
 - [edit-link-top](#edit-link-top)
@@ -223,6 +224,11 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 
 Set a custom title on Browser tab for your web pages with the optional **browser-tab-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&browser-tab-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
+
+##### docsify-theme
+
+Use the core Docsify v5 theme instead of the Docsify-This theme with the optional **docsify-theme** parameter, for example:  
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-theme=true
 
 ##### edit-link
 
@@ -363,11 +369,6 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 Enable dark theme or automatically switch light/dark theme based on system OS-level preference with the optional **dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=on
-
-##### docsify-theme
-
-Use the core Docsify v5 theme instead of the Docsify-This theme with the optional **docsify-theme** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-theme=true
 
 ##### edit-link-emoji
 

@@ -95,16 +95,6 @@
   <script>
     if ((getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') && (getURLParameterByName('basePath'))) {
       document.querySelectorAll('style').forEach(style => style.remove());
-      const bodyElement = document.body;
-      if (bodyElement) {
-        fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
-        if (!(fontfamily === false)) {
-          bodyElement.style.fontFamily = fontfamily;
-        } else {
-          bodyElement.style.fontFamily = 'system-ui, sans-serif';
-        }
-      }
-
     } else {
       document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="assets/css/theme.css" />');
     }
@@ -363,6 +353,11 @@
           const cb8 = document.querySelector('#hypothesisenable');
           if (cb8.checked) {
             var URLparms = URLparms + `&hypothesis=true`;
+          }
+
+          const cb19 = document.querySelector('#docsifyV5coretheme');
+          if (cb19.checked) {
+            var URLparms = URLparms + `&docsify-theme=true`;
           }
 
           var getFontFamily = document.getElementById('fontfamily').selectedOptions[0].value;
@@ -691,6 +686,7 @@
       document.getElementById("maxLevel").value = 2;
       document.getElementById("hideCredits").checked = false;
       document.getElementById("hypothesisenable").checked = false;
+      document.getElementById("docsifyV5coretheme").checked = false;
       document.getElementById("loadfavicon").checked = false;
       document.getElementById("loadcoverpage").checked = false;
       document.getElementById("loadcustomsidebar").checked = false;
@@ -1540,6 +1536,10 @@
               document.getElementById("hypothesisenable").checked = true;
             }
 
+            if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+              document.getElementById("docsifyV5coretheme").checked = true;
+            }
+
             pageTitle = getURLParameterByName(['page-title', 'pageTitle'], null, null, window.location.href, true);
             if (pageTitle) {
               document.getElementById('pageTitle').value = decodeURI(pageTitle);
@@ -1914,13 +1914,17 @@
         document.documentElement.style.setProperty('--heading-font-weight', headerweight);
       }
 
-      // Change body font if fontFamily parameter present
+      // Change body font if fontFamily or docsify-theme parameters present
       fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
       if (!(fontfamily === false)) {
         // console.log(fontfamily);
         document.documentElement.style.setProperty('--font-family', fontfamily);
       } else {
-        document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
+        if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+          document.documentElement.style.setProperty('--font-family', 'system-ui, sans-serif');
+        } else {
+          document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
+        }
       }
 
       // Change body font size if fontSize parameter present
