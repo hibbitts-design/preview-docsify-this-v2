@@ -1921,6 +1921,11 @@
       if (!(fontfamily === false)) {
         // console.log(fontfamily);
         document.documentElement.style.setProperty('--font-family', fontfamily);
+          if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+            /* Fix to handle a variety of fonts with core Docsify v5 theme */
+            const root_theme = document.querySelector(':root');
+            root_theme.style.setProperty('--heading-line-height', 'calc(2ex + 9px)');
+          }
       } else {
         if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
           document.documentElement.style.setProperty('--font-family', 'system-ui, sans-serif');
