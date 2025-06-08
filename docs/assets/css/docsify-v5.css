@@ -34,6 +34,14 @@ iframe[src] * {
 }
 
 /* Topics index style with Docsify v5 theme */
+.markdown-section h1#abcdefghijklmnopqrstuvwxyz,
+.markdown-section h2#abcdefghijklmnopqrstuvwxyz,
+.markdown-section h3#abcdefghijklmnopqrstuvwxyz,
+.markdown-section h4#abcdefghijklmnopqrstuvwxyz,
+.markdown-section h5#abcdefghijklmnopqrstuvwxyz,
+.markdown-section h6#abcdefghijklmnopqrstuvwxyz {
+  font-weight: 400;
+}
 .markdown-section #a,
 .markdown-section #b,
 .markdown-section #c,
