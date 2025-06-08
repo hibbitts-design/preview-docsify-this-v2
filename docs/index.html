@@ -93,7 +93,7 @@
 <body class="sidebar-chevron-right sidebar-toggle-kebab">
   <div id="app"></div>
   <script>
-    if ((getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') && (getURLParameterByName('basePath'))) {
+    if ((getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true') && (getURLParameterByName('basePath'))) {
       document.querySelectorAll('style').forEach(style => style.remove());
       const body = document.body;
       body.classList.add('sidebar-group-box');
@@ -359,7 +359,7 @@
 
           const cb19 = document.querySelector('#docsifyV5coretheme');
           if (cb19.checked) {
-            var URLparms = URLparms + `&docsify-theme=true`;
+            var URLparms = URLparms + `&docsify-core-theme=true`;
           }
 
           var getFontFamily = document.getElementById('fontfamily').selectedOptions[0].value;
@@ -721,7 +721,7 @@
 
     function setColorProperties(color) {
         document.documentElement.style.setProperty('--theme-color', color);
-        if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['docsify-theme', 'docsifytheme'], null, null, window.location.href, true) === 'true'))) {
+        if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true'))) {
           document.documentElement.style.setProperty('--link-color', color);
         }
     }
@@ -739,7 +739,7 @@
           if (themeColorDarkMode !== false) {
             setColorProperties('#' + themeColorDarkMode);
           }
-          if ((linkColorDarkMode !== false) && (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true'))) {
+          if ((linkColorDarkMode !== false) && (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true'))) {
             setColorProperties('#' + linkColorDarkMode);
             document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
           }
@@ -753,7 +753,7 @@
           if (linkColor !== false) {
             setColorProperties('#' + linkColor);
           } else {
-            if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
+            if (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true')) {
               setColorProperties('#1BA1EE');
               document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
             }
@@ -787,7 +787,7 @@
             setColorProperties('#' + linkColor);
           }
         } else {
-          if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
+          if (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true')) {
             setColorProperties('#0374B5');
             document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
           }
@@ -803,7 +803,7 @@
         if (coverPageColor !== false) {
           document.documentElement.style.setProperty('--cover-bg', '#' + coverPageColor);
         } else {
-          if (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true')) {
+          if (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true')) {
             document.documentElement.style.setProperty('--cover-bg', '#C1E1F6');
           }
         }
@@ -939,7 +939,7 @@
         depth: 6,
         namespace: "docsify-this-" + Date.now(),
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-        insertBefore: getURLParameterByName(['docsify-theme','docsifyTheme'], '.app-name' , '.sidebar-nav', window.location.href)
+        insertBefore: getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], '.app-name' , '.sidebar-nav', window.location.href)
       },
 
       imgGrid: {
@@ -1538,7 +1538,7 @@
               document.getElementById("hypothesisenable").checked = true;
             }
 
-            if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+            if (getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true') {
               document.getElementById("docsifyV5coretheme").checked = true;
             }
 
@@ -1758,7 +1758,7 @@
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
-    if (((getURLParameterByName(['standalone', 'embedded']) || standalone)) && (!(getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true'))) {
+    if (((getURLParameterByName(['standalone', 'embedded']) || standalone)) && (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true'))) {
       const root_theme = document.querySelector(':root');
       root_theme.style.setProperty('--content-margin-inline', '14px');
     }
@@ -1916,18 +1916,18 @@
         document.documentElement.style.setProperty('--heading-font-weight', headerweight);
       }
 
-      // Change body font if fontFamily or docsify-theme parameters present
+      // Change body font if fontFamily or docsify-core-theme parameters present
       fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
       if (!(fontfamily === false)) {
         // console.log(fontfamily);
         document.documentElement.style.setProperty('--font-family', fontfamily);
-          if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+          if (getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true') {
             /* Fix to handle a variety of fonts with core Docsify v5 theme */
             const root_theme = document.querySelector(':root');
             root_theme.style.setProperty('--heading-line-height', 'calc(2ex + 9px)');
           }
       } else {
-        if (getURLParameterByName(['docsify-theme', 'docsifyTheme'], null, null, window.location.href, true) === 'true') {
+        if (getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true') {
           document.documentElement.style.setProperty('--font-family', 'system-ui, sans-serif');
         } else {
           document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
