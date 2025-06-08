@@ -227,7 +227,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 
 ##### docsify-core-theme
 
-Use the core Docsify v5 theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
+Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true
 
 ##### edit-link
