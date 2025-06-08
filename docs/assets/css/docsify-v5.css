@@ -27,13 +27,13 @@ iframe[src] * {
   background: var(--color-mono-2);
 }
 
-/* Patch for Docsify v4 Header content compatibility with Docsify v5 (i.e. Font Awesome plugin) */
+/* Fix for Docsify v4 Header content compatibility with preview build of Docsify v5 theme (i.e. Font Awesome plugin) */
 .markdown-section :is(h1, h2, h3, h4, h5, h6) {
   display: flex;
   gap: 0.15em;
 }
 
-/* Patch for Topics index style with Docsify v5 */
+/* Topics index style with Docsify v5 theme */
 .markdown-section #a,
 .markdown-section #b,
 .markdown-section #c,
