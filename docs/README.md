@@ -4,7 +4,7 @@
 <div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2&sidebar=true&searchbox=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&header-weight=600&zoom-images=true&dark-mode=auto" target="_blank"><i class="fas fa-book-open fa-fw" style="margin-right:2px;"></i>Docsify-This ReadMe Docs</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw" style="margin-right:2px;"></i>Docsify Discord Chat</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw" style="margin-right:2px;"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
-    <h1>Docsify&#8288;&#8211;&#8288;This</h1>
+    <div class="title-with-version"><h1>Docsify&#8288;&#8211;&#8288;This</h1><span class="version-badge">v2.0</span></div>
   </div>
 </div>
 
