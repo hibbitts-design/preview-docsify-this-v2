@@ -1,3 +1,20 @@
+:root {
+  --font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --line-height: 1.4;
+  --font-size: 18px;
+  --font-weight: 400;
+  --content-max-width: 910px;
+  --heading-font-weight: 400;
+  --theme-color: #0374B5;
+  --link-color: #0374B5;
+  --link-color-hover: var(--link-color);
+  --link-underline-thickness: auto;
+  --link-underline-thickness-hover: var(--link-underline-thickness);
+  --blockquote-color: var(--color-text);
+  --blockquote-bg: var(--color-mono-1);
+  --docsifytabs-tab-color: var(--color-mono-max);
+}
+
 body {
   display: flex;
   flex-wrap: wrap; 
