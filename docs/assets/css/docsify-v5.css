@@ -27,20 +27,62 @@ iframe[src] * {
   background: var(--color-mono-2);
 }
 
-/* Fix for Docsify v4 Header content compatibility with preview build of Docsify v5 theme (i.e. Font Awesome plugin) */
-.markdown-section :is(h1, h2, h3, h4, h5, h6) {
+/* Patch for Font Awesome plugin Header content compatibility with Docsify v5 */
+.markdown-section:has(.fas) h1,
+.markdown-section:has(.fab) h1,
+.markdown-section:has(.svg-inline--fa) h1,
+.markdown-section:has(.fas) h2,
+.markdown-section:has(.fab) h2,
+.markdown-section:has(.svg-inline--fa) h2,
+.markdown-section:has(.fas) h3,
+.markdown-section:has(.fab) h3,
+.markdown-section:has(.svg-inline--fa) h3,
+.markdown-section:has(.fas) h4,
+.markdown-section:has(.fab) h4,
+.markdown-section:has(.svg-inline--fa) h4,
+.markdown-section:has(.fas) h5,
+.markdown-section:has(.fab) h5,
+.markdown-section:has(.svg-inline--fa) h5,
+.markdown-section:has(.fas) h6,
+.markdown-section:has(.fab) h6,
+.markdown-section:has(.svg-inline--fa) h6 {
   display: flex;
   gap: 0.15em;
 }
 
-/* Topics index style with Docsify v5 theme */
-.markdown-section h1#abcdefghijklmnopqrstuvwxyz,
-.markdown-section h2#abcdefghijklmnopqrstuvwxyz,
-.markdown-section h3#abcdefghijklmnopqrstuvwxyz,
-.markdown-section h4#abcdefghijklmnopqrstuvwxyz,
-.markdown-section h5#abcdefghijklmnopqrstuvwxyz,
-.markdown-section h6#abcdefghijklmnopqrstuvwxyz {
-  font-weight: 400;
+/* Patch for Topics index links with Docsify v5 */
+.markdown-section a[href$="?id=a"],
+.markdown-section a[href$="?id=b"],
+.markdown-section a[href$="?id=c"],
+.markdown-section a[href$="?id=d"],
+.markdown-section a[href$="?id=e"],
+.markdown-section a[href$="?id=f"],
+.markdown-section a[href$="?id=g"],
+.markdown-section a[href$="?id=h"],
+.markdown-section a[href$="?id=i"],
+.markdown-section a[href$="?id=j"],
+.markdown-section a[href$="?id=k"],
+.markdown-section a[href$="?id=l"],
+.markdown-section a[href$="?id=m"],
+.markdown-section a[href$="?id=n"],
+.markdown-section a[href$="?id=o"],
+.markdown-section a[href$="?id=p"],
+.markdown-section a[href$="?id=q"],
+.markdown-section a[href$="?id=r"],
+.markdown-section a[href$="?id=s"],
+.markdown-section a[href$="?id=t"],
+.markdown-section a[href$="?id=u"],
+.markdown-section a[href$="?id=v"],
+.markdown-section a[href$="?id=w"],
+.markdown-section a[href$="?id=x"],
+.markdown-section a[href$="?id=y"],
+.markdown-section a[href$="?id=z"] {
+  display: inline-flex;
+  padding-top: 0px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  line-height: 1.2em;
 }
 .markdown-section #a,
 .markdown-section #b,
