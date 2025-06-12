@@ -228,7 +228,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 ##### docsify-core-theme
 
 Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `alert` CSS class within an HTML Blockquote.
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `announcement` CSS class within an HTML Blockquote.
 
 ##### edit-link
 
@@ -727,13 +727,12 @@ The following CSS classes are available when authoring your own Markdown content
 </div>
 ```
 
-##### alert
+##### announcement
 
 When the Docsify v5 theme is enabled, to style Blockquotes similarly to the default Docsify-This style.  
 
 ```html
-<blockquote>
-<div class="alert">
+<blockquote class="announcement">
   <h2>What’s Happening This Week</h2>
   <h3>How to explore the problem space?</h3>
   <h4>Important Reminders</h4>
@@ -756,7 +755,6 @@ When the Docsify v5 theme is enabled, to style Blockquotes similarly to the defa
       Required Reading Quiz due Jun 4th
     </a>
   </p>
-</div>
 </blockquote>
 ```
 
