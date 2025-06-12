@@ -119,7 +119,7 @@ iframe[src] * {
 }
 
 /* Support for Docsify-This classes with preview build of Docsify v5 theme */
-.markdown-section blockquote:has(.alert) {
+.markdown-section blockquote.alert {
   background-color: var(--color-mono-1);
 }
 
@@ -172,8 +172,7 @@ iframe[src] * {
   font-size: 1.2rem;
 }
 
-.markdown-section .alert h6,
-.markdown-section blockquote h6 {
+.markdown-section .alert h6 {
   font-size: 1.1rem;
 }
 
