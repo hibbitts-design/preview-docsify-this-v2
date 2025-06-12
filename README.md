@@ -687,6 +687,7 @@ For example, to edit GitHub Markdown files on your desktop you would do the foll
 #### Supported Markdown CSS Classes
 
 - [accordion](#accordion)
+- [announcement](#announcement)
 - [badge](#badge)
 - [banner-image](#banner-image)
 - [banner-tall-image](#banner-tall-image)
