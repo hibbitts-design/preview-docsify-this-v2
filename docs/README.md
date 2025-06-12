@@ -60,21 +60,22 @@ Page layout:
 
 <div class='stackedlabeldropdown'>
   <label for="fontfamily">Page font family:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
-    <option value="default">Source Sans 3</option>
+  <select style="border-radius: 7px; border-color: #8e8f9d;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
+    <option value="default">Theme Default</option>
     <option disabled="disabled">----</option>
     <option value="Arial,sans-serif">Arial, sans-serif</option>
     <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
     <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
     <option value="Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif">Lato, sans-serif</option>
     <option value="Open%20Sans,sans-serif">Open Sans, sans-serif</option>
+    <option value="%27Source+Sans+3%27,Helvetica%20Neue,sans-serif">Source Sans 3</option>
     <option value="system-ui,sans-serif">System UI, sans-serif</option>
     <option value="Tahoma,sans-serif">Tahoma, sans-serif</option>
     <option value="Verdana,sans-serif">Verdana, sans-serif</option>
-  <option value="Georgia,serif">Georgia, serif</option>
-  <option value="Merriweather,Georgia,serif">Merriweather, serif</option>
-  <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
-  <option value="Courier,monospace">Courier, monospace</option>
+    <option value="Georgia,serif">Georgia, serif</option>
+    <option value="Merriweather,Georgia,serif">Merriweather, serif</option>
+    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
+    <option value="Courier,monospace">Courier, monospace</option>
   </select>
 </div>
 
@@ -496,7 +497,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 ##### font-family
 
 Set a custom font for your web pages with the optional **font-family** parameter, for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-family=Helvetica,Arial,sans-serif. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. Please note to use fonts with spaces in their names they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "Courier New" would be "Courier%20New". Underscores may also be used to represent spaces.
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-family=Helvetica,Arial,sans-serif. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. The default Docsify-This theme font is _Source Sans 3_, and the default font for the Docsify v5 core theme is _System-UI_. Please note to use fonts with spaces in their names they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "Courier New" would be "Courier%20New". Underscores may also be used to represent spaces.
 
 ##### font-size
 
