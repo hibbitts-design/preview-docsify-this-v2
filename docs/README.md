@@ -128,7 +128,7 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" unchecked><label for="docsifyV5coretheme">Enable Docsify v5 core theme</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" unchecked><label for="docsifyV5coretheme">Enable Docsify v5 core theme (replaces default Docsify-This styles)</label></div>
 
 <h3>Navigation Display Options</h3>
 
