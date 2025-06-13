@@ -61,14 +61,13 @@ Page layout:
 <div class='stackedlabeldropdown'>
   <label for="fontfamily">Page font family:</label>
   <select style="border-radius: 7px; border-color: #8e8f9d;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
-    <option value="default">Theme Default</option>
+    <option value="Source%20Sans%203,Helvetica%20Neue,sans-serif">Source Sans 3, sans-serif</option>
     <option disabled="disabled">----</option>
     <option value="Arial,sans-serif">Arial, sans-serif</option>
     <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
     <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
     <option value="Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif">Lato, sans-serif</option>
     <option value="Open%20Sans,sans-serif">Open Sans, sans-serif</option>
-    <option value="Source%20Sans%203,Helvetica%20Neue,sans-serif">Source Sans 3, sans-serif</option>
     <option value="system-ui,sans-serif">System UI, sans-serif</option>
     <option value="Tahoma,sans-serif">Tahoma, sans-serif</option>
     <option value="Verdana,sans-serif">Verdana, sans-serif</option>
@@ -129,7 +128,7 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" unchecked><label for="docsifyV5coretheme">Use Docsify v5 Core Theme, without Docsify-This default styling</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" unchecked><label for="docsifyV5coretheme">Use Docsify v5 Core Theme, overriding Web Page Builder defaults. Custom options can still be applied.</label></div>
 
 <h3>Navigation Display Options</h3>
 
