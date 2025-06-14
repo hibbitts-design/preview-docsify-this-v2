@@ -1,30 +1,5 @@
 /* DOCSIFY THIS */
 
-#docsifythisurlbuilder .custom-details summary {
-  list-style: none; /* Remove default list-style bullet */
-  display: flex; /* Use flexbox for better alignment */
-  align-items: center; /* Vertically center items */
-  cursor: pointer; /* Indicate that it's clickable */
-  padding: 0;  /*Remove any default padding*/
-  margin: 0;  /*Remove any default margin*/
-  margin-top: -18px;
-  margin-bottom: -14px;
-}
-
-#docsifythisurlbuilder .custom-details summary::-webkit-details-marker {
-  display: none; /* Hide the default arrow in WebKit browsers (Chrome, Safari) */
-}
-#docsifythisurlbuilder .custom-details summary::-moz-list-bullet {
-    list-style: none; /* Hide the default arrow in Firefox */
-}
-#docsifythisurlbuilder .custom-details summary::marker { /* Hide the default arrow in other browsers */
-  display: none;
-}
-
-#docsifythisurlbuilder .custom-details .info-label {
-  margin-left: 5px; /* Add spacing between SVG and text */
-}
-
 #docsifythis .docsifythisheader .logoandtext img {
   float: left;
 }
@@ -122,6 +97,31 @@
 #docsifythisurlbuilder h3 {
   margin-top: 14px;
   color: #242bae; /* Previous colors #2442ae #2462ae */
+}
+
+#docsifythisurlbuilder .docsifythiscustomdetails summary {
+  list-style: none; /* Remove default list-style bullet */
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Vertically center items */
+  cursor: pointer; /* Indicate that it's clickable */
+  padding: 0;  /*Remove any default padding*/
+  margin: 0;  /*Remove any default margin*/
+  margin-top: -18px;
+  margin-bottom: -14px;
+}
+
+#docsifythisurlbuilder .docsifythiscustomdetails summary::-webkit-details-marker {
+  display: none; /* Hide the default arrow in WebKit browsers (Chrome, Safari) */
+}
+#docsifythisurlbuilder .docsifythiscustomdetails summary::-moz-list-bullet {
+    list-style: none; /* Hide the default arrow in Firefox */
+}
+#docsifythisurlbuilder .docsifythiscustomdetails summary::marker { /* Hide the default arrow in other browsers */
+  display: none;
+}
+
+#docsifythisurlbuilder .docsifythiscustomdetails .docsifythisinfolabel {
+  margin-left: 5px; /* Add spacing between SVG and text */
 }
 
 #docsifythisurlbuilder input[type="text"],
@@ -312,7 +312,7 @@ span #docsifythisurlfield {
   text-decoration-color: #3940bf;
 }
 
-#customdetailslink {
+#docsifythisurlbuildercustomdetailslink {
   color: #3940bf;
   text-decoration: underline;
   cursor: pointer;
@@ -556,7 +556,7 @@ span #docsifythisurlfield {
     text-decoration-color: #c6bfed;
   }
 
-  #customdetailslink {
+  #docsifythisurlbuildercustomdetailslink {
     color: #c6bfed; /* Original color #4bc3f4 */
     text-decoration: underline;
     cursor: pointer;
