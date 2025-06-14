@@ -128,7 +128,18 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" unchecked><label for="docsifyV5coretheme">Use Docsify v5 Core Theme, overriding Web Page Builder defaults</label></div>
+<div class="docsifythisurlbuilderoptionsline">
+  <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme">
+  <label for="docsifyV5coretheme">Use Docsify v5 Core Theme, overriding Web Page Builder defaults
+    <details class="custom-details">
+      <summary aria-label="More information about using Docsify v5 Core Theme">
+        <img src="images/info.svg" alt="Info" width="16" height="16">
+        <span class="info-label">More info</span>
+      </summary>
+      <p>While Web Page Builder defaults for the Docsify-This theme are ignored, custom options can still be chosen and be applied. To continue to use a specific Docsify-This theme style (e.g., the Source Sans 3 font), manually add the corresponding URL parameter instead of using the Web Page Builder.</p>
+    </details>
+  </label>
+</div>
 
 <h3>Navigation Display Options</h3>
 
