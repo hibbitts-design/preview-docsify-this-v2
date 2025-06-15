@@ -136,7 +136,7 @@ Page layout:
         <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16">
         <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
       </summary>
-      <p>While Web Page Builder defaults for the Docsify-This theme are ignored, custom options can still be chosen and be applied. To continue to use a specific Docsify-This theme default style (e.g., the Source Sans 3 font), manually add or modify the corresponding URL parameter.</p>
+      <p>While Web Page Builder defaults for the Docsify-This theme are ignored, custom options can still be chosen and be applied. To continue to use a specific Docsify-This theme default style (e.g., the Source Sans 3 font), include the corresponding URL parameter.</p>
     </details>
   </label>
 </div>
