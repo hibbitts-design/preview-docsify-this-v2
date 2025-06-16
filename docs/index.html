@@ -344,33 +344,35 @@
           }
 
           var getFontFamily = document.getElementById('fontfamily').selectedOptions[0].value;
-          if (!(getFontFamily == "Source%20Sans%203,Helvetica%20Neue,sans-serif")) {
+          if ((!(getFontFamily == "Source%20Sans%203,Helvetica%20Neue,sans-serif")) && (!(document.getElementById('fontfamily').disabled)))  {
             var URLparms = URLparms + `&font-family=` + getFontFamily;
           }
 
           var getFontSize = document.getElementById('fontsize').value;
-          if (!(getFontSize == "18px")) {
+          if ((!(getFontSize == "18px")) && (!(document.getElementById('fontsize').disabled)))  {
             var URLparms = URLparms + `&font-size=` + getFontSize;
           }
 
           var getLineHeight = document.getElementById('lineheight').value;
-          if (!(getLineHeight == "1.4")) {
+          if ((!(getLineHeight == "1.4")) && (!(document.getElementById('lineheight').disabled)))  {
             var URLparms = URLparms + `&line-height=` + getLineHeight
           }
 
           var getColor = document.getElementById("linkcolor");
-          var hexCode = getColor.value;
-          if (hexCode === '') {
-            hexCode = '#0374B5';
-            document.getElementById("linkcolor").value = hexCode;
-            document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
-            document.getElementById("linkcolorpreview").style.backgroundColor = '#0374B5';
-          }
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "0374B5")) {
-            URLparms = URLparms + `&link-color=` + hexCode;
+          if (!(document.getElementById('linkcolor').disabled))  {
+            var hexCode = getColor.value;
+            if (hexCode === '') {
+              hexCode = '#0374B5';
+              document.getElementById("linkcolor").value = hexCode;
+              document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
+              document.getElementById("linkcolorpreview").style.backgroundColor = '#0374B5';
+            }
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "0374B5")) {
+              URLparms = URLparms + `&link-color=` + hexCode;
+            }
           }
 
           const cb9 = document.querySelector('#loadfavicon');
@@ -440,21 +442,23 @@
 
           var getlinktextdecoration = document.getElementById("linktextdecoration");
           var linktextdecoration = getlinktextdecoration.value;
-          if (!(linktextdecoration === 'underline')) {
+          if ((!(linktextdecoration === 'underline')) && (!(document.getElementById('linktextdecoration').disabled)))  {
             URLparms = URLparms + `&link-text-decoration=` + linktextdecoration;
           }
 
           var getColor = document.getElementById("linkhovercolor");
-          var hexCode = getColor.value;
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "")) {
-            URLparms = URLparms + `&link-color-hover=` + hexCode;
+          if (!(document.getElementById('linkhovercolor').disabled)) {
+            var hexCode = getColor.value;
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "")) {
+              URLparms = URLparms + `&link-color-hover=` + hexCode;
+            }
           }
 
           var linkhovertextdecoration = document.getElementById("linkhovertextdecoration").value;
-          if (!(linkhovertextdecoration === 'none')) {
+          if ((!(linkhovertextdecoration === 'none')) && (!(document.getElementById('linkhovertextdecoration').disabled)))  {
             URLparms = URLparms + `&link-text-decoration-hover=` + linkhovertextdecoration;
           }
 
@@ -474,7 +478,7 @@
           }
 
           var getheaderweight = document.getElementById('headerweight').value;
-          if (!(getheaderweight == "400")) {
+          if ((!(getheaderweight == "400")) && (!(document.getElementById('fontfamily').disabled)))  {
             var URLparms = URLparms + `&header-weight=` + getheaderweight
           }
 
@@ -489,18 +493,20 @@
           }
 
           var getColor = document.getElementById("coverpagecolor");
-          var hexCode = getColor.value;
-          if (hexCode === '') {
-            hexCode = '#C1E1F6';
-            document.getElementById("coverpagecolor").value = hexCode;
-            document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
-            document.getElementById("coverpagecolorpreview").style.backgroundColor = '#C1E1F6';
-          }
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "C1E1F6")) {
-            URLparms = URLparms + `&coverpage-color=` + hexCode;
+          if (!(document.getElementById('coverpagecolor').disabled)) {
+            var hexCode = getColor.value;
+            if (hexCode === '') {
+              hexCode = '#C1E1F6';
+              document.getElementById("coverpagecolor").value = hexCode;
+              document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
+              document.getElementById("coverpagecolorpreview").style.backgroundColor = '#C1E1F6';
+            }
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "C1E1F6")) {
+              URLparms = URLparms + `&coverpage-color=` + hexCode;
+            }
           }
 
           var getenabledarkmode = document.getElementById('enableDarkmode').value;
@@ -509,42 +515,48 @@
           }
 
           var getColor = document.getElementById("linkcolordarkmode");
-          var hexCode = getColor.value;
-          if (hexCode === '') {
-            hexCode = '#1BA1EE';
-            document.getElementById("linkcolordarkmode").value = hexCode;
-            document.getElementById("linkcolordarkmodepreview").style.borderColor = '#1BA1EE';
-            document.getElementById("linkcolordarkmodepreview").style.backgroundColor = '#1BA1EE';
-          }
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "1BA1EE")) {
-            URLparms = URLparms + `&link-color-dark-mode=` + hexCode;
+          if (!(document.getElementById('linkcolordarkmode').disabled)) {
+            var hexCode = getColor.value;
+            if (hexCode === '') {
+              hexCode = '#1BA1EE';
+              document.getElementById("linkcolordarkmode").value = hexCode;
+              document.getElementById("linkcolordarkmodepreview").style.borderColor = '#1BA1EE';
+              document.getElementById("linkcolordarkmodepreview").style.backgroundColor = '#1BA1EE';
+            }
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "1BA1EE")) {
+              URLparms = URLparms + `&link-color-dark-mode=` + hexCode;
+            }
           }
 
           var getColor = document.getElementById("linkhovercolordarkmode");
-          var hexCode = getColor.value;
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "")) {
-            URLparms = URLparms + `&link-color-hover-dark-mode=` + hexCode;
+          if (!(document.getElementById('linkhovercolordarkmode').disabled)) {
+            var hexCode = getColor.value;
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "")) {
+              URLparms = URLparms + `&link-color-hover-dark-mode=` + hexCode;
+            }
           }
 
           var getColor = document.getElementById("coverpagecolordarkmode");
-          var hexCode = getColor.value;
-          if (hexCode === '') {
-            hexCode = '#20587D';
-            document.getElementById("coverpagecolordarkmode").value = hexCode;
-            document.getElementById("coverpagecolordarkmodepreview").style.borderColor = '#20587D';
-            document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = '#20587D';
-          }
-          if (hexCode.charAt(0) == "#") {
-            hexCode = hexCode.substring(1);
-          }
-          if (!(hexCode == "20587D")) {
-            URLparms = URLparms + `&coverpage-color-dark-mode=` + hexCode;
+          if (!(document.getElementById('coverpagecolordarkmode').disabled)) {
+            var hexCode = getColor.value;
+            if (hexCode === '') {
+              hexCode = '#20587D';
+              document.getElementById("coverpagecolordarkmode").value = hexCode;
+              document.getElementById("coverpagecolordarkmodepreview").style.borderColor = '#20587D';
+              document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = '#20587D';
+            }
+            if (hexCode.charAt(0) == "#") {
+              hexCode = hexCode.substring(1);
+            }
+            if (!(hexCode == "20587D")) {
+              URLparms = URLparms + `&coverpage-color-dark-mode=` + hexCode;
+            }
           }
 
           if ((!(isExtensionAllowed(lastSegment)) || lastSegment === "") && url.includes("gist.githubusercontent.com")) {
