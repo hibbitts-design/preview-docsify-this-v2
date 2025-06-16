@@ -130,13 +130,13 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">
   <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">
-  <label for="docsifyV5coretheme">Apply Docsify v5 Core Theme defaults, overriding Web Page Builder Docsify-This theme styles
+  <label for="docsifyV5coretheme">Apply Docsify v5 core theme defaults, overriding corresponding Docsify-This Web Page Builder options
     <details class="docsifythiscustomdetails">
       <summary aria-label="More information about using Docsify v5 Core Theme">
         <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16">
         <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
       </summary>
-      <p>This will use the Docsify v5 core theme defaults, replacing any chosen Web Page Builder styles. To keep specific styles (like fonts or colors), add them to the URL as parameters after publishing the Web page  (e.g., <code>&font-family=Merriweather,serif</code> for the Merriweather font).</p>
+      <p>This will use the Docsify v5 core theme defaults, replacing Docsify-This Web Page Builder styles. To keep specific styles (like fonts or colors), add them to the URL as parameters after publishing the Web page  (e.g., <code>&font-family=Merriweather,serif</code> for the Merriweather font).</p>
     </details>
   </label>
 </div>
