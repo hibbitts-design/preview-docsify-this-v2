@@ -648,12 +648,24 @@
     }
 
     function restoreAllDefaults() {
+      (document.getElementById('fontfamily') || {}).disabled = false;
+      (document.getElementById('fontsize') || {}).disabled = false;
+      (document.getElementById('lineheight') || {}).disabled = false;
+      (document.getElementById('linkcolor') || {}).disabled = false;
+      (document.getElementById('headerweight') || {}).disabled = false;
+      (document.getElementById('linkcolordarkmode') || {}).disabled = false;
+      (document.getElementById('linkhovercolordarkmode') || {}).disabled = false;
+      (document.getElementById('linktextdecoration') || {}).disabled = false;
+      (document.getElementById('linkhovercolor') || {}).disabled = false;
+      (document.getElementById('linkhovertextdecoration') || {}).disabled = false;
+      (document.getElementById('coverpagecolor') || {}).disabled = false;
+      (document.getElementById('coverpagecolordarkmode') || {}).disabled = false;
       document.getElementById("stylecontentonly").checked = true;
       document.getElementById("styletoc").checked = false;
       document.getElementById("stylesidebar").checked = false;
       document.getElementById("browserTabTitle").value = 'Published by Docsify-This';
       document.getElementById("editCheck").checked = false;
-      document.getElementById("fontfamily").value = 'default';
+      document.getElementById("fontfamily").value = 'Source%20Sans%203,Helvetica%20Neue,sans-serif';
       document.getElementById("fontsize").value = '18px';
       document.getElementById("lineheight").value = '1.4';
       document.getElementById("linkcolor").value = '#0374B5';
@@ -879,6 +891,40 @@
       attributes: true, // observe attributes changes
       attributeFilter: ['href'] // filter to only observe changes to 'href' attributes
     });
+
+    function disableEnableThemeStyleOptions() {
+      toggleElementState('fontfamily');
+      toggleElementState('fontsize');
+      toggleElementState('lineheight');
+      toggleElementState('linkcolor');
+      toggleElementState('headerweight');
+      toggleElementState('linkcolordarkmode');
+      toggleElementState('linkhovercolordarkmode');
+      toggleElementState('linktextdecoration');
+      toggleElementState('linkhovercolor');
+      toggleElementState('linkhovertextdecoration');
+      toggleElementState('coverpagecolor');
+      toggleElementState('coverpagecolordarkmode');
+    }
+
+    const updateEnableThemeStyleOptions = disableEnableThemeStyleOptions();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.getElementById('docsifyV5coretheme');
+      if (checkbox) {
+        checkbox.addEventListener('change', disableEnableThemeStyleOptions);
+      }
+    });
+
+    function toggleElementState(elementId) {
+      const element = document.getElementById(elementId);
+      if (element) {
+        if (typeof element.disabled !== 'undefined') { //Check if disabled property exists
+          element.disabled = !element.disabled;
+          element.setAttribute('aria-disabled', element.disabled); //Accessibility
+        }
+      }
+    }
 
     // Docsify
 
