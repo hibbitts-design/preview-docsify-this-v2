@@ -716,10 +716,10 @@
     }
 
     function setColorProperties(color) {
-        document.documentElement.style.setProperty('--theme-color', color);
-        if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true'))) {
-          document.documentElement.style.setProperty('--link-color', color);
-        }
+      document.documentElement.style.setProperty('--theme-color', color);
+      if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['docsify-core-theme','docsifyCoreTheme','docsify-theme'], null, null, window.location.href, true) === 'true'))) {
+        document.documentElement.style.setProperty('--link-color', color);
+      }
     }
 
     function updateThemeModeLinkColors() {
