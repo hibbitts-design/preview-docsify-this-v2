@@ -130,7 +130,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">
   <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">
-  <label for="docsifyV5coretheme">Apply Docsify v5 core theme style defaults, overriding Docsify-This theme styles
+  <label for="docsifyV5coretheme">Apply Docsify v5 core theme style defaults, overriding Docsify-This styles
     <details class="docsifythiscustomdetails">
       <summary aria-label="More information about using Docsify v5 Core Theme">
         <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16">
