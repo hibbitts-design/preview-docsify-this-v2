@@ -136,7 +136,7 @@ Page layout:
         <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16">
         <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
       </summary>
-      <p>This will load only the Docsify v5 core theme, replacing all Docsify-This Web Page Builder theme styles. To apply specific styles (such as fonts or colors), add them as URL as parameters after publishing the Web page (for example <code>&font-family=Merriweather,serif</code> or <code>&link-color=CC0000</code>).</p>
+      <p>This loads only the Docsify v5 core theme, removing all existing Docsify-This and Web Page Builder theme styling. After publishing the Web page, add URL parameters to customize if needed (for example <code>&font-family=Merriweather,serif</code> or <code>&link-color=CC0000</code>).</p>
     </details>
   </label>
 </div>
