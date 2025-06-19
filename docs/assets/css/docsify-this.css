@@ -101,7 +101,7 @@
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-width: 0;
   border-radius: 16px;
-  background: linear-gradient(to right, #f7f8fc, #e2e4f6);
+  background: linear-gradient(to right, #f4f5fc, #e0e4f6);
   border: 1px solid #e2e4f6;
 }
 
