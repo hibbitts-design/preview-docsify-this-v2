@@ -56,6 +56,16 @@
   color: #7bb381; /* Original color #6a6a6a */
 }
 
+#docsifythis h1 .subhead {
+  color: #6a6a6a; /* Original color #6a6a6a */
+}
+
+@media (prefers-color-scheme: dark) {
+  #docsifythis h1 .subhead {
+    color: #969696 /* Original color #969696; */
+  }
+}
+
 #docsifythis .docsifythisheader .logoandtext img {
   height: 54px;
   vertical-align: middle;
