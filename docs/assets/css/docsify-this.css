@@ -7,14 +7,14 @@
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight:700;
-  color: #82a187; /* Original color #a6a6a6; */
+  color: #7bb381; /* Original color #a6a6a6; */
   margin-left: 0px;
 }
 
 #docsifythis .version-badge {
   font-size: 0.6em;
   font-weight:700;
-  background-color:  #82a187; /* Original color #ddd */
+  background-color:  #ddd;
   color: #555;
   padding: 2px 6px;
   border-radius: 10px;
@@ -25,7 +25,7 @@
 
 @media (prefers-color-scheme: dark) {
   #docsifythis .version-tag {
-    color: #82a187 /* Original color #969696; */
+    color: #7bb381 /* Original color #969696; */
   }
 }
 
@@ -53,7 +53,7 @@
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 .highlight {
-  color: #5ba468; /* Original color #6a6a6a */
+  color: #7bb381; /* Original color #6a6a6a */
 }
 
 #docsifythis .docsifythisheader .logoandtext img {
