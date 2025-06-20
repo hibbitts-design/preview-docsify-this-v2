@@ -54,7 +54,7 @@
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 .highlight {
-  color: #7bb381; /* Original color #6a6a6a */
+  color: #549b5d; /* Original color #6a6a6a */
 }
 
 #docsifythis h1 .subhead {
@@ -100,8 +100,8 @@
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 8px;
-  background: linear-gradient(to right, #f0efff, #d4d7f4);
-  border: 1px solid #d2d6ef;
+  background: linear-gradient(to right, #f8f8fc, #e1e3f0);
+  border: 1px solid #dddee8;
   box-shadow:  0 .1875rem .4375rem 0 rgba(0,0,0,.13),0 .0625rem .125rem 0 rgba(0,0,0,.11);
 }
 
@@ -197,10 +197,12 @@ span #docsifythisurlfield {
   width: 260px;
   padding: 10px;
   line-height: 1.4rem;
-  background-color: #2302cd; /* Previous colors #0224cd #0361cd */
+  background-color: #57985E; /* Previous colors #2302cd */
   text-decoration: none;
   font-weight: 600;
-  border: 1px solid #2302cd;
+  border: none;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2), 
+            0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 1.4rem;
   -webkit-appearance: none;
   white-space: normal;
@@ -532,8 +534,8 @@ span #docsifythisurlfield {
 
   .docsifythisurlbuilderprimarybutton {
     color: black !important;
-    background-color: #7e83ed !important; /* Previous colors #817eed #4bc3f4 */
-    border: 1px solid #7e83ed !important;
+    background-color: #549b5c !important; /* Previous colors #7e83ed */
+    border: 1px solid #549b5c !important;
   }
 
   .docsifythisurlbuildersecondarybutton {
