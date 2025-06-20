@@ -100,7 +100,7 @@
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 8px;
-  background: linear-gradient(to right, #f1f2ff, #d8dcf2);
+  background: linear-gradient(to right, #f0efff, #d4d7f4);
   border: 1px solid #d2d6ef;
   box-shadow:  0 .1875rem .4375rem 0 rgba(0,0,0,.13),0 .0625rem .125rem 0 rgba(0,0,0,.11);
 }
