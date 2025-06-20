@@ -154,6 +154,7 @@ input[type="color"] {
 #docsifythisurlfield {
   width: 100%;
   padding: min(15px, 5%) min(15px, 5%);
+  font-size: 22px;
 }
 
 #browserTabTitle {
@@ -487,7 +488,7 @@ input[type="color"] {
     margin-top: 40px;
   }
   #docsifythisurlfield {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
