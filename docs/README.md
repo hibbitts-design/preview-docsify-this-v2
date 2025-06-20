@@ -19,16 +19,16 @@ This open-source web app, built with magical documentation site generator [Docsi
 <p style="margin-bottom:-8px;">Enter the URL of a Markdown file and view that file as a web page in a new Browser tab. The resulting Docsify-This page URL can be copied and shared or used as an iFrame source URL.</p>
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
-<textarea 
-    style="border-radius: 7px; border-color: #8e8f9d; resize: none; min-height: 60px; width: 100%; font-family: inherit; padding: 12px 10px; overflow: hidden; field-sizing: content;" 
-    aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)" 
-    name="markdownFileURL" 
-    id="docsifythisurlfield" 
-    onfocus="this.select()" 
-    onkeypress="checkKey(event);" 
-    rows="2" 
+<textarea
+    style="border-radius: 7px; border-color: #8e8f9d; resize: none; min-height: 60px; width: 100%; font-family: inherit; padding: 18px 10px; overflow: hidden; field-sizing: content; box-sizing: border-box; line-height: 1.4;"
+    aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)"
+    name="markdownFileURL"
+    id="docsifythisurlfield"
+    onfocus="this.select()"
+    onkeypress="checkKey(event);"
+    rows="2"
     placeholder="Enter Markdown file URL...">https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md</textarea>
-<input class="docsifythisurlbuilderprimarybutton" style="margin-top: -12px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
+<input class="docsifythisurlbuilderprimarybutton" style="margin-top: -4px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
 
 Page layout:
 
