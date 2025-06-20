@@ -100,7 +100,7 @@
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
-  background: linear-gradient(to right, #f4f5fc, #e0e4f6);
+  background: linear-gradient(to right, #f1f2ff, #d8dcf2);
   border: 2px solid #e2e4f6;
 }
 
