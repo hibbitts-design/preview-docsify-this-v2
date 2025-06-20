@@ -153,6 +153,7 @@ input[type="color"] {
 
 #docsifythisurlfield {
   width: 100%;
+  vertical-align: middle;
   padding: min(15px, 5%) min(15px, 5%);
   font-size: 22px;
 }

@@ -20,14 +20,24 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
 <textarea
-    style="border-radius: 7px; border-color: #8e8f9d; resize: none; min-height: 60px; width: 100%; font-family: inherit; padding: 18px 10px; overflow: hidden; field-sizing: content; box-sizing: border-box; line-height: 1.4;"
+    style="border-radius: 7px; border-color: #8e8f9d; resize: none; min-height: 60px; width: 100%; font-family: inherit; padding: 10px 10px; overflow: hidden; field-sizing: content; line-height: 1.4; box-sizing: border-box;"
     aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)"
     name="markdownFileURL"
     id="docsifythisurlfield"
     onfocus="this.select()"
     onkeypress="checkKey(event);"
-    rows="2"
+    rows="1"
     placeholder="Enter Markdown file URL...">https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md</textarea>
+
+<style>
+/* Safari-specific fix */
+@supports (-webkit-appearance: none) {
+    #docsifythisurlfield {
+        padding: 15px 10px 25px 10px !important; /* More bottom padding */
+        -webkit-appearance: none;
+    }
+}
+</style>
 <input class="docsifythisurlbuilderprimarybutton" style="margin-top: -4px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
 
 Page layout:
