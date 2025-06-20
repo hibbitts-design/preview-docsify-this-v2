@@ -7,7 +7,7 @@
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight:700;
-  color: #7bb381; /* Original color #a6a6a6; */
+  color: #57985E; /* Original color #a6a6a6; */
   margin-left: 0px;
 }
 
@@ -25,7 +25,7 @@
 
 @media (prefers-color-scheme: dark) {
   #docsifythis .version-tag {
-    color: #7bb381 /* Original color #969696; */
+    color: #57985E /* Original color #969696; */
   }
 }
 
@@ -54,7 +54,7 @@
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 .highlight {
-  color: #549b5d; /* Original color #6a6a6a */
+  color: #57985E; /* Original color #6a6a6a */
 }
 
 #docsifythis h1 .subhead {
@@ -534,8 +534,10 @@ span #docsifythisurlfield {
 
   .docsifythisurlbuilderprimarybutton {
     color: black !important;
-    background-color: #549b5c !important; /* Previous colors #7e83ed */
-    border: 1px solid #549b5c !important;
+    background-color: #57985E !important; /* Previous colors #7e83ed */
+    border: 1px solid rgba(161, 163, 176, 0.2);
+    box-shadow: 0 2px 8px rgba(161, 163, 176, 0.2),
+                0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .docsifythisurlbuildersecondarybutton {
