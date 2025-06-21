@@ -12,7 +12,7 @@
   <div style="background: #fdf4d3; border: 2px solid #f0e4b3; border-radius: 8px; padding: 12px; margin: 20px 0; display: flex; align-items: center; gap: 12px;">
       <div style="flex: 1;">
           <strong style="color: #8b6914;">This is a preview of Docsify-This v2.0</strong>
-          <div style="color: #666; margin-top: 2px;">URLs generated here are temporary and will need to be updated when v2.0 is released.</div>
+          <div style="color: #666; margin-top: 2px; font-size: 16px;">URLs generated here are temporary and will need to be updated when v2.0 is released.</div>
       </div>
       <a href="https://docsify-this.net" style="background: #b8941f; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap;">Switch to v1.0</a>
   </div>
