@@ -25,7 +25,7 @@ This open-source web app, built with magical documentation site generator [Docsi
     name="markdownFileURL"
     id="docsifythisurlfield"
     onfocus="this.select()"
-    onkeypress="checkKey(event);"
+    onkeypress="if(event.key==='Enter'){event.preventDefault(); checkKey(event); return false;} checkKey(event);"
     rows="1"
     placeholder="Enter Markdown file URL...">https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md</textarea>
 
