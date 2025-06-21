@@ -20,21 +20,25 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
 <textarea
-    style="border-radius: 7px; border-color: #8e8f9d; resize: none; min-height: 60px; width: 100%; font-family: inherit; overflow: hidden; field-sizing: content; line-height: 1.4; box-sizing: border-box;"
+    style="border-radius: 7px; border-color: #8e8f9d; resize: none; width: 100%; font-family: inherit; overflow: hidden; box-sizing: border-box;"
     aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)"
     name="markdownFileURL"
     id="docsifythisurlfield"
     onfocus="this.select()"
-    onkeypress="if(event.key==='Enter'){event.preventDefault(); checkKey(event); return false;} checkKey(event);"
     rows="1"
+    onkeydown="if(event.key==='Enter'){event.preventDefault(); checkKey(event); return false;}"
+    oninput="if(!CSS.supports('field-sizing', 'content')){this.style.height='auto';this.style.height=this.scrollHeight+'px';} this.value=this.value.replace(/[^a-zA-Z0-9\-._~:\/?#@!$&()*+,;=%]/g,'');"
     placeholder="Enter Markdown file URL...">https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md</textarea>
-
 <style>
-/* Safari-specific fix */
-@supports (-webkit-appearance: none) {
+#docsifythisurlfield {
+    field-sizing: content;
+    padding: 15px 10px;
+}
+@supports (-webkit-hyphens: none) {
     #docsifythisurlfield {
-        padding: 15px 10px 15px 10px 
-        -webkit-appearance: none;
+        field-sizing: auto !important;
+        padding: 15px 10px !important;
+        -webkit-appearance: none !important;
     }
 }
 </style>
