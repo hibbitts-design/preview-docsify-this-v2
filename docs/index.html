@@ -1473,6 +1473,13 @@
               document.getElementById('docsifythisurlfield').value = markdownFileURL;
             }
 
+            if (getURLParameterByName(['hide-banner', 'hideBanner']) === true) {
+              var theDiv = document.getElementById("banner");
+               if (theDiv) {
+                theDiv.style.display = "none";
+               }
+            }
+
             // console.log(getURLParameterByName(['browser-tab-title','font-family', 'font-size','line-height','link-color','edit-link-text','edit-link-top','hide-credits','toc-headings','toc-narrow','maxLevel','hypothesis']));
 
             if (getURLParameterByName(['show-page-options', 'showPageOptions']) === true) {
