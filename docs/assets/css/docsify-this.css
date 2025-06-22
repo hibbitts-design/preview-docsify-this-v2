@@ -281,6 +281,21 @@ input[type="color"] {
   line-height: 1.2rem;
 }
 
+#docsifythisurlbuilder .toggle-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    flex-wrap: nowrap;
+}
+#docsifythisurlbuilder .toggle-wrapper .toggle {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+#docsifythisurlbuilder .toggle-wrapper label {
+    margin-top: -1px !important;  /* Push label up by 3 pixels */
+}
+
 #docsifythisurlbuilder input[type="checkbox"] {
   border-color: #8e8f9d;
 }
