@@ -285,6 +285,10 @@ input[type="color"] {
   border-color: #8e8f9d;
 }
 
+input.toggle:where([type=checkbox],[type=radio]):before {
+    background: #8e8f9d;
+}
+
 #docsifythisurlbuilder input[type="checkbox"]:checked {
   background: #0324cd;
   border-color: #0324cd;
