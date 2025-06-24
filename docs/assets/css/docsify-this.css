@@ -1,25 +1,26 @@
 /* DOCSIFY THIS */
 
 ::selection {
-    background-color: #C1D1E9;
-    color: #333;
+  background-color: #C1D1E9;
+  color: #333;
 }
+
 ::-moz-selection {
-    background-color: #C1D1E9;
-    color: #333;
+  background-color: #C1D1E9;
+  color: #333;
 }
 
 #docsifythis .version-tag {
   font-size: 0.8em;
-  font-weight:700;
+  font-weight: 700;
   color: #57985E; /* Original color #a6a6a6; */
   margin-left: 0px;
 }
 
 #docsifythis .version-badge {
   font-size: 0.6em;
-  font-weight:700;
-  background-color:  #ddd;
+  font-weight: 700;
+  background-color: #ddd;
   color: #555;
   padding: 2px 6px;
   border-radius: 10px;
@@ -30,7 +31,7 @@
 
 @media (prefers-color-scheme: dark) {
   #docsifythis .version-tag {
-    color: #57985E /* Original color #969696; */
+    color: #57985E; /* Original color #969696; */
   }
 }
 
@@ -68,7 +69,7 @@
 
 @media (prefers-color-scheme: dark) {
   #docsifythis h1 .subhead {
-    color: #969696 /* Original color #969696; */
+    color: #969696; /* Original color #969696; */
   }
 }
 
@@ -108,7 +109,7 @@
   border-radius: 8px;
   background: linear-gradient(to right, #f8f8fc, #e1e3f0);
   border: 1px solid #dddee8;
-  box-shadow:  0 .1875rem .4375rem 0 rgba(0,0,0,.13),0 .0625rem .125rem 0 rgba(0,0,0,.11);
+  box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13), 0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
 }
 
 #docsifythisurlbuilder h2 {
@@ -121,35 +122,37 @@
 }
 
 #docsifythisurlbuilder .docsifythiscustomdetails summary {
-  list-style: none; /* Remove default list-style bullet */
-  display: flex; /* Use flexbox for better alignment */
-  align-items: center; /* Vertically center items */
-  cursor: pointer; /* Indicate that it's clickable */
-  padding: 0; /* Remove any default padding */
-  margin: 0; /* Remove any default margin */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
   margin-top: -18px;
   margin-bottom: -14px;
 }
 
 #docsifythisurlbuilder .docsifythiscustomdetails summary::-webkit-details-marker {
-  display: none; /* Hide the default arrow in WebKit browsers (Chrome, Safari) */
+  display: none;
 }
+
 #docsifythisurlbuilder .docsifythiscustomdetails summary::-moz-list-bullet {
-    list-style: none; /* Hide the default arrow in Firefox */
+  list-style: none;
 }
-#docsifythisurlbuilder .docsifythiscustomdetails summary::marker { /* Hide the default arrow in other browsers */
+
+#docsifythisurlbuilder .docsifythiscustomdetails summary::marker {
   display: none;
 }
 
 #docsifythisurlbuilder .docsifythiscustomdetails .docsifythisinfolabel {
-  margin-left: 5px; /* Add spacing between SVG and text */
+  margin-left: 5px;
 }
 
 #docsifythisurlbuilder input[type="text"],
 input[type="url"],
 input[type="color"] {
   overflow: hidden;
-  background-color: #white;
+  background-color: #FFF;
   height: 2rem;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -191,7 +194,7 @@ input[type="color"] {
 
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton {
   cursor: pointer;
-  color: white;
+  color: #FFF;
   height: auto;
   display: inline-block;
   margin-top: 4px;
@@ -204,7 +207,7 @@ input[type="color"] {
   font-weight: 600;
   border: 1px solid rgba(161, 163, 176, 0.2);
   box-shadow: 0 2px 8px rgba(161, 163, 176, 0.2),
-              0 1px 3px rgba(0, 0, 0, 0.1);
+    0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 1.4rem;
   -webkit-appearance: none;
   white-space: normal;
@@ -215,7 +218,7 @@ input[type="color"] {
 
 @media (max-width: 480px) {
   #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -243,7 +246,7 @@ input[type="color"] {
 
 @media (max-width: 480px) {
   #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -262,12 +265,12 @@ input[type="color"] {
   opacity: 0;
 }
 
-#docsifythisurlbuilder [type="radio"] + img {
+#docsifythisurlbuilder [type="radio"]+img {
   cursor: pointer;
   margin-right: 0.5rem;
 }
 
-#docsifythisurlbuilder [type="radio"]:checked + img {
+#docsifythisurlbuilder [type="radio"]:checked+img {
   outline: 4px solid #2302cd; /* Previous colors #0224cd #0261cd */
   border-radius: 8px;
   position: relative;
@@ -289,26 +292,27 @@ input[type="color"] {
 }
 
 #docsifythisurlbuilder .toggle-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 0px;
-    flex-wrap: nowrap;
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+  flex-wrap: nowrap;
 }
+
 #docsifythisurlbuilder .toggle-wrapper .toggle {
-    flex-shrink: 0;
-    margin-top: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 #docsifythisurlbuilder .toggle-wrapper label {
-    margin-top: -1px !important;  /* Push label up by 3 pixels */
+  margin-top: -1px !important; /* Push label up by 3 pixels */
 }
 
 #docsifythisurlbuilder input[type="checkbox"] {
   border-color: #8e8f9d;
 }
 
-input.toggle:where([type=checkbox],[type=radio]):before {
-    background: #8e8f9d;
+input.toggle:where([type=checkbox], [type=radio]):before {
+  background: #8e8f9d;
 }
 
 #docsifythisurlbuilder input[type="checkbox"]:checked {
@@ -316,7 +320,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-color: #0324cd;
 }
 
-#docsifythisurlbuilder input[type="checkbox"] ~ label {
+#docsifythisurlbuilder input[type="checkbox"]~label {
   width: 90%;
   padding-left: 0.23rem;
   display: inline-block;
@@ -361,7 +365,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -371,7 +375,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -381,7 +385,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -391,7 +395,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -402,7 +406,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -412,7 +416,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   border-radius: 3px;
   outline: solid 1px #777777;
   outline-offset: 0px;
-  padding-bottom:4px;
+  padding-bottom: 4px;
   margin-left: 4px;
 }
 
@@ -453,6 +457,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
     width: 100%;
     margin-right: 0px;
   }
+
   .markdown-section .docsifythiscolumn65 {
     width: 100%;
     margin-top: 0px;
@@ -494,8 +499,9 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   #docsifythisurlbuilderrestoredefaultsbutton {
     margin-top: 40px;
   }
+
   #docsifythisurlfield {
-    min-height: 110px; 
+    min-height: 110px;
     font-size: 18px;
   }
 }
@@ -505,16 +511,15 @@ input.toggle:where([type=checkbox],[type=radio]):before {
 }
 
 /* Dark mode colours for use with light + dark themes */
-
 @media (prefers-color-scheme: dark) {
-
   ::selection {
-      background-color: #7265B6;
-      color: #fff;
+    background-color: #7265B6;
+    color: #fff;
   }
+
   ::-moz-selection {
-      background-color: #7265B6;
-      color: #fff;
+    background-color: #7265B6;
+    color: #fff;
   }
 
   #docsifythis .docsifythisheader .logoandtext h1 {
@@ -543,17 +548,23 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   #docsifythisurlbuilder {
     background: linear-gradient(to right, #2b2e3b, #1f1f2f);
     border: 2px solid #3b3f4a;
-    box-shadow:  0 .1875rem .4375rem 0 rgba(0,0,0,.13),0 .0625rem .125rem 0 rgba(0,0,0,.11);
-  } 
-
-  #docsifythisurlfield {
-    background-color: #273338;
-    color: white;
+    box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13), 0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
   }
 
-  #pageTitle {
+  #docsifythisurlfield,
+  #pageTitle,
+  #linkcolor,
+  #browserTabTitle,
+  #editLinkText,
+  #siteName,
+  #siteLogo,
+  #coverpagecolor,
+  #linkhovercolor,
+  #linkhovercolordarkmode,
+  #linkcolordarkmode,
+  #coverpagecolordarkmode {
     background-color: #273338;
-    color: white;
+    color: #FFF;
   }
 
   .docsifythisurlbuilderprimarybutton {
@@ -561,7 +572,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
     background-color: #5FA566 !important; /* Previous colors #7e83ed */
     border: 1px solid rgba(161, 163, 176, 0.2);
     box-shadow: 0 2px 8px rgba(161, 163, 176, 0.2),
-                0 1px 3px rgba(0, 0, 0, 0.1);
+      0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .docsifythisurlbuildersecondarybutton {
@@ -570,7 +581,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
     border: 1px solid #c1bfed !important;
   }
 
-  #docsifythisurlbuilder [type="radio"]:checked + img {
+  #docsifythisurlbuilder [type="radio"]:checked+img {
     outline: 4px solid #7e83ed; /* Previous colors #9592ec #4bc3f4 */
     position: relative;
   }
@@ -593,7 +604,7 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   #docsifythisurlbuildershowhidelink2 a:hover,
   #docsifythisurlbuildershowhidelink2 a:active,
   .docsifythisurlbuilderoptionsline a:link,
-   .docsifythisurlbuilderoptionsline a:visited,
+  .docsifythisurlbuilderoptionsline a:visited,
   .docsifythisurlbuilderoptionsline a:hover,
   .docsifythisurlbuilderoptionsline a:active {
     color: #c6bfed; /* Original color #4bc3f4 */
@@ -604,56 +615,6 @@ input.toggle:where([type=checkbox],[type=radio]):before {
     color: #c6bfed; /* Original color #4bc3f4 */
     text-decoration: underline;
     cursor: pointer;
-  }
-
-  #linkcolor {
-    background-color: #273338;
-    color: white;
-  }
-
-  #browserTabTitle {
-    background-color: #273338;
-    color: white;
-  }
-
-  #editLinkText {
-    background-color: #273338;
-    color: white;
-  }
-
-  #siteName {
-    background-color: #273338;
-    color: white;
-  }
-
-  #siteLogo {
-    background-color: #273338;
-    color: white;
-  }
-  
-  #coverpagecolor {
-    background-color: #273338;
-    color: white;
-  }
-
-  #linkhovercolor {
-    background-color: #273338;
-    color: white;
-  }
-
-  #linkhovercolordarkmode {
-    background-color: #273338;
-    color: white;
-  }
-
-  #linkcolordarkmode {
-    background-color: #273338;
-    color: white;
-  }
-
-  #coverpagecolordarkmode {
-    background-color: #273338;
-    color: white;
   }
 
   #docsifythis .button {
