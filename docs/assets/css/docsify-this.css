@@ -1,9 +1,5 @@
 /* DOCSIFY THIS */
 
-#docsifythis .docsifythisheader .logoandtext img {
-  float: left;
-}
-
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight:700;
@@ -68,6 +64,7 @@
 }
 
 #docsifythis .docsifythisheader .logoandtext img {
+  float: left;
   height: 54px;
   vertical-align: middle;
   opacity: 0.8;
@@ -119,8 +116,8 @@
   display: flex; /* Use flexbox for better alignment */
   align-items: center; /* Vertically center items */
   cursor: pointer; /* Indicate that it's clickable */
-  padding: 0;  /*Remove any default padding*/
-  margin: 0;  /*Remove any default margin*/
+  padding: 0;  /* Remove any default padding */
+  margin: 0;  /* Remove any default margin */
   margin-top: -18px;
   margin-bottom: -14px;
 }
@@ -268,6 +265,7 @@ input[type="color"] {
 }
 
 #docsifythisurlbuilder input[type="number"] {
+  width: 4em;
   border: 1px solid #8e8f9d;
   height: 1.9rem;
   padding-left: 0.3rem;
@@ -314,14 +312,6 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   padding-left: 0.23rem;
   display: inline-block;
   vertical-align: top;
-}
-
-#docsifythisurlbuilder input[type="number"] {
-  border: 1px solid #000;
-  height: 1.9rem;
-  padding-left: 0.3rem;
-  margin-top: 4px;
-  margin-bottom: 6px;
 }
 
 #docsifythisurlbuildershowhidelink {
@@ -415,10 +405,6 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   outline-offset: 0px;
   padding-bottom:4px;
   margin-left: 4px;
-}
-
-#docsifythisurlbuilder input[type="number"] {
-  width: 4em;
 }
 
 #docsifythisurlbuilderrestoredefaultsbutton {
