@@ -144,7 +144,7 @@ input[type="url"],
 input[type="color"] {
   overflow: hidden;
   background-color: #white;
-  height: 1.9rem;
+  height: 2rem;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 6px;
@@ -348,14 +348,6 @@ input.toggle:where([type=checkbox],[type=radio]):before {
   color: #3940bf;
   text-decoration: underline;
   cursor: pointer;
-}
-
-#docsifythisurlbuilder select {
-  /* color: #323232; DOCSIFY v5 */
-  border: 1px solid #757575;
-  /* height: 2rem; DOCSIFY v5 */
-  /* line-height: 2rem; DOCSIFY v5 */
-  /* -webkit-appearance: menulist-button; DOCSIFY v5 */
 }
 
 #docsifythisurlbuilder hr {
