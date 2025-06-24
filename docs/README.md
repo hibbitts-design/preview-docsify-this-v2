@@ -100,7 +100,7 @@ Page layout:
   <label for="fontfamily">Page font family:</label>
   <select style="border-radius: 7px; border-color: #8e8f9d;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
     <option value="Source%20Sans%203,Helvetica%20Neue,sans-serif">Source Sans 3, sans-serif</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">─────────────</option>
     <option value="Arial,sans-serif">Arial, sans-serif</option>
     <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
     <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
@@ -120,7 +120,7 @@ Page layout:
   <label for="fontsize">Font size:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="fontsize" name="fontsize">
     <option value="18px">18px</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">───</option>
     <option value="14px">14px</option>
     <option value="15px">15px</option>
     <option value="16px">16px</option>
@@ -134,7 +134,7 @@ Page layout:
   <label for="lineheight">Line height:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="lineheight" name="lineheight" style="width: 60px;">
     <option value="1.4">1.4</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">──</option>
     <option value="1.2">1.2</option>
     <option value="1.3">1.3</option>
     <option value="1.5">1.5</option>
@@ -150,7 +150,7 @@ Page layout:
   <label for="headerweight">Page headers font weight:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
     <option value="400">Normal (400)</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">────────</option>
     <option value="600">Semi Bold (600)</option>
     <option value="700">Bold (700)</option>
   </select>
@@ -220,7 +220,7 @@ Page layout:
   <label for="enableDarkmode">Dark theme mode:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">───────────</option>
     <option value="auto">Match System Setting</option>
     <option value="on">On</option>
   </select>
@@ -240,7 +240,7 @@ Page layout:
   <label for="linktextdecoration">Link text decoration:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="linktextdecoration" name="linktextdecoration" style="width: 60px;">
     <option value="underline">Underline</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">─────</option>
     <option value="none">None</option>
   </select></div>
 
@@ -254,7 +254,7 @@ Page layout:
   <label for="linkhovertextdecoration">Link hover text decoration:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 60px;">
     <option value="none">None</option>
-    <option disabled="disabled">----</option>
+    <option disabled="disabled">─────</option>
     <option value="underline">Underline</option>
   </select></div>
 
@@ -266,7 +266,7 @@ Page layout:
 <label for="externalLinkTarget">External link target:</label>
 <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget" style="width: 60px;">
   <option value="_top">Same window or tab</option>
-  <option disabled="disabled">----</option>
+  <option disabled="disabled">──────────</option>
   <option value="_blank">New window or tab</option>
 </select></div>
 
