@@ -509,11 +509,11 @@ input.toggle:where([type=checkbox],[type=radio]):before {
 @media (prefers-color-scheme: dark) {
 
   ::selection {
-      background-color: #8798EE;
+      background-color: #7265B6;
       color: #fff;
   }
   ::-moz-selection {
-      background-color: #8798EE;
+      background-color: #7265B6;
       color: #fff;
   }
 
