@@ -1,11 +1,31 @@
 /* DOCSIFY THIS */
 
-::selection {
+/* --- Global transitions --- */
+
+#docsifythisurlbuilder a,
+#docsifythisurlbuilder button,
+#docsifythisurlbuilder input[type="text"],
+#docsifythisurlbuilder input[type="url"],
+#docsifythisurlbuilder input[type="color"],
+#docsifythisurlbuilder input[type="number"],
+#docsifythisurlbuilder textarea,
+#docsifythisurlbuilder select,
+[type="radio"] + img, /* For your custom radio button images */
+input[type="checkbox"] {
+  transition: all 0.2s ease-in-out; /* Smooth transition for all animatable properties */
+  /* Using 'all' is simple, but for performance, you might specify properties like:
+     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+                 color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+                 transform 0.1s ease-out; */
+}
+
+#docsifythisurlbuilder ::selection {
   background-color: #C1D1E9;
   color: #333;
 }
 
-::-moz-selection {
+
+#docsifythisurlbuilder ::-moz-selection {
   background-color: #C1D1E9;
   color: #333;
 }
@@ -42,7 +62,7 @@
   }
 }
 
-.title-with-version {
+#docsifythis .title-with-version {
   display: flex;
   align-items: baseline;
   gap: 4px;
@@ -73,7 +93,7 @@
   }
 }
 
-#docsifythis .docsifythisheader .logoandtext img {
+.docsifythisheader .logoandtext img {
   float: left;
   height: 54px;
   vertical-align: middle;
@@ -121,7 +141,7 @@
   color: #242bae;
 }
 
-#docsifythisurlbuilder .docsifythiscustomdetails summary {
+.docsifythiscustomdetails summary {
   list-style: none;
   display: flex;
   align-items: center;
@@ -132,19 +152,19 @@
   margin-bottom: -14px;
 }
 
-#docsifythisurlbuilder .docsifythiscustomdetails summary::-webkit-details-marker {
+.docsifythiscustomdetails summary::-webkit-details-marker {
   display: none;
 }
 
-#docsifythisurlbuilder .docsifythiscustomdetails summary::-moz-list-bullet {
+.docsifythiscustomdetails summary::-moz-list-bullet {
   list-style: none;
 }
 
-#docsifythisurlbuilder .docsifythiscustomdetails summary::marker {
+.docsifythiscustomdetails summary::marker {
   display: none;
 }
 
-#docsifythisurlbuilder .docsifythiscustomdetails .docsifythisinfolabel {
+.docsifythiscustomdetails .docsifythisinfolabel {
   margin-left: 5px;
 }
 
@@ -167,27 +187,27 @@ input[type="color"] {
   font-size: 22px;
 }
 
-#browserTabTitle {
+#docsifythisurlbuilder #browserTabTitle {
   width: 100%;
   max-width: 370px;
 }
 
-#editLinkText {
+#docsifythisurlbuilder #editLinkText {
   width: 100%;
   max-width: 370px;
 }
 
-#pageTitle {
+#docsifythisurlbuilder #pageTitle {
   width: 100%;
   max-width: 370px;
 }
 
-#siteName {
+#docsifythisurlbuilder #siteName {
   width: 100%;
   max-width: 370px;
 }
 
-#siteLogo {
+#docsifythisurlbuilder #siteLogo {
   width: 100%;
   max-width: 370px;
 }
@@ -480,17 +500,17 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   clear: both;
 }
 
-.sidebar .app-name {
+#docsifythisurlbuilder .sidebar .app-name {
   display: none;
 }
 
 @media only screen and (max-width: 480px) {
-  #docsifythis .docsifythisheader .logoandtext h1 {
+  .docsifythisheader .logoandtext h1 {
     font-size: 2rem;
     line-height: 35px;
   }
 
-  #docsifythis .docsifythisheader .logoandtext img {
+  .docsifythisheader .logoandtext img {
     height: 35px;
   }
 }
@@ -506,18 +526,18 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   }
 }
 
-.clr-picker .clr-alpha {
+#docsifythisurlbuilder .clr-picker .clr-alpha {
   display: none;
 }
 
 /* Dark mode colours for use with light + dark themes */
 @media (prefers-color-scheme: dark) {
-  ::selection {
+  #docsifythisurlbuilder ::selection {
     background-color: #7265B6;
     color: #fff;
   }
 
-  ::-moz-selection {
+  #docsifythisurlbuilder ::-moz-selection {
     background-color: #7265B6;
     color: #fff;
   }
@@ -526,7 +546,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
     color: #a6a6a6;
   }
 
-  #docsifythis .docsifythisheader .logoandtext h1 .highlight {
+  .docsifythisheader .logoandtext h1 .highlight {
     color: #5FA566;
   }
 
@@ -534,8 +554,8 @@ input.toggle:where([type=checkbox], [type=radio]):before {
     color: #5FA566;
   }
 
-  #docsifythis #docsifythisurlbuilder h2,
-  #docsifythis #docsifythisurlbuilder h3 {
+  #docsifythisurlbuilder h2,
+  #docsifythisurlbuilder h3 {
     color: #8798ee;
   }
 
@@ -552,17 +572,17 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   }
 
   #docsifythisurlfield,
-  #pageTitle,
-  #linkcolor,
-  #browserTabTitle,
-  #editLinkText,
-  #siteName,
-  #siteLogo,
-  #coverpagecolor,
-  #linkhovercolor,
-  #linkhovercolordarkmode,
-  #linkcolordarkmode,
-  #coverpagecolordarkmode {
+  #docsifythisurlbuilder #pageTitle,
+  #docsifythisurlbuilder #linkcolor,
+  #docsifythisurlbuilder #browserTabTitle,
+  #docsifythisurlbuilder #editLinkText,
+  #docsifythisurlbuilder #siteName,
+  #docsifythisurlbuilder #siteLogo,
+  #docsifythisurlbuilder #coverpagecolor,
+  #docsifythisurlbuilder #linkhovercolor,
+  #docsifythisurlbuilder #linkhovercolordarkmode,
+  #docsifythisurlbuilder #linkcolordarkmode,
+  #docsifythisurlbuilder #coverpagecolordarkmode {
     background-color: #273338;
     color: #FFF;
   }
@@ -631,7 +651,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
     color: #cc0000;
   }
 
-  #docsifythis .docsifythiscolumn65 h4 a {
+  .docsifythiscolumn65 h4 a {
     color: #1ba1ee;
   }
 
