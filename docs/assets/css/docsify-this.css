@@ -1,5 +1,14 @@
 /* DOCSIFY THIS */
 
+::selection {
+    background-color: #C1D1E9;
+    color: #333;
+}
+::-moz-selection {
+    background-color: #C1D1E9;
+    color: #333;
+}
+
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight:700;
@@ -498,6 +507,16 @@ input.toggle:where([type=checkbox],[type=radio]):before {
 /* Dark mode colours for use with light + dark themes */
 
 @media (prefers-color-scheme: dark) {
+
+  ::selection {
+      background-color: #8798EE;
+      color: #fff;
+  }
+  ::-moz-selection {
+      background-color: #8798EE;
+      color: #fff;
+  }
+
   #docsifythis .docsifythisheader .logoandtext h1 {
     color: #a6a6a6;
   }
