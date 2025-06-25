@@ -559,12 +559,12 @@
             }
           }
 
-          // Split by both '?' and '&' to handle all cases
-          const parts = lastSegment.split(/[?&]/, 2);
+          const parts = lastSegment.split(/[?&]/);
           lastSegment = parts[0];
           let queryString = '';
-          if (parts[1]) {
-              queryString = '&' + parts[1];
+          if (parts.length > 1) {
+              // Join all parameters back together
+              queryString = '&' + parts.slice(1).join('&');
           }
 
           if ((!(isExtensionAllowed(lastSegment)) || lastSegment === "") && url.includes("gist.githubusercontent.com")) {
