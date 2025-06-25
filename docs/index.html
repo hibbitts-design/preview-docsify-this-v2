@@ -165,7 +165,7 @@
 
         if (isValidUrl(url)) {
 
-          docsifyURL = window.location.href
+          var docsifyURL = window.location.href
 
           var params = new URLSearchParams(docsifyURL.search);
           params.delete('url-field');
