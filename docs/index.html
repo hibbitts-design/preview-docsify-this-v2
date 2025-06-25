@@ -559,9 +559,9 @@
             }
           }
 
-          const parts = lastSegment.split('?', 2);
+          // Split by both '?' and '&' to handle all cases
+          const parts = lastSegment.split(/[?&]/, 2);
           lastSegment = parts[0];
-
           let queryString = '';
           if (parts[1]) {
               queryString = '&' + parts[1];
