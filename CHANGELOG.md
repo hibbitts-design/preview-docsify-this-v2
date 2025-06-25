@@ -7,7 +7,7 @@
 * Adoption of Docsify v5's new theme system for enhanced customization and a modern user interface
 * Option to display pages using the new Docsify v5 core theme
 * Use of Marked.js v15+ (from Docsify v5) for markdown rendering, providing improved compatibility and rendering capabilities
-* Refreshed Web Page Builder UI, including support for multi-line display of Markdown file URLs and manually including URL parms (except for `edit-link`)
+* Refreshed Web Page Builder UI, including support for multi-line display of Markdown file URLs and manually included overriding URL parms (except for `edit-link`)
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to use new Docsify v5 core (default) theme
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
 
