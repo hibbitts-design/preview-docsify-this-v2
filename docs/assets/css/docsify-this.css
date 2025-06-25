@@ -1,7 +1,6 @@
 /* DOCSIFY THIS */
 
 /* --- Global transitions --- */
-
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button,
 #docsifythisurlbuilder input[type="text"],
@@ -10,13 +9,9 @@
 #docsifythisurlbuilder input[type="number"],
 #docsifythisurlbuilder textarea,
 #docsifythisurlbuilder select,
-[type="radio"] + img, /* For your custom radio button images */
+[type="radio"] + img,
 input[type="checkbox"] {
-  transition: all 0.2s ease-in-out; /* Smooth transition for all animatable properties */
-  /* Using 'all' is simple, but for performance, you might specify properties like:
-     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
-                 color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-                 transform 0.1s ease-out; */
+  transition: all 0.2s ease-in-out;
 }
 
 #docsifythisurlbuilder ::selection {

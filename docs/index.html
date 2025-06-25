@@ -559,6 +559,14 @@
             }
           }
 
+          const parts = lastSegment.split('?', 2);
+          lastSegment = parts[0];
+
+          let queryString = '';
+          if (parts[1]) {
+              queryString = '&' + parts[1];
+          }
+
           if ((!(isExtensionAllowed(lastSegment)) || lastSegment === "") && url.includes("gist.githubusercontent.com")) {
             // Filename without supported extension or missing filename
             alert("Please use the GitHub Gist raw source URL and a filename that includes a supported extension (" + displayAllowedFileExtensions() + ") as the file URL. To get this URL, tap on the filename of your Gist (i.e. 'Yourfile.md') and then tap the 'Raw' button.");
@@ -572,7 +580,7 @@
           } else {
             // Filename with supported extension is present along with full path and filename
             url = url.substring(0, url.lastIndexOf("/"));
-            var baseURL = docsifyURL + `?basePath=${url}&homepage=${lastSegment}` + URLparms;
+            var baseURL = docsifyURL + `?basePath=${url}&homepage=${lastSegment}` + URLparms + queryString;
           }
 
           var docsifyPreviewWin = window.open(baseURL, "Docsify-This Preview");
