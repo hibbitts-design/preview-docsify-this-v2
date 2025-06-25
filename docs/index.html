@@ -258,11 +258,15 @@
           }
 
           if (document.querySelector('#stylesidebar').checked) {
-            var URLparms = URLparms + `&sidebar=true`;
+            if (!url.includes('sidebar=')) {
+              var URLparms = URLparms + `&sidebar=true`;
+            }
           }
 
           if (document.querySelector('#styletoc').checked) {
-            var URLparms = URLparms + `&toc=true`;
+            if (!url.includes('toc=')) {
+              var URLparms = URLparms + `&toc=true`;
+            }
           }
 
           var getBrowserTabTitle = document.getElementById("browserTabTitle");
@@ -271,8 +275,10 @@
             document.getElementById("browserTabTitle").value = 'Published by Docsify-This';
           }
           if (!(browserTabTitle == "Published by Docsify-This")) {
-            browserTabTitle = encodeURI(browserTabTitle);
-            URLparms = URLparms + `&browser-tab-title=` + browserTabTitle;
+            if (!url.includes('browser-tab-title=')) {
+              browserTabTitle = encodeURI(browserTabTitle);
+              URLparms = URLparms + `&browser-tab-title=` + browserTabTitle;
+            }
           }
 
           var getEditThisPage = document.getElementById("editLinkText");
@@ -288,13 +294,17 @@
           const cb2 = document.querySelector('#editLinkTopCheck');
           if (cb1.checked && cb2.checked) {
             if (gitlinkPageURL) {
-              var URLparms = URLparms + `&edit-link-top=true`;
+              if (!url.includes('edit-link-top=')) {
+                var URLparms = URLparms + `&edit-link-top=true`;
+              }
             }
           }
 
           const cb3 = document.querySelector('#hideCredits');
           if (cb3.checked) {
-            var URLparms = URLparms + `&hide-credits=true`;
+            if (!url.includes('hide-credits=')) {
+              var URLparms = URLparms + `&hide-credits=true`;
+            }
           }
 
           const cb4 = document.querySelector('#narrowToC');
@@ -336,7 +346,9 @@
                     ToCHeadings = "h3";
                   }
                 }
-                URLparms = URLparms + `&toc-headings=` + ToCHeadings;
+                if (!url.includes('=')) {
+                  URLparms = URLparms + `&toc-headings=` + ToCHeadings;
+                }
               }
             }
           }
@@ -352,27 +364,37 @@
 
           const cb8 = document.querySelector('#hypothesisenable');
           if (cb8.checked) {
-            var URLparms = URLparms + `&hypothesis=true`;
+            if (!url.includes('hypothesis=')) {
+              var URLparms = URLparms + `&hypothesis=true`;
+            }
           }
 
           const cb19 = document.querySelector('#docsifyV5coretheme');
           if (cb19.checked) {
-            var URLparms = URLparms + `&docsify-core-theme=true`;
+            if (!url.includes('docsify-core-theme=')) {
+              var URLparms = URLparms + `&docsify-core-theme=true`;
+            }
           }
 
           var getFontFamily = document.getElementById('fontfamily').selectedOptions[0].value;
           if ((!(getFontFamily == "Source%20Sans%203,Helvetica%20Neue,sans-serif")) && (!(document.getElementById('fontfamily').disabled)))  {
-            var URLparms = URLparms + `&font-family=` + getFontFamily;
+            if (!url.includes('font-family=')) {
+              var URLparms = URLparms + `&font-family=` + getFontFamily;
+            }
           }
 
           var getFontSize = document.getElementById('fontsize').value;
           if ((!(getFontSize == "18px")) && (!(document.getElementById('fontsize').disabled)))  {
-            var URLparms = URLparms + `&font-size=` + getFontSize;
+            if (!url.includes('font-size=')) {
+              var URLparms = URLparms + `&font-size=` + getFontSize;
+            }
           }
 
           var getLineHeight = document.getElementById('lineheight').value;
           if ((!(getLineHeight == "1.4")) && (!(document.getElementById('lineheight').disabled)))  {
-            var URLparms = URLparms + `&line-height=` + getLineHeight
+            if (!url.includes('line-height=')) {
+              var URLparms = URLparms + `&line-height=` + getLineHeight
+            }
           }
 
           var getColor = document.getElementById("linkcolor");
@@ -388,18 +410,24 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "0374B5")) {
-              URLparms = URLparms + `&link-color=` + hexCode;
+              if (!url.includes('line-height=')) {
+                URLparms = URLparms + `&link-color=` + hexCode;
+              }
             }
           }
 
           const cb9 = document.querySelector('#loadfavicon');
           if (cb9.checked) {
-            var URLparms = URLparms + `&loadFavicon=favicon.png`;
+            if (!url.includes('loadFavicon=')) {
+              var URLparms = URLparms + `&loadFavicon=favicon.png`;
+            }
           }
 
           const cb10 = document.querySelector('#loadcoverpage');
           if (cb10.checked) {
-            var URLparms = URLparms + `&coverpage=_coverpage.md`;
+            if (!url.includes('coverpage=')) {
+              var URLparms = URLparms + `&coverpage=_coverpage.md`;
+            }
           }
 
           const cb11 = document.querySelector('#loadcustomsidebar');
@@ -415,30 +443,40 @@
 
           const cb12 = document.querySelector('#loadcustomnavbar');
           if (cb12.checked) {
-            var URLparms = URLparms + `&loadNavbar=_navbar.md`;
+            if (!url.includes('loadNavbar=')) {
+              var URLparms = URLparms + `&loadNavbar=_navbar.md`;
+            }
           }
 
           const cb13 = document.querySelector('#loadcustomfooter');
           if (cb13.checked) {
-            var URLparms = URLparms + `&loadFooter=_footer.md`;
+            if (!url.includes('loadFooter=')) {
+              var URLparms = URLparms + `&loadFooter=_footer.md`;
+            }
           }
 
           var getSiteName = document.getElementById("siteName");
           var siteName = getSiteName.value;
           if (!(siteName == "")) {
-            siteName = siteName.replace(/ /g, '%20');
-            URLparms = URLparms + `&name=` + siteName;
+            if (!url.includes('name=')) {
+              siteName = siteName.replace(/ /g, '%20');
+              URLparms = URLparms + `&name=` + siteName;
+            }
           }
 
           var getSiteLogo = document.getElementById("siteLogo");
           var siteLogo = getSiteLogo.value;
           if (!(siteLogo == "")) {
-            URLparms = URLparms + `&logo=` + siteLogo;
+            if (!url.includes('logo=')) {
+              URLparms = URLparms + `&logo=` + siteLogo;
+            }
           }
 
           const cb14 = document.querySelector('#enableSidebarsearch');
           if (cb14.checked) {
-            var URLparms = URLparms + `&searchbox=true`;
+            if (!url.includes('searchbox=')) {
+              var URLparms = URLparms + `&searchbox=true`;
+            }
           }
 
           var getSubMaxLevel = document.getElementById("subMaxLevel");
@@ -447,20 +485,26 @@
             document.getElementById("subMaxLevel").value = 2;
           }
           if (!(subMaxLevel == 2)) {
-            URLparms = URLparms + `&subMaxLevel=` + subMaxLevel;
+            if (!url.includes('subMaxLevel=')) {
+              var URLparms = URLparms + `&subMaxLevel=` + subMaxLevel;
+            }
           }
 
           var getpageTitle = document.getElementById("pageTitle");
           var pageTitle = getpageTitle.value;
           if (!(pageTitle == "")) {
-            pageTitle = pageTitle.replace(/ /g, '%20');
-            URLparms = URLparms + `&page-title=` + pageTitle;
+            if (!url.includes('page-title=')) {
+              pageTitle = pageTitle.replace(/ /g, '%20');
+              var URLparms = URLparms + `&page-title=` + pageTitle;
+            }
           }
 
           var getlinktextdecoration = document.getElementById("linktextdecoration");
           var linktextdecoration = getlinktextdecoration.value;
           if ((!(linktextdecoration === 'underline')) && (!(document.getElementById('linktextdecoration').disabled)))  {
-            URLparms = URLparms + `&link-text-decoration=` + linktextdecoration;
+            if (!url.includes('link-text-decoration=')) {
+              var URLparms = URLparms + `&link-text-decoration=` + linktextdecoration;
+            }
           }
 
           var getColor = document.getElementById("linkhovercolor");
@@ -470,43 +514,59 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "")) {
-              URLparms = URLparms + `&link-color-hover=` + hexCode;
+              if (!url.includes('link-color-hover=')) {
+                var URLparms = URLparms + `&link-color-hover=` + hexCode;
+              }
             }
           }
 
           var linkhovertextdecoration = document.getElementById("linkhovertextdecoration").value;
           if ((!(linkhovertextdecoration === 'none')) && (!(document.getElementById('linkhovertextdecoration').disabled)))  {
-            URLparms = URLparms + `&link-text-decoration-hover=` + linkhovertextdecoration;
+            if (!url.includes('link-text-decoration-hover=')) {
+              var URLparms = URLparms + `&link-text-decoration-hover=` + linkhovertextdecoration;
+            }
           }
 
           var externalLinkTarget = document.getElementById("externalLinkTarget").value;
           if (!(externalLinkTarget === '_top')) {
-            URLparms = URLparms + `&externalLinkTarget=` + externalLinkTarget;
+            if (!url.includes('externalLinkTarget=')) {
+              var URLparms = URLparms + `&externalLinkTarget=` + externalLinkTarget;
+            }
           }
 
           const cb17 = document.querySelector('#pagination');
           if (cb17.checked) {
-            var URLparms = URLparms + `&pagination=true`;
+            if (!url.includes('pagination=')) {
+              var URLparms = URLparms + `&pagination=true`;
+            }
           }
 
           const cb18 = document.querySelector('#mergeNavbar');
           if (cb18.checked) {
-            var URLparms = URLparms + `&mergeNavbar=true`;
+            if (!url.includes('mergeNavbar=')) {
+              var URLparms = URLparms + `&mergeNavbar=true`;
+            }
           }
 
           var getheaderweight = document.getElementById('headerweight').value;
           if ((!(getheaderweight == "400")) && (!(document.getElementById('fontfamily').disabled)))  {
-            var URLparms = URLparms + `&header-weight=` + getheaderweight
+            if (!url.includes('header-weight=')) {
+              var URLparms = URLparms + `&header-weight=` + getheaderweight
+            }
           }
 
           const cb16 = document.querySelector('#imageCaptions');
           if (cb16.checked) {
-            var URLparms = URLparms + `&image-captions=true`;
+            if (!url.includes('image-captions=')) {
+              var URLparms = URLparms + `&image-captions=true`;
+            }
           }
 
           const cb15 = document.querySelector('#zoomimages');
           if (cb15.checked) {
-            var URLparms = URLparms + `&zoom-images=true`;
+            if (!url.includes('zoom-images=')) {
+              var URLparms = URLparms + `&zoom-images=true`;
+            }
           }
 
           var getColor = document.getElementById("coverpagecolor");
@@ -522,13 +582,17 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "C1E1F6")) {
-              URLparms = URLparms + `&coverpage-color=` + hexCode;
+              if (!url.includes('coverpage-color=')) {
+                var URLparms = URLparms + `&coverpage-color=` + hexCode;
+              }
             }
           }
 
           var getenabledarkmode = document.getElementById('enableDarkmode').value;
           if (!(getenabledarkmode == "false")) {
-            var URLparms = URLparms + `&dark-mode=` + getenabledarkmode
+            if (!url.includes('dark-mode=')) {
+              var URLparms = URLparms + `&dark-mode=` + getenabledarkmode
+            }
           }
 
           var getColor = document.getElementById("linkcolordarkmode");
@@ -544,7 +608,9 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "1BA1EE")) {
-              URLparms = URLparms + `&link-color-dark-mode=` + hexCode;
+              if (!url.includes('link-color-dark-mode=')) {
+                var URLparms = URLparms + `&link-color-dark-mode=` + hexCode;
+              }
             }
           }
 
@@ -555,7 +621,9 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "")) {
-              URLparms = URLparms + `&link-color-hover-dark-mode=` + hexCode;
+              if (!url.includes('link-color-hover-dark-mode=')) {
+                var URLparms = URLparms + `&link-color-hover-dark-mode=` + hexCode;
+              }
             }
           }
 
@@ -572,7 +640,9 @@
               hexCode = hexCode.substring(1);
             }
             if (!(hexCode == "20587D")) {
-              URLparms = URLparms + `&coverpage-color-dark-mode=` + hexCode;
+              if (!url.includes('coverpage-color-dark-mode=')) {
+                var URLparms = URLparms + `&coverpage-color-dark-mode=` + hexCode;
+              }
             }
           }
 
