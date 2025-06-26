@@ -2088,9 +2088,9 @@
       // Change body font size if fontSize parameter present
       fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
       if (!(fontsize === false)) {
-        if (!(fontsize.includes("px"))) {
-          // Convert rem values to pixel values
-          fontsize = (fontsize * 16) + "px";
+        // Check if fontsize is a number when converted
+        if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
+            fontsize = fontsize + "px";
         }
         // console.log(fontsize);
         document.documentElement.style.setProperty('--font-size', fontsize);
