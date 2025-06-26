@@ -166,8 +166,8 @@
         if (isValidUrl(url)) {
 
           // Code generated/assisted by Anthropic Claude AI
-          // Remove 'edit-link' and its value anywhere in the URL string
-          url = url.replace(/([?&])edit-link=[^&]*(&?)/, function(match, firstChar, secondChar) {
+          // Remove 'edit-link*' and values anywhere in the URL string
+          url = url.replace(/([?&])edit-link[^&]*(&?)/, function(match, firstChar, secondChar) {
           // If 'edit-link' is the first query param and has another param after it
           if (firstChar === '?' && secondChar) return '?';
             // If 'edit-link' is the only query param

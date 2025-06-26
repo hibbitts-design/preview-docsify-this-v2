@@ -499,25 +499,25 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 
 **Basic URL Parameters (included in the standard Web Page Builder)**
 
-- [browser-tab-title](/?id=browser-tab-title)
-- [docsify-core-theme](/?id=docsify-core-theme)
+- [browser-tab-title](/?id=browser-tab-titlecopy)
+- [docsify-core-theme](/?id=docsify-core-themecopy)
 - [edit-link](/?id=edit-link)
 - [edit-link-text](/?id=edit-link-text)
 - [edit-link-top](/?id=edit-link-top)
-- [font-family](/?id=font-family)
-- [font-size](/?id=font-size)
-- [header-weight](/?id=header-weight)
-- [hide-credits](/?id=hide-credits)
-- [hypothesis](/?id=hypothesis)
-- [image-captions](/?id=image-captions)
-- [line-height](/?id=line-height)
-- [link-color](/?id=link-color)
-- [maxLevel](/?id=maxLevel)
-- [sidebar](/?id=sidebar)
-- [toc](/?id=toc)
-- [toc-headings](/?id=toc-headings)
-- [toc-narrow](/?id=toc-narrow)
-- [zoom-images](/?id=zoom-images)
+- [font-family](/?id=font-familycopy)
+- [font-size](/?id=font-sizecopy)
+- [header-weight](/?id=header-weightcopy)
+- [hide-credits](/?id=hide-creditscopy)
+- [hypothesis](/?id=hypothesiscopy)
+- [image-captions](/?id=image-captionscopy)
+- [line-height](/?id=line-heightcopy)
+- [link-color](/?id=link-colorcopy)
+- [maxLevel](/?id=maxLevelcopy)
+- [sidebar](/?id=sidebarcopy)
+- [toc](/?id=toccopy)
+- [toc-headings](/?id=toc-headingscopy)
+- [toc-narrow](/?id=toc-narrowcopy)
+- [zoom-images](/?id=zoom-imagescopy)
 
 ##### browser-tab-title<span class="copy-link" onclick="navigator.clipboard.writeText('&browser-tab-title=')">copy</span>
 
@@ -534,15 +534,15 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Display a "Edit this Page" link (default location is bottom of page) with the optional **edit-link** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md. Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.
 
-##### edit-link-text<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
+##### edit-link-text
 
 Change the default text for a "Edit this Page" link with the optional **edit-link-text** parameter, for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20as%20Markdown. Please note to use text with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "View as Markdown" would be "View%20as%20Markdown". Underscores may also be used to represent spaces.
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20as%20Markdown. Please note to use text with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "View as Markdown" would be "View%20as%20Markdown". Underscores may also be used to represent spaces. Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder text field instead.
 
-##### edit-link-top<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-top=')">copy</span>
+##### edit-link-top
 
 Change the location of the "Edit this Page" link from the bottom of pages to be the top of pages with the optional **edit-link-top** parameter, for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&toc=true&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-top=true
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&toc=true&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-top=true Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.
 
 ##### font-family<span class="copy-link" onclick="navigator.clipboard.writeText('&font-famil=')">copy</span>
 
@@ -619,34 +619,34 @@ The following additional URL parameters are available for use in Docsify-This UR
 
 **Supplemental URL Parameters (included in the Advanced Web Page Builder)**
 
-- [coverpage](/?id=coverpage)
-- [coverpage-color](/?id=coverpage-color)
-- [coverpage-color-dark-mode](/?id=coverpage-color-dark-mode)
-- [dark-mode](/?id=dark-mode)
+- [coverpage](/?id=coverpagecopy)
+- [coverpage-color](/?id=coverpage-colorcopy)
+- [coverpage-color-dark-mode](/?id=coverpage-color-dark-modecopy)
+- [dark-mode](/?id=dark-modecopy)
 - [edit-link-emoji](/?id=edit-link-emoji)
-- [image-captions-font-style](/?id=image-captions-font-style)
-- [image-captions-image-align](/?id=image-captions-image-align)
-- [image-captions-text-align](/?id=image-captions-text-align)
-- [link-color-dark-mode](/?id=link-color-dark-mode)
-- [link-color-hover](/?id=link-color-hover)
-- [link-color-hover-dark-mode](/?id=link-color-hover-dark-mode)
-- [link-text-decoration](/?id=link-text-decoration)
-- [link-text-decoration-hover](/?id=link-text-decoration-hover)
-- [loadFavicon](/?id=loadFavicon)
-- [loadFooter](/?id=loadFooter)
-- [loadNavbar](/?id=loadNavbar)
-- [loadSidebar](/?id=loadSidebar)
-- [logo](/?id=logo)
-- [max-width](/?id=max-width)
-- [mergeNavbar](/?id=mergeNavbar)
-- [name](/?id=name)
-- [page-title](/?id=page-title)
-- [pagination](/?id=pagination)
-- [searchbox](/?id=searchbox)
-- [subMaxLevel](/?id=subMaxLevel)
-- [svg-icons](/?id=svg-icons)
-- [theme-color](/?id=theme-color)
-- [theme-color-dark-mode](/?id=theme-color-dark-mode)
+- [image-captions-font-style](/?id=image-captions-font-stylecopy)
+- [image-captions-image-align](/?id=image-captions-image-aligncopy)
+- [image-captions-text-align](/?id=image-captions-text-aligncopy)
+- [link-color-dark-mode](/?id=link-color-dark-modecopy)
+- [link-color-hover](/?id=link-color-hovercopy)
+- [link-color-hover-dark-mode](/?id=link-color-hover-dark-modecopy)
+- [link-text-decoration](/?id=link-text-decorationcopy)
+- [link-text-decoration-hover](/?id=link-text-decoration-hovercopy)
+- [loadFavicon](/?id=loadFaviconcopy)
+- [loadFooter](/?id=loadFootercopy)
+- [loadNavbar](/?id=loadNavbarcopy)
+- [loadSidebar](/?id=loadSidebarcopy)
+- [logo](/?id=logocopy)
+- [max-width](/?id=max-widthcopy)
+- [mergeNavbar](/?id=mergeNavbarcopy)
+- [name](/?id=namecopy)
+- [page-title](/?id=page-titlecopy)
+- [pagination](/?id=paginationcopy)
+- [searchbox](/?id=searchboxcopy)
+- [subMaxLevel](/?id=subMaxLevelcopy)
+- [svg-icons](/?id=svg-iconscopy)
+- [theme-color](/?id=theme-colorcopy)
+- [theme-color-dark-mode](/?id=theme-color-dark-modecopy)
 
 ##### coverpage<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage=')">copy</span>
 
@@ -671,7 +671,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 ##### edit-link-emoji<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-emoji=')">copy</span>
 
 Change the default emoji for a "Edit this Page" link with the optional **edit-link-emoji** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder:
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder: Please note that adding this URL parameter directly to the Markdown File URL field is not supported.
 
 ##### image-captions-font-style<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-font-style=')">copy</span>
 
