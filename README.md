@@ -184,7 +184,7 @@ The visual appearance of an online Markdown file displayed as a web page by Docs
 - **Adding parameters directly to the Markdown File URL field** — You can append URL parameters (like `&link-color=cc0000&font-size=16px`) in the Web Page Builder's URL field for quick customization
 - **Manually adjusting URL parameters** — You can also manually modify the appearance by changing or adding specific parameters to the published Docsify-This URL
 
-For example, to display the Markdown file located at https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main/home.md with a Docsify sidebar including headings up to 3 levels, the Docsify-This URL is:
+For example, to display the Markdown file located at https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main/home.md with a Docsify sidebar including headings up to 3 levels, the published Docsify-This URL would be:
 
 ```html
 https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&maxLevel=3
