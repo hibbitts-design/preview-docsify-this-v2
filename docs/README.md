@@ -524,7 +524,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 Set a custom title on Browser tab for your web pages with the optional **browser-tab-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&browser-tab-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### docsify-core-theme<span class="copy-link" onclick="navigator.clipboard.writeText('&docsify-core-theme=')">copy</span>
+##### docsify-core-theme<span class="copy-link" onclick="navigator.clipboard.writeText('&docsify-core-theme=true')">copy</span>
 
 Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true. Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `announcement` CSS class within an HTML Blockquote.
@@ -559,17 +559,17 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set a custom header font weight (default is 400 - regular) for your web pages with the optional **header-weight** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600.
 
-##### hide-credits<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
+##### hide-credits<span class="copy-link" onclick="navigator.clipboard.writeText('&hide-credits=true')">copy</span>
 
 Hide the credits usually shown at the bottom of every displayed Docsify-This page with the optional **hide-credits** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hide-credits=true.
 
-##### hypothesis<span class="copy-link" onclick="navigator.clipboard.writeText('&hypothesis=')">copy</span>
+##### hypothesis<span class="copy-link" onclick="navigator.clipboard.writeText('&hypothesis=true')">copy</span>
 
 Enable page annotation with [Hypothes.is](https://hypothes.is) with the optional **hypothesis** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hypothesis=true.
 
-##### image-captions<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions=')">copy</span>
+##### image-captions<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions=true')">copy</span>
 
 Turn alt text into image captions (using the semantic HTML `<figure>` and `<figcaption>` structure) with the optional **image-captions** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true.
@@ -589,12 +589,12 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set the maximum header level of the Docsify sidebar with the optional **maxLevel** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&sidebar=true&maxLevel=3
 
-##### sidebar<span class="copy-link" onclick="navigator.clipboard.writeText('&sidebar=')">copy</span>
+##### sidebar<span class="copy-link" onclick="navigator.clipboard.writeText('&sidebar=true')">copy</span>
 
 Display a Docsify sidebar with the optional **sidebar** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&sidebar=true
 
-##### toc<span class="copy-link" onclick="navigator.clipboard.writeText('&toc=')">copy</span>
+##### toc<span class="copy-link" onclick="navigator.clipboard.writeText('&toc=true')">copy</span>
 
 Display a page table of contents with the optional **toc** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true
@@ -604,12 +604,12 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set the page heading levels (i.e. h1, h2, etc.) to be included in the Page Table of Contents with the optional **toc-headings** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true&toc-headings=h1,h2,h3.
 
-##### toc-narrow<span class="copy-link" onclick="navigator.clipboard.writeText('&toc-narrow=')">copy</span>
+##### toc-narrow<span class="copy-link" onclick="navigator.clipboard.writeText('&toc-narrow=true')">copy</span>
 
 Use a less wide Page Table of Contents with the optional **toc-narrow** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc-narrow=true. This parameter can be particularly valuable when embedding content where a smaller screen area is likely.
 
-##### zoom-images<span class="copy-link" onclick="navigator.clipboard.writeText('&zoom-images=')">copy</span>
+##### zoom-images<span class="copy-link" onclick="navigator.clipboard.writeText('&zoom-images=true')">copy</span>
 Enable image zoom (tapping on page images to enlarge them) with the optional **zoom-images** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&zoom-images=true. To exclude images, use `![](image.png ":no-zoom")`.
 
@@ -663,7 +663,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set a custom color for the coverpage in dark mode with the optional **coverpage-color-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&dark-mode=auto&link-color=CC0000&link-color-dark-mode=FF9E9E&coverpage=_coverpage.md&coverpage-color=FF9E9E&coverpage-color-dark-mode=4d0000
 
-##### dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&dark-mode=')">copy</span>
+##### dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&dark-mode=auto')">copy</span>
 
 Enable dark theme or automatically switch light/dark theme based on system OS-level preference with the optional **dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=on
@@ -688,7 +688,7 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 Align image caption text with the optional **image-captions-text-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
-##### lazy-load-images<span class="copy-link" onclick="navigator.clipboard.writeText('&lazy-load-images=')">copy</span>
+##### lazy-load-images<span class="copy-link" onclick="navigator.clipboard.writeText('&lazy-load-images=true')">copy</span>
 
 Enable the lazy loading of images by Browsers with the optional **lazy-load-images** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&lazy-load-images=true Please note that enabling lazy loading of images may affect page scroll accuracy, for example by the Docsify Sidebar etc.
@@ -748,7 +748,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&docsify-core-theme=true&max-width=910px. This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and embedding the resulting page.
 
-##### mergeNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&mergeNavbar=')">copy</span>
+##### mergeNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&mergeNavbar=true')">copy</span>
 
 Merge the Navbar items to the top of the sidebar on smaller screens with the optional **mergeNavbar** Docsify parameter, for example:
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&mergeNavbar=true&name=CPT-363
@@ -763,12 +763,12 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Set a custom page title at the top of your web pages with the optional **page-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-course-hub/refs/heads/master/pages/03.resources&homepage=page.md&page-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### pagination<span class="copy-link" onclick="navigator.clipboard.writeText('&pagination=')">copy</span>
+##### pagination<span class="copy-link" onclick="navigator.clipboard.writeText('&pagination=true')">copy</span>
 
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&pagination=true
 
-##### searchbox<span class="copy-link" onclick="navigator.clipboard.writeText('&searchbox=')">copy</span>
+##### searchbox<span class="copy-link" onclick="navigator.clipboard.writeText('&searchbox=true')">copy</span>
 
 Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
