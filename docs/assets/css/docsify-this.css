@@ -25,6 +25,31 @@ input[type="checkbox"] {
   color: #333;
 }
 
+#docsifythis .copy-link {
+  margin-left: 2px;
+  color: #0066cc;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none !important;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+#docsifythis .copy-link:hover {
+  color: #004499;
+  background-color: #f0f8ff;
+  text-decoration: none !important;
+}
+
+/* Override any parent hover effects */
+#docsifythis h5:hover .copy-link,
+#docsifythis h4:hover .copy-link,
+#docsifythis h3:hover .copy-link {
+  text-decoration: none !important;
+}
+
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight: 700;
