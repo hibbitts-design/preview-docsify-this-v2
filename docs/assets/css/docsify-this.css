@@ -27,9 +27,9 @@ input[type="checkbox"] {
 
 #docsifythis .copy-link {
   margin-left: 2px;
-  color: #0066cc;
+  color: var(--link-color);
   cursor: pointer;
-  font-size: 12px;
+  font-size: 18px;
   text-decoration: none !important;
   padding: 2px 4px;
   border-radius: 2px;
@@ -38,15 +38,13 @@ input[type="checkbox"] {
 }
 
 #docsifythis .copy-link:hover {
-  color: #004499;
-  background-color: #f0f8ff;
+  color: var(--link-color);
+  background-color: #ddeeff;
   text-decoration: none !important;
 }
 
 /* Override any parent hover effects */
-#docsifythis h5:hover .copy-link,
-#docsifythis h4:hover .copy-link,
-#docsifythis h3:hover .copy-link {
+#docsifythis h5:hover .copy-link {
   text-decoration: none !important;
 }
 
@@ -581,7 +579,8 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
   #docsifythis p a,
   #docsifythis li a,
-  #docsifythis h3 a {
+  #docsifythis h3 a ,
+  #docsifythis .copy-link{
     color: #1ba1ee;
   }
 
