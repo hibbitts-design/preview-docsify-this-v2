@@ -519,12 +519,12 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [toc-narrow](/?id=toc-narrow)
 - [zoom-images](/?id=zoom-images)
 
-##### browser-tab-title <span class="copy-link" onclick="navigator.clipboard.writeText('&browser-tab-title=')">copy</span>
+##### browser-tab-title<span class="copy-link" onclick="navigator.clipboard.writeText('&browser-tab-title=')">copy</span>
 
 Set a custom title on Browser tab for your web pages with the optional **browser-tab-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&browser-tab-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### docsify-core-theme <span class="copy-link" onclick="navigator.clipboard.writeText('&docsify-core-theme=')">copy</span>
+##### docsify-core-theme<span class="copy-link" onclick="navigator.clipboard.writeText('&docsify-core-theme=')">copy</span>
 
 Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true. Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `announcement` CSS class within an HTML Blockquote.
@@ -534,82 +534,82 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Display a "Edit this Page" link (default location is bottom of page) with the optional **edit-link** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md. Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.
 
-##### edit-link-text <span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
+##### edit-link-text<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
 
 Change the default text for a "Edit this Page" link with the optional **edit-link-text** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20as%20Markdown. Please note to use text with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "View as Markdown" would be "View%20as%20Markdown". Underscores may also be used to represent spaces.
 
-##### edit-link-top <span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-top=')">copy</span>
+##### edit-link-top<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-top=')">copy</span>
 
 Change the location of the "Edit this Page" link from the bottom of pages to be the top of pages with the optional **edit-link-top** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&toc=true&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-top=true
 
-##### font-family <span class="copy-link" onclick="navigator.clipboard.writeText('&font-famil=')">copy</span>
+##### font-family<span class="copy-link" onclick="navigator.clipboard.writeText('&font-famil=')">copy</span>
 
 Set a custom font for your web pages with the optional **font-family** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-family=Helvetica,Arial,sans-serif. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. The default Docsify-This theme font is _Source Sans 3_, and the default font for the Docsify v5 core theme is _System-UI_. Please note to use fonts with spaces in their names they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "Courier New" would be "Courier%20New". Underscores may also be used to represent spaces.
 
-##### font-size <span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
+##### font-size<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
 
 Set a custom font size in pixels for your web pages with the optional **font-size** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-size=16px. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform.
 
-##### header-weight <span class="copy-link" onclick="navigator.clipboard.writeText('&header-weight=')">copy</span>
+##### header-weight<span class="copy-link" onclick="navigator.clipboard.writeText('&header-weight=')">copy</span>
 
 Set a custom header font weight (default is 400 - regular) for your web pages with the optional **header-weight** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&header-weight=600.
 
-##### hide-credits <span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
+##### hide-credits<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-text=')">copy</span>
 
 Hide the credits usually shown at the bottom of every displayed Docsify-This page with the optional **hide-credits** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hide-credits=true.
 
-##### hypothesis <span class="copy-link" onclick="navigator.clipboard.writeText('&hypothesis=')">copy</span>
+##### hypothesis<span class="copy-link" onclick="navigator.clipboard.writeText('&hypothesis=')">copy</span>
 
 Enable page annotation with [Hypothes.is](https://hypothes.is) with the optional **hypothesis** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&hypothesis=true.
 
-##### image-captions <span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions=')">copy</span>
+##### image-captions<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions=')">copy</span>
 
 Turn alt text into image captions (using the semantic HTML `<figure>` and `<figcaption>` structure) with the optional **image-captions** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true.
 
-##### line-height <span class="copy-link" onclick="navigator.clipboard.writeText('&line-height=')">copy</span>
+##### line-height<span class="copy-link" onclick="navigator.clipboard.writeText('&line-height=')">copy</span>
 
 Set a custom line height for your web pages with the optional **line-height** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&line-height=1.5.
 
-##### link-color <span class="copy-link" onclick="navigator.clipboard.writeText('&link-color=')">copy</span>
+##### link-color<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color=')">copy</span>
 
 Set a custom color for all links, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000.
 
-##### maxLevel <span class="copy-link" onclick="navigator.clipboard.writeText('&maxLevel=')">copy</span>
+##### maxLevel<span class="copy-link" onclick="navigator.clipboard.writeText('&maxLevel=')">copy</span>
 
 Set the maximum header level of the Docsify sidebar with the optional **maxLevel** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&sidebar=true&maxLevel=3
 
-##### sidebar <span class="copy-link" onclick="navigator.clipboard.writeText('&sidebar=')">copy</span>
+##### sidebar<span class="copy-link" onclick="navigator.clipboard.writeText('&sidebar=')">copy</span>
 
 Display a Docsify sidebar with the optional **sidebar** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&sidebar=true
 
-##### toc <span class="copy-link" onclick="navigator.clipboard.writeText('&toc=')">copy</span>
+##### toc<span class="copy-link" onclick="navigator.clipboard.writeText('&toc=')">copy</span>
 
 Display a page table of contents with the optional **toc** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true
 
-##### toc-headings <span class="copy-link" onclick="navigator.clipboard.writeText('&toc-headings=')">copy</span>
+##### toc-headings<span class="copy-link" onclick="navigator.clipboard.writeText('&toc-headings=')">copy</span>
 
 Set the page heading levels (i.e. h1, h2, etc.) to be included in the Page Table of Contents with the optional **toc-headings** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true&toc-headings=h1,h2,h3.
 
-##### toc-narrow <span class="copy-link" onclick="navigator.clipboard.writeText('&toc-narrow=')">copy</span>
+##### toc-narrow<span class="copy-link" onclick="navigator.clipboard.writeText('&toc-narrow=')">copy</span>
 
 Use a less wide Page Table of Contents with the optional **toc-narrow** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc-narrow=true. This parameter can be particularly valuable when embedding content where a smaller screen area is likely.
 
-##### zoom-images <span class="copy-link" onclick="navigator.clipboard.writeText('&zoom-images=')">copy</span>
+##### zoom-images<span class="copy-link" onclick="navigator.clipboard.writeText('&zoom-images=')">copy</span>
 Enable image zoom (tapping on page images to enlarge them) with the optional **zoom-images** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&zoom-images=true. To exclude images, use `![](image.png ":no-zoom")`.
 
@@ -648,147 +648,147 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [theme-color](/?id=theme-color)
 - [theme-color-dark-mode](/?id=theme-color-dark-mode)
 
-##### coverpage <span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage=')">copy</span>
+##### coverpage<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage=')">copy</span>
 
 Display a [Docsify custom coverpage](https://docsify.js.org/#/configuration?id=coverpage) with the optional **coverpage** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&coverpage=_coverpage.md
 
-##### coverpage-color <span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color=')">copy</span>
+##### coverpage-color<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color=')">copy</span>
 
 Set a custom color for the coverpage with the optional **coverpage-color** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&coverpage=_coverpage.md&coverpage-color=FF9E9E
 
-##### coverpage-color-dark-mode <span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color-dark-mode=')">copy</span>
+##### coverpage-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color-dark-mode=')">copy</span>
 
 Set a custom color for the coverpage in dark mode with the optional **coverpage-color-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&dark-mode=auto&link-color=CC0000&link-color-dark-mode=FF9E9E&coverpage=_coverpage.md&coverpage-color=FF9E9E&coverpage-color-dark-mode=4d0000
 
-##### dark-mode <span class="copy-link" onclick="navigator.clipboard.writeText('&dark-mode=')">copy</span>
+##### dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&dark-mode=')">copy</span>
 
 Enable dark theme or automatically switch light/dark theme based on system OS-level preference with the optional **dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=on
 
-##### edit-link-emoji <span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-emoji=')">copy</span>
+##### edit-link-emoji<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-emoji=')">copy</span>
 
 Change the default emoji for a "Edit this Page" link with the optional **edit-link-emoji** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder:
 
-##### image-captions-font-style <span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-font-style=')">copy</span>
+##### image-captions-font-style<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-font-style=')">copy</span>
 
 Set the font style of image captions with the optional **image-captions-font-style** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
 
-##### image-captions-image-align <span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-image-align=')">copy</span>
+##### image-captions-image-align<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-image-align=')">copy</span>
 
 Align image caption images with the optional **image-captions-image-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-text-align=right&image-captions-image-align=right.
 
-##### image-captions-text-align <span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-text-align=')">copy</span>
+##### image-captions-text-align<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-text-align=')">copy</span>
 
 Align image caption text with the optional **image-captions-text-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
-##### lazy-load-images <span class="copy-link" onclick="navigator.clipboard.writeText('&lazy-load-images=')">copy</span>
+##### lazy-load-images<span class="copy-link" onclick="navigator.clipboard.writeText('&lazy-load-images=')">copy</span>
 
 Enable the lazy loading of images by Browsers with the optional **lazy-load-images** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&lazy-load-images=true Please note that enabling lazy loading of images may affect page scroll accuracy, for example by the Docsify Sidebar etc.
 
-##### link-color-dark-mode <span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-dark-mode=')">copy</span>
+##### link-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-dark-mode=')">copy</span>
 
 Set a custom color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000&dark-mode=auto&link-color-dark-mode=FF9E9E.
 
-##### link-color-hover <span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover=')">copy</span>
+##### link-color-hover<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover=')">copy</span>
 
 Set a custom hover color for all links, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000.
 
-##### link-color-hover-dark-mode <span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover-dark-mode=')">copy</span>
+##### link-color-hover-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover-dark-mode=')">copy</span>
 
 Set a custom hover color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-hover-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000&dark-mode=auto&link-color-hover-dark-mode=FF9E9E.
 
-##### link-text-decoration <span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration=')">copy</span>
+##### link-text-decoration<span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration=')">copy</span>
 
 Set a custom text decoration for all links, with the optional **link-text-decoration** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-text-decoration=none
 
-##### link-text-decoration-hover <span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration-hover=')">copy</span>
+##### link-text-decoration-hover<span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration-hover=')">copy</span>
 
 Set a custom hover text decoration for all links, with the optional **link-text-decoration-hover** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-text-decoration-hover=underline
 
-##### loadFavicon <span class="copy-link" onclick="navigator.clipboard.writeText('&loadFavicon=')">copy</span>
+##### loadFavicon<span class="copy-link" onclick="navigator.clipboard.writeText('&loadFavicon=')">copy</span>
 
 You can set a custom Favicon from the image file passed from the optional **loadFavicon** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-markdown-content-demo/main&loadFavicon=open-access.png
 
-##### loadFooter <span class="copy-link" onclick="navigator.clipboard.writeText('&loadFooter=')">copy</span>
+##### loadFooter<span class="copy-link" onclick="navigator.clipboard.writeText('&loadFooter=')">copy</span>
 
 Load a Docsify footer from the Markdown file in the current directory passed with the optional **loadFooter** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&loadFooter=_footer.md
 
-##### loadNavbar <span class="copy-link" onclick="navigator.clipboard.writeText('&loadNavbar=')">copy</span>
+##### loadNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&loadNavbar=')">copy</span>
 
 Load a [Docsify custom navbar](https://docsify.js.org/#/custom-navbar?id=custom-navbar) from the Markdown file passed with the optional **loadNavbar** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&loadNavbar=_navbar.md
 
-##### loadSidebar <span class="copy-link" onclick="navigator.clipboard.writeText('&loadSidebar=')">copy</span>
+##### loadSidebar<span class="copy-link" onclick="navigator.clipboard.writeText('&loadSidebar=')">copy</span>
 
 Load a [Docsify custom sidebar](https://docsify.js.org/#/more-pages?id=sidebar) from the Markdown file passed with the optional **loadSidebar** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar-with-home.md
 
-##### logo <span class="copy-link" onclick="navigator.clipboard.writeText('&logo=')">copy</span>
+##### logo<span class="copy-link" onclick="navigator.clipboard.writeText('&logo=')">copy</span>
 
 Display a logo image for the website name in a Docsify custom Sidebar (i.e. file 'logo.png) with the optional **logo** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=CPT-363&logo=/images/logo.png The full folder path and filename must be provided. A website name must also be provided, and will be used as the alt text for the logo.
 
-##### max-width <span class="copy-link" onclick="navigator.clipboard.writeText('&max-width=')">copy</span>
+##### max-width<span class="copy-link" onclick="navigator.clipboard.writeText('&max-width=')">copy</span>
 
 Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&docsify-core-theme=true&max-width=910px. This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and embedding the resulting page.
 
-##### mergeNavbar <span class="copy-link" onclick="navigator.clipboard.writeText('&mergeNavbar=')">copy</span>
+##### mergeNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&mergeNavbar=')">copy</span>
 
 Merge the Navbar items to the top of the sidebar on smaller screens with the optional **mergeNavbar** Docsify parameter, for example:
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&mergeNavbar=true&name=CPT-363
 
-##### name <span class="copy-link" onclick="navigator.clipboard.writeText('&name=')">copy</span>
+##### name<span class="copy-link" onclick="navigator.clipboard.writeText('&name=')">copy</span>
 
 Display the name for the website in a Docsify custom Sidebar (i.e. file '\_sidebar.md) with the optional **name** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&name=CPT-363. When this parameter is provided it will be automatically used as the Browser tab title as well. Please note to use names with spaces they must be encoded, so "My Site" would be "My%20Site". Underscores may also be used to represent spaces.
 
-##### page-title <span class="copy-link" onclick="navigator.clipboard.writeText('&page-title=')">copy</span>
+##### page-title<span class="copy-link" onclick="navigator.clipboard.writeText('&page-title=')">copy</span>
 
 Set a custom page title at the top of your web pages with the optional **page-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-course-hub/refs/heads/master/pages/03.resources&homepage=page.md&page-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### pagination <span class="copy-link" onclick="navigator.clipboard.writeText('&pagination=')">copy</span>
+##### pagination<span class="copy-link" onclick="navigator.clipboard.writeText('&pagination=')">copy</span>
 
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&pagination=true
 
-##### searchbox <span class="copy-link" onclick="navigator.clipboard.writeText('&searchbox=')">copy</span>
+##### searchbox<span class="copy-link" onclick="navigator.clipboard.writeText('&searchbox=')">copy</span>
 
 Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
 
-##### subMaxLevel <span class="copy-link" onclick="navigator.clipboard.writeText('&subMaxLevel=')">copy</span>
+##### subMaxLevel<span class="copy-link" onclick="navigator.clipboard.writeText('&subMaxLevel=')">copy</span>
 
 Set the maximum automatic table of contents header levels in Docsify custom Sidebar (i.e. file '\_sidebar.md) with the optional **subMaxLevel** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&subMaxLevel=1
 
-##### svg-icons <span class="copy-link" onclick="navigator.clipboard.writeText('&svg-icons=')">copy</span>
+##### svg-icons<span class="copy-link" onclick="navigator.clipboard.writeText('&svg-icons=')">copy</span>
 
 Use the SVG version of Font Awesome icons instead of Web Fonts with the optional **svg-icons** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-lms-content-pages/main&homepage=schedule.md&svg-icons=true
 
-##### theme-color <span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color=')">copy</span>
+##### theme-color<span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color=')">copy</span>
 
 Set a custom theme color, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-core-theme=true&theme-color=CC0000. This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and wanting to retain the default link style.  
 
-##### theme-color-dark-mode <span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color-dark-mode=')">copy</span>
+##### theme-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color-dark-mode=')">copy</span>
 
 Set a custom theme color in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color-dark-mode** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-core-theme=true&theme-color=CC0000&dark-mode=auto&theme-color-dark-mode=FF9E9E.  This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and wanting to retain the default link style.  
