@@ -479,6 +479,7 @@ Docsify-This has been recognized as a finalist in the Open Infrastructure catego
 The visual appearance of an online Markdown file displayed as a web page by Docsify-This can be altered in two ways:
 
 - **Using the above Web Page Builder** — This point-and-click tool automatically generates the required Docsify-This URL with the necessary parameters
+- **Adding parameters directly to the Markdown File URL field** — You can manually append URL parameters (like `&link-color=cc0000&font-size=16px`) directly in the Web Page Builder's URL field for quick customization
 - **Manually adjusting URL parameters** — You can also manually modify the appearance by changing or adding specific parameters to the Docsify-This URL
 
 For example, to display the Markdown file located at https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main/home.md with a Docsify sidebar including headings up to 3 levels, the Docsify-This URL is:
