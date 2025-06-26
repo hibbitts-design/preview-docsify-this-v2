@@ -29,7 +29,7 @@ input[type="checkbox"] {
   margin-left: 8px;
   color: var(--link-color);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none !important;
   padding: 2px 4px;
   border-radius: 2px;
