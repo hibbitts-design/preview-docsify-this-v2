@@ -499,12 +499,12 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 
 **Basic URL Parameters (included in the standard Web Page Builder)**
 
-- [browser-tab-title](/?id=browser-tab-titlecopy)
-- [docsify-core-theme](/?id=docsify-core-themecopy)
+- [browser-tab-title](/?id=browser-tab-titleconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
+- [docsify-core-theme](/?id=docsify-core-themeconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [edit-link](/?id=edit-link)
 - [edit-link-text](/?id=edit-link-text)
 - [edit-link-top](/?id=edit-link-top)
-- [font-family](/?id=font-familycopy)
+- [font-family](/?id=font-familyconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [font-size](/?id=font-sizecopy)
 - [header-weight](/?id=header-weightcopy)
 - [hide-credits](/?id=hide-creditscopy)
@@ -519,12 +519,12 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [toc-narrow](/?id=toc-narrowcopy)
 - [zoom-images](/?id=zoom-imagescopy)
 
-##### browser-tab-title<span class="copy-link" onclick="navigator.clipboard.writeText('&browser-tab-title=')">copy</span>
+##### browser-tab-title<button type="button" class="copy-link" aria-label="Copy browser-tab-title parameter" onclick="navigator.clipboard.writeText('&browser-tab-title=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom title on Browser tab for your web pages with the optional **browser-tab-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&browser-tab-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### docsify-core-theme<span class="copy-link" onclick="navigator.clipboard.writeText('&docsify-core-theme=true')">copy</span>
+##### docsify-core-theme<button type="button" class="copy-link" aria-label="Copy docsify-core-theme parameter" onclick="navigator.clipboard.writeText('docsify-core-theme=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true. Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `announcement` CSS class within an HTML Blockquote.
@@ -544,7 +544,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Change the location of the "Edit this Page" link from the bottom of pages to be the top of pages with the optional **edit-link-top** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&toc=true&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-top=true Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.
 
-##### font-family<span class="copy-link" onclick="navigator.clipboard.writeText('&font-famil=')">copy</span>
+##### font-family<button type="button" class="copy-link" aria-label="Copy font-family parameter" onclick="navigator.clipboard.writeText('font-family=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom font for your web pages with the optional **font-family** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&font-family=Helvetica,Arial,sans-serif. This parameter can be particularly valuable when trying to better match the visual presentation of embedded content with your destination platform. The default Docsify-This theme font is _Source Sans 3_, and the default font for the Docsify v5 core theme is _System-UI_. Please note to use fonts with spaces in their names they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "Courier New" would be "Courier%20New". Underscores may also be used to represent spaces.

@@ -35,6 +35,16 @@ input[type="checkbox"] {
   border-radius: 2px;
   transition: all 0.2s ease;
   display: inline-block;
+  margin-right: 4px; /* Add some right margin */
+  white-space: nowrap; /* Prevent text wrapping */
+  
+  /* Minimal button reset */
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  
+  /* Critical accessibility additions */
+  min-height: 24px; /* Touch target size */
 }
 
 #docsifythis .copy-link:hover {
@@ -43,7 +53,12 @@ input[type="checkbox"] {
   text-decoration: none !important;
 }
 
-/* Override any parent hover effects */
+/* CRITICAL: Focus indicator for keyboard users */
+#docsifythis .copy-link:focus {
+  outline: 2px solid var(--link-color, #0066cc);
+  outline-offset: 2px;
+}
+
 #docsifythis h5:hover .copy-link {
   text-decoration: none !important;
 }
