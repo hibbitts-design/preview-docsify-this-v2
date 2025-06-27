@@ -647,147 +647,147 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [theme-color](/?id=theme-colorcopy)
 - [theme-color-dark-mode](/?id=theme-color-dark-modecopy)
 
-##### coverpage<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage=')">copy</span>
+##### coverpage<button type="button" class="copy-link" aria-label="Copy coverpage parameter" onclick="navigator.clipboard.writeText('&coverpage=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display a [Docsify custom coverpage](https://docsify.js.org/#/configuration?id=coverpage) with the optional **coverpage** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&coverpage=_coverpage.md
 
-##### coverpage-color<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color=')">copy</span>
+##### coverpage-color<button type="button" class="copy-link" aria-label="Copy coverpage-color parameter" onclick="navigator.clipboard.writeText('&coverpage-color=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom color for the coverpage with the optional **coverpage-color** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&coverpage=_coverpage.md&coverpage-color=FF9E9E
 
-##### coverpage-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&coverpage-color-dark-mode=')">copy</span>
+##### coverpage-color-dark-mode<button type="button" class="copy-link" aria-label="Copy coverpage-color-dark-mode parameter" onclick="navigator.clipboard.writeText('&coverpage-color-dark-mode=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom color for the coverpage in dark mode with the optional **coverpage-color-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=home.md&dark-mode=auto&link-color=CC0000&link-color-dark-mode=FF9E9E&coverpage=_coverpage.md&coverpage-color=FF9E9E&coverpage-color-dark-mode=4d0000
 
-##### dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&dark-mode=auto')">copy</span>
+##### dark-mode<button type="button" class="copy-link" aria-label="Copy dark-mode parameter" onclick="navigator.clipboard.writeText('&dark-mode=auto').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Enable dark theme or automatically switch light/dark theme based on system OS-level preference with the optional **dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&dark-mode=on
 
-##### edit-link-emoji<span class="copy-link" onclick="navigator.clipboard.writeText('&edit-link-emoji=')">copy</span>
+##### edit-link-emoji
 
 Change the default emoji for a "Edit this Page" link with the optional **edit-link-emoji** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md&edit-link-text=View%20on%20GitHub&edit-link-emoji=:file_folder: Please note that adding this URL parameter directly to the Markdown File URL field is not supported.
 
-##### image-captions-font-style<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-font-style=')">copy</span>
+##### image-captions-font-style<button type="button" class="copy-link" aria-label="Copy image-captions-font-style parameter" onclick="navigator.clipboard.writeText('&image-captions-font-style=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set the font style of image captions with the optional **image-captions-font-style** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-font-style=normal.
 
-##### image-captions-image-align<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-image-align=')">copy</span>
+##### image-captions-image-align<button type="button" class="copy-link" aria-label="Copy image-captions-image-align parameter" onclick="navigator.clipboard.writeText('&image-captions-image-align=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Align image caption images with the optional **image-captions-image-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-text-align=right&image-captions-image-align=right.
 
-##### image-captions-text-align<span class="copy-link" onclick="navigator.clipboard.writeText('&image-captions-text-align=')">copy</span>
+##### image-captions-text-align<button type="button" class="copy-link" aria-label="Copy image-captions-text-align parameter" onclick="navigator.clipboard.writeText('&image-captions-text-align=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Align image caption text with the optional **image-captions-text-align** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&image-captions=true&image-captions-image-align=center&image-captions-text-align=center.
 
-##### lazy-load-images<span class="copy-link" onclick="navigator.clipboard.writeText('&lazy-load-images=true')">copy</span>
+##### lazy-load-images<button type="button" class="copy-link" aria-label="Copy lazy-load-images parameter" onclick="navigator.clipboard.writeText('&lazy-load-images=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Enable the lazy loading of images by Browsers with the optional **lazy-load-images** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&lazy-load-images=true Please note that enabling lazy loading of images may affect page scroll accuracy, for example by the Docsify Sidebar etc.
 
-##### link-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-dark-mode=')">copy</span>
+##### link-color-dark-mode<button type="button" class="copy-link" aria-label="Copy link-color-dark-mode parameter" onclick="navigator.clipboard.writeText('&link-color-dark-mode=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000&dark-mode=auto&link-color-dark-mode=FF9E9E.
 
-##### link-color-hover<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover=')">copy</span>
+##### link-color-hover<button type="button" class="copy-link" aria-label="Copy link-color-hover parameter" onclick="navigator.clipboard.writeText('&link-color-hover=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom hover color for all links, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000.
 
-##### link-color-hover-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&link-color-hover-dark-mode=')">copy</span>
+##### link-color-hover-dark-mode<button type="button" class="copy-link" aria-label="Copy link-color-hover-dark-mode parameter" onclick="navigator.clipboard.writeText('&link-color-hover-dark-mode=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom hover color for all links in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **link-color-hover-dark-mode** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-color=CC0000&dark-mode=auto&link-color-hover-dark-mode=FF9E9E.
 
-##### link-text-decoration<span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration=')">copy</span>
+##### link-text-decoration<button type="button" class="copy-link" aria-label="Copy link-text-decoration parameter" onclick="navigator.clipboard.writeText('&link-text-decoration=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom text decoration for all links, with the optional **link-text-decoration** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-text-decoration=none
 
-##### link-text-decoration-hover<span class="copy-link" onclick="navigator.clipboard.writeText('&link-text-decoration-hover=')">copy</span>
+##### link-text-decoration-hover<button type="button" class="copy-link" aria-label="Copy link-text-decoration-hover parameter" onclick="navigator.clipboard.writeText('&link-text-decoration-hover=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom hover text decoration for all links, with the optional **link-text-decoration-hover** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&link-text-decoration-hover=underline
 
-##### loadFavicon<span class="copy-link" onclick="navigator.clipboard.writeText('&loadFavicon=')">copy</span>
+##### loadFavicon<button type="button" class="copy-link" aria-label="Copy loadFavicon parameter" onclick="navigator.clipboard.writeText('&loadFavicon=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 You can set a custom Favicon from the image file passed from the optional **loadFavicon** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-markdown-content-demo/main&loadFavicon=open-access.png
 
-##### loadFooter<span class="copy-link" onclick="navigator.clipboard.writeText('&loadFooter=')">copy</span>
+##### loadFooter<button type="button" class="copy-link" aria-label="Copy loadFooter parameter" onclick="navigator.clipboard.writeText('&loadFooter=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Load a Docsify footer from the Markdown file in the current directory passed with the optional **loadFooter** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&loadFooter=_footer.md
 
-##### loadNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&loadNavbar=')">copy</span>
+##### loadNavbar<button type="button" class="copy-link" aria-label="Copy loadNavbar parameter" onclick="navigator.clipboard.writeText('&loadNavbar=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Load a [Docsify custom navbar](https://docsify.js.org/#/custom-navbar?id=custom-navbar) from the Markdown file passed with the optional **loadNavbar** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&loadNavbar=_navbar.md
 
-##### loadSidebar<span class="copy-link" onclick="navigator.clipboard.writeText('&loadSidebar=')">copy</span>
+##### loadSidebar<button type="button" class="copy-link" aria-label="Copy loadSidebar parameter" onclick="navigator.clipboard.writeText('&loadSidebar=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Load a [Docsify custom sidebar](https://docsify.js.org/#/more-pages?id=sidebar) from the Markdown file passed with the optional **loadSidebar** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar-with-home.md
 
-##### logo<span class="copy-link" onclick="navigator.clipboard.writeText('&logo=')">copy</span>
+##### logo<button type="button" class="copy-link" aria-label="Copy logo parameter" onclick="navigator.clipboard.writeText('&logo=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display a logo image for the website name in a Docsify custom Sidebar (i.e. file 'logo.png) with the optional **logo** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=CPT-363&logo=/images/logo.png The full folder path and filename must be provided. A website name must also be provided, and will be used as the alt text for the logo.
 
-##### max-width<span class="copy-link" onclick="navigator.clipboard.writeText('&max-width=')">copy</span>
+##### max-width<button type="button" class="copy-link" aria-label="Copy max-width parameter" onclick="navigator.clipboard.writeText('&max-width=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&docsify-core-theme=true&max-width=910px. This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and embedding the resulting page.
 
-##### mergeNavbar<span class="copy-link" onclick="navigator.clipboard.writeText('&mergeNavbar=true')">copy</span>
+##### mergeNavbar<button type="button" class="copy-link" aria-label="Copy mergeNavbar parameter" onclick="navigator.clipboard.writeText('&mergeNavbar=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Merge the Navbar items to the top of the sidebar on smaller screens with the optional **mergeNavbar** Docsify parameter, for example:
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&mergeNavbar=true&name=CPT-363
 
-##### name<span class="copy-link" onclick="navigator.clipboard.writeText('&name=')">copy</span>
+##### name<button type="button" class="copy-link" aria-label="Copy name parameter" onclick="navigator.clipboard.writeText('&name=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display the name for the website in a Docsify custom Sidebar (i.e. file '\_sidebar.md) with the optional **name** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&name=CPT-363. When this parameter is provided it will be automatically used as the Browser tab title as well. Please note to use names with spaces they must be encoded, so "My Site" would be "My%20Site". Underscores may also be used to represent spaces.
 
-##### page-title<span class="copy-link" onclick="navigator.clipboard.writeText('&page-title=')">copy</span>
+##### page-title<button type="button" class="copy-link" aria-label="Copy age-title parameter" onclick="navigator.clipboard.writeText('&age-title=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom page title at the top of your web pages with the optional **page-title** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-course-hub/refs/heads/master/pages/03.resources&homepage=page.md&page-title=Resources. Please note to use titles with spaces they must be [encoded](https://meyerweb.com/eric/tools/dencoder/), so "My Page" would be "My%20Page". Underscores may also be used to represent spaces.
 
-##### pagination<span class="copy-link" onclick="navigator.clipboard.writeText('&pagination=true')">copy</span>
+##### pagination<button type="button" class="copy-link" aria-label="Copy pagination parameter" onclick="navigator.clipboard.writeText('&pagination=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&pagination=true
 
-##### searchbox<span class="copy-link" onclick="navigator.clipboard.writeText('&searchbox=true')">copy</span>
+##### searchbox<button type="button" class="copy-link" aria-label="Copy searchbox parameter" onclick="navigator.clipboard.writeText('&searchbox=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
 
-##### subMaxLevel<span class="copy-link" onclick="navigator.clipboard.writeText('&subMaxLevel=')">copy</span>
+##### subMaxLevel<button type="button" class="copy-link" aria-label="Copy subMaxLevel parameter" onclick="navigator.clipboard.writeText('&subMaxLevel=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set the maximum automatic table of contents header levels in Docsify custom Sidebar (i.e. file '\_sidebar.md) with the optional **subMaxLevel** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&subMaxLevel=1
 
-##### svg-icons<span class="copy-link" onclick="navigator.clipboard.writeText('&svg-icons=')">copy</span>
+##### svg-icons<button type="button" class="copy-link" aria-label="Copy svg-icons parameter" onclick="navigator.clipboard.writeText('&svg-icons=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Use the SVG version of Font Awesome icons instead of Web Fonts with the optional **svg-icons** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-lms-content-pages/main&homepage=schedule.md&svg-icons=true
 
-##### theme-color<span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color=')">copy</span>
+##### theme-color<button type="button" class="copy-link" aria-label="Copy theme-color parameter" onclick="navigator.clipboard.writeText('&theme-color=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom theme color, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-core-theme=true&theme-color=CC0000. This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and wanting to retain the default link style.  
 
-##### theme-color-dark-mode<span class="copy-link" onclick="navigator.clipboard.writeText('&theme-color-dark-mode=')">copy</span>
+##### theme-color-dark-mode<button type="button" class="copy-link" aria-label="Copy theme-color-dark-mode parameter" onclick="navigator.clipboard.writeText('&theme-color-dark-mode=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Set a custom theme color in dark mode, defined using the standard hexadecimal format _without the '#' symbol_ with the optional **theme-color-dark-mode** parameter (not included in the Advanced Web Page Builder), for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/docs&homepage=resources.md&docsify-core-theme=true&theme-color=CC0000&dark-mode=auto&theme-color-dark-mode=FF9E9E.  This parameter can be particularly valuable when using the core Docsify v5 theme via `docsify-core-theme` and wanting to retain the default link style.  
