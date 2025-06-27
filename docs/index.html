@@ -294,9 +294,7 @@
           const cb2 = document.querySelector('#editLinkTopCheck');
           if (cb1.checked && cb2.checked) {
             if (gitlinkPageURL) {
-              if (!url.includes('edit-link-top=')) {
-                var URLparms = URLparms + `&edit-link-top=true`;
-              }
+              var URLparms = URLparms + `&edit-link-top=true`;
             }
           }
 
@@ -310,8 +308,10 @@
           const cb4 = document.querySelector('#narrowToC');
           if (cb4.checked) {
             if (URLparms.includes("&toc=true")) {
-              var URLparms = URLparms.replace("&toc=true", "");
-              URLparms = URLparms + `&toc-narrow=true`;
+              if (!url.includes('toc-narrow=')) {
+                var URLparms = URLparms.replace("&toc=true", "");
+                URLparms = URLparms + `&toc-narrow=true`;
+              }
             }
           }
 
@@ -438,7 +438,9 @@
               document.getElementById("styletoc").checked = false;
               document.getElementById("stylesidebar").checked = true;
             }
-            var URLparms = URLparms + `&loadSidebar=_sidebar.md`;
+            if (!url.includes('loadSidebar=')) {
+              var URLparms = URLparms + `&loadSidebar=_sidebar.md`;
+            }
           }
 
           const cb12 = document.querySelector('#loadcustomnavbar');
