@@ -346,7 +346,7 @@
                     ToCHeadings = "h3";
                   }
                 }
-                if (!url.includes('=')) {
+                if (!url.includes('toc-headings=')) {
                   URLparms = URLparms + `&toc-headings=` + ToCHeadings;
                 }
               }
@@ -359,7 +359,9 @@
             document.getElementById("maxLevel").value = 2;
           }
           if (!(maxLevel == 2)) {
-            URLparms = URLparms + `&maxLevel=` + maxLevel;
+            if (!url.includes('maxLevel=')) {
+              URLparms = URLparms + `&maxLevel=` + maxLevel;
+            }
           }
 
           const cb8 = document.querySelector('#hypothesisenable');
