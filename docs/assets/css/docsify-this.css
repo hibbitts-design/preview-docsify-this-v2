@@ -540,11 +540,11 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 @media only screen and (max-width: 480px) {
   .docsifythisheader .logoandtext h1 {
     font-size: 1.8rem!important;
-    line-height: 50px!important;
+    line-height: 35px!important;
   }
 
   .docsifythisheader .logoandtext img {
-    height: 50px;
+    height: 35px;
   }
 }
 
