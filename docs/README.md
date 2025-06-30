@@ -501,7 +501,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 
 - [browser-tab-title](/?id=browser-tab-titleconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [docsify-core-theme](/?id=docsify-core-themeconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
-- [edit-link](/?id=edit-link)
+- [edit-link](/?id=edit-linkconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [edit-link-text](/?id=edit-link-textconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [edit-link-top](/?id=edit-link-topconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [font-family](/?id=font-familyconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
@@ -529,7 +529,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 Use the Docsify v5 core theme instead of the Docsify-This theme with the optional **docsify-core-theme** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-one-page-article/main&homepage=home.md&edit-link=https://github.com/paulhibbitts/docsify-this-one-page-article/blob/main/home.md&docsify-core-theme=true. Default page elements, such as Blockquotes, will be displayed without any Docsify-This styles. To style a blockquote similarly to the default Docsify-This theme, you can apply the `announcement` CSS class within an HTML Blockquote.
 
-##### edit-link
+##### edit-link<button type="button" class="copy-link" aria-label="Copy font-family parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&edit-link=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display a "Edit this Page" link (default location is bottom of page) with the optional **edit-link** parameter, for example:  
 https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md. Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.

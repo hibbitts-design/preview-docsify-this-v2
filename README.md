@@ -235,7 +235,7 @@ https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/
 ##### edit-link
 
 Display a "Edit this Page" link (default location is bottom of page) with the optional **edit-link** parameter, for example:  
-https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md. Please note that adding this URL parameter directly to the Markdown File URL field is not supported, use the provided Web Page Builder checkbox instead.
+https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&edit-link=https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/README.md.
 
 ##### edit-link-text
 
