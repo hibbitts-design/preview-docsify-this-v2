@@ -1141,6 +1141,13 @@
         imageAlign: (getURLParameterByName('image-captions-image-align', null, null, window.location.href, true) || 'left'),   // Caption alignment (default: 'left')    // Image alignment: 'left', 'center', or 'right' (default: 'center')
       },
 
+      // docsify-copy-code (defaults)
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied',
+      },
+
       markdown: {
         renderer: {
           code({ text, lang }) {
@@ -2326,6 +2333,13 @@
       }
     }
   </script>
+
+    <!-- Copy Code Plugin -->
+    <script>
+      if (window.$docsify['basePath'] === undefined) {
+        document.write('<script src="https://unpkg.com/docsify-copy-code@2"><\/script>');
+      }
+    </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics, only loaded for docsify-this.net homepage -->
 
