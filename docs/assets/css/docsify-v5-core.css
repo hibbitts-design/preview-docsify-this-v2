@@ -43,8 +43,14 @@ iframe[src] * {
 }
 
 /* Patch for legacy use of inline Code on mobile with preview build of Docsify v5 theme */
-.markdown-section  code {
+.markdown-section code {
   white-space: pre-wrap !important;
+  overflow-wrap: break-word;
+}
+
+/* Patch for legacy use of non-Markdown long links to wrap */
+.markdown-section a {
+  word-break: break-all;
   overflow-wrap: break-word;
 }
 
