@@ -64,7 +64,7 @@ body {
 .markdown-section blockquote ul, 
 .markdown-section blockquote.announcement ul {
   list-style: none;
-  margin-top: 0.8em;
+  margin-top: 0.2em;
 }
 
 .markdown-section blockquote ul li,
@@ -288,7 +288,7 @@ body {
 .markdown-section blockquote.announcement h1 {
   font-size: 1.45rem;
   line-height: 1.8rem;
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -297,7 +297,7 @@ body {
 .markdown-section blockquote.announcement h2 {
   font-size: 1.35rem;
   line-height: 1.7rem;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   border-style: none;
 }
@@ -306,7 +306,7 @@ body {
 .markdown-section blockquote.announcement h3 {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -315,7 +315,7 @@ body {
 .markdown-section blockquote.announcement h4 {
   font-size: 1.15rem;
   line-height: 1.3rem;
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -324,7 +324,7 @@ body {
 .markdown-section blockquote.announcement h5 {
   font-size: 1.1rem;
   line-height: 1.25rem;
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -333,7 +333,7 @@ body {
 .markdown-section blockquote.announcement h6 {
   font-size: 1rem;
   line-height: 1.1rem;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
