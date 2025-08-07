@@ -1,34 +1,3 @@
-/* Fix for site name using sidebar link clamping with preview build of Docsify v5 theme */
-:is(body.sidebar-link-clamp .sidebar) a.app-name-link {
-    white-space: normal;
-}
-
-/* Fix for Coverpage title link colors with preview build of Docsify v5 theme */
-.cover h1 {
-  position: relative;
-  color: var(--cover-title-color);
-  font: var(--cover-title-font);
-
-  a {
-    color: var(--cover-title-color);
-  }
-}
-
-/* Fix for Transparent iframe support for both light and dark modes with preview build of Docsify v5 theme */
-@media (prefers-color-scheme: dark) {
-  iframe,
-  iframe *,
-  iframe[src],
-  iframe[src] * {
-    color-scheme: light;
-  }
-}
-
-/* Fix for inline codeblock contrast within shaded table rows with preview build of Docsify v5 theme */
-.markdown-section code {
-  background: var(--color-mono-2);
-}
-
 /* Patch for legacy use of Pre on mobile with preview build of Docsify v5 theme */
 .markdown-section pre {
   margin-top: 1rem;
@@ -49,11 +18,6 @@
 .markdown-section a {
   word-break: break-word;
   overflow-wrap: break-word;
-}
-
-/* Patch for Font Awesome plugin Header content compatibility with Docsify v5 */
-[id]:is(.markdown-section :where(h1,h2,h3,h4,h5,h6)) a:first-of-type {
-  display: unset;
 }
 
 /* Patch for Topics index links with Docsify v5 */
@@ -90,8 +54,6 @@
   padding-left: 4px;
   line-height: 1.4;
 }
-
-/* Support for Docsify-This classes with preview build of Docsify v5 theme */
 
 /* Target first paragraphs with 5+ links (reasonable index minimum) */
 .markdown-section p:first-of-type:has(a[href^="#"]):has(a:nth-of-type(5)) {
