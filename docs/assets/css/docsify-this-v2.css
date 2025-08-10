@@ -8,7 +8,7 @@
   /* Light theme colors */
   --bg-primary: #ffffff;
   --bg-secondary: #f1f5f9;
-  --bg-elevated: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --bg-elevated: linear-gradient(to right, #f8fafc 0%, #e2e8f0 100%);
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #64748b;
@@ -29,7 +29,7 @@
   :root {
     --bg-primary: #020617;
     --bg-secondary: #0f172a;
-    --bg-elevated: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --bg-elevated: linear-gradient(to right, #0f172a 0%, #1e293b 100%);
     --text-primary: #f8fafc;
     --text-secondary: #e2e8f0;
     --text-muted: #94a3b8;
