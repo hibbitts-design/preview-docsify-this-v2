@@ -37,7 +37,7 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 <p style="margin-bottom:-8px;">Enter the URL of a Markdown file and view that file as a web page in a new Browser tab. The resulting Docsify-This page URL can be copied and shared or used as an iFrame source URL.</p>
 
-<p style="margin-bottom:6px";> <strong>Markdown File URL</strong> (GitHub, Codeberg or raw source URL):</p>
+**Markdown File URL** (GitHub, Codeberg or raw source URL):  
 
 <textarea
     style="border-radius: 7px; border-color: #8e8f9d; resize: none; width: 100%; font-family: inherit; overflow: hidden; box-sizing: border-box;"
@@ -64,7 +64,7 @@ This open-source web app, built with magical documentation site generator [Docsi
 </style>
 <input class="docsifythisurlbuilderprimarybutton" style="margin-top: -4px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
 
-<p style="margin-bottom: -14px"> Page layout: </p>
+Page layout:
 
 <div style="display: flex; margin-top: -3px;">
 
@@ -118,7 +118,7 @@ This open-source web app, built with magical documentation site generator [Docsi
    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
    <option value="Courier,monospace">Courier, monospace</option>
  </select>
- <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-top: 0px; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; overflow: hidden; text-align: center;">
+ <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-top: 6px; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; overflow: hidden; text-align: center;">
    AaBb 123
  </span>
 </div>
@@ -215,15 +215,15 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
-<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -17px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
+<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -27px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
 
-<div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:30px;display: none'>
+<div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
 
 <h3>Dark Theme Mode and Link Colors</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
+<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:8px;border-radius: 7px;border-color: #8e8f9d'>
   <label for="enableDarkmode">Dark theme mode:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
@@ -235,7 +235,7 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris><span id="linkcolordarkmodepreview"></span></div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-top: 0px; margin-left: 10px;">Link hover color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris><span id="linkhovercolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris><span id="linkhovercolordarkmodepreview"></span></div>
 
 <h3>Link Style and Behavior</h3>
 
@@ -255,27 +255,26 @@ This open-source web app, built with magical documentation site generator [Docsi
 
 <div class="clearfix">
 
-  <div class='stackedlabeldropdown'><div class="docsifythisurlbuilderoptionsline" style='margin-top:-2px;'>Link hover color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris><span id="linkhovercolorpreview"></span></div></div>
+  <div class='stackedlabeldropdown'><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover color:</label><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris><span id="linkhovercolorpreview"></span></div></div>
 
-  <div class='stackedlabeldropdown' style="margin-top:0px;">
-  <label for="linkhovertextdecoration">Link hover text decoration:</label>
+  <div class='stackedlabeldropdown'><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover text decoration:</label>
   <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 60px;">
     <option value="none">None</option>
     <option disabled="disabled">──</option>
     <option value="underline">Underline</option>
-  </select></div>
+  </select></div></div>
 
 </div>
 
 <div class="clearfix">
 
-<div class='stackedlabeldropdown' style="margin-top:-11px;">
+<div class='stackedlabeldropdown'><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;">
 <label for="externalLinkTarget">External link target:</label>
 <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget" style="width: 60px;">
   <option value="_top">Same window or tab</option>
   <option disabled="disabled">──</option>
   <option value="_blank">New window or tab</option>
-</select></div>
+</select></div></div>
 
 </div>
 
