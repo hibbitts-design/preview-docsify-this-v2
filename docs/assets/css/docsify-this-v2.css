@@ -3,7 +3,6 @@
 :root {
   /* Core brand color - matching darker green in logo */
   --accent-color: #16a34a;
-  --accent-hover: #15803d;
   
   /* Light theme colors */
   --bg-primary: #ffffff;
@@ -225,10 +224,6 @@ input[type="checkbox"] {
   opacity: 1;
 }
 
-.docsifythisheader .logoandtext:hover h1 .highlight {
-  color: var(--accent-hover);
-}
-
 #docsifythis h1,
 #docsifythis h2,
 #docsifythis h3,
@@ -380,12 +375,6 @@ input[type="color"]:focus {
   overflow: visible;
   word-wrap: break-word;
   text-align: center;
-}
-
-#docsifythisurlbuilder .docsifythisurlbuilderprimarybutton:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
-  transform: translateY(-1px);
 }
 
 @media (max-width: 480px) {
