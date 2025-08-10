@@ -215,16 +215,16 @@ input[type="checkbox"] {
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 {
-  font-size: 2.25rem;
-  font-weight: 500;
+  font-size: clamp(1.75rem, 4vw, 2.25rem); /* Responsive sizing */
+  font-weight: 600;
   margin: 0;
-  padding-left: 5px;
-  display: inline;
-  vertical-align: middle;
-  line-height: 54px;
+  display: inline-flex; /* Better alignment control */
+  align-items: center; /* Center with logo vertically */
+  line-height: 1.2; /* Relative to font size instead of fixed */
   color: var(--text-secondary);
   font-family: var(--font-system);
   letter-spacing: var(--letter-spacing-tight);
+  text-decoration: none; /* If it's a link */
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 .highlight {
@@ -233,6 +233,12 @@ input[type="checkbox"] {
 
 #docsifythis h1 .subhead {
   color: var(--text-secondary);
+  font-size: clamp(1.35rem, 4vw, 1.75rem); /* Responsive sizing */
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-normal); /* Less tight than h1 */
+  opacity: 0.8; /* Subtle de-emphasis */
+  display: block; /* Forces line break if desired */
+  margin-top: 2px; /* Small gap from main title */
 }
 
 .docsifythisheader .logoandtext img {
