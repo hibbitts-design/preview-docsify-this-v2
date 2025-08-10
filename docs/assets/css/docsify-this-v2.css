@@ -568,7 +568,6 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 #docsifythisurlbuilder #linkcolordarkmodepreview,
 #docsifythisurlbuilder #linkhovercolordarkmodepreview,
 #docsifythisurlbuilder #coverpagecolordarkmodepreview {
-  border: solid 4px transparent;
   border-radius: 3px;
   outline: solid 1px var(--border-strong);
   outline-offset: 0px;
@@ -577,6 +576,37 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-left: 4px;
   vertical-align: middle;
   display: inline-block;
+}
+
+#docsifythisurlbuilder #linkcolorpreview {
+  border: solid 4px #0374b5;
+  background-color: #0374b5;
+}
+
+#docsifythisurlbuilder #linkhovercolorpreview {
+  border: solid 4px transparent;
+  background-color: transparent;
+}
+
+#docsifythisurlbuilder #coverpagecolorpreview {
+  border: solid 4px #c1e1f6;
+  background-color: #c1e1f6;
+}
+
+#docsifythisurlbuilder #linkcolordarkmodepreview {
+  border: solid 4px #0685D7;
+  background-color: #0685D7;
+}
+
+#docsifythisurlbuilder #linkhovercolordarkmodepreview {
+  border: solid 4px transparent;
+  background-color: transparent;
+}
+
+
+#docsifythisurlbuilder #coverpagecolordarkmodepreview {
+  border: solid 4px #20587d;
+  background-color: #20587d;
 }
 
 #docsifythisurlbuilderrestoredefaultsbutton {
