@@ -118,9 +118,8 @@ Page layout:
    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
    <option value="Courier,monospace">Courier, monospace</option>
  </select>
- <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-top: 6px; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; overflow: hidden; text-align: center;">
-   AaBb 123
- </span>
+ <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123
+</span>
 </div>
 
 <div class='stackedlabeldropdown'>

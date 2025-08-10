@@ -566,6 +566,10 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-top: 4px;
 }
 
+#docsifythisurlbuilder #fontPreview {
+  margin-top: 6px!important;
+}
+
 #docsifythisurlbuilder .clearfix:after {
   content: "";
   display: block;

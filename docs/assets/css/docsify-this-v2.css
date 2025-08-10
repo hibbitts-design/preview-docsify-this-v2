@@ -668,11 +668,10 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-top: 0.125rem;
 }
 
-@media screen and (min-width: 768px) {
-  #docsifythisurlbuilder #fontPreview {
-    margin-top: 3px!important;
-  }
+#docsifythisurlbuilder #fontPreview {
+  margin-top: 2px!important;
 }
+
 
 /* Align form elements horizontally - override inline styles */
 #docsifythisurlbuilder input[type="text"],
