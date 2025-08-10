@@ -1,7 +1,7 @@
 /* DOCSIFY THIS - MODERNIZED */
 
 :root {
-  /* Core brand color - matching darker green in logo */
+  /* Core brand color */
   --accent-color: #16a34a;
   
   /* Light theme colors */
@@ -23,7 +23,7 @@
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.025em;
   
-  /* Transition speeds - ADDED MISSING VARIABLE */
+  /* Transition speeds */
   --transition-fast: 0.15s ease-out;
 }
 
