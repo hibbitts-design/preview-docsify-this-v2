@@ -22,6 +22,9 @@
   --letter-spacing-tight: -0.025em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.025em;
+  
+  /* Transition speeds - ADDED MISSING VARIABLE */
+  --transition-fast: 0.15s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,6 +99,20 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 768px) {
+  /* FALLBACK: For browsers that don't support :has() */
+  .stackedlabeldropdown[data-fontsize="true"] {
+    display: block;
+    clear: both;
+    margin-top: 10px;
+  }
+  
+  .stackedlabeldropdown[data-lineheight="true"] {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 0;
+  }
+  
+  /* MODERN: For browsers that support :has() */
   .stackedlabeldropdown:has(label[for="fontsize"]) {
     display: block;
     clear: both;
@@ -466,6 +483,12 @@ input[type="color"]:focus {
 }
 
 /* Radio button layout options - add space above labels */
+/* FALLBACK: For browsers that don't support :has() */
+#docsifythisurlbuilder label[data-pagestyle-radio="true"] {
+  margin-top: 1rem;
+}
+
+/* MODERN: For browsers that support :has() */
 #docsifythisurlbuilder label:has(input[type="radio"][name="pagestyle"]) {
   margin-top: 1rem;
 }
@@ -588,7 +611,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-top: -5px;
 }
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 768px) {
   .markdown-section .docsifythiscolumn35 {
     width: 100%;
     margin-right: 0px;
@@ -645,8 +668,8 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
 @media only screen and (max-width: 480px) {
   .docsifythisheader .logoandtext h1 {
-    font-size: 1.8rem!important;
-    line-height: 35px!important;
+    font-size: 1.8rem !important;
+    line-height: 35px !important;
   }
 
   .docsifythisheader .logoandtext img {
