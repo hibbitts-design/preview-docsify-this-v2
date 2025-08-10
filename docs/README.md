@@ -1,9 +1,3 @@
-<style>
-  :root {
-    --font-family: system-ui, sans-serif;
-  }
-</style>
-
 <div id="docsifythis">
 
 <div class="docsifythisheader">
