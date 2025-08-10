@@ -78,7 +78,7 @@
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
-  transition: background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
@@ -86,11 +86,11 @@
 #docsifythisurlbuilder input[type="number"],
 #docsifythisurlbuilder textarea,
 #docsifythisurlbuilder select {
-  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 [type="radio"] + img,
 input[type="checkbox"] {
-  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 #docsifythisurlbuilder ::selection {
@@ -747,7 +747,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   color: #92400e !important;
   border: 1px solid #e5d5b7 !important;
   border-radius: 8px !important;
-  transition: all 0.15s ease-out;
+  transition: all var(--transition-fast);
   padding: 6px 12px !important;
   text-decoration: none !important;
   font-weight: 500 !important;
@@ -778,7 +778,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 /* Form control improvements */
 #docsifythisurlfield {
   border: 2px solid var(--border-color) !important;
-  transition: all 0.15s ease-out;
+  transition: all var(--transition-fast);
 }
 
 #docsifythisurlfield:focus {
@@ -791,7 +791,7 @@ select, input[type="text"], input[type="number"] {
   border: 1px solid var(--border-color) !important;
   background: var(--bg-primary) !important;
   color: var(--text-primary) !important;
-  transition: all 0.15s ease-out;
+  transition: all var(--transition-fast);
   font-family: var(--font-system);
 }
 
@@ -840,7 +840,7 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 400;
-  transition: all 0.15s ease-out;
+  transition: all var(--transition-fast);
 }
 
 #docsifythisurlbuilderrestoredefaultsbutton input:hover {
