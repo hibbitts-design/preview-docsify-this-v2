@@ -88,7 +88,7 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck" unchecked/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (default location is bottom of page)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (default location is bottom of page)</label></div>
 
 <div id="docsifythisurlbuildershowhidelink"><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
 
@@ -99,6 +99,8 @@ Page layout:
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
+
+<div class="pagefontsettings">
 
 <div class="stackedlabeldropdown">
  <label for="fontfamily">Page font family:</label>
@@ -118,8 +120,7 @@ Page layout:
    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
    <option value="Courier,monospace">Courier, monospace</option>
  </select>
- <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123
-</span>
+ <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123</span>
 </div>
 
 <div class="stackedlabeldropdown">
@@ -148,6 +149,8 @@ Page layout:
   </select>
 </div>
 
+</div>
+
 <div class="docsifythisurlbuilderoptionsline">Page link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="clearfix">
@@ -164,11 +167,11 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked/><label for="imageCaptions">Show alternative text of images as captions</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"/><label for="imageCaptions">Show alternative text of images as captions</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked/><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages"/><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable" unchecked/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
 <hr>
 
@@ -190,11 +193,11 @@ Page layout:
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline" >Headings to include in table of contents (at least one required):</div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1"  unchecked/><label for="toch1">Heading 1 (h1)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1" /><label for="toch1">Heading 1 (h1)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h2 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch2" checked><label for="toch2">Heading 2 (h2)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h3 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch3" unchecked/><label for="toch3">Heading 3 (h3)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h3 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch3"/><label for="toch3">Heading 3 (h3)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="narrowToC" unchecked/><label for="narrowToC">Use a narrower table of contents area, along with a smaller screen breakpoint</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="narrowToC"/><label for="narrowToC">Use a narrower table of contents area, along with a smaller screen breakpoint</label></div>
 
 <hr>
 
@@ -206,11 +209,11 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Text of 'Edit this Page' link:<br><input aria-label="Text of 'Edit this Page' link" type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck" unchecked/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits" unchecked/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
@@ -288,11 +291,11 @@ Page layout:
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline">Load and display additional <a href="https://docsify.js.org/#/more-pages" target="_blank">Docsify</a> custom files (must be located at root level of remote files):</div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"  unchecked><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar" unchecked><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcoverpage" unchecked><label for="loadcoverpage">Coverpage (<code>_coverpage.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"  unchecked><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter" unchecked><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar"><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcoverpage"><label for="loadcoverpage">Coverpage (<code>_coverpage.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter"><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
 
 <h3>Docsify Custom Sidebar Options</h3>
 
@@ -304,15 +307,15 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Maximum header level of Sidebar automatic table of contents (0 for none):<br><input aria-label="Maximum header level of Sidebar automatic table of contents (0 for none)" type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch" unchecked/><label for="enableSidebarsearch">Enable search box in Sidebar</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch"/><label for="enableSidebarsearch">Enable search box in Sidebar</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination" unchecked/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
 
 <h3>Docsify Custom Navbar Options</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar" unchecked/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar"/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
 <h3>Docsify Custom Coverpage Colors</h3>
 

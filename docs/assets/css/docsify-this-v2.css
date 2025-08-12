@@ -103,6 +103,11 @@ input[type="checkbox"] {
   color: var(--text-primary);
 }
 
+#docsifythisurlbuilder .pagefontsettings {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
 /* CSS generated/assisted by Anthropic Claude AI */
 @media screen and (max-width: 768px) {
   /* FALLBACK: For browsers that don't support :has() */
@@ -336,7 +341,7 @@ input[type="color"] {
   color: var(--text-primary);
   height: 2rem;
   margin-top: 0.125rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   padding: 6px;
   border: 1px solid var(--border-strong);
   border-radius: 6px;
@@ -574,6 +579,15 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-bottom: 0.6em;
 }
 
+#docsifythisurlbuilder #linkcolor,
+#docsifythisurlbuilder #linkhovercolor,
+#docsifythisurlbuilder #coverpagecolor
+#docsifythisurlbuilder #linkcolordarkmode,
+#docsifythisurlbuilder #linkhovercolordarkmode,
+#docsifythisurlbuilder #coverpagecolordarkmodep {
+  margin-bottom: 0px;
+}
+
 #docsifythisurlbuilder #linkcolorpreview,
 #docsifythisurlbuilder #linkhovercolorpreview,
 #docsifythisurlbuilder #coverpagecolorpreview,
@@ -699,7 +713,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 /* Ensure stacked dropdowns align with adjacent inputs */
 #docsifythisurlbuilder .stackedlabeldropdown {
   float: left;
-  margin: 0 10px 10px 0px;
+  margin: 10px 10px 0px 0px;
   vertical-align: top;
 }
 
@@ -707,6 +721,8 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   content: "";
   display: block;
   clear: both;
+  height: 0;
+  overflow: hidden;
 }
 
 .sidebar .app-name {
