@@ -164,7 +164,7 @@ input[type="checkbox"] {
 
 #docsifythis .copy-link {
   margin-left: 8px;
-  color: var(--interactive-color);
+  color: var(--link-color);
   cursor: pointer;
   font-size: 16px;
   text-decoration: none !important;
