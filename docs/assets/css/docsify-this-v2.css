@@ -7,12 +7,12 @@
   /* Light theme colors */
   --bg-primary: #ffffff;
   --bg-secondary: #f1f5f9;
-  --bg-elevated: linear-gradient(to right, #f8fafc 0%, #e2e8f0 100%);
+  --bg-elevated: linear-gradient(to right, #f6f8fd 0%, #e6efff 100%);
   --text-primary: #0f172a;
   --text-secondary: #202124;
   --text-muted: #64748b;
-  --border-color: #cbd5e1;
-  --border-strong: #334155;
+  --border-color: #e8eaed;
+  --border-strong: #374151;
   --interactive-color: #4f46e5;
   --interactive-hover: #4338ca;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -31,12 +31,12 @@
   :root {
     --bg-primary: #020617;
     --bg-secondary: #0f172a;
-    --bg-elevated: linear-gradient(to right, #0f172a 0%, #1e293b 100%);
+    --bg-elevated: linear-gradient(to right, #1a1d29 0%, #2d3748 100%);
     --text-primary: #f8fafc;
     --text-secondary: #e2e8f0;
     --text-muted: #94a3b8;
-    --border-color: #1e293b;
-    --border-strong: #475569;
+    --border-color: #3c4043;
+    --border-strong: #4b5563;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
     --interactive-color: #818cf8;
     --interactive-hover: #6366f1;
