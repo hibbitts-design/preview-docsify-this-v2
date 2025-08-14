@@ -41,6 +41,15 @@
     --interactive-color: #818cf8;
     --interactive-hover: #6366f1;
   }
+
+  #docsifythis p a,
+  #docsifythis li a,
+  #docsifythis h3:not(#quickstart-⚡) a,
+  #docsifythis summary,
+  #docsifythis .copy-link {
+    color: #1ba1ee;
+  }
+
 }
 
 /* Global typography improvements */
