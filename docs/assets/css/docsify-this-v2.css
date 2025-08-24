@@ -13,8 +13,7 @@
   --text-muted: #64748b;
   --border-color: #e8eaed;
   --border-strong: #374151;
-  --interactive-color: #4f46e5;
-  --interactive-hover: #4338ca;
+  --docsifythis-link-color: #4f46e5;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
   
   /* Typography improvements */
@@ -38,8 +37,7 @@
     --border-color: #3c4043;
     --border-strong: #4b5563;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-    --interactive-color: #818cf8;
-    --interactive-hover: #6366f1;
+    --docsifythis-link-color: #818cf8;
   }
 
   #docsifythis p a,
@@ -190,13 +188,12 @@ input[type="checkbox"] {
 }
 
 #docsifythis .copy-link:hover {
-  color: var(--interactive-hover);
   background-color: rgba(79, 70, 229, 0.1);
   text-decoration: none !important;
 }
 
 #docsifythis .copy-link:focus {
-  outline: 2px solid var(--interactive-color);
+  outline: 2px solid var(--docsifythis-link-color);
   outline-offset: 2px;
 }
 
@@ -324,7 +321,7 @@ input[type="checkbox"] {
   margin: 0;
   margin-top: -18px;
   margin-bottom: -14px;
-  color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
 }
 
 .docsifythiscustomdetails summary::-webkit-details-marker {
@@ -361,7 +358,7 @@ input[type="color"] {
 input[type="url"]:focus,
 input[type="color"]:focus {
   outline: none;
-  border-color: var(--interactive-color);
+  border-color: var(--docsifythis-link-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
@@ -429,7 +426,7 @@ input[type="color"]:focus {
 
 #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
   cursor: pointer;
-  color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
   height: auto;
   display: inline-block;
   margin-top: 4px;
@@ -440,7 +437,7 @@ input[type="color"]:focus {
   background-color: transparent;
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid var(--interactive-color);
+  border: 1px solid var(--docsifythis-link-color);
   border-radius: 20px;
   -webkit-appearance: none;
   white-space: normal;
@@ -481,7 +478,7 @@ input[type="color"]:focus {
 }
 
 #docsifythisurlbuilder [type="radio"]:checked+img {
-  outline: 4px solid var(--interactive-color);
+  outline: 4px solid var(--docsifythis-link-color);
   border-radius: 8px;
   position: relative;
 }
@@ -500,7 +497,7 @@ input[type="color"]:focus {
 
 #docsifythisurlbuilder input[type="number"]:focus {
   outline: none;
-  border-color: var(--interactive-color);
+  border-color: var(--docsifythis-link-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
@@ -546,8 +543,8 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 #docsifythisurlbuilder input[type="checkbox"]:checked {
-  background: var(--interactive-color);
-  border-color: var(--interactive-color);
+  background: var(--docsifythis-link-color);
+  border-color: var(--docsifythis-link-color);
 }
 
 #docsifythisurlbuilder input[type="checkbox"]~label {
@@ -573,12 +570,12 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 .docsifythisurlbuilderoptionsline a:visited,
 .docsifythisurlbuilderoptionsline a:hover,
 .docsifythisurlbuilderoptionsline a:active {
-  color: var(--interactive-color);
-  text-decoration-color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
+  text-decoration-color: var(--docsifythis-link-color);
 }
 
 #docsifythisurlbuildercustomdetailslink {
-  color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -814,7 +811,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 #docsifythisurlfield:focus {
-  border-color: var(--interactive-color) !important;
+  border-color: var(--docsifythis-link-color) !important;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1) !important;
 }
 
@@ -846,7 +843,7 @@ select {
 }
 
 select:focus, input[type="text"]:focus, input[type="number"]:focus {
-  border-color: var(--interactive-color) !important;
+  border-color: var(--docsifythis-link-color) !important;
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
   outline: none !important;
 }
@@ -854,14 +851,14 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
 /* Section headers in builder */
 #docsifythisurlbuilder h2 {
   font-weight: 500;
-  color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
 }
 
 #docsifythisurlbuilder h3 {
   font-weight: 500;
   margin-top: .75rem;
   margin-bottom: 0.50rem;
-  color: var(--interactive-color);
+  color: var(--docsifythis-link-color);
 }
 
 /* Reset button styling */
