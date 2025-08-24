@@ -184,7 +184,7 @@ input[type="checkbox"] {
   background: transparent;
   border: none;
   font-family: inherit;
-  min-height: 24px;
+  min-height: 22px;
 }
 
 #docsifythis .copy-link:hover {
