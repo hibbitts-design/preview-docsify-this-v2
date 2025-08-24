@@ -193,7 +193,7 @@ input[type="checkbox"] {
 }
 
 #docsifythis .copy-link:focus {
-  outline: 2px solid var(--docsifythis-link-color);
+  outline: 2px solid var(--link-color);
   outline-offset: 2px;
 }
 
