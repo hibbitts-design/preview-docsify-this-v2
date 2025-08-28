@@ -2044,9 +2044,16 @@
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
-    if ((!(getURLParameterByName('sidebar') || (!standalone))) && ((!getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!corethemestyles)) || (!(getURLParameterByName('basePath')))) {
+    if (getURLParameterByName(['standalone', 'embedded',]) || standalone) {
       const root_theme = document.querySelector(':root');
-      root_theme.style.setProperty('--content-margin-inline', '14px');
+      maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
+      if (!(maxwidth === false)) {
+        if (!(isNaN(maxwidth))) {
+          root_theme.style.setProperty('--content-margin-inline', '0px');
+        }
+      } else {
+        root_theme.style.setProperty('--content-margin-inline', '14px');
+      }     
     }
   </script>
 
