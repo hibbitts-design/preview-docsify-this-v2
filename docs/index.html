@@ -2190,7 +2190,7 @@
       maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
       if (!(maxwidth === false)) {
         if (!(isNaN(maxwidth))) {
-          maxwidth += 'px'; // Append 'px' if no unit is provided
+          maxwidth += '%'; // Append '%' if no unit is provided
         }
         document.documentElement.style.setProperty('--content-max-width', maxwidth);
       }
