@@ -560,6 +560,8 @@ https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-des
 
 #### Embedding Docsify-This Pages into Other Platforms
 
+For comprehensive iframe embedding guidance, including automatic height adjustment for responsive content, see [Embedding a Responsive Docsify-This Page in an iFrame](#embedding-a-responsive-docsify-this-page-in-an-iframe).
+
 ##### Canvas LMS
 
 [Embed content in Canvas](https://www.howtocanvas.com/create-amazing-pages-in-canvas/embedding-content)  
@@ -1512,7 +1514,7 @@ For basic embedding with a fixed height, use:
 
 _Adjust the height value (2700px) to match your content length. Test on different devices to ensure all content is visible._
 
-**Automatic Height Adjustment (Recommended):**
+**Automatic Height Adjustment**
 
 For dynamic height adjustment that works across desktop and mobile devices (generated/assisted by Anthropic Claude AI):
 
@@ -1555,6 +1557,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 ```
+
+_To customize for longer/shorter content, adjust the height arrays in the JavaScript code._
 
 ##### Embedding a Responsive Docsify-This Page in HTML
 
