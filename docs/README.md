@@ -356,7 +356,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 
 ## Everything You Need to Know about Docsify-This
 
-### [1. Introduction and Overview](/?id=_1-introduction-and-overview-1)
+### [1. Introduction and Overview](/?id=_1-introduction-and-overview)
 
 - [What Problem Does Docsify-This Solve?](/?id=what-problem-does-docsify-this-solve)
 - [Docsify-This Core Design Principles](/?id=docsify-this-core-design-principles)
@@ -364,7 +364,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 - [How Docsify-This Works](/?id=how-docsify-this-works)
 - [Read What People are Saying about Docsify-This](/?id=read-what-people-are-saying-about-docsify-this)
 
-### [2. Publishing with Docsify-This](/?id=_2-publishing-with-docsify-this-1)
+### [2. Publishing with Docsify-This](/?id=_2-publishing-with-docsify-this)
 
 - [Overview](/?id=overview)
 - [Page Appearance URL Parameters (Basic)](/?id=page-appearance-url-parameters-basic)
@@ -380,14 +380,14 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 - [Custom Markdown CSS Classes](/?id=custom-markdown-css-classes)
 - [Looking for Even More Customization and Control?](/?id=looking-for-even-more-customization-and-control)
 
-### [4. Reference Materials and Project Resources](/?id=_4-reference-materials-and-project-resources-1)
+### [4. Reference Materials and Project Resources](/?id=_4-reference-materials-and-project-resources)
 
 - [Markdown Syntax References](/?id=markdown-syntax-references)
 - [Font Awesome Icons](/?id=font-awesome-icons)
 - [Additional Docsify-This Examples and Templates](/?id=additional-docsify-this-examples-and-templates)
 - [Additional Docsify-This Learning Materials](/?id=additional-docsify-this-learning-materials)
 
-### [5. Tips, Techniques, and Troubleshooting](/?id=_5-tips-techniques-and-troubleshooting-1)
+### [5. Tips, Techniques, and Troubleshooting](/?id=_5-tips-techniques-and-troubleshooting)
 
 - [Content Display Tips and Techniques](/?id=content-display-tips-and-techniques)
 - [Making a Markdown File Available Online](/?id=making-a-markdown-file-available-online)
@@ -395,7 +395,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 - [Loading Web Page Builder Custom Settings](/?id=loading-web-page-builder-custom-settings)
 - [Troubleshooting](/?id=troubleshooting)
 
-### [6. Support and Policies](/?id=_6-support-and-policies-1)
+### [6. Support and Policies](/?id=_6-support-and-policies)
 
 - [Privacy Policy Summary](/?id=privacy-policy-summary)
 - [Contact and Support](/?id=contact-and-support)
