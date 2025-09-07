@@ -11,6 +11,7 @@
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to apply Docsify v5 core theme defaults
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
+* Automatic image path resolution for HTML image assets using data-src attribute relative to site base path with fallback support
 
 **Improved:**
 * Updated ReadMe

@@ -1456,15 +1456,21 @@
               const docBody = document.body;
 
               /* Javascript generated/assisted by Anthropic Claude AI */
-              // Function to resolve image paths
-              window.resolveImagePath = function(imagePath) {
-              const basePath = vm.config.basePath || (window.location.pathname !== '/' ? '/' + window.location.pathname.split('/')[1] : '');
-              const cleanImagePath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
-              return basePath ? `${basePath}/${cleanImagePath}` : cleanImagePath;
+              // Function to resolve asset paths (images and links)
+              window.resolveAssetPath = function(assetPath) {
+                const basePath = vm.config.basePath || (window.location.pathname !== '/' ? '/' + window.location.pathname.split('/')[1] : '');
+                const cleanAssetPath = assetPath.startsWith('/') ? assetPath.slice(1) : assetPath;
+                return basePath ? `${basePath}/${cleanAssetPath}` : cleanAssetPath;
               };    
+
               // Auto-update all images with data-src attribute
               document.querySelectorAll('img[data-src]').forEach(img => {
-              img.src = window.resolveImagePath(img.dataset.src);
+                img.src = window.resolveAssetPath(img.dataset.src);
+              });
+
+              // Auto-update all links with data-href attribute (add #/ prefix for Docsify routing)
+              document.querySelectorAll('a[data-href]').forEach(link => {
+                link.href = '#/' + window.resolveAssetPath(link.dataset.href);
               });
 
               // Code generated/assisted by Anthropic Claude AI
