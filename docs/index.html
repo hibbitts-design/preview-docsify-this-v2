@@ -1455,6 +1455,14 @@
               const docHead = document.head;
               const docBody = document.body;
 
+              // Remove page-link classes (chevrons) for external links
+              document.querySelectorAll('.sidebar a.page-link[href^="http"]').forEach(link => {
+                // Check if it's truly external (not your domain)
+                if (!link.href.includes(window.location.hostname)) {
+                  link.classList.remove('page-link');
+                }
+              });
+
               /* Javascript generated/assisted by Anthropic Claude AI */
               // Function to resolve image paths
               window.resolveImagePath = function(imagePath) {
