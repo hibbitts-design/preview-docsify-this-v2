@@ -11,7 +11,6 @@
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to apply Docsify v5 core theme defaults
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
-* Automatic image path resolution for HTML image assets using data-src attribute relative to site base path with fallback support
 
 **Improved:**
 * Updated ReadMe
@@ -34,6 +33,11 @@
 
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
+
+## [1.10.7] - XX/XX/2025🏫
+
+**New:**
+* Availability of alias domain Share-This.net for non Docsify-This branded URLs
 
 ## [1.10.6] - 09/02/2025🏫
 
