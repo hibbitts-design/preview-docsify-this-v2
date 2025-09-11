@@ -649,6 +649,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   }
 
   #docsifythisurlfield,
+  #docsifythisurlbuilder #backLink,
   #docsifythisurlbuilder #pageTitle,
   #docsifythisurlbuilder #linkcolor,
   #docsifythisurlbuilder #browserTabTitle,
