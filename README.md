@@ -1633,13 +1633,13 @@ There are multiple ways to get a raw Markdown file available online, here are th
 1. Create a gist with your Markdown file at https://gist.github.com
 1. Enter a filename ending with `.md` (e.g. `myfile.md`)
 1. Choose **Create public gist** and tap on that button
-1. Tap on **Raw** button in the upper right of your Gist field and copy/paste that URL into the Docsify-This **Markdown File URL** field
+1. Tap on **Raw** button in the upper right of your Gist field and copy/paste that URL into the Docsify-This **Markdown File URL** field
 
 **Personal or Organizational Website:**
 
 1. Obtain login information for your server
 2. Upload the Markdown file to your server
-3. Navigate to the location of that file, view the contents in your Browser, and copy/paste that URL into the Docsify-This **Markdown File URL** field
+3. Navigate to the location of that file, view the contents in your Browser, and copy/paste that URL into the Docsify-This **Markdown File URL** field
 
 ---
 
@@ -1711,13 +1711,16 @@ For example, the following URL will display the Advanced Web Page Builder, with 
 
 The quickest way to create such a shareable URL is to use the Docsify-This Web Page Builder to generate a Docsify-This web page URL, and then replace the URL parameter `basepath` with `url-field` using the full path of the source Markdown file URL. For example, the URL https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&maxLevel=3 would be changed to https://docsify-this.net?url-field=https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md&homepage=home.md&sidebar=true&maxLevel=3.
 
-##### Pre-configured Settings for Embedding Docsify-This Content
+##### Load and Go LMS Styling Configurations
 
-- Popular Learning Management System (LMS) content styles for Docsify-This:
-  - [Brightspace Config](http://load-brightspace.docsify-this.net)
-  - [Canvas Config](http://load-canvas.docsify-this.net)
-  - [Moodle Config](http://load-moodle.docsify-this.net)
-  - [Sakai Config](http://load-sakai.docsify-this.net)
+Use these pre-configured Web Page Builders that automatically apply the default styling for your Learning Management System:
+
+- [Brightspace Config](http://load-brightspace.docsify-this.net) 
+- [Canvas Config](http://load-canvas.docsify-this.net)
+- [Moodle Config](http://load-moodle.docsify-this.net)
+- [Sakai Config](http://load-sakai.docsify-this.net)
+
+Each opens the Docsify-This Web Page Builder with fonts, colors, and sizing pre-set to seamlessly blend with your chosen platform.
 
 ---
 
