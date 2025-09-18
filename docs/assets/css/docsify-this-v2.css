@@ -150,7 +150,7 @@ input[type="checkbox"] {
   }
 }
 
-#docsifythis .docsify-copy-code-button {
+.markdown-section .docsify-copy-code-button {
   padding: 0.35em 0.5em;
   background: var(--text-primary);
   color: var(--bg-primary);
@@ -159,12 +159,12 @@ input[type="checkbox"] {
   border: none;
 }
 
-.docsify-copy-code-button:focus-visible {
+.markdown-section .docsify-copy-code-button:focus-visible {
   opacity: 1;
 }
 
-#docsifythis .docsify-copy-code-button > .error,
-#docsifythis .docsify-copy-code-button > .success {
+.markdown-section .docsify-copy-code-button > .error,
+.markdown-section .docsify-copy-code-button > .success {
   padding: 0.2em 0.35em;
   font-size: 0.8em;
 }
