@@ -158,9 +158,9 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:8px;'>
   <label for="headerweight">Page headers font weight:</label>
   <select class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
-    <option value="400">Normal (400)</option>
-    <option disabled="disabled">──</option>
     <option value="600">Semi Bold (600)</option>
+    <option disabled="disabled">──</option>
+    <option value="400">Normal (400)</option>
     <option value="700">Bold (700)</option>
   </select>
 </div></div>
