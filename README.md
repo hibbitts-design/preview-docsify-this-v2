@@ -671,30 +671,30 @@ To edit a file in GitHub, tap the **Pencil** icon (Edit file) in the upper-right
 
 **Available Docsify-This Markdown Templates**
 
-- [One Page Article Template](#docsify-this-one-page-article-template)
-- [One Page Course Template](#docsify-this-one-page-course-template)
-- [Multiple Page Basic Site Template](#docsify-this-multiple-page-basic-site-template)
-- [Multiple Page Blog Style Site Template](#docsify-this-multiple-page-blog-style-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
-- [Multiple Page Open Publishing Site Template](#docsify-this-multiple-page-open-publishing-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
-- [Multiple Page Course Site Template](#docsify-this-multiple-page-course-site-template)
-- [LMS Content Pages Template](#docsify-this-lms-content-pages-template)
+- [One Page Article Template](#one-page-article-template)
+- [One Page Course Template](#one-page-course-template)
+- [Multiple Page Basic Site Template](#multiple-page-basic-site-template)
+- [Multiple Page Blog Style Site Template](#multiple-page-blog-style-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
+- [Multiple Page Open Publishing Site Template](#multiple-page-open-publishing-site-template) <span class="badge" style="--badge-bg-color: #22c55e;">NEW</span>
+- [Multiple Page Course Site Template](#multiple-page-course-site-template)
+- [LMS Content Pages Template](#lms-content-pages-template)
 
-##### [One Page Article Template](https://github.com/hibbitts-design/docsify-this-one-page-article)
+##### One Page Article Template
 
 ![Docsify-This One Page Article Template](docs/images/docsify-this-one-page-article-readme.png)
 
-One Page Article [home.md](https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md) file displayed by Docsify-This as a:
+[One Page Article Template](https://github.com/hibbitts-design/docsify-this-one-page-article) with [home.md](https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md) file displayed by Docsify-This as a:
 
 - [Web Page](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md "Docsify-This One Page Article Template - Web Page")
 - [Web Page with Table of Contents including h2 and h3 Headers and an 'Edit this Page' link](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&toc=true&toc-headings=h2,h3&edit-link=https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md "Docsify-This One Page Article Template - Web Page with Table of Contents")
 - [Web Page with Docsify Sidebar with maxLevel of 3 (H3) and an 'Edit this Page' link](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&maxLevel=3&edit-link=https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md "Docsify-This One Page Article Template - Web Page with Docsify Sidebar")
 - [Web Page with Docsify Sidebar with maxLevel of 3 (H3) and a 'View as Markdown' link at top of page with custom emoji](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&maxLevel=3&edit-link=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/refs/heads/main/home.md&edit-link-text=View%20as%20Markdown&edit-link-emoji=:page_facing_up:&edit-link-top=true "Docsify-This One Page Article Template - Web Page with Docsify Sidebar")
 
-##### [One Page Course Template](https://github.com/hibbitts-design/docsify-this-one-page-course)
+##### One Page Course Template
 
 ![Docsify-This One Page Course Template](docs/images/docsify-this-one-page-course-readme.png)
 
-One Page Course [home.md](https://github.com/hibbitts-design/docsify-this-one-page-course/blob/main/home.md) file displayed by Docsify-This as a:
+[One Page Course Template](https://github.com/hibbitts-design/docsify-this-one-page-course) with [home.md](https://github.com/hibbitts-design/docsify-this-one-page-course/blob/main/home.md) file displayed by Docsify-This as a:
 
 - [Web Page](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-course/main&homepage=home.md "Docsify-This One Page Course Template - Web Page")
 - [Web Page with Table of Contents and an 'Edit this Page' link](https://docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-course/main&homepage=home.md&toc=true&edit-link=https://github.com/hibbitts-design/docsify-this-one-page-course/blob/main/home.md "Docsify-This One Page Course Template - Web Page with Table of Contents")
