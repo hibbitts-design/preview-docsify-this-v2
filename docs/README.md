@@ -423,7 +423,7 @@ What do you think about Docsify-This so far? Help shape its direction by sharing
 - [When is Docsify-This a Good Candidate?](#when-is-docsify-this-a-good-candidate)
 - [How Docsify-This Works](#how-docsify-this-works)
 - [Read What People are Saying about Docsify-This](#read-what-people-are-saying-about-docsify-this)
-- [See What People are Doing with Docsify-This](#read-what-people-are-doing-with-docsify-this)
+- [See What People are Doing with Docsify-This](#see-what-people-are-doing-with-docsify-this)
 
 ---
 
