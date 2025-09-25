@@ -1701,7 +1701,7 @@
                         
                         dd && console.log('scrolling to position:', scrollTop, '(element top:', elementTop, '- topMargin:', topMargin, ')');
                         
-                        // Scroll instantly to the element's top position minus topMargin
+                        // Scroll smoothly to the element's top position minus topMargin
                         window.scrollTo({
                           top: scrollTop,
                           behavior: 'smooth'
