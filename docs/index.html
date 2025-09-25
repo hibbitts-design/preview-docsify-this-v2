@@ -1654,6 +1654,10 @@
 
             dd && console.log('custom scroll plugin called!');
 
+            // Get topMargin from Docsify config or use default
+            let topMargin = (window.$docsify && window.$docsify.topMargin) || 0;
+            dd && console.log('topMargin setting:', topMargin);
+
             // Build the current URL without the hash
             let currentUrlWithoutHash = new URL(
               location.origin + location.pathname +
@@ -1688,11 +1692,20 @@
                     if (!excludedParent) {
                       // Use requestAnimationFrame for immediate scroll to the element
                       requestAnimationFrame(() => {
-                        // Scroll smoothly to the element's top position
+                        // Calculate the scroll position with topMargin offset
+                        let elementTop = targetElement.offsetTop + (targetElement.offsetParent?.offsetTop || 0);
+                        let scrollTop = elementTop - topMargin;
+                        
+                        // Ensure we don't scroll above the top of the page
+                        scrollTop = Math.max(0, scrollTop);
+                        
+                        dd && console.log('scrolling to position:', scrollTop, '(element top:', elementTop, '- topMargin:', topMargin, ')');
+                        
+                        // Scroll instantly to the element's top position minus topMargin
                         window.scrollTo({
-                        top: targetElement.offsetTop + targetElement.offsetParent?.offsetTop || 0,
-                        behavior: 'smooth'
-                      });
+                          top: scrollTop,
+                          behavior: 'instant'  // Changed from 'smooth' to 'instant'
+                        });
                       });
                     } else {
                       dd && console.log('Target is within an excluded parent:', excludedParent);
