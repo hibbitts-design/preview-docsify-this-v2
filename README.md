@@ -284,7 +284,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [link-color](#link-color)
 - [maxLevel](#maxLevel)
 - [searchbox](#searchbox)
-- [sidebar](/#sidebar)
+- [sidebar](#sidebar)
 - [toc](#toc)
 - [toc-headings](#toc-headings)
 - [toc-narrow](#toc-narrow)
