@@ -575,6 +575,17 @@
             }
           }
 
+          var getmaxwidthvalue = document.getElementById('maxWidthValue').value;
+          var getmaxwidthvalueunit = document.getElementById('maxWidthValueUnit').value;
+          if (!((getmaxwidthvalue == "910") && (getmaxwidthvalueunit == "px"))) {
+            if (!url.includes('max-width=')) {
+              if (getmaxwidthvalueunit == "%") {
+                getmaxwidthvalueunit = ''
+              }
+              var URLparms = URLparms + `&max-width=` + getmaxwidthvalue + getmaxwidthvalueunit
+            }
+          }
+
           var getColor = document.getElementById("coverpagecolor");
           if (!(document.getElementById('coverpagecolor').disabled)) {
             var hexCode = getColor.value;
@@ -695,6 +706,24 @@
 
       }
 
+    }
+
+    function updateMaxWidthStep() {
+      const select = document.getElementById('maxWidthValueUnit');
+      const input = document.getElementById('maxWidthValue');
+      const selectedOption = select.selectedOptions[0];
+      
+      const step = selectedOption.getAttribute('data-step');
+      input.setAttribute('step', step);
+      
+      // Set appropriate default for each unit
+      const defaults = {
+        'px': '910',
+        '%': '100',
+        'ch': '75'
+      };
+      
+      input.value = defaults[select.value];
     }
 
     const isValidUrl = urlString => {
@@ -1940,6 +1969,19 @@
 
             if (getURLParameterByName(['zoom-images', 'zoomImages'], null, null, window.location.href, true) === 'true') {
               document.getElementById("zoomimages").checked = true;
+            }
+
+            maxWidth = getURLParameterByName('max-width', null, null, window.location.href, true);
+            if (maxWidth) {
+              if (!(isNaN(maxWidth))) {
+                document.getElementById('maxWidthValue').value = maxWidth;
+                document.getElementById('maxWidthValueUnit').value = 'px';
+              } else {
+                const maxWidthvalue = parseInt(maxWidth);
+                const maxWidthUnit = maxWidth.replace(/\d+/, '');
+                document.getElementById('maxWidthValue').value = maxWidthvalue;
+                document.getElementById('maxWidthValueUnit').value = maxWidthUnit;
+              }
             }
 
             if (getURLParameterByName('loadFavicon')) {

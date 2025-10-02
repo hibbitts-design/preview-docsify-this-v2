@@ -170,9 +170,36 @@ Page layout:
 
 </div>
 
+<h3>Page Display Options</h3>
+
+<hr>
+
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"/><label for="imageCaptions">Show alternative text of images as captions</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages"/><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
+
+<hr>
+
+<div class="clearfix">
+
+<div class='stackedlabeldropdown'>
+  <label for="maxWidthValue">Content maximum width:</label>
+  <div style="display: flex; gap: 10px;">
+    <input type="number" id="maxWidthValue" name="maxWidthValue"
+       style="flex: .8; width: 80px; height: 38px; vertical-align: top; "
+       value="910" step="10">
+    <select style="height: 38px; vertical-align: top; "
+        id="maxWidthValueUnit" name="maxWidthValueUnit" value="px" onchange="updateMaxWidthStep()">
+      <option value="px" data-step="10" selected>Pixels (px)</option>
+      <option value="%" data-step="5">Percent (%)</option>
+      <option value="ch" data-step="1">Characters (ch)</option>
+    </select>
+  </div>
+</div>
+
+</div>
+
+<hr>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
