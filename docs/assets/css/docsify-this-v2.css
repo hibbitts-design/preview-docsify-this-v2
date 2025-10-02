@@ -312,6 +312,10 @@ input[type="checkbox"] {
   color: var(--text-primary);
 }
 
+#docsifythisurlbuilder h3 a.anchor:hover {
+  text-decoration: none !important;
+}
+
 .docsifythiscustomdetails summary {
   list-style: none;
   display: flex;

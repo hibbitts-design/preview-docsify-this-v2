@@ -94,7 +94,7 @@ Page layout:
 
 <div id="docsifythisurlbuilderoptionsDiv" style='display: none'>
 
-<h3>Page Style and Behavior</h3>
+### Page Style and Behavior
 
 <hr>
 
@@ -170,7 +170,7 @@ Page layout:
 
 </div>
 
-<h3>Page Display Options</h3>
+### Page Display Options
 
 <hr>
 
@@ -202,7 +202,7 @@ Page layout:
 
 </div>
 
-<h3>Navigation Display Options</h3>
+### Navigation Display Options
 
 <hr>
 
@@ -219,7 +219,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Maximum Header level (1-6) of Docsify Sidebar:<br><input aria-label="Maximum Header level (1-6) of Docsify Sidebar" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"/></div>
 
-<h3>Additional Page Options</h3>
+### Additional Page Options
 
 <hr>
 
@@ -231,7 +231,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
-<h3>Dark Theme</h3>
+### Dark Theme
 
 <hr>
 
@@ -255,7 +255,7 @@ Page layout:
 
 <div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
 
-<h3>Dark Theme Link Colors</h3>
+### Dark Theme Link Colors
 
 <hr>
 
@@ -263,7 +263,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div>
 
-<h3>Link Style and Behavior</h3>
+### Link Style and Behavior
 
 <hr>
 
@@ -304,7 +304,7 @@ Page layout:
 
 </div>
 
-<h3>Custom Page Additions</h3>
+### Custom Page Additions
 
 <hr>
 
@@ -316,7 +316,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
-<h3>Docsify Custom Files</h3>
+### Docsify Custom Files
 
 <hr>
 
@@ -327,7 +327,7 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter"><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
 
-<h3>Docsify Custom Sidebar Options</h3>
+### Docsify Custom Sidebar Options
 
 <hr>
 
@@ -339,13 +339,13 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
 
-<h3>Docsify Custom Navbar Options</h3>
+### Docsify Custom Navbar Options
 
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar"/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
-<h3>Docsify Custom Coverpage Colors</h3>
+### Docsify Custom Coverpage Colors
 
 <hr>
 
@@ -353,7 +353,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
 
-<h3>Theme Overrides</h3>
+### Theme Overrides
 
 <hr>
 
