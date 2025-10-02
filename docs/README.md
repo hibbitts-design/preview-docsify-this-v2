@@ -182,9 +182,9 @@ Page layout:
 
 <div class="clearfix">
 
-<div class='stackedlabeldropdown'>
+<div class='stackedlabeldropdown' style="margin-top: -4px;">
   <label for="maxWidthValue">Content maximum width:</label>
-  <div style="display: flex; gap: 10px;">
+  <div style="display: flex; gap: 10px; ">
     <input type="number" id="maxWidthValue" name="maxWidthValue"
        style="flex: .2; width: 80px; height: 38px; vertical-align: top; "
        value="910" step="10">
@@ -195,30 +195,11 @@ Page layout:
       <option value="ch" data-step="1">Characters (ch)</option>
     </select>
   </div>
-  <div style=" margin-top: -8px; line-height: 1.4;">
+  <div style="margin-top: -8px; line-height: 1.4;">
   Embedding or presenting content? Try 100% for embeds or 80% for presentations
   </div>
 </div>
 
-</div>
-
-<hr>
-
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
-
-<hr>
-
-<div class="docsifythisurlbuilderoptionsline">
-  <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">
-  <label for="docsifyV5coretheme">Use Docsify v5 core theme style defaults instead of Docsify-This styling
-    <details class="docsifythiscustomdetails">
-      <summary aria-label="More information about using Docsify v5 Core Theme">
-        <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16"/>
-        <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
-      </summary>
-      <p>This applies the Docsify v5 core theme defaults, removing Docsify-This and Web Page Builder theme styling. To adjust the visual appearance after publishing manually add URL parameters, for example <code>&font-family=Merriweather,serif</code>, <code>&theme-color=CC0000</code>, <code>&link-color=CC0000</code>, or <code>&max-width=910px</code>.</p>
-    </details>
-  </label>
 </div>
 
 <h3>Navigation Display Options</h3>
@@ -250,17 +231,13 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
-<input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
-
-<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -27px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"/><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
-
-<div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
-
-<h3>Dark Theme Mode and Link Colors</h3>
+<h3>Dark Theme</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:16px;'>
+<div class="clearfix">
+
+<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;"><div class="stackedlabeldropdown">
   <label for="enableDarkmode">Dark theme mode:</label>
   <select class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
@@ -269,6 +246,18 @@ Page layout:
     <option value="on">On</option>
   </select>
 </div></div>
+
+</div>
+
+<input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 16px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
+
+<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -27px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"/><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
+
+<div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
+
+<h3>Dark Theme Link Colors</h3>
+
+<hr>
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
@@ -323,6 +312,10 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Add page title (as H1 header at top of page):<br><input aria-label="Add page title (as H1 header at top of page)" type="text" maxlength="200" value="" id="pageTitle" name="pageTitle"></div>
 
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
+
 <h3>Docsify Custom Files</h3>
 
 <hr>
@@ -359,6 +352,23 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris/><span id="coverpagecolorpreview"></span></div>
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
+
+<h3>Theme Overrides</h3>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline">
+  <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">
+  <label for="docsifyV5coretheme">Use Docsify v5 core theme style defaults instead of Docsify-This styling
+    <details class="docsifythiscustomdetails">
+      <summary aria-label="More information about using Docsify v5 Core Theme">
+        <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16"/>
+        <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
+      </summary>
+      <p>This applies the Docsify v5 core theme defaults, removing Docsify-This and Web Page Builder theme styling. To adjust the visual appearance after publishing manually add URL parameters, for example <code>&font-family=Merriweather,serif</code>, <code>&theme-color=CC0000</code>, <code>&link-color=CC0000</code>, or <code>&max-width=910px</code>.</p>
+    </details>
+  </label>
+</div>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;margin-bottom: 8px;" type="button" id="btn_3" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 

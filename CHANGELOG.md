@@ -41,6 +41,7 @@
 
 **Improved:**
 * Updated ReadMe
+* Reorganize Advanced Web Page Builder options
 
 ## [1.10.7] - 10/01/2025🎃
 
