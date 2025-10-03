@@ -862,11 +862,11 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   color: var(--docsifythis-link-color);
 }
 
-#docsifythisurlbuilder h3 {
+#docsifythisurlbuilder h3, #docsifythisurlbuilder h3 a {
   font-weight: 500;
   margin-top: .75rem;
   margin-bottom: 0.50rem;
-  color: var(--docsifythis-link-color);
+  color: var(--docsifythis-link-color)!important;
 }
 
 /* Reset button styling */
