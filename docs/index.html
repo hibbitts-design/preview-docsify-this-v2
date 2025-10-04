@@ -2186,6 +2186,11 @@
       if (!(maxwidth === false)) {
         if (!(isNaN(maxwidth))) {
           root_theme.style.setProperty('--content-margin-inline', '0px');
+          if (maxwidth == 100) {
+            var editCSS = document.createElement('style')
+            editCSS.innerHTML = ".markdown-section {margin-top: 0 !important;}";
+            document.body.appendChild(editCSS);
+          }
         }
       } else {
         root_theme.style.setProperty('--content-margin-inline', '14px');
