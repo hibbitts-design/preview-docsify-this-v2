@@ -2190,6 +2190,11 @@
             var editCSS = document.createElement('style')
             editCSS.innerHTML = ".markdown-section {margin-top: 0 !important;}";
             document.body.appendChild(editCSS);
+          } else {
+            if (!(getURLParameterByName('topMargin'))) {
+              var adjustedTopMargin = (100 - maxwidth) * 2;
+              window.$docsify.topMargin = adjustedTopMargin;
+            }
           }
         }
       } else {
