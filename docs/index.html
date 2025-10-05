@@ -2378,6 +2378,9 @@
         }
         // console.log(fontsize);
         document.documentElement.style.setProperty('--font-size', fontsize);
+        var fontCSS = document.createElement('style');
+        fontCSS.innerHTML = `.sidebar { font-size: 18px !important; }`;
+        document.head.appendChild(fontCSS);
       }
 
       // Change line height if lineheight parameter present
