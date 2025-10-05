@@ -2374,13 +2374,30 @@
       if (!(fontsize === false)) {
         // Check if fontsize is a number when converted
         if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
-            fontsize = fontsize + "px";
+          fontsize = fontsize + "px";
         }
         // console.log(fontsize);
         document.documentElement.style.setProperty('--font-size', fontsize);
+        document.documentElement.style.setProperty('--sidebar-name-font-size', '28px');
         var fontCSS = document.createElement('style');
-        fontCSS.innerHTML = `.sidebar { font-size: 18px !important; }`;
+        fontCSS.innerHTML = `
+            .sidebar { font-size: 18px !important; }
+            .search kbd { font-size: 18px !important; }
+        `;
         document.head.appendChild(fontCSS);
+        document.addEventListener('DOMContentLoaded', function () {
+          const sidebarElements = document.querySelectorAll('.search');
+          sidebarElements.forEach(element => {
+            element.style.marginTop = '27px';
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+          const sidebarHeadings = document.querySelectorAll('.sidebar > h1');
+          sidebarHeadings.forEach(element => {
+            element.style.setProperty('margin-top', '27px', 'important');
+            element.style.setProperty('margin-bottom', '27px', 'important');
+          });
+        });
       }
 
       // Change line height if lineheight parameter present
