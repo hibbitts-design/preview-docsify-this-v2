@@ -2386,12 +2386,13 @@
         `;
         document.head.appendChild(fontCSS);
         document.addEventListener('DOMContentLoaded', function () {
-          const sidebarElements = document.querySelectorAll('.search');
-          sidebarElements.forEach(element => {
+          // Apply regular margin-top to search elements
+          const searchElements = document.querySelectorAll('.search');
+          searchElements.forEach(element => {
             element.style.marginTop = '27px';
           });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
+
+          // Apply margin-top and margin-bottom to sidebar headings
           const sidebarHeadings = document.querySelectorAll('.sidebar > h1');
           sidebarHeadings.forEach(element => {
             element.style.setProperty('margin-top', '27px', 'important');
