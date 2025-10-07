@@ -2403,13 +2403,15 @@
         fontCSS.innerHTML = `
             .sidebar { font-size: 18px !important; }
             .search kbd { font-size: 18px !important; }
+            .search .results-status { font-size: 15px !important; }
+            .search .matching-post .content { font-size: 15px !important; }
         `;
         document.head.appendChild(fontCSS);
         document.addEventListener('DOMContentLoaded', function () {
           // Apply regular margin-top to search elements
           const searchElements = document.querySelectorAll('.search');
           searchElements.forEach(element => {
-            element.style.marginTop = '27px';
+            element.style.marginTop = '11px';
           });
 
           // Apply margin-top and margin-bottom to sidebar headings
