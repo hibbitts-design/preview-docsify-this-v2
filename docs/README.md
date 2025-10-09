@@ -653,7 +653,7 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 
 ##### close-sidebar<button type="button" class="copy-link" aria-label="Copy close-sidebar parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&close-sidebar=false').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
-Initial set the Docsify sidebar to be closed with the optional **close-sidebar** parameter, for example:  
+Set the Docsify sidebar to start closed and auto-close after navigation with the optional **close-sidebar** parameter, for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&close-sidebar=true
 
 ##### core-theme-styles<button type="button" class="copy-link" aria-label="Copy core-theme-styles parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&core-theme-styles=false').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
