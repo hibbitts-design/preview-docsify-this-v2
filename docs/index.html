@@ -1542,6 +1542,19 @@
               const docHead = document.head;
               const docBody = document.body;
 
+              // Close sidebar after clicking a link when close-sidebar parameter is true
+              if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
+                // Close sidebar when hash changes (navigation occurs)
+                window.addEventListener('hashchange', function() {
+                  const sidebarToggle = document.querySelector('.sidebar-toggle');
+                  const sidebar = document.querySelector('.sidebar');
+                  
+                  if (sidebar && !sidebar.classList.contains('close') && sidebarToggle) {
+                    sidebarToggle.click();
+                  }
+                });
+              }
+
               // Remove page-link classes (chevrons) for external links
               document.querySelectorAll('.sidebar a.page-link[href^="http"]').forEach(link => {
                 // Check if it's truly external (not your domain)
