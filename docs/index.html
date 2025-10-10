@@ -1401,14 +1401,6 @@
 
             if (window.$docsify['basePath']) {
 
-              // Close Sidebar based on URL parm
-              if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
-                const sidebarToggle = document.querySelector('.sidebar-toggle');
-                if (sidebarToggle) {
-                  sidebarToggle.click();
-                }
-              }
-
               // Basic error handling (i.e. 404 - File not found error)
               const { file = '', response = {} } = vm.route || {};
               const { ok = true, status = 0, statusText = '' } = response;
