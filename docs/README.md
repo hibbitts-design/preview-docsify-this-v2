@@ -217,7 +217,7 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="closesidebar"/><label for="closesidebar">Initially close Docsify Sidebar for presentations or focused reading</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="closesidebar"/><label for="closesidebar">Automatically close Docsify Sidebar for presentations or focused reading</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch"/><label for="enableSidebarsearch">Enable search box in Docsify Sidebar</label></div>
 
