@@ -1539,20 +1539,18 @@
           // Invoked on each page load after new HTML has been appended to the DOM
           hook.doneEach(function () {
             if (window.$docsify['basePath']) {
+              
               const docHead = document.head;
               const docBody = document.body;
 
-              // Close sidebar after clicking a link when close-sidebar parameter is true
+              // Close Sidebar - handle page-to-page navigation if URL parameter is present
               if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
-                // Close sidebar when hash changes (navigation occurs)
-                window.addEventListener('hashchange', function() {
-                  const sidebarToggle = document.querySelector('.sidebar-toggle');
-                  const sidebar = document.querySelector('.sidebar');
-                  
-                  if (sidebar && !sidebar.classList.contains('close') && sidebarToggle) {
-                    sidebarToggle.click();
-                  }
-                });
+                const sidebarToggle = document.querySelector('.sidebar-toggle');
+                const sidebar = document.querySelector('.sidebar');
+                
+                if (sidebar && !sidebar.classList.contains('close') && sidebarToggle) {
+                  sidebarToggle.click();
+                }
               }
 
               // Remove page-link classes (chevrons) for external links
@@ -1808,6 +1806,28 @@
             }
 
             if (window.$docsify['basePath']) {
+
+              // Close Sidebar - handle same-page ?id= changes if URL parameter is present
+              if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
+                
+                let lastHash = window.location.hash;
+                
+                window.addEventListener('hashchange', function() {
+                  const currentHash = window.location.hash;
+                  
+                  if (currentHash !== lastHash) {
+                    lastHash = currentHash;
+                    
+                    const sidebarToggle = document.querySelector('.sidebar-toggle');
+                    const sidebar = document.querySelector('.sidebar');
+                    
+                    if (sidebar && !sidebar.classList.contains('close') && sidebarToggle) {
+                      sidebarToggle.click();
+                    }
+                  }
+                });
+              }
+
               return; // Exit if basePath is present
             }
 
@@ -2244,7 +2264,7 @@
             var fontSizeRaw = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
             var fontSize = parseFloat(fontSizeRaw);
             if (!isNaN(fontSize) && fontSize >= 24) {
-              window.$docsify.topMargin = (fontSize - 6);
+              window.$docsify.topMargin = (fontSize - 16);
             }
           }
         }
