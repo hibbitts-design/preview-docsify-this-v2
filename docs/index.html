@@ -2452,32 +2452,39 @@
         if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
           fontsize = fontsize + "px";
         }
-        // console.log(fontsize);
+        
         document.documentElement.style.setProperty('--font-size', fontsize);
-        document.documentElement.style.setProperty('--sidebar-name-font-size', '28px');
-        var fontCSS = document.createElement('style');
-        fontCSS.innerHTML = `
-            .sidebar { font-size: 18px !important; }
-            .search kbd { font-size: 18px !important; }
-            .search .results-status { font-size: 15px !important; }
-            .search .matching-post .content { font-size: 15px !important; }
-            .page_toc ul { font-size: 18px !important; }
-        `;
-        document.head.appendChild(fontCSS);
-        document.addEventListener('DOMContentLoaded', function () {
-          // Apply regular margin-top to search elements
-          const searchElements = document.querySelectorAll('.search');
-          searchElements.forEach(element => {
-            element.style.marginTop = '11px';
-          });
+        
+        // Only apply sidebar/ToC adjustments if font size is 24px or larger
+        const numericFontSize = parseFloat(fontsize);
+        if (numericFontSize >= 24) {
+          document.documentElement.style.setProperty('--sidebar-name-font-size', '28px');
+          
+          var fontCSS = document.createElement('style');
+          fontCSS.innerHTML = `
+              .sidebar { font-size: 18px !important; }
+              .search kbd { font-size: 18px !important; }
+              .search .results-status { font-size: 15px !important; }
+              .search .matching-post .content { font-size: 15px !important; }
+              .page_toc ul { font-size: 18px !important; }
+          `;
+          document.head.appendChild(fontCSS);
+          
+          document.addEventListener('DOMContentLoaded', function () {
+            // Apply regular margin-top to search elements
+            const searchElements = document.querySelectorAll('.search');
+            searchElements.forEach(element => {
+              element.style.marginTop = '11px';
+            });
 
-          // Apply margin-top and margin-bottom to sidebar headings
-          const sidebarHeadings = document.querySelectorAll('.sidebar > h1');
-          sidebarHeadings.forEach(element => {
-            element.style.setProperty('margin-top', '27px', 'important');
-            element.style.setProperty('margin-bottom', '27px', 'important');
+            // Apply margin-top and margin-bottom to sidebar headings
+            const sidebarHeadings = document.querySelectorAll('.sidebar > h1');
+            sidebarHeadings.forEach(element => {
+              element.style.setProperty('margin-top', '27px', 'important');
+              element.style.setProperty('margin-bottom', '27px', 'important');
+            });
           });
-        });
+        }
       }
 
       // Change line height if lineheight parameter present
