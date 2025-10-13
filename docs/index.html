@@ -373,7 +373,7 @@
           if (getFontSize === '' || isNaN(getFontSize)) {
             getFontSize = '18';
           }
-          if (getFontSize != "18") {
+          if (getFontSize != "18" && !document.getElementById('fontsize').disabled) {
             if (!url.includes('font-size=')) {
               var URLparms = URLparms + `&font-size=` + getFontSize + 'px';
             }
@@ -383,14 +383,9 @@
           if (getLineHeight === '' || isNaN(getLineHeight)) {
             getLineHeight = '1.4';
           }
-          if (getLineHeight != "1.4" && !url.includes('line-height=')) {
-            var URLparms = URLparms + `&line-height=` + getLineHeight;
-          }
-
-          var getLineHeight = document.getElementById('lineheight').value;
-          if ((!(getLineHeight == "1.4")) && (!(document.getElementById('lineheight').disabled)))  {
+          if (getLineHeight != "1.4" && !document.getElementById('lineheight').disabled) {
             if (!url.includes('line-height=')) {
-              var URLparms = URLparms + `&line-height=` + getLineHeight
+              var URLparms = URLparms + `&line-height=` + getLineHeight;
             }
           }
 
