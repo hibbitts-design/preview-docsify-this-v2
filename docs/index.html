@@ -369,18 +369,22 @@
             }
           }
 
-          var getFontFamily = document.getElementById('fontfamily').selectedOptions[0].value;
-          if ((!(getFontFamily == "Source%20Sans%203,Helvetica%20Neue,sans-serif")) && (!(document.getElementById('fontfamily').disabled)))  {
-            if (!url.includes('font-family=')) {
-              var URLparms = URLparms + `&font-family=` + getFontFamily;
+          var getFontSize = document.getElementById('fontsize').value;
+          if (getFontSize === '' || isNaN(getFontSize)) {
+            getFontSize = '18';
+          }
+          if (getFontSize != "18") {
+            if (!url.includes('font-size=')) {
+              var URLparms = URLparms + `&font-size=` + getFontSize + 'px';
             }
           }
 
-          var getFontSize = document.getElementById('fontsize').value;
-          if ((!(getFontSize == "18px")) && (!(document.getElementById('fontsize').disabled)))  {
-            if (!url.includes('font-size=')) {
-              var URLparms = URLparms + `&font-size=` + getFontSize;
-            }
+          var getLineHeight = document.getElementById('lineheight').value;
+          if (getLineHeight === '' || isNaN(getLineHeight)) {
+            getLineHeight = '1.4';
+          }
+          if (getLineHeight != "1.4" && !url.includes('line-height=')) {
+            var URLparms = URLparms + `&line-height=` + getLineHeight;
           }
 
           var getLineHeight = document.getElementById('lineheight').value;
@@ -821,7 +825,7 @@
       document.getElementById("browserTabTitle").value = 'Published by Docsify-This';
       document.getElementById("editCheck").checked = false;
       document.getElementById("fontfamily").value = 'Source%20Sans%203,Helvetica%20Neue,sans-serif';
-      document.getElementById("fontsize").value = '18px';
+      document.getElementById("fontsize").value = '18';
       document.getElementById("lineheight").value = '1.4';
       document.getElementById("linkcolor").value = '#0374B5';
       document.getElementById("linkcolorpreview").style.borderColor = '#0374B5';
