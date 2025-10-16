@@ -435,6 +435,17 @@
             }
           }
 
+          var getSubMaxLevel = document.getElementById("subMaxLevel");
+          var subMaxLevel = getSubMaxLevel.value;
+          if (subMaxLevel === '') {
+            document.getElementById("subMaxLevel").value = 2;
+          }
+          if (!(subMaxLevel == 2)) {
+            if (!url.includes('subMaxLevel=')) {
+              var URLparms = URLparms + `&subMaxLevel=` + subMaxLevel;
+            }
+          }
+
           const cb12 = document.querySelector('#loadcustomnavbar');
           if (cb12.checked) {
             if (!url.includes('loadNavbar=')) {
@@ -470,17 +481,6 @@
           if (cb14.checked) {
             if (!url.includes('searchbox=')) {
               var URLparms = URLparms + `&searchbox=true`;
-            }
-          }
-
-          var getSubMaxLevel = document.getElementById("subMaxLevel");
-          var subMaxLevel = getSubMaxLevel.value;
-          if (subMaxLevel === '') {
-            document.getElementById("subMaxLevel").value = 2;
-          }
-          if (!(subMaxLevel == 2)) {
-            if (!url.includes('subMaxLevel=')) {
-              var URLparms = URLparms + `&subMaxLevel=` + subMaxLevel;
             }
           }
 
