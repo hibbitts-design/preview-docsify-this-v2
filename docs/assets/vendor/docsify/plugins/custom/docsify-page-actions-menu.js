@@ -340,31 +340,58 @@ function pageActionItems(hook, vm) {
    hook.afterEach((html, next) => {
       injectStyles();
       const menuHtml = generateMenuHtml();
-      
+
       // Check if targetImageClass is configured
       const targetImageClass = vm.config.pageActionItems?.targetImageClass;
-      
+
       if (targetImageClass) {
-      // Look for the image + heading pattern and inject after the headings
-      const imageWithOverlayRegex = new RegExp(
-         `(<img[^>]*class="[^"]*${targetImageClass}[^"]*"[^>]*>[^<]*</p>\\s*<h1[^>]*>.*?</h1>(?:\\s*<h2[^>]*>.*?</h2>)?)`,
-         'is'
-      );
-      
-      if (imageWithOverlayRegex.test(html)) {
-         html = html.replace(imageWithOverlayRegex, `$1${menuHtml}`);
-      } else {
-         // Fallback: inject after just the image
-         const imageRegex = new RegExp(`(<img[^>]*class="[^"]*${targetImageClass}[^"]*"[^>]*>)`, 'i');
-         html = html.replace(imageRegex, `$1${menuHtml}`);
-      }
+         let processed = false;
+         // Handle both string and array
+         const classes = Array.isArray(targetImageClass) ? targetImageClass : [targetImageClass];
+
+         for (const className of classes) {
+               // Check if this class contains "heading"
+               if (className.includes('heading')) {
+                  // Look for the image + heading pattern and inject after the headings
+                  const imageWithOverlayRegex = new RegExp(
+                     `(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>[^<]*</p>\\s*<h1[^>]*>.*?</h1>(?:\\s*<h2[^>]*>.*?</h2>)?)`,
+                     'is'
+                  );
+
+                  if (imageWithOverlayRegex.test(html)) {
+                     html = html.replace(imageWithOverlayRegex, `$1${menuHtml}`);
+                     processed = true;
+                     break;
+                  }
+               } else {
+                  // No "heading" in class name, insert right after the image
+                  const imageRegex = new RegExp(`(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>)`, 'i');
+                  if (imageRegex.test(html)) {
+                     html = html.replace(imageRegex, `$1${menuHtml}`);
+                     processed = true;
+                     break;
+                  }
+               }
+         }
+
+         // Only use fallback if no classes were processed
+         if (!processed) {
+               // Final fallback: try each class for just the image (regardless of heading check)
+               for (const className of classes) {
+                  const imageRegex = new RegExp(`(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>)`, 'i');
+                  if (imageRegex.test(html)) {
+                     html = html.replace(imageRegex, `$1${menuHtml}`);
+                     break;
+                  }
+               }
+         }
       } else {
          // Default behavior: inject at top
          html = /<article[\s>]/.test(html)
-            ? html.replace(/(<article[\s>])/i, `$1${menuHtml}`)
-            : menuHtml + html;
+               ? html.replace(/(<article[\s>])/i, `$1${menuHtml}`)
+               : menuHtml + html;
       }
-      
+
       next(html);
    });
    hook.doneEach(bindMenuEvents);
