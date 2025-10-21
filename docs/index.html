@@ -289,6 +289,13 @@
             }
           }
 
+          const cb21 = document.querySelector('#pageCopyMenu');
+          if (cb21.checked) {
+            if (!url.includes('page-copy-menu=')) {
+              var URLparms = URLparms + `&page-copy-menu=true`;
+            }
+          }
+
           const cb3 = document.querySelector('#hideCredits');
           if (cb3.checked) {
             if (!url.includes('hide-credits=')) {
@@ -833,6 +840,7 @@
       document.getElementById("toch2").checked = true;
       document.getElementById("toch3").checked = false;
       document.getElementById("maxLevel").value = 2;
+      document.getElementById("pageCopyMenu").checked = false;
       document.getElementById("hideCredits").checked = false;
       document.getElementById("hypothesisenable").checked = false;
       document.getElementById("docsifyV5coretheme").checked = false;
@@ -1975,6 +1983,10 @@
 
             if (getURLParameterByName(['edit-link-top', 'editLinkTop'], null, null, window.location.href, true) === 'true') {
               document.getElementById("editLinkTopCheck").checked = true;
+            }
+
+            if (getURLParameterByName(['page-copy-menu', 'pageCopyMenu'], null, null, window.location.href, true) === 'true') {
+              document.getElementById("pageCopyMenu").checked = true;
             }
 
             if (getURLParameterByName(['hide-credits', 'hideCredits'], null, null, window.location.href, true) === 'true') {

@@ -230,6 +230,8 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
 
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pageCopyMenu"/><label for="pageCopyMenu">Include page copy menu for directly accessing Markdown content</label></div>
+
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
