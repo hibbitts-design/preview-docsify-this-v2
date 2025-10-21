@@ -45,6 +45,8 @@ function pageActionItems(hook, vm) {
          label: 'Copy page',
          desc: 'Copy page as Markdown for LLMs',
          action: 'copy',
+         onSuccess: 'Copied!',
+         onError: 'Copy failed!',
       },
       {
          icon: svgs.view,
@@ -88,6 +90,32 @@ function pageActionItems(hook, vm) {
             url
          )}%20so%20I%20can+ask+questions+about+it.`,
    };
+
+   // Helper: handle onSuccess/onError for an item
+   function handleActionResult(type, item, context, error) {
+      const handler = item[type];
+      if (!handler) return;
+
+      if (typeof handler === 'function') {
+         handler(context, error);
+      } else {
+         // If string or localization object, show as notification (adapt this to your UI)
+         const msg = getLocalizedText(handler, window.location.hash.replace(/^#/, '') || '/');
+         // For demo: set button label, but you may want a toast/notification
+         if (context.triggerButton) {
+            context.triggerButton.querySelector('span:nth-child(2)').textContent = msg;
+            setTimeout(() => {
+               context.triggerButton.querySelector('span:nth-child(2)').textContent =
+                  getLocalizedText(
+                     context.triggerButtonConfig.label,
+                     window.location.hash.replace(/^#/, '') || '/'
+                  );
+            }, 1800);
+         } else {
+            alert(msg); // fallback
+         }
+      }
+   }
 
    // Get effective menu items (user config or defaults)
    function getMenuItems() {
@@ -293,6 +321,8 @@ function pageActionItems(hook, vm) {
       const btn = document.getElementById('page-actions-menu-btn');
       const dropdown = document.getElementById('page-actions-menu-dropdown');
       const items = getMenuItems();
+      const triggerButtonConfig = getButton();
+      const path = window.location.hash.replace(/^#/, '') || '/';
       if (!btn || !dropdown) return;
 
       btn.onclick = (e) => {
@@ -304,28 +334,42 @@ function pageActionItems(hook, vm) {
       });
 
       dropdown.querySelectorAll('.page-actions-menu-item').forEach((el, idx) => {
-         el.onclick = (e) => {
+         el.onclick = async (e) => {
             e.stopPropagation();
             const item = items[idx];
-            if (item.action === 'copy' && rawMarkdown) {
-               navigator.clipboard.writeText(rawMarkdown);
-               btn.querySelector('span:nth-child(2)').textContent = '✅';
-               setTimeout(
-                  () => (btn.querySelector('span:nth-child(2)').textContent = 'Page actions'),
-                  1200
-               );
-            } else if (item.action === 'view' && blobUrl) {
-               window.open(blobUrl, '_blank');
-            } else if (item.action === 'llm') {
-               if (item.llm === 'chatgpt') {
-                  window.open(llmUrls[item.llm]?.(rawMarkdown), '_blank');
-               } else {
-                  window.open(llmUrls[item.llm]?.(getCurrentPageUrl()), '_blank');
+            const context = {
+               rawMarkdown,
+               blobUrl,
+               vm,
+               triggerButton: btn,
+               triggerButtonConfig,
+               item,
+               event: e,
+            };
+            try {
+               let result;
+               if (item.action === 'copy' && rawMarkdown) {
+                  await navigator.clipboard.writeText(rawMarkdown);
+                  handleActionResult('onSuccess', item, context);
+               } else if (item.action === 'view' && blobUrl) {
+                  window.open(blobUrl, '_blank');
+                  handleActionResult('onSuccess', item, context);
+               } else if (item.action === 'llm') {
+                  let url =
+                     item.llm === 'chatgpt'
+                        ? llmUrls[item.llm]?.(rawMarkdown)
+                        : llmUrls[item.llm]?.(getCurrentPageUrl());
+                  window.open(url, '_blank');
+                  handleActionResult('onSuccess', item, context);
+               } else if (typeof item.onClick === 'function') {
+                  result = await item.onClick(context);
+                  handleActionResult('onSuccess', item, context);
                }
-            } else if (typeof item.onClick === 'function') {
-               item.onClick({ rawMarkdown, blobUrl, vm });
+               dropdown.style.display = 'none';
+            } catch (error) {
+               handleActionResult('onError', item, { ...context, error }, error);
+               dropdown.style.display = 'none';
             }
-            dropdown.style.display = 'none';
          };
       });
    }
@@ -340,58 +384,55 @@ function pageActionItems(hook, vm) {
    hook.afterEach((html, next) => {
       injectStyles();
       const menuHtml = generateMenuHtml();
-
-      // Check if targetImageClass is configured
+      
+      // Get the target image class from config
       const targetImageClass = vm.config.pageActionItems?.targetImageClass;
-
-      if (targetImageClass) {
-         let processed = false;
-         // Handle both string and array
-         const classes = Array.isArray(targetImageClass) ? targetImageClass : [targetImageClass];
-
-         for (const className of classes) {
-               // Check if this class contains "heading"
-               if (className.includes('heading')) {
-                  // Look for the image + heading pattern and inject after the headings
-                  const imageWithOverlayRegex = new RegExp(
-                     `(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>[^<]*</p>\\s*<h1[^>]*>.*?</h1>(?:\\s*<h2[^>]*>.*?</h2>)?)`,
-                     'is'
-                  );
-
-                  if (imageWithOverlayRegex.test(html)) {
-                     html = html.replace(imageWithOverlayRegex, `$1${menuHtml}`);
-                     processed = true;
-                     break;
-                  }
-               } else {
-                  // No "heading" in class name, insert right after the image
-                  const imageRegex = new RegExp(`(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>)`, 'i');
-                  if (imageRegex.test(html)) {
-                     html = html.replace(imageRegex, `$1${menuHtml}`);
-                     processed = true;
-                     break;
-                  }
-               }
-         }
-
-         // Only use fallback if no classes were processed
-         if (!processed) {
-               // Final fallback: try each class for just the image (regardless of heading check)
-               for (const className of classes) {
-                  const imageRegex = new RegExp(`(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>)`, 'i');
-                  if (imageRegex.test(html)) {
-                     html = html.replace(imageRegex, `$1${menuHtml}`);
-                     break;
-                  }
-               }
-         }
-      } else {
-         // Default behavior: inject at top
+      
+      // If no target class is specified, put menu at the top
+      if (!targetImageClass) {
          html = /<article[\s>]/.test(html)
-               ? html.replace(/(<article[\s>])/i, `$1${menuHtml}`)
-               : menuHtml + html;
+            ? html.replace(/(<article[\s>])/i, `$1${menuHtml}`)
+            : menuHtml + html;
+         next(html);
+         return;
       }
-
+      
+      // Convert to array if it's a single string
+      const classes = Array.isArray(targetImageClass) ? targetImageClass : [targetImageClass];
+      let menuAdded = false;
+      
+      // Try each class until we find one
+      for (const className of classes) {
+         // If class name contains "heading", look for image + headings pattern
+         if (className.includes('heading')) {
+            const pattern = `(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>[^<]*</p>\\s*<h1[^>]*>.*?</h1>(?:\\s*<h2[^>]*>.*?</h2>)?)`;
+            const regex = new RegExp(pattern, 'is');
+            
+            if (regex.test(html)) {
+               html = html.replace(regex, `$1${menuHtml}`);
+               menuAdded = true;
+               break;
+            }
+         } else {
+            // No "heading" in class name, look for just the image
+            const pattern = `(<img[^>]*class="[^"]*${className}[^"]*"[^>]*>)`;
+            const regex = new RegExp(pattern, 'i');
+            
+            if (regex.test(html)) {
+               html = html.replace(regex, `$1${menuHtml}`);
+               menuAdded = true;
+               break;
+            }
+         }
+      }
+      
+      // If no target images found, put menu at the top as fallback
+      if (!menuAdded) {
+         html = /<article[\s>]/.test(html)
+            ? html.replace(/(<article[\s>])/i, `$1${menuHtml}`)
+            : menuHtml + html;
+      }
+      
       next(html);
    });
    hook.doneEach(bindMenuEvents);

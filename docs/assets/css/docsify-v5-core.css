@@ -55,6 +55,14 @@
   line-height: 1.4;
 }
 
+#page-actions-menu-dropdown .page-actions-menu-item {
+  font-size: 1rem;
+}
+
+#page-actions-menu-dropdown .page-actions-menu-desc {
+  font-size: .8rem;
+}
+
 /* Target first paragraphs with 5+ links (reasonable index minimum) */
 .markdown-section p:first-of-type:has(a[href^="#"]):has(a:nth-of-type(5)) {
     display: flex;
