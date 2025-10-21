@@ -2631,7 +2631,7 @@
   <!-- Page actions plugin -->
   <script>
     if (!(window.$docsify['basePath'] === undefined)) {
-      copypagemenu = getURLParameterByName(['copy-page-menu', 'copyPageMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true);
+      copypagemenu = getURLParameterByName(['page-copy-menu', 'copyPageMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true);
       if (!(copypagemenu === false)) {
         // document.write('<script src="//cdn.jsdelivr.net/npm/docsify-page-actions-menu@0.4.0"><\/script>');
         document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-page-actions-menu.js"><\/script>');
