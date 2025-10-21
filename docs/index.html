@@ -2644,6 +2644,8 @@
   <script>
     console.log('basePath:', window.$docsify?.basePath);
     console.log('basePath type:', typeof window.$docsify?.basePath);
+    console.log(!(window.$docsify['basePath'] === undefined));
+    console.log(getURLParameterByName(['page-copy-button', 'pageCopyButton','page-copy-menu', 'pageCopyMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true) === 'true');
     if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['page-copy-button', 'pageCopyButton','page-copy-menu', 'pageCopyMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true) === 'true')){
       // document.write('<script src="//cdn.jsdelivr.net/npm/docsify-page-actions-menu@0.4.0"><\/script>');
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-page-actions-menu.js"><\/script>');
