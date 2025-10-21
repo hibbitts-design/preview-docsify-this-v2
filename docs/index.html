@@ -289,10 +289,10 @@
             }
           }
 
-          const cb21 = document.querySelector('#pageCopyMenu');
+          const cb21 = document.querySelector('#pageCopyButton');
           if (cb21.checked) {
-            if (!url.includes('page-copy-menu=')) {
-              var URLparms = URLparms + `&page-copy-menu=true`;
+            if (!url.includes('page-copy-button=')) {
+              var URLparms = URLparms + `&page-copy-button=true`;
             }
           }
 
@@ -840,7 +840,7 @@
       document.getElementById("toch2").checked = true;
       document.getElementById("toch3").checked = false;
       document.getElementById("maxLevel").value = 2;
-      document.getElementById("pageCopyMenu").checked = false;
+      document.getElementById("pageCopyButton").checked = false;
       document.getElementById("hideCredits").checked = false;
       document.getElementById("hypothesisenable").checked = false;
       document.getElementById("docsifyV5coretheme").checked = false;
@@ -1985,8 +1985,8 @@
               document.getElementById("editLinkTopCheck").checked = true;
             }
 
-            if (getURLParameterByName(['page-copy-menu', 'pageCopyMenu'], null, null, window.location.href, true) === 'true') {
-              document.getElementById("pageCopyMenu").checked = true;
+            if (getURLParameterByName(['page-copy-button', 'pageCopyButton'], null, null, window.location.href, true) === 'true') {
+              document.getElementById("pageCopyButton").checked = true;
             }
 
             if (getURLParameterByName(['hide-credits', 'hideCredits'], null, null, window.location.href, true) === 'true') {
@@ -2642,7 +2642,7 @@
 
   <!-- Page actions plugin -->
   <script>
-    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['page-copy-menu', 'pageCopyMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true) === 'true')){
+    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['page-copy-button', 'pageCopyButton','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true) === 'true')){
       // document.write('<script src="//cdn.jsdelivr.net/npm/docsify-page-actions-menu@0.4.0"><\/script>');
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-page-actions-menu.js"><\/script>');
     }

@@ -41,7 +41,7 @@
 * Support scrolling to specific Web Page Builder sections
 * Web Page Builder option and URL parameter to initially close the Sidebar ( `close-sidebar`)
 * Added Docsify Page Actions Menu plugin, including customizations (with thanks and appreciation to @calycode for developing the plugin)
-* Support for Page Actions Menu plugin via optional `page-copy-menu` URL parameter
+* Support for Page Actions Menu plugin via optional `page-copy-button` URL parameter
 
 **Improved:**
 * Updated ReadMe
