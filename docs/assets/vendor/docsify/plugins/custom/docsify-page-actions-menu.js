@@ -352,6 +352,11 @@ function pageActionItems(hook, vm) {
                if (item.action === 'copy' && rawMarkdown) {
                   await navigator.clipboard.writeText(rawMarkdown);
                   handleActionResult('onSuccess', item, context);
+               } else if (item.action === 'copyllm' && rawMarkdown) {
+                  const prompt = "I'd like to discuss this content. Please read through it and let me know when you're ready for questions.";
+                  const content = rawMarkdown + '\n\n' + prompt;
+                  await navigator.clipboard.writeText(content);
+                  handleActionResult('onSuccess', item, context);
                } else if (item.action === 'view' && blobUrl) {
                   window.open(blobUrl, '_blank');
                   handleActionResult('onSuccess', item, context);
