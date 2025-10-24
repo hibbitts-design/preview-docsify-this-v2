@@ -994,11 +994,13 @@ Along with the standard Docsify-This URL parameters, the Web Page Builder also o
 To pre-fill the Web Page Builder with a specific URL, use the `url-field` parameter, for example:
 
 ```html
-https://preview-v2.docsify-this.net?url-field=https://codeberg.org/paulhibbitts/docsify-this-one-page-course/src/branch/main/home.md
+https://docsify-this.net?url-field=https://codeberg.org/paulhibbitts/docsify-this-one-page-course/src/branch/main/home.md
 ```
 
+To clear the default Markdown file URL field, use the value of `empty`.
+
 ```html
-https://preview-v2.docsify-this.net?url-field=empty
+https://docsify-this.net?url-field=empty
 ```
 
 **Note:** The `url-field` parameter is used only for pre-populating the Web Page Builder form. Once you click "Publish as Web Page", the resulting URL will use `basePath` and `homepage` parameters for the rendered page.
