@@ -1584,8 +1584,8 @@
                 const sidebarToggle = document.querySelector('.sidebar-toggle');
                 const sidebar = document.querySelector('.sidebar');
                 
-                // Only auto-close on desktop (screen width > 768px)
-                if (sidebar && !sidebar.classList.contains('close') && sidebarToggle && window.innerWidth > 640) {
+                // Only close if sidebar has 'show' class (is visible)
+                if (sidebar && sidebar.classList.contains('show') && sidebarToggle && window.innerWidth > 640) {
                   sidebarToggle.click();
                 }
               }
@@ -1858,7 +1858,8 @@
                     const sidebarToggle = document.querySelector('.sidebar-toggle');
                     const sidebar = document.querySelector('.sidebar');
                     
-                    if (sidebar && !sidebar.classList.contains('close') && sidebarToggle && window.innerWidth > 640) {
+                    // Only close if sidebar has 'show' class (is visible)
+                    if (sidebar && sidebar.classList.contains('show') && sidebarToggle && window.innerWidth > 640) {
                       sidebarToggle.click();
                     }
                   }
