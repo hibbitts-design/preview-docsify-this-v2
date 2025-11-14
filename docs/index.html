@@ -47,12 +47,13 @@
   <!-- Core Dark (add-on) -->
   <!-- <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
     data-sheet="dark-mode" disabled />  -->
-  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled/>
+  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled />
 
   <!-- Core Dark (add-on) -->
   <!-- <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
     media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />  -->
-  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
+  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
+    data-sheet="dark-mode-auto" />
 
   <link rel="stylesheet" href="assets/css/docsify-this-v2.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
@@ -151,7 +152,7 @@
       return exists;
     }
 
-    if (((getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) && (getURLParameterByName('basePath'))) {
+    if (((getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) && (getURLParameterByName('basePath'))) {
       document.querySelectorAll('style').forEach(style => style.remove());
       const body = document.body;
       body.classList.add('sidebar-group-box');
@@ -397,7 +398,7 @@
           }
 
           var getColor = document.getElementById("linkcolor");
-          if (!(document.getElementById('linkcolor').disabled))  {
+          if (!(document.getElementById('linkcolor').disabled)) {
             var hexCode = getColor.value;
             if (hexCode === '') {
               hexCode = '#0374B5';
@@ -494,13 +495,13 @@
           var getbackLink = document.getElementById("backLink");
           var backLink = getbackLink.value;
           if (!(backLink == "")) {
-              if (!backLink.startsWith('https://') && !backLink.startsWith('http://')) {
-                  backLink = 'https://' + backLink;
-              }
-              if (!url.includes('back-link=')) {
-                  backLink = backLink.replace(/&/g, '+');
-                  var URLparms = URLparms + `&back-link=` + backLink;
-              }
+            if (!backLink.startsWith('https://') && !backLink.startsWith('http://')) {
+              backLink = 'https://' + backLink;
+            }
+            if (!url.includes('back-link=')) {
+              backLink = backLink.replace(/&/g, '+');
+              var URLparms = URLparms + `&back-link=` + backLink;
+            }
           }
 
           var getpageTitle = document.getElementById("pageTitle");
@@ -514,7 +515,7 @@
 
           var getlinktextdecoration = document.getElementById("linktextdecoration");
           var linktextdecoration = getlinktextdecoration.value;
-          if ((!(linktextdecoration === 'underline')) && (!(document.getElementById('linktextdecoration').disabled)))  {
+          if ((!(linktextdecoration === 'underline')) && (!(document.getElementById('linktextdecoration').disabled))) {
             if (!url.includes('link-text-decoration=')) {
               var URLparms = URLparms + `&link-text-decoration=` + linktextdecoration;
             }
@@ -534,7 +535,7 @@
           }
 
           var linkhovertextdecoration = document.getElementById("linkhovertextdecoration").value;
-          if ((!(linkhovertextdecoration === 'none')) && (!(document.getElementById('linkhovertextdecoration').disabled)))  {
+          if ((!(linkhovertextdecoration === 'none')) && (!(document.getElementById('linkhovertextdecoration').disabled))) {
             if (!url.includes('link-text-decoration-hover=')) {
               var URLparms = URLparms + `&link-text-decoration-hover=` + linkhovertextdecoration;
             }
@@ -562,7 +563,7 @@
           }
 
           var getheaderweight = document.getElementById('headerweight').value;
-          if ((!(getheaderweight == "600")) && (!(document.getElementById('fontfamily').disabled)))  {
+          if ((!(getheaderweight == "600")) && (!(document.getElementById('fontfamily').disabled))) {
             if (!url.includes('header-weight=')) {
               var URLparms = URLparms + `&header-weight=` + getheaderweight
             }
@@ -680,8 +681,8 @@
           const parts = url.split(/[?&]/);
           let queryString = '';
           if (parts.length > 1) {
-              // Join all parameters back together
-              queryString = '&' + parts.slice(1).join('&');
+            // Join all parameters back together
+            queryString = '&' + parts.slice(1).join('&');
           }
 
           if ((!(isExtensionAllowed(lastSegment)) || lastSegment === "") && url.includes("gist.githubusercontent.com")) {
@@ -726,17 +727,17 @@
       const select = document.getElementById('maxWidthValueUnit');
       const input = document.getElementById('maxWidthValue');
       const selectedOption = select.selectedOptions[0];
-      
+
       const step = selectedOption.getAttribute('data-step');
       input.setAttribute('step', step);
-      
+
       // Set appropriate default for each unit
       const defaults = {
         'px': '910',
         '%': '100',
         'ch': '65'
       };
-      
+
       input.value = defaults[select.value];
     }
 
@@ -884,7 +885,7 @@
 
     function setColorProperties(color) {
       document.documentElement.style.setProperty('--theme-color', color);
-      if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true')) || (!corethemestyles)) {
+      if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true')) || (!corethemestyles)) {
         document.documentElement.style.setProperty('--link-color', color);
       }
     }
@@ -902,7 +903,7 @@
           if (themeColorDarkMode !== false) {
             setColorProperties('#' + themeColorDarkMode);
           }
-          if ((linkColorDarkMode !== false) && ((!getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!corethemestyles))) {
+          if ((linkColorDarkMode !== false) && ((!getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!corethemestyles))) {
             setColorProperties('#' + linkColorDarkMode);
             document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
           }
@@ -916,7 +917,7 @@
           if (linkColor !== false) {
             setColorProperties('#' + linkColor);
           } else {
-            if (!(getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') && !(corethemestyles)) {
+            if (!(getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') && !(corethemestyles)) {
               setColorProperties('#1BA1EE');
               document.documentElement.style.setProperty('--cover-button-primary-color', '#000000');
             }
@@ -950,7 +951,7 @@
             setColorProperties('#' + linkColor);
           }
         } else {
-          if (!(getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!(corethemestyles))) {
+          if (!(getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!(corethemestyles))) {
             setColorProperties('#0374B5');
             document.documentElement.style.setProperty('--cover-button-primary-color', '#FFFFFF');
           }
@@ -966,7 +967,7 @@
         if (coverPageColor !== false) {
           document.documentElement.style.setProperty('--cover-bg', '#' + coverPageColor);
         } else {
-          if (!(getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!(corethemestyles))) {
+          if (!(getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!(corethemestyles))) {
             document.documentElement.style.setProperty('--cover-bg', '#C1E1F6');
           }
         }
@@ -1000,13 +1001,13 @@
     function isExtensionAllowed(fileURL) {
       // Check if filename contains an allowed file extension or supported slug
       var allowedExtensions = getAllowedFileExtensions();
-      
+
       // Handle case where fileURL is a query parameter string starting with &
       if (fileURL && fileURL.startsWith('&edit-link=')) {
         // Extract just the URL part after &edit-link=
         fileURL = fileURL.split('&edit-link=')[1].split('&')[0];
       }
-      
+
       fileURL = fileURL.split('?id')[0];
       var extension = fileURL.split(".").pop();
 
@@ -1086,7 +1087,7 @@
     // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
     const updateEnableThemeStyleOptions = disableEnableThemeStyleOptions();
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const checkbox = document.getElementById('docsifyV5coretheme');
       if (checkbox) {
         checkbox.addEventListener('change', disableEnableThemeStyleOptions);
@@ -1108,7 +1109,7 @@
     function setupFontPreview() {
       const fontSelect = document.getElementById('fontfamily');
       const fontPreview = document.getElementById('fontPreview');
-      
+
       // Check if both elements exist
       if (!fontSelect || !fontPreview) {
         setTimeout(setupFontPreview, 100); // Try again after 100 milliseconds
@@ -1135,11 +1136,11 @@
       function updateFontPreview() {
         const selectedValue = fontSelect.value;
         // Check if the selectedValue exists in fontMap, otherwise use default
-        const fontFamily = fontMap[selectedValue] || fontMap['Source%20Sans%203']; 
+        const fontFamily = fontMap[selectedValue] || fontMap['Source%20Sans%203'];
         fontPreview.style.fontFamily = fontFamily;
       }
       // Add event listener for when the selection changes
-      fontSelect.addEventListener('change', function() {
+      fontSelect.addEventListener('change', function () {
         updateFontPreview();
       });
       // Call it once on page load to set the initial preview
@@ -1147,7 +1148,7 @@
     }
     // Start the setup process when the DOM is fully loaded/parsed
     document.addEventListener('DOMContentLoaded', setupFontPreview);
-    
+
     // Docsify
 
     let num = 0;
@@ -1192,8 +1193,8 @@
         depth: 6,
         namespace: "docsify-this-" + Date.now(),
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-        insertBefore: (getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme']) || corethemestyles) 
-          ? '.app-name' 
+        insertBefore: (getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme']) || corethemestyles)
+          ? '.app-name'
           : '.sidebar-nav'
       },
 
@@ -1217,7 +1218,7 @@
       },
 
       pageActionItems: {
-        targetImageClass: ['header-image-fade-full-width','header-tall-image-full-width-headings-overlay', 'header-tall-image-full-width', 'header-image-full-width'],
+        targetImageClass: ['header-image-fade-full-width', 'header-tall-image-full-width-headings-overlay', 'header-tall-image-full-width', 'header-image-full-width'],
         button: {
           icon: '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 5.25H7.25C6.14543 5.25 5.25 6.14543 5.25 7.25V14.25C5.25 15.3546 6.14543 16.25 7.25 16.25H14.25C15.3546 16.25 16.25 15.3546 16.25 14.25V7.25C16.25 6.14543 15.3546 5.25 14.25 5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.80103 11.998L1.77203 5.07397C1.61003 3.98097 2.36403 2.96397 3.45603 2.80197L10.38 1.77297C11.313 1.63397 12.19 2.16297 12.528 3.00097" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
           label: 'Copy Page',
@@ -1237,9 +1238,9 @@
             desc: 'Copy page with LLM discussion prompt to clipboard',
             action: 'custom',
             onClick: async ({ rawMarkdown, vm, blobUrl }) => {
-                const finalPrompt = `${rawMarkdown}\n\nPlease analyze the provided content thoroughly, paying particular attention to nuance, conditional statements, and presented alternatives. Before answering any question, you MUST search the source material to verify specific details, locating the exact information, and quoting or paraphrasing directly using the exact terminology as written. Crucially, you must clearly identify any conditions, limitations, or exceptions stated in the text that are relevant to the question, and never infer details that "seem logical"—only rely on what's explicitly stated. Always verify against the source, even if you think you know the answer, cross-referencing related sections for a complete picture. Be sure to cite relevant sections with section titles or by quoting the relevant sentence/paragraph, and clearly indicate if something isn't covered in the material rather than filling gaps with general knowledge or assumptions. If uncertain, acknowledge this and offer to search for the correct information, always focusing on accuracy above all else.`;
-                await navigator.clipboard.writeText(finalPrompt);
-                console.log({ rawMarkdown, vm, blobUrl, finalPrompt });
+              const finalPrompt = `${rawMarkdown}\n\nPlease analyze the provided content thoroughly, paying particular attention to nuance, conditional statements, and presented alternatives. Before answering any question, you MUST search the source material to verify specific details, locating the exact information, and quoting or paraphrasing directly using the exact terminology as written. Crucially, you must clearly identify any conditions, limitations, or exceptions stated in the text that are relevant to the question, and never infer details that "seem logical"—only rely on what's explicitly stated. Always verify against the source, even if you think you know the answer, cross-referencing related sections for a complete picture. Be sure to cite relevant sections with section titles or by quoting the relevant sentence/paragraph, and clearly indicate if something isn't covered in the material rather than filling gaps with general knowledge or assumptions. If uncertain, acknowledge this and offer to search for the correct information, always focusing on accuracy above all else.`;
+              await navigator.clipboard.writeText(finalPrompt);
+              console.log({ rawMarkdown, vm, blobUrl, finalPrompt });
             },
             onSuccess: 'Copied with prompt to clipboard!',
             onError: 'Copy failed.',
@@ -1550,11 +1551,11 @@
 
               } else if (getURLParameterByName(['standalone', 'embedded']) && !(getURLParameterByName('hidegitlink', null, null, window.location.href, true) === 'true') && (!!gitLinkRepoURL)) {
                 if (getURLParameterByName(['edit-link-top', 'editLinkTop'], null, null, window.location.href, true) === 'true') {
-                   if (!html.includes('full-width')) {
+                  if (!html.includes('full-width')) {
                     return editHtml + '\n' + html
-                   } else {
+                  } else {
                     return html + '<br />' + '\n\n' + editHtml
-                   }
+                  }
                 } else {
                   return html + '<br />' + '\n\n' + editHtml
                 }
@@ -1575,7 +1576,7 @@
           // Invoked on each page load after new HTML has been appended to the DOM
           hook.doneEach(function () {
             if (window.$docsify['basePath']) {
-              
+
               const docHead = document.head;
               const docBody = document.body;
 
@@ -1583,7 +1584,7 @@
               if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
                 const sidebarToggle = document.querySelector('.sidebar-toggle');
                 const sidebar = document.querySelector('.sidebar');
-                
+
                 // Only close if sidebar has 'show' class (is visible)
                 if (sidebar && sidebar.classList.contains('show') && sidebarToggle && window.innerWidth > 640) {
                   sidebarToggle.click();
@@ -1623,15 +1624,15 @@
                 if (document.body.classList.contains('sticky')) {
                   importantClasses.push('sticky');
                 }
-                
+
                 // Clear all classes
                 document.body.className = '';
-                
+
                 // Re-add important classes first
                 for (let importantClass of importantClasses) {
                   document.body.classList.add(importantClass);
                 }
-                
+
                 // Add theme classes
                 const newClasses = themeClasses.split(',');
                 for (let className of newClasses) {
@@ -1641,7 +1642,7 @@
                   }
                 }
               }
-              
+
               // Embedly script
               let hasEmbedly = document.getElementsByClassName('embedly-card');
               if (hasEmbedly.length > 0 && !document.querySelector('script[src="https://cdn.embedly.com/widgets/platform.js"]')) {
@@ -1716,40 +1717,40 @@
               let backLink = getURLParameterByName(['back-link', 'backLink'], null, null, window.location.href, true);
 
               if (backLink) {
-                  backLink = backLink.replace(/\+/g, '&');
-                  let divToMoveTo = document.getElementById("main");
-                  let backLinkElement = document.createElement("a");
-                  backLinkElement.href = backLink;
-                  backLinkElement.textContent = "←Back";
-                  let linkWrapper = document.createElement("p");
-                  linkWrapper.appendChild(backLinkElement);
-                  let fullWidthImage = divToMoveTo.querySelector('img[class*="full-width"]');             
-                  if (fullWidthImage) {
-                      let imageClass = fullWidthImage.className;               
-                      if (imageClass === "header-tall-image-full-width-headings-overlay" || 
-                          imageClass === "header-image-full-width-headings-overlay") {
-                          let firstH1 = divToMoveTo.querySelector("h1");
-                          if (firstH1) {
-                              let nextElement = firstH1.nextElementSibling;
-                              if (nextElement && nextElement.tagName.toLowerCase() === 'h2') {
-                                  nextElement.insertAdjacentElement('afterend', linkWrapper);
-                              } else {
-                                  firstH1.insertAdjacentElement('afterend', linkWrapper);
-                              }
-                          }
+                backLink = backLink.replace(/\+/g, '&');
+                let divToMoveTo = document.getElementById("main");
+                let backLinkElement = document.createElement("a");
+                backLinkElement.href = backLink;
+                backLinkElement.textContent = "←Back";
+                let linkWrapper = document.createElement("p");
+                linkWrapper.appendChild(backLinkElement);
+                let fullWidthImage = divToMoveTo.querySelector('img[class*="full-width"]');
+                if (fullWidthImage) {
+                  let imageClass = fullWidthImage.className;
+                  if (imageClass === "header-tall-image-full-width-headings-overlay" ||
+                    imageClass === "header-image-full-width-headings-overlay") {
+                    let firstH1 = divToMoveTo.querySelector("h1");
+                    if (firstH1) {
+                      let nextElement = firstH1.nextElementSibling;
+                      if (nextElement && nextElement.tagName.toLowerCase() === 'h2') {
+                        nextElement.insertAdjacentElement('afterend', linkWrapper);
                       } else {
-                          let wrapperP = fullWidthImage.closest('p');                        
-                          if (wrapperP) {
-                              wrapperP.insertAdjacentElement('afterend', linkWrapper);
-                          } else {
-                              fullWidthImage.insertAdjacentElement('afterend', linkWrapper);
-                          }
+                        firstH1.insertAdjacentElement('afterend', linkWrapper);
                       }
+                    }
                   } else {
-                      divToMoveTo.insertBefore(linkWrapper, divToMoveTo.children[0]);
+                    let wrapperP = fullWidthImage.closest('p');
+                    if (wrapperP) {
+                      wrapperP.insertAdjacentElement('afterend', linkWrapper);
+                    } else {
+                      fullWidthImage.insertAdjacentElement('afterend', linkWrapper);
+                    }
                   }
+                } else {
+                  divToMoveTo.insertBefore(linkWrapper, divToMoveTo.children[0]);
+                }
               }
-              
+
               // Iframes update for responsive design
               const allIframes = document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="youtube-nocookie.com"], iframe[src*="docs.google.com"], iframe[src*="onedrive.live.com"]');
               allIframes.forEach(iframe => {
@@ -1818,12 +1819,12 @@
                         // Calculate the scroll position with topMargin offset
                         let elementTop = targetElement.offsetTop + (targetElement.offsetParent?.offsetTop || 0);
                         let scrollTop = elementTop - topMargin;
-                        
+
                         // Ensure we don't scroll above the top of the page
                         scrollTop = Math.max(0, scrollTop);
-                        
+
                         dd && console.log('scrolling to position:', scrollTop, '(element top:', elementTop, '- topMargin:', topMargin, ')');
-                        
+
                         // Scroll smoothly to the element's top position minus topMargin
                         window.scrollTo({
                           top: scrollTop,
@@ -1846,18 +1847,18 @@
 
               // Close Sidebar - handle same-page ?id= changes if URL parameter is present
               if (getURLParameterByName(['close-sidebar', 'closeSidebar'], null, null, window.location.href, true) === 'true') {
-                
+
                 let lastHash = window.location.hash;
-                
-                window.addEventListener('hashchange', function() {
+
+                window.addEventListener('hashchange', function () {
                   const currentHash = window.location.hash;
-                  
+
                   if (currentHash !== lastHash) {
                     lastHash = currentHash;
-                    
+
                     const sidebarToggle = document.querySelector('.sidebar-toggle');
                     const sidebar = document.querySelector('.sidebar');
-                    
+
                     // Only close if sidebar has 'show' class (is visible)
                     if (sidebar && sidebar.classList.contains('show') && sidebarToggle && window.innerWidth > 640) {
                       sidebarToggle.click();
@@ -1901,9 +1902,9 @@
 
             if (getURLParameterByName(['hide-banner', 'hideBanner']) === true) {
               var theDiv = document.getElementById("banner");
-               if (theDiv) {
+              if (theDiv) {
                 theDiv.style.display = "none";
-               }
+              }
             }
 
             // Code generated/assisted by Anthropic Claude AI
@@ -2035,7 +2036,7 @@
               document.getElementById("hypothesisenable").checked = true;
             }
 
-            if (getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') {
+            if (getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') {
               document.getElementById("docsifyV5coretheme").checked = true;
             }
 
@@ -2232,7 +2233,7 @@
           if (key === 'name') {
             window.$docsify[key] = replaceUnderscores(value);
           } else {
-          window.$docsify[key] = convertToBoolean(value);
+            window.$docsify[key] = convertToBoolean(value);
           }
         }
       });
@@ -2328,7 +2329,7 @@
   <!-- docsify-tabs (latest v1.x.x) -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
   <script src="assets/vendor/docsify/plugins/docsify-tabs.min.js"></script>
-  
+
   <!-- Load custom.css file only when displaying Markdown files -->
   <script>
     if (window.$docsify['basePath']) {
@@ -2463,10 +2464,10 @@
         if (!(isNaN(maxwidth))) {
           maxwidth += '%'; // Append '%' if no unit is provided
         }
-        
+
         // Check if aside (ToC) is present and adjust for percentage values
         const hasAside = getURLParameterByName(['toc', 'toc-narrow', 'tocNarrow'], null, null, window.location.href, true) === 'true';
-        
+
         if (hasAside && maxwidth.endsWith('%')) {
           const isNarrowToc = getURLParameterByName(['toc-narrow', 'tocNarrow'], null, null, window.location.href, true) === 'true';
           let asideWidth = '440px'; // default to regular ToC
@@ -2475,7 +2476,7 @@
           }
           maxwidth = `calc(${maxwidth} - ${asideWidth})`;
         }
-        
+
         document.documentElement.style.setProperty('--content-max-width', maxwidth);
       }
 
@@ -2489,7 +2490,7 @@
       // Change body font if fontFamily or core-theme-styles parameters present
       fontfamily = getURLParameterByName(['font-family', 'fontFamily'], null, null, window.location.href, true);
       if (!(fontfamily === false)) {
-          const fontlist = fontfamily.split(',').map(font => {
+        const fontlist = fontfamily.split(',').map(font => {
           const trimmed = font.trim();
           return trimmed.includes(' ') ? `'${trimmed}'` : trimmed;
         });
@@ -2497,7 +2498,7 @@
         finalfontstack = finalfontstack.replaceAll('_', ' ');
         document.documentElement.style.setProperty('--font-family', finalfontstack);
       } else {
-        if ((getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) {
+        if ((getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) {
           document.documentElement.style.setProperty('--font-family', 'system-ui, sans-serif');
         } else {
           document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
@@ -2511,14 +2512,14 @@
         if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
           fontsize = fontsize + "px";
         }
-        
+
         document.documentElement.style.setProperty('--font-size', fontsize);
-        
+
         // Only apply sidebar/ToC adjustments if font size is 24px or larger
         const numericFontSize = parseFloat(fontsize);
         if (numericFontSize >= 24) {
           document.documentElement.style.setProperty('--sidebar-name-font-size', '28px');
-          
+
           var fontCSS = document.createElement('style');
           fontCSS.innerHTML = `
               .sidebar { font-size: 18px !important; }
@@ -2528,7 +2529,7 @@
               .page_toc ul { font-size: 18px !important; }
           `;
           document.head.appendChild(fontCSS);
-          
+
           document.addEventListener('DOMContentLoaded', function () {
             // Apply regular margin-top to search elements
             const searchElements = document.querySelectorAll('.search');
@@ -2577,7 +2578,7 @@
       }
 
       updateThemeModeLinkColors();
-    
+
       // Enable dark theme CSS files loaded if dark-mode parameter is true
       var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
       // console.log(enabledarkmode);
@@ -2654,14 +2655,14 @@
 
   <!-- Copy Code Plugin -->
   <script>
-    if ((window.$docsify['basePath'] === undefined) || (getURLParameterByName(['code-copy','codeCopy'], null, null, window.location.href, true) === 'true')) {
+    if ((window.$docsify['basePath'] === undefined) || (getURLParameterByName(['code-copy', 'codeCopy'], null, null, window.location.href, true) === 'true')) {
       document.write('<script src="assets/vendor/docsify/plugins/docsify-code-copy.min.js"><\/script>');
     }
   </script>
 
   <!-- Page Actions Plugin -->
   <script>
-    if (!(window.$docsify['basePath'] === undefined) && ['true', 'nollm'].includes(getURLParameterByName(['page-copy-button', 'pageCopyButton','page-copy-menu', 'pageCopyMenu','page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true))) {
+    if (!(window.$docsify['basePath'] === undefined) && ['true', 'nollm'].includes(getURLParameterByName(['page-copy-button', 'pageCopyButton', 'page-copy-menu', 'pageCopyMenu', 'page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true))) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-page-actions-menu.js"><\/script>');
     }
   </script>
