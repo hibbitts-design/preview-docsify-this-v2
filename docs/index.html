@@ -41,19 +41,19 @@
   <!-- Stylesheets -->
 
   <!-- Core Theme -->
-  <!-- <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/core.min.css" /> -->
-  <link rel="stylesheet" href="assets/vendor/themes/core.min.css" />
+  <link rel="stylesheet" href="https://docsify-preview-6ufx9sppv-docsifyjs.vercel.app/dist/themes/core.min.css" />
+  <!-- <link rel="stylesheet" href="assets/vendor/themes/core.min.css" /> -->
 
   <!-- Core Dark (add-on) -->
-  <!-- <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
-    data-sheet="dark-mode" disabled />  -->
-  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled />
+  <link rel="stylesheet" href="https://docsify-preview-6ufx9sppv-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+    data-sheet="dark-mode" disabled />
+  <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled /> -->
 
   <!-- Core Dark (add-on) -->
-  <!-- <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
-    media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />  -->
-  <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
-    data-sheet="dark-mode-auto" />
+  <link rel="stylesheet" href="https://docsify-preview-6ufx9sppv-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+    media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
+  <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
+    data-sheet="dark-mode-auto" /> -->
 
   <link rel="stylesheet" href="assets/css/docsify-this-v2.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
@@ -1169,7 +1169,6 @@
       loadFooter: (getURLParameterByName('footer') || footer || false),
       ext: getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true)),
       executeScript: true,
-      topMargin: 10,
 
       // SIDEBAR NAVIGATION
       // -----------------------------------------------------------------
@@ -2279,8 +2278,8 @@
 
   <!-- Docsify v5 release -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@rc/dist/docsify.min.js"></script> -->
-  <!-- <script src="https://docsify-preview-docsifyjs.vercel.app/dist/docsify.min.js"></script> -->
-  <script src="assets/vendor/docsify/docsify.min.js"></script>
+  <script src="https://docsify-preview-6ufx9sppv-docsifyjs.vercel.app/dist/docsify.min.js"></script>
+  <!-- <script src="assets/vendor/docsify/docsify.min.js"></script> -->
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
@@ -2305,7 +2304,8 @@
               } else {
                 if (!(getURLParameterByName('topMargin'))) {
                   var adjustedTopMargin = (100 - numericValue) * 1.6;
-                  window.$docsify.topMargin = adjustedTopMargin;
+                  // window.$docsify.topMargin = adjustedTopMargin;
+                  document.documentElement.style.setProperty('--scroll-padding-top', adjustedTopMargin);
                 }
               }
             }
@@ -2315,7 +2315,8 @@
               var fontSizeRaw = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
               var fontSize = parseFloat(fontSizeRaw);
               if (!isNaN(fontSize) && fontSize >= 24) {
-                window.$docsify.topMargin = (fontSize - 16);
+                // window.$docsify.topMargin = (fontSize - 16);
+                document.documentElement.style.setProperty('--scroll-padding-top', fontSize - 16);
               }
             }
           }
@@ -2632,8 +2633,8 @@
       // document.write('<script src="assets/vendor/docsify/plugins/preview/custom/search.js"><\/script>');
 
       // Docsify Search Plugin "develop" branch preview files
-      document.write('<script src="assets/vendor/docsify/plugins/search.min.js"><\/script>');
-      // document.write('<script src="https://docsify-preview-docsifyjs.vercel.app/dist/plugins/search.min.js"><\/script>');
+      // document.write('<script src="assets/vendor/docsify/plugins/search.min.js"><\/script>');
+      document.write('<script src="https://docsify-preview-6ufx9sppv-docsifyjs.vercel.app/dist/plugins/search.min.js"><\/script>');
     }
   </script>
 

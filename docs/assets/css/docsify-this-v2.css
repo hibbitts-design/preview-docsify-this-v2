@@ -24,6 +24,9 @@
   
   /* Transition speeds */
   --transition-fast: 0.15s ease-out;
+
+  /* Top margin padding */
+  --scroll-padding-top: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
