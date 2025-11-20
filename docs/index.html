@@ -1779,8 +1779,8 @@
 
             // Get topMargin from Docsify config or use default
             // let topMargin = (window.$docsify && window.$docsify.topMargin) || 0;
-            let topMargin = getComputedStyle(document.documentElement)
-              .getPropertyValue('--scroll-padding-top') || '0';
+            let topMargin = parseInt(getComputedStyle(document.documentElement)
+              .getPropertyValue('--scroll-padding-top')) || 0;
             dd && console.log('topMargin setting:', topMargin);
 
             // Build the current URL without the hash
@@ -2457,9 +2457,18 @@
   <!-- <script src="unpkg.com/docsify-asciidoc@^1/dist/main.js"></script> -->
   <script src="assets/vendor/docsify/plugins/docsify-asciidoc.js"></script>
 
-  <!-- Check for headerweight, fontfamily, fontsize, fontweight, lineheight, theme colors, and darkmode parameters -->
+  <!-- Check for scrollpaddingtop, maxwidth, headerweight, fontfamily, fontsize, fontweight, lineheight, theme colors, and darkmode parameters -->
   <script>
     if (!(window.$docsify['basePath'] === undefined)) {
+
+      // Change scroll padding top if scrollpaddingtop parameter present
+      scrollpaddingtop = getURLParameterByName(['scroll-padding-top', 'scrollPaddingTop'], null, null, window.location.href, true);
+      if (!(scrollpaddingtop === false)) {
+        if (!isNaN(scrollpaddingtop)) {
+          scrollpaddingtop = scrollpaddingtop + "px";
+        }
+        document.documentElement.style.setProperty('--scroll-padding-top', scrollpaddingtop);
+      }
 
       // Change content max width if maxwidth parameter present
       maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
