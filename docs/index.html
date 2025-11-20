@@ -2219,6 +2219,11 @@
     if (getURLParameterByName('basePath')) {
       const params = new URLSearchParams(window.location.search.replaceAll('&amp;', '&'));
       params.forEach((value, key) => {
+        // Skip assignment for topMargin
+        if (key === 'topMargin') {
+          return; // Skip
+        }
+
         // TODO: Parse numbers?
 
         // console.log(value, key);
@@ -2462,7 +2467,7 @@
     if (!(window.$docsify['basePath'] === undefined)) {
 
       // Change scroll padding top if scrollpaddingtop parameter present
-      scrollpaddingtop = getURLParameterByName(['scroll-padding-top', 'scrollPaddingTop'], null, null, window.location.href, true);
+      scrollpaddingtop = getURLParameterByName(['scroll-padding-top', 'scrollPaddingTop','topMargin'], null, null, window.location.href, true);
       if (!(scrollpaddingtop === false)) {
         if (!isNaN(scrollpaddingtop)) {
           scrollpaddingtop = scrollpaddingtop + "px";
