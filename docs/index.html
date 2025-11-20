@@ -6,8 +6,8 @@
   <meta name="robots" content="noindex">
   <title>Docsify-This | Instantly Publish Markdown Files as Web Pages</title>
   <meta name="description"
-    content="
-    Docsify-This makes it easy to start turning online Markdown files into shareable web pages, embeddable content, and presentation-friendly displays. Great for documentation, course materials, technical writing, and lightweight publishing. Open-source and setup-free — just write, share, and future-proof your content.">
+    content="Docsify-This makes it easy to start turning online Markdown files into shareable web pages, embeddable content, and presentation-friendly displays. Great for documentation, course materials, technical writing, and lightweight publishing. Open-source and setup-free — just write, share, and future-proof your content.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" href="assets/favicon/favicon.png"> -->
   <link rel="shortcut icon" href="#">
@@ -15,7 +15,7 @@
   <meta property="og:title" content="Docsify-This" />
   <meta property="og:description" content="Markdown Web Publishing" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://paulhibbitts.github.io/test-docsify-this?v=3" />
+  <meta property="og:url" content="https://docsify-this.net?v=0" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hibbittsdesign" />
@@ -1272,6 +1272,7 @@
       // CUSTOM PLUGINS
       // -----------------------------------------------------------------
       plugins: [
+
         function (hook, vm) {
 
           hook.afterEach(function (html, next) {
@@ -1281,8 +1282,10 @@
             // call `next(html)` when task is done.
 
             if (window.$docsify['basePath']) {
+
               var htmlElement = document.createElement('div');
               htmlElement.innerHTML = html;
+
               // Scan for links to local Markdown files and adjust URLs to work correctly
 
               // Get current Docsify URL
@@ -2077,7 +2080,6 @@
 
             headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
             if (headerweight) {
-              // console.log(headerweight);
               document.getElementById('headerweight').value = headerweight;
             }
 
