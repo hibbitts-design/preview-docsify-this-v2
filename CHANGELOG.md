@@ -34,14 +34,14 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.8] - XX/XX/2025
+## [1.10.8] - 11/XX/2025
 
 **New:**
 * Added value and unit fields for max width in Web Page Builder (in addition to URL parameter `max-width`)
 * Support scrolling to specific Web Page Builder sections
 * Web Page Builder option and URL parameter to initially close the Sidebar ( `close-sidebar`)
 * Added Docsify Page Actions Menu plugin, including customizations (with thanks and appreciation to @calycode for developing the plugin)
-* Support for Page Actions Menu plugin via optional `page-copy-button` URL parameter
+* Support for Page Actions Menu plugin via Web Page Builder and optional `page-copy-button` URL parameter
 
 **Improved:**
 * Updated ReadMe
@@ -84,7 +84,7 @@
 * Updated ReadMe
 * Removed image for Twitter Cards and Open Graph
 * Relocated enable search field checkbox to basic URL parameters
-* Minor Web Page Builder UI updates
+* Minor refresh to Web Page Builder UI
 * Improved file error messages
 * Set page margins to 0 when max-width is set to 100%
 
@@ -101,6 +101,7 @@
 **Improved:**
 * Updated ReadMe, including a new Quickstart section
 * Improve visual design of h1 and h2 below top full width image (use HTML tags to keep default styling)
+* Fixed Font Awesome plugin regex to only match :fa- prefixed patterns
 
 **Bugfix:**
 * Minor CSS fixes
@@ -202,7 +203,7 @@
 * Provide default values in error handling to avoid possible script error
 * Add missing variable declaration for enabledarkmode
 
-## [1.9.14] - 10/17/2024
+## [1.9.14] - 10/16/2024
 
 **Improved:**
 * Updated CSS with word-wrap for code blocks
