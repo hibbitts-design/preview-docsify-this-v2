@@ -1847,7 +1847,6 @@
               return; // Exit if basePath is present
             }
 
-
             // Check for valid URL parms or a URL-like pattern after a '?' by using RegEx
             if (getURLParameterByName(['url-field', 'urlField']) || (window.location.href.includes('?') && /[?&](url-field|urlField|https?:\/\/[^\s]+|www\.[^\s]+|[a-z0-9.-]+\.[a-z]{2,})/i.test(window.location.href))) {
               var markdownFileURL = '';
@@ -2488,7 +2487,7 @@
       // Change body font size if fontSize parameter present
       fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
       if (!(fontsize === false)) {
-        // Check if fontsize is a number when converted
+        // If it's just a number, append 'px'
         if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
           fontsize = fontsize + "px";
         }
