@@ -2635,6 +2635,13 @@
     }
   </script>
 
+  <!-- Experimental responsive tables -->
+  <script>
+     if ((window.$docsify['basePath'] === undefined) || (!(getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'false'))) {
+      document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-responsive-tables.js"><\/script>');
+    }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics, only loaded for docsify-this.net homepage -->
 
   <!--
