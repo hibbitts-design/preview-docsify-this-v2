@@ -11,6 +11,7 @@
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to apply Docsify v5 core theme defaults
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
+* Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
 
 **Improved:**
 * Updated ReadMe
@@ -40,6 +41,7 @@
 **Improved:**
 * Hide empty rows in responsive tables
 * Left align rows in responsive tables
+* Support nested properties via URL parameters
 
 ## [1.10.8] - 11/24/2025
 
