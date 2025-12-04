@@ -29,7 +29,7 @@
 
 <h1 style="margin-top:6px;"><span class="subhead">Instantly Turn Markdown Text Files into Styled Web&nbsp;Pages</span></h1>
 
-This open-source web app built with [Docsify](https://docsify.js.org), a magical documentation site generator capable of flexible content display, makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link - publish and style single pages or entire websites for reading, embedding, or presenting, without requiring webserver setup or modifying files.  
+This open-source web app built with [Docsify](https://docsify.js.org), a magical documentation site generator capable of flexible content display, makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link - publish and style pages or entire sites for reading, embedding, or presenting, without requiring webserver setup or modifying source files.  
 
 <div id="docsifythisurlbuilder">
 
@@ -481,11 +481,11 @@ What do you think about Docsify-This so far? Help shape its direction by sharing
 
 #### What Problem Does Docsify-This Solve?
 
-Docsify-This provides a quick way to transform and style [Markdown content](https://www.markdownguide.org/basic-syntax/) into visually appealing web pages without requiring a webserver, website setup, build process, or in-depth technical knowledge. Designed for rapid, flexible content sharing, Docsify-This enables almost instant publishing and seamless content distribution across multiple platforms.  
+Docsify-This provides a quick way to transform and style [Markdown content](https://www.markdownguide.org/basic-syntax/) into visually appealing web pages without requiring a webserver, website setup, build process, or in-depth technical knowledge. Designed to support OER and open publishing workflows, it enables almost instant publishing and seamless content distribution across multiple platforms.
 
 With Docsify-This you can:
 
-- Instantly transform online Markdown files into visually styled web pages or complete websites — no technical setup or hosting required
+- Transform online Markdown files into visually styled web pages or complete websites — no technical setup or hosting required
 - Present your materials, courses, documentation, and projects in a clean, professional style great for workshops, presentations, and online sharing
 - Maintain full control over your content by keeping files in their original locations, such as GitHub or Codeberg repositories
 - Style and customize web pages with a point-and-click Web Page Builder — no coding or technical expertise required
@@ -515,6 +515,7 @@ With Docsify-This you can:
 - Want to present existing Markdown content for workshops, presentations, or online sessions
 - Prefer simple, low-maintenance publishing (set it and forget it, no webserver needed)
 - Value keeping content in portable Markdown files with platform independence
+- Value open education resource (OER) principles and open publishing workflows
 - Are interested in using GitHub/Codeberg for version control and team collaboration
 - Need professional-looking websites without coding or design skills
 - Want to eliminate content duplication across your publishing workflow
