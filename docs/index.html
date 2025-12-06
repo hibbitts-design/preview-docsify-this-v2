@@ -2014,6 +2014,7 @@
 
             if (getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') {
               document.getElementById("docsifyV5coretheme").checked = true;
+              disableEnableThemeStyleOptions();
             }
 
             backLink = getURLParameterByName(['back-link', 'backLink'], null, null, window.location.href, true);
