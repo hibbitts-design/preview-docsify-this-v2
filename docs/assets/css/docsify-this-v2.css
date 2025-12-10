@@ -370,6 +370,7 @@ input[type="color"]:focus {
 #docsifythisurlfield {
   width: 100%;
   vertical-align: middle;
+  min-height: 100px;
   padding: min(15px, 5%) min(15px, 5%);
   font-size: 22px;
   border-radius: 16px !important;
@@ -762,7 +763,6 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   }
 
   #docsifythisurlfield {
-    min-height: 110px;
     font-size: 18px;
   }
 }
