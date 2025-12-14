@@ -1375,7 +1375,7 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
 
 #### Custom Markdown CSS Classes
 
-In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via CSS vars, for example in a Markdown file:
+In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), for example in a Markdown file:  
 
 ```
 <style>
