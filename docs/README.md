@@ -1965,10 +1965,26 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
   font-weight: bold;
   text-decoration: none;
 }
-
 </style>
 
-In addition to the Markdown CSS classes supported by Docsify-This, you can also define your own custom classes within your displayed Markdown files, for example:
+In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via CSS vars, for example in a Markdown file:
+
+```
+<style>
+  :root {
+    --font-family: system-ui,sans-serif;
+    --line-height: 1.4;
+    --font-size: 18px;
+    --font-weight: 400;
+    --content-max-width: 800px;
+    --heading-font-weight: 700;
+    --theme-color: #9333ea;
+    --link-color: #9333ea;
+  }
+</style>
+```
+
+You can also define your own custom classes within your displayed Markdown files, for example:
 
 [Custom CSS Class Button](# ":class=mybutton")
 

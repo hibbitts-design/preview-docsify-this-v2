@@ -881,9 +881,32 @@
     }
 
     function setColorProperties(color) {
-      document.documentElement.style.setProperty('--theme-color', color);
+      const styles = getComputedStyle(document.documentElement);
+
+      // Define default colors (both hex and RGB formats) - DON'T override these
+      const defaultColors = [
+        '#0374B5', '#1BA1EE',
+        'rgb(3, 116, 181)', 'rgb(27, 161, 238)',
+        ''  // empty string
+      ];
+
+      // Helper to check if a property should be set
+      // Returns true ONLY if current value is NOT a default (i.e., user customized it)
+      const shouldSet = (prop) => {
+        const current = styles.getPropertyValue(prop).trim();
+        // If empty OR is a default color, DON'T override
+        return current && !defaultColors.some(def => current === def || current.includes(def));
+      };
+
+      if (shouldSet('--theme-color')) {
+        console.log(styles.getPropertyValue('--theme-color').trim());
+        document.documentElement.style.setProperty('--theme-color', color);
+      }
+
       if ((getURLParameterByName(['link-color', 'linkColor']) || getURLParameterByName(['link-color-dark-mode', 'linkColorDarkMode'])) || (!(getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true')) || (!corethemestyles)) {
-        document.documentElement.style.setProperty('--link-color', color);
+        if (shouldSet('--link-color')) {
+          document.documentElement.style.setProperty('--link-color', color);
+        }
       }
     }
 

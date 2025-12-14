@@ -42,6 +42,7 @@
 * Hide empty rows in responsive tables
 * Left align rows in responsive tables
 * Support nested properties via URL parameters
+* Better support for inline CSS vars
 
 **Bugfix:**
 * Accommodate legacy use of default font sizes being in rem units
