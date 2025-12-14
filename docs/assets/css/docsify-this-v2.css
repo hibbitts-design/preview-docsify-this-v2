@@ -1,6 +1,6 @@
 /* DOCSIFY THIS - MODERNIZED */
 
-:root {
+:root #docsifythis {
   /* Core brand color */
   --accent-color: #16a34a;
   
@@ -28,7 +28,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root #docsifythis {
     --bg-primary: #020617;
     --bg-secondary: #0f172a;
     --bg-elevated: linear-gradient(to right, #1a1d29 0%, #2d3748 100%);
