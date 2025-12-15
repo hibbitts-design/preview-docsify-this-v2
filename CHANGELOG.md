@@ -6,7 +6,7 @@
 * Built with the modernized and refactored Docsify v5 platform
 * Adoption of Docsify v5's new theme system for enhanced customization and a modern user interface
 * Option to display pages using the new Docsify v5 core theme
-* Use of Marked.js v15+ (from Docsify v5) for markdown rendering, providing improved compatibility and rendering capabilities
+* Use of Marked.js v16+ (from Docsify v5) for markdown rendering, providing improved compatibility and rendering capabilities
 * Refreshed Web Page Builder UI
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to apply Docsify v5 core theme defaults
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
@@ -28,6 +28,7 @@
 * Improved search results, which exclude Markdown formatting syntax (via Docsify v5)
 * Added variable for applying Docsify v5 core theme defaults
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
+* Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
 
 **Bugfix:**
 * Handle use of Coverpage title link with duplicate id via enhanced target scrolling
@@ -36,13 +37,14 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.9] - XX/XX/2025
+## [1.10.9] - XX/XX/2026
 
 **Improved:**
 * Hide empty rows in responsive tables
 * Left align rows in responsive tables
 * Support nested properties via URL parameters
-* Better support for inline CSS vars
+* Updated ReadMe
+* Enhanced support for inline Docsify Themeable CSS vars
 
 **Bugfix:**
 * Accommodate legacy use of default font sizes being in rem units
