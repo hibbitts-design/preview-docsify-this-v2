@@ -1974,12 +1974,16 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
   :root {
     --font-family: system-ui,sans-serif;
     --line-height: 1.4;
-    --font-size: 18px;
+    --font-size: 20px;
     --font-weight: 400;
     --content-max-width: 800px;
+    --heading-color: #0891b2;
     --heading-font-weight: 700;
-    --theme-color: #9333ea;
-    --link-color: #9333ea;
+    --theme-color: #9333ea !important;
+    --link-color: #9333ea !important;
+    --link-color-hover: var(--link-color) !important;
+    --link-underline-thickness: auto;
+    --link-underline-thickness-hover: var(--link-underline-thickness);
   }
 </style>
 ```
