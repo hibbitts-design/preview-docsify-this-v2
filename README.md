@@ -1380,14 +1380,23 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
 ```
 <style>
   :root {
+    /* Typography */
     --font-family: system-ui,sans-serif;
     --line-height: 1.4;
     --font-size: 20px;
     --font-weight: 400;
+
+    /* Content */
     --content-max-width: 800px;
+
+    /* Headings */
     --heading-color: #0891b2;
     --heading-font-weight: 700;
+
+    /* Theme */
     --theme-color: #9333ea !important;
+
+    /* Links */
     --link-color: #9333ea !important;
     --link-color-hover: var(--link-color) !important;
     --link-underline-thickness: auto;
