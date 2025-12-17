@@ -1969,6 +1969,7 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
 
 In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), for example in a Markdown file:  
 
+```
 <style>
   :root {
     /* Typography */
@@ -1988,8 +1989,8 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
     --theme-color: #9333ea !important;
 
     /* Links */
-    --link-color: #9333ea !important;
-    --link-color-hover: var(--link-color) !important;
+    --link-color: var(--theme-color) !important;
+    --link-color-hover: var(--theme-color) !important;
     --link-underline-thickness: auto;
     --link-underline-thickness-hover: var(--link-underline-thickness);
   }

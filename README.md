@@ -1397,8 +1397,8 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
     --theme-color: #9333ea !important;
 
     /* Links */
-    --link-color: #9333ea !important;
-    --link-color-hover: var(--link-color) !important;
+    --link-color: var(--theme-color) !important;
+    --link-color-hover: var(--theme-color) !important;
     --link-underline-thickness: auto;
     --link-underline-thickness-hover: var(--link-underline-thickness);
   }
