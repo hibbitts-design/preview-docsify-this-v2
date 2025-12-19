@@ -1986,7 +1986,7 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
     --heading-font-weight: 700;
 
     /* Theme */
-    --theme-color: #9333ea !important;
+    --theme-color: #9333ea;
 
     /* Links */
     --link-color: var(--theme-color) !important;
@@ -1996,6 +1996,8 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
   }
 </style>
 ```
+
+Here is an example Markdown file containing the above styles, as displayed by Docsify-This (notice no URL parameters are required for visual styling): https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/markdown-file-examples/main&homepage=custom-theme-vars-v5.md&sidebar=true
 
 You can also define your own custom classes within your displayed Markdown files, for example:
 
