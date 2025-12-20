@@ -2496,7 +2496,7 @@
 
         // Only apply sidebar/ToC adjustments if font size is 24px or larger
         const numericFontSize = parseFloat(fontsize);
-        if (numericFontSize >= 24) {
+        if (numericFontSize > 18) {
           document.documentElement.style.setProperty('--sidebar-name-font-size', '28px');
 
           var fontCSS = document.createElement('style');
@@ -2506,6 +2506,7 @@
               .search .results-status { font-size: 15px !important; }
               .search .matching-post .content { font-size: 15px !important; }
               .page_toc ul { font-size: 18px !important; }
+              .app-nav { font-size: 18px !important; }
           `;
           document.head.appendChild(fontCSS);
 
