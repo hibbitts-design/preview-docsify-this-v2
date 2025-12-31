@@ -12,6 +12,7 @@
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
 * Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
+* Added supportof optional sidebar-collapse parameter (`sidebar-collapse=true`) to make top-level sidebar sections collapsible
 
 **Improved:**
 * Updated ReadMe
@@ -37,7 +38,7 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.9] - XX/XX/2026
+## [1.10.9] - 12/23/2025🎊
 
 **Improved:**
 * Hide empty rows in responsive tables
@@ -45,6 +46,7 @@
 * Support nested properties via URL parameters
 * Updated ReadMe
 * Enhanced support for inline Docsify Themeable CSS vars
+* Minor refresh of Sidebar UI
 
 **Bugfix:**
 * Accommodate legacy use of default font sizes being in rem units

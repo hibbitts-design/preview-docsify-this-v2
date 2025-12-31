@@ -1170,6 +1170,10 @@
       loadFooter: (getURLParameterByName('footer') || footer || false),
       ext: getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true)),
       executeScript: true,
+      sidebarExpandCollapse: {
+        accordion: false,
+        showChevrons: true
+      },
 
       // SIDEBAR NAVIGATION
       // -----------------------------------------------------------------
@@ -2657,6 +2661,13 @@
   <script>
      if ((window.$docsify['basePath'] === undefined) || (!(getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'false'))) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-responsive-tables.js"><\/script>');
+    }
+  </script>
+
+  <!-- Sidebar expand collapse plugin -->
+  <script>
+    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['sidebar-collapse', 'sidebarCollapse'], null, null, window.location.href, true) === 'true')) {
+      document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-sidebar-expand-collapse.js"><\/script>');
     }
   </script>
 
