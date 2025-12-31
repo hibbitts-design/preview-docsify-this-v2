@@ -1171,8 +1171,8 @@
       ext: getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true)),
       executeScript: true,
       sidebarExpandCollapse: {
-        accordion: true,
-        showChevrons: true
+        accordion: (getURLParameterByName('sidebarExpandCollapse.accordion') || false),
+        showChevrons: (getURLParameterByName('sidebarExpandCollapse.showChevrons') || true),
       },
 
       // SIDEBAR NAVIGATION
