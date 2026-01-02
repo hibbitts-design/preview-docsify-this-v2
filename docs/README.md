@@ -951,7 +951,7 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 ##### theme-classes<button type="button" class="copy-link" aria-label="Copy theme-classes parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&theme-classes=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Add one or more Docsify v5 [core theme classes](https://preview.docsifyjs.org/#/themes?id=classes) with the optional **theme-classes** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&name=CPT-363&loadNavbar=_navbar.md&mergeNavbar=true&hide-credits=true&browser-tab-title=CPT-363&theme-classes=sidebar-chevron-left,sidebar-toggle-hamburger
+https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&name=CPT-363&loadNavbar=_navbar.md&mergeNavbar=true&hide-credits=true&browser-tab-title=CPT-363&theme-classes=sidebar-chevron-left,sidebar-group-box,sidebar-toggle-hamburger
 
 ---
 

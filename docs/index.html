@@ -155,7 +155,7 @@
     if (((getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) && (getURLParameterByName('basePath'))) {
       document.querySelectorAll('style').forEach(style => style.remove());
       const body = document.body;
-      body.classList.add('sidebar-group-box');
+      // body.classList.add('sidebar-group-box');
     } else {
       document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="assets/css/theme.css" />');
     }
