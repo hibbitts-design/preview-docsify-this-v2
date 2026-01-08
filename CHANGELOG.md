@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0] - XX/XX/2025
+## [2.0.0] - XX/XX/2026
 
 **New:**
 * Built with the modernized and refactored Docsify v5 platform
@@ -12,7 +12,7 @@
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
 * Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
-* Added supportof optional sidebar-collapse parameter (`sidebar-collapse=true`) to make top-level sidebar sections collapsible
+* Added support of optional sidebar-collapse parameter (`sidebar-collapse=true`) to make top-level sidebar sections collapsible
 
 **Improved:**
 * Updated ReadMe
@@ -31,17 +31,13 @@
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
 * Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
 
-**Bugfix:**
-* Handle use of Coverpage title link with duplicate id via enhanced target scrolling
-* Fixed Font Awesome plugin regex to only match :fa- prefixed patterns
-
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
 ## [1.11.0] - XX/XX/2026
 
 **New:**
-* Add Inter font choice, for visual consistency with Grav CMS Helios
+* Add Inter font choice, which also enables rendering Grav CMS Helios page content with visual consistency
 
 ## [1.10.9] - 12/23/2025🎊
 
