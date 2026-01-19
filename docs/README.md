@@ -1,3 +1,22 @@
+<style>
+html {
+  background: linear-gradient(135deg, #fbfcfe 0%, #f4f7fe 100%);
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: linear-gradient(135deg, #060a14 0%, #0f1428 100%);
+    background-attachment: fixed;
+  }
+}
+</style>
+
 <div id="docsifythis">
 
 <div class="docsifythisheader">
