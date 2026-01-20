@@ -55,11 +55,11 @@
   }
 
   #docsifythisurlbuilder input[type="checkbox"] {
-    border-color: #9ca3af !important;
+    border-color: #737985 !important;  /* CHANGED: 50% brighter */
   }
   
   input.toggle:where([type=checkbox], [type=radio]):before {
-    background: #9ca3af !important;
+    background: #737985 !important;  /* CHANGED: 50% brighter */
   }
 
   #docsifythisurlbuilder input[type="text"],
@@ -67,7 +67,7 @@
   #docsifythisurlbuilder input[type="number"],
   #docsifythisurlbuilder textarea,
   #docsifythisurlbuilder select {
-    border-color: #6b7280 !important;
+    border-color: #737985 !important;  /* CHANGED: 50% brighter */
   }
 
 }
