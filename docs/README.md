@@ -154,7 +154,7 @@ Page layout:
     min="10" 
     max="72" 
     step="1"
-    style="width: 70px;"
+    style="height: 38px;width: 70px;"
   >
 </div>
 
@@ -169,7 +169,7 @@ Page layout:
     min="1.0" 
     max="3.0" 
     step="0.1"
-    style="width: 70px;"
+    style="height: 38px;width: 70px;"
   >
 </div>
 

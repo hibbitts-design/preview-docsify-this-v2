@@ -49,6 +49,27 @@
     color: #1ba1ee;
   }
 
+  #docsifythisurlbuilder {
+    border: 1px solid rgba(60, 64, 67, 0.6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  #docsifythisurlbuilder input[type="checkbox"] {
+    border-color: #9ca3af !important;
+  }
+  
+  input.toggle:where([type=checkbox], [type=radio]):before {
+    background: #9ca3af !important;
+  }
+
+  #docsifythisurlbuilder input[type="text"],
+  #docsifythisurlbuilder input[type="url"],
+  #docsifythisurlbuilder input[type="number"],
+  #docsifythisurlbuilder textarea,
+  #docsifythisurlbuilder select {
+    border-color: #6b7280 !important;
+  }
+
 }
 
 /* Global typography improvements */
@@ -300,8 +321,8 @@ input[type="checkbox"] {
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 #docsifythisurlbuilder h2 {
