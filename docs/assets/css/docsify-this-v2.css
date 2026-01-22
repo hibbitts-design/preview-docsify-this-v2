@@ -677,6 +677,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   font-family: inherit;
   font-size: inherit;
   text-align: right;
+  margin-top: 30px;
 }
 
 .markdown-section #docsifythisdocsindex h3 {
