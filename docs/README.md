@@ -42,7 +42,7 @@ body {
         <span class="hide-on-mobile">URLs generated here are temporary and will need to be updated when v2.0 is released.</span>
       </div>
     </div>
-    <a href="https://docsify-this.net" style="background: #b8941f; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap;">Switch to v1.0</a>
+    <a href="https://docsify-this.net" style="background: #b8941f; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: normal; overflow-wrap: break-word; word-break: break-word;">Switch to v1.0</a>
   </div>
 </div>
 
