@@ -677,7 +677,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   font-family: inherit;
   font-size: inherit;
   text-align: right;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .markdown-section #docsifythisdocsindex h3 {
@@ -780,10 +780,6 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 @media only screen and (max-width: 510px) {
-  #docsifythisurlbuilderrestoredefaultsbutton {
-    margin-top: 40px;
-  }
-
   #docsifythisurlfield {
     font-size: 18px;
   }
