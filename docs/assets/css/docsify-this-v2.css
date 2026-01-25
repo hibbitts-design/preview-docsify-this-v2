@@ -2,43 +2,43 @@
 
 :root #docsifythis {
   /* Core brand color */
-  --accent-color: #16a34a;
+  --dt-accent-color: #16a34a;
   
   /* Light theme colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f1f5f9;
-  --bg-elevated: linear-gradient(to right, #f6f8fd 0%, #e6efff 100%);
-  --text-primary: #0f172a;
-  --text-secondary: #202124;
-  --text-muted: #64748b;
-  --border-color: #e8eaed;
-  --border-strong: #374151;
-  --docsifythis-link-color: #4f46e5;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --dt-bg-primary: #ffffff;
+  --dt-bg-secondary: #f1f5f9;
+  --dt-bg-elevated: linear-gradient(to right, #f6f8fd 0%, #e6efff 100%);
+  --dt-text-primary: #0f172a;
+  --dt-text-secondary: #202124;
+  --dt-text-muted: #64748b;
+  --dt-border-color: #e8eaed;
+  --dt-border-strong: #374151;
+  --dt-link-color: #4f46e5;
+  --dt-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
   
   /* Typography improvements */
-  --font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.025em;
+  --dt-font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --dt-letter-spacing-tight: -0.025em;
+  --dt-letter-spacing-normal: 0;
+  --dt-letter-spacing-wide: 0.025em;
   
   /* Transition speeds */
-  --transition-fast: 0.15s ease-out;
+  --dt-transition-fast: 0.15s ease-out;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root #docsifythis {
-    --bg-primary: #020617;
-    --bg-secondary: #0f172a;
-    --bg-elevated: linear-gradient(to right, #1a1d29 0%, #2d3748 100%);
-    --text-primary: #f8fafc;
-    --text-secondary: #e2e8f0;
-    --text-muted: #94a3b8;
-    --border-color: #3c4043;
-    --border-strong: #4b5563;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-    --docsifythis-link-color: #818cf8;
+    --dt-bg-primary: #020617;
+    --dt-bg-secondary: #0f172a;
+    --dt-bg-elevated: linear-gradient(to right, #1a1d29 0%, #2d3748 100%);
+    --dt-text-primary: #f8fafc;
+    --dt-text-secondary: #e2e8f0;
+    --dt-text-muted: #94a3b8;
+    --dt-border-color: #3c4043;
+    --dt-border-strong: #4b5563;
+    --dt-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --dt-link-color: #818cf8;
   }
 
   #docsifythis p a,
@@ -74,7 +74,7 @@
 
 /* Global typography improvements */
 #docsifythis {
-  font-family: var(--font-system);
+  font-family: var(--dt-font-system);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -82,24 +82,24 @@
 
 #docsifythis p {
   line-height: 1.5;
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: var(--dt-letter-spacing-normal);
   margin-bottom: .5rem;
 }
 
 /* Button typography */
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton,
 #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
-  font-family: var(--font-system);
-  letter-spacing: var(--letter-spacing-wide);
+  font-family: var(--dt-font-system);
+  letter-spacing: var(--dt-letter-spacing-wide);
   font-weight: 500;
 }
 
 /* Form labels and text */
 #docsifythisurlbuilder label {
-  font-family: var(--font-system);
+  font-family: var(--dt-font-system);
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: var(--dt-letter-spacing-normal);
   margin-bottom: 0.125rem;
 }
 
@@ -107,7 +107,7 @@
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
-  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  transition: background-color var(--dt-transition-fast), color var(--dt-transition-fast), border-color var(--dt-transition-fast);
 }
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
@@ -115,21 +115,21 @@
 #docsifythisurlbuilder input[type="number"],
 #docsifythisurlbuilder textarea,
 #docsifythisurlbuilder select {
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--dt-transition-fast), box-shadow var(--dt-transition-fast);
 }
 [type="radio"] + img,
 input[type="checkbox"] {
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition: opacity var(--dt-transition-fast), transform var(--dt-transition-fast);
 }
 
 #docsifythisurlbuilder ::selection {
   background-color: rgba(79, 70, 229, 0.15);
-  color: var(--text-primary);
+  color: var(--dt-text-primary);
 }
 
 #docsifythisurlbuilder ::-moz-selection {
   background-color: rgba(79, 70, 229, 0.15);
-  color: var(--text-primary);
+  color: var(--dt-text-primary);
 }
 
 #docsifythisurlbuilder .pagefontsettings {
@@ -174,8 +174,8 @@ input[type="checkbox"] {
 
 .markdown-section .docsify-copy-code-button {
   padding: 0.35em 0.5em;
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  background: var(--dt-text-primary);
+  color: var(--dt-bg-primary);
   font-size: .85em;
   border-radius: 6px;
   border: none;
@@ -226,15 +226,15 @@ input[type="checkbox"] {
 #docsifythis .version-tag {
   font-size: 0.8em;
   font-weight: 500;
-  color: var(--accent-color);
+  color: var(--dt-accent-color);
   margin-left: 0px;
 }
 
 #docsifythis .version-badge {
   font-size: 0.6em;
   font-weight: 500;
-  background-color: var(--text-muted);
-  color: var(--bg-primary);
+  background-color: var(--dt-text-muted);
+  color: var(--dt-bg-primary);
   padding: 2px 6px;
   border-radius: 20px;
   line-height: 1;
@@ -249,30 +249,30 @@ input[type="checkbox"] {
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 {
-  font-size: clamp(1.75rem, 4vw, 2.25rem); /* Responsive sizing */
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 600;
   margin: 0;
-  display: inline-flex; /* Better alignment control */
-  align-items: center; /* Center with logo vertically */
-  line-height: 1.2; /* Relative to font size instead of fixed */
-  color: var(--text-secondary);
-  font-family: var(--font-system);
-  letter-spacing: var(--letter-spacing-tight);
-  text-decoration: none; /* If it's a link */
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+  color: var(--dt-text-secondary);
+  font-family: var(--dt-font-system);
+  letter-spacing: var(--dt-letter-spacing-tight);
+  text-decoration: none;
 }
 
 #docsifythis .docsifythisheader .logoandtext h1 .highlight {
-  color: var(--accent-color);
+  color: var(--dt-accent-color);
 }
 
 #docsifythis h1 .subhead {
-  color: var(--text-secondary);
-  font-size: clamp(1.35rem, 4vw, 1.75rem); /* Responsive sizing */
+  color: var(--dt-text-secondary);
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
   font-weight: 600;
-  letter-spacing: var(--letter-spacing-normal); /* Less tight than h1 */
-  opacity: 0.8; /* Subtle de-emphasis */
-  display: block; /* Forces line break if desired */
-  margin-top: 2px; /* Small gap from main title */
+  letter-spacing: var(--dt-letter-spacing-normal);
+  opacity: 0.8;
+  display: block;
+  margin-top: 2px;
 }
 
 .docsifythisheader .logoandtext img {
@@ -294,9 +294,9 @@ input[type="checkbox"] {
 #docsifythis h5,
 #docsifythis h6 {
   font-weight: 500;
-  color: var(--text-primary);
-  font-family: var(--font-system);
-  letter-spacing: var(--letter-spacing-tight);
+  color: var(--dt-text-primary);
+  font-family: var(--dt-font-system);
+  letter-spacing: var(--dt-letter-spacing-tight);
   line-height: 1.15;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
@@ -320,18 +320,18 @@ input[type="checkbox"] {
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
-  background: var(--bg-elevated);
+  background: var(--dt-bg-elevated);
   border: 1px solid rgba(148, 163, 184, 0.6) !important;
   box-shadow: none !important;
 }
 
 #docsifythisurlbuilder h2 {
-  color: var(--text-primary);
+  color: var(--dt-text-primary);
 }
 
 #docsifythisurlbuilder h3 {
   margin-top: 12px!important;
-  color: var(--text-primary);
+  color: var(--dt-text-primary);
 }
 
 #docsifythisurlbuilder h3 a.anchor:hover {
@@ -347,7 +347,7 @@ input[type="checkbox"] {
   margin: 0;
   margin-top: -18px;
   margin-bottom: -14px;
-  color: var(--docsifythis-link-color);
+  color: var(--dt-link-color);
 }
 
 .docsifythiscustomdetails summary::-webkit-details-marker {
@@ -370,13 +370,13 @@ input[type="checkbox"] {
 input[type="url"],
 input[type="color"] {
   overflow: hidden;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--dt-bg-primary);
+  color: var(--dt-text-primary);
   height: 2rem;
   margin-top: 0.125rem;
   margin-bottom: 0.25rem;
   padding: 6px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--dt-border-color);
   border-radius: 6px;
 }
 
@@ -384,7 +384,7 @@ input[type="color"] {
 input[type="url"]:focus,
 input[type="color"]:focus {
   outline: none;
-  border-color: var(--docsifythis-link-color);
+  border-color: var(--dt-link-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
@@ -436,11 +436,11 @@ input[type="color"]:focus {
   width: 260px;
   padding: 14px 22px;
   line-height: 1.3rem;
-  background-color: var(--accent-color);
+  background-color: var(--dt-accent-color);
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid var(--accent-color);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--dt-accent-color);
+  box-shadow: var(--dt-shadow);
   border-radius: 20px;
   -webkit-appearance: none;
   white-space: normal;
@@ -457,7 +457,7 @@ input[type="color"]:focus {
 
 #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
   cursor: pointer;
-  color: var(--docsifythis-link-color);
+  color: var(--dt-link-color);
   height: auto;
   display: inline-block;
   margin-top: 4px;
@@ -468,7 +468,7 @@ input[type="color"]:focus {
   background-color: transparent;
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid var(--docsifythis-link-color);
+  border: 1px solid var(--dt-link-color);
   border-radius: 20px;
   -webkit-appearance: none;
   white-space: normal;
@@ -509,16 +509,16 @@ input[type="color"]:focus {
 }
 
 #docsifythisurlbuilder [type="radio"]:checked+img {
-  outline: 4px solid var(--docsifythis-link-color);
+  outline: 4px solid var(--dt-link-color);
   border-radius: 8px;
   position: relative;
 }
 
 #docsifythisurlbuilder input[type="number"] {
   width: 4em;
-  border: 1px solid var(--border-strong);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  border: 1px solid var(--dt-border-strong);
+  background-color: var(--dt-bg-primary);
+  color: var(--dt-text-primary);
   height: 1.9rem;
   padding-left: 0.3rem;
   margin-top: 0.125rem;
@@ -528,7 +528,7 @@ input[type="color"]:focus {
 
 #docsifythisurlbuilder input[type="number"]:focus {
   outline: none;
-  border-color: var(--docsifythis-link-color);
+  border-color: var(--dt-link-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
@@ -565,17 +565,17 @@ input[type="color"]:focus {
 }
 
 #docsifythisurlbuilder input[type="checkbox"] {
-  border-color: var(--border-strong);
+  border-color: var(--dt-border-strong);
   vertical-align: text-bottom;
 }
 
 input.toggle:where([type=checkbox], [type=radio]):before {
-  background: var(--border-strong);
+  background: var(--dt-border-strong);
 }
 
 #docsifythisurlbuilder input[type="checkbox"]:checked {
-  background: var(--docsifythis-link-color);
-  border-color: var(--docsifythis-link-color);
+  background: var(--dt-link-color);
+  border-color: var(--dt-link-color);
 }
 
 #docsifythisurlbuilder input[type="checkbox"]~label {
@@ -601,18 +601,18 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 .docsifythisurlbuilderoptionsline a:visited,
 .docsifythisurlbuilderoptionsline a:hover,
 .docsifythisurlbuilderoptionsline a:active {
-  color: var(--docsifythis-link-color);
-  text-decoration-color: var(--docsifythis-link-color);
+  color: var(--dt-link-color);
+  text-decoration-color: var(--dt-link-color);
 }
 
 #docsifythisurlbuildercustomdetailslink {
-  color: var(--docsifythis-link-color);
+  color: var(--dt-link-color);
   text-decoration: underline;
   cursor: pointer;
 }
 
 #docsifythisurlbuilder hr {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--dt-border-color);
   margin-top: 0.6em;
   margin-bottom: 0.6em;
 }
@@ -633,7 +633,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 #docsifythisurlbuilder #linkhovercolordarkmodepreview,
 #docsifythisurlbuilder #coverpagecolordarkmodepreview {
   border-radius: 3px;
-  outline: solid 1px var(--border-strong);
+  outline: solid 1px var(--dt-border-strong);
   outline-offset: 0px;
   padding-bottom: 24px;
   margin-top: 4px;
@@ -691,7 +691,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 .markdown-section .docsify-this-screenshot {
   width: 85%;
   height: 85%;
-  border: solid 1px var(--border-color);
+  border: solid 1px var(--dt-border-color);
   border-radius: 8px;
 }
 
@@ -803,7 +803,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   color: #92400e !important;
   border: 1px solid #e5d5b7 !important;
   border-radius: 8px !important;
-  transition: all var(--transition-fast);
+  transition: all var(--dt-transition-fast);
   padding: 6px 12px !important;
   text-decoration: none !important;
   font-weight: 500 !important;
@@ -833,22 +833,22 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
 /* Form control improvements */
 #docsifythisurlfield {
-  border: 2px solid var(--border-color) !important;
-  transition: all var(--transition-fast);
+  border: 2px solid var(--dt-border-color) !important;
+  transition: all var(--dt-transition-fast);
 }
 
 #docsifythisurlfield:focus {
-  border-color: var(--docsifythis-link-color) !important;
+  border-color: var(--dt-link-color) !important;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1) !important;
 }
 
 /* Select and input styling with dropdown indicators */
 select, input[type="text"], input[type="number"] {
-  border: 1px solid var(--border-color) !important;
-  background: var(--bg-primary) !important;
-  color: var(--text-primary) !important;
-  transition: all var(--transition-fast);
-  font-family: var(--font-system);
+  border: 1px solid var(--dt-border-color) !important;
+  background: var(--dt-bg-primary) !important;
+  color: var(--dt-text-primary) !important;
+  transition: all var(--dt-transition-fast);
+  font-family: var(--dt-font-system);
 }
 
 /* Dropdown indicator for select elements */
@@ -870,7 +870,7 @@ select {
 }
 
 select:focus, input[type="text"]:focus, input[type="number"]:focus {
-  border-color: var(--docsifythis-link-color) !important;
+  border-color: var(--dt-link-color) !important;
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
   outline: none !important;
 }
@@ -878,29 +878,29 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
 /* Section headers in builder */
 #docsifythisurlbuilder h2 {
   font-weight: 500;
-  color: var(--docsifythis-link-color);
+  color: var(--dt-link-color);
 }
 
 #docsifythisurlbuilder h3, #docsifythisurlbuilder h3 a {
   font-weight: 500;
   margin-top: .75rem;
   margin-bottom: 0.50rem;
-  color: var(--docsifythis-link-color)!important;
+  color: var(--dt-link-color)!important;
 }
 
 /* Reset button styling */
 #docsifythisurlbuilderrestoredefaultsbutton input {
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
+  background: var(--dt-bg-secondary);
+  color: var(--dt-text-secondary);
+  border: 1px solid var(--dt-border-color);
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 400;
-  transition: all var(--transition-fast);
+  transition: all var(--dt-transition-fast);
 }
 
 #docsifythisurlbuilderrestoredefaultsbutton input:hover {
-  background: var(--text-muted);
+  background: var(--dt-text-muted);
   color: white;
   transform: translateY(-1px);
 }
