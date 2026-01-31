@@ -573,7 +573,7 @@ input[type="color"]:focus {
 
 #docsifythisurlbuilder [type="radio"]:checked+img {
   opacity: 1;
-  outline: 2px solid var(--dt-link-color);
+  outline: 3px solid var(--dt-link-color);
   border-radius: 6px;
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
