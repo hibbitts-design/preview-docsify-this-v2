@@ -1,4 +1,4 @@
-/* DOCSIFY THIS - MODERNIZED */
+/* DOCSIFY THIS - MODERNIZED v2 */
 
 :root #docsifythis {
   /* Core brand color */
@@ -14,7 +14,11 @@
   --dt-border-color: #e8eaed;
   --dt-border-strong: #374151;
   --dt-link-color: #4f46e5;
-  --dt-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 
+               0 1px 3px 0 rgba(0, 0, 0, 0.05), 
+               0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                     0 10px 15px -3px rgba(0, 0, 0, 0.05);
   
   /* Typography improvements */
   --dt-font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -37,7 +41,10 @@
     --dt-text-muted: #94a3b8;
     --dt-border-color: #3c4043;
     --dt-border-strong: #4b5563;
-    --dt-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 
+                 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+    --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                       0 10px 15px -3px rgba(0, 0, 0, 0.4);
     --dt-link-color: #818cf8;
   }
 
@@ -50,26 +57,35 @@
   }
 
   #docsifythisurlbuilder {
-    border: 1px solid rgba(148, 163, 184, 0.2) !important; 
-    box-shadow: none !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; 
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 
+                0 4px 20px -4px rgba(0, 0, 0, 0.5) !important;
   }
 
   #docsifythisurlbuilder input[type="checkbox"] {
-    border-color: #737985 !important;  /* CHANGED: 50% brighter */
+    border-color: #737985 !important;
   }
   
   input.toggle:where([type=checkbox], [type=radio]):before {
-    background: #737985 !important;  /* CHANGED: 50% brighter */
+    background: #737985 !important;
   }
 
+  /* FIXED: Changed background to background-color so it doesn't override the SVG arrow */
   #docsifythisurlbuilder input[type="text"],
   #docsifythisurlbuilder input[type="url"],
   #docsifythisurlbuilder input[type="number"],
   #docsifythisurlbuilder textarea,
   #docsifythisurlbuilder select {
-    border-color: #737985 !important;  /* CHANGED: 50% brighter */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
+  /* FIXED: Explicit dark mode select arrow with light color (#e2e8f0) */
+  #docsifythisurlbuilder select,
+  select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e2e8f0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+  }
 }
 
 /* Global typography improvements */
@@ -81,17 +97,18 @@
 }
 
 #docsifythis p {
-  line-height: 1.5;
+  line-height: 1.65;
   letter-spacing: var(--dt-letter-spacing-normal);
   margin-bottom: .5rem;
+  color: var(--dt-text-secondary);
 }
 
 /* Button typography */
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton,
 #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
   font-family: var(--dt-font-system);
-  letter-spacing: var(--dt-letter-spacing-wide);
-  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
 /* Form labels and text */
@@ -107,7 +124,7 @@
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
-  transition: background-color var(--dt-transition-fast), color var(--dt-transition-fast), border-color var(--dt-transition-fast);
+  transition: background-color var(--dt-transition-fast), color var(--dt-transition-fast), border-color var(--dt-transition-fast), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
@@ -115,11 +132,11 @@
 #docsifythisurlbuilder input[type="number"],
 #docsifythisurlbuilder textarea,
 #docsifythisurlbuilder select {
-  transition: border-color var(--dt-transition-fast), box-shadow var(--dt-transition-fast);
+  transition: border-color var(--dt-transition-fast), box-shadow var(--dt-transition-fast), transform 0.2s ease;
 }
 [type="radio"] + img,
 input[type="checkbox"] {
-  transition: opacity var(--dt-transition-fast), transform var(--dt-transition-fast);
+  transition: opacity var(--dt-transition-fast), transform var(--dt-transition-fast), filter 0.2s ease;
 }
 
 #docsifythisurlbuilder ::selection {
@@ -257,7 +274,7 @@ input[type="checkbox"] {
   line-height: 1.2;
   color: var(--dt-text-secondary);
   font-family: var(--dt-font-system);
-  letter-spacing: var(--dt-letter-spacing-tight);
+  letter-spacing: -0.02em;
   text-decoration: none;
 }
 
@@ -293,13 +310,13 @@ input[type="checkbox"] {
 #docsifythis h4,
 #docsifythis h5,
 #docsifythis h6 {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--dt-text-primary);
   font-family: var(--dt-font-system);
-  letter-spacing: var(--dt-letter-spacing-tight);
+  letter-spacing: -0.02em;
   line-height: 1.15;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .markdown-section #docsifythisdocscontent code {
@@ -320,18 +337,30 @@ input[type="checkbox"] {
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
-  background: var(--dt-bg-elevated);
-  border: 1px solid rgba(148, 163, 184, 0.6) !important;
-  box-shadow: none !important;
+  background: var(--dt-bg-secondary);
+  border: 1px solid var(--dt-border-color) !important;
+  box-shadow: var(--dt-shadow) !important;
 }
 
+/* UPDATED: Purple headers in both light and dark mode for consistency */
 #docsifythisurlbuilder h2 {
-  color: var(--dt-text-primary);
+  color: var(--dt-link-color);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #docsifythisurlbuilder h3 {
-  margin-top: 12px!important;
-  color: var(--dt-text-primary);
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--dt-link-color) !important;
+}
+
+#docsifythisurlbuilder h3 a.anchor {
+  color: var(--dt-link-color) !important;
 }
 
 #docsifythisurlbuilder h3 a.anchor:hover {
@@ -377,53 +406,71 @@ input[type="color"] {
   margin-bottom: 0.25rem;
   padding: 6px;
   border: 1px solid var(--dt-border-color);
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
 }
 
 #docsifythisurlbuilder input[type="text"]:focus,
 input[type="url"]:focus,
 input[type="color"]:focus {
   outline: none;
-  border-color: var(--dt-link-color);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  border-color: rgba(79, 70, 229, 0.4);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 #docsifythisurlfield {
   width: 100%;
   vertical-align: middle;
-  min-height: 100px;
+  min-height: 64px;
   padding: min(15px, 5%) min(15px, 5%);
   font-size: 22px;
-  border-radius: 16px !important;
+  border-radius: 12px !important;
+  border-width: 2px !important;
+  border-color: rgba(148, 163, 184, 0.4) !important;
+  letter-spacing: -0.01em;
+}
+
+#docsifythisurlfield:focus {
+  border-color: var(--dt-link-color) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
 #docsifythisurlbuilder #browserTabTitle {
   width: 100%;
   max-width: 370px;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder #editLinkText {
   width: 100%;
   max-width: 370px;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder #backLink {
   width: 100%;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder #pageTitle {
   width: 100%;
   max-width: 370px;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder #siteName {
   width: 100%;
   max-width: 370px;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder #siteLogo {
   width: 100%;
   max-width: 370px;
+  border-radius: 8px;
 }
 
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton {
@@ -438,15 +485,25 @@ input[type="color"]:focus {
   line-height: 1.3rem;
   background-color: var(--dt-accent-color);
   text-decoration: none;
-  font-weight: 500;
-  border: 1px solid var(--dt-accent-color);
-  box-shadow: var(--dt-shadow);
-  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(22, 163, 74, 0.15), 
+              0 3px 6px 0 rgba(22, 163, 74, 0.1);
+  border-radius: 10px;
   -webkit-appearance: none;
   white-space: normal;
   overflow: visible;
   word-wrap: break-word;
   text-align: center;
+  transform: translateY(0);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#docsifythisurlbuilder .docsifythisurlbuilderprimarybutton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px 0 rgba(22, 163, 74, 0.25);
+  filter: brightness(1.05);
 }
 
 @media (max-width: 480px) {
@@ -465,20 +522,24 @@ input[type="color"]:focus {
   width: 260px;
   padding: 14px 22px;
   line-height: 1.3rem;
-  background-color: transparent;
+  background-color: rgba(79, 70, 229, 0.04);
   text-decoration: none;
-  font-weight: 500;
-  border: 1px solid var(--dt-link-color);
-  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 10px;
   -webkit-appearance: none;
   white-space: normal;
   overflow: visible;
   word-wrap: break-word;
   text-align: center;
+  transition: all 0.2s ease;
 }
 
 #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton:hover {
-  background-color: rgba(79, 70, 229, 0.1);
+  background-color: rgba(79, 70, 229, 0.08);
+  border-color: rgba(79, 70, 229, 0.3);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 480px) {
@@ -505,13 +566,31 @@ input[type="color"]:focus {
 #docsifythisurlbuilder [type="radio"]+img {
   cursor: pointer;
   margin-right: 0.5rem;
-  border-radius: 10px;
+  border-radius: 6px;
+  opacity: .9;
+  transition: all 0.2s ease;
 }
 
 #docsifythisurlbuilder [type="radio"]:checked+img {
-  outline: 4px solid var(--dt-link-color);
-  border-radius: 8px;
+  opacity: 1;
+  outline: 2px solid var(--dt-link-color);
+  border-radius: 6px;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
   position: relative;
+}
+
+/* Radio label modern styling */
+#docsifythisurlbuilder label:has(input[type="radio"]) {
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+#docsifythisurlbuilder label:has(input[type="radio"]:checked) {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.02);
 }
 
 #docsifythisurlbuilder input[type="number"] {
@@ -523,13 +602,15 @@ input[type="color"]:focus {
   padding-left: 0.3rem;
   margin-top: 0.125rem;
   margin-bottom: 0.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 #docsifythisurlbuilder input[type="number"]:focus {
   outline: none;
-  border-color: var(--dt-link-color);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  border-color: rgba(79, 70, 229, 0.4);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 #docsifythisurlbuilder figcaption {
@@ -619,7 +700,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
 #docsifythisurlbuilder #linkcolor,
 #docsifythisurlbuilder #linkhovercolor,
-#docsifythisurlbuilder #coverpagecolor
+#docsifythisurlbuilder #coverpagecolor,
 #docsifythisurlbuilder #linkcolordarkmode,
 #docsifythisurlbuilder #linkhovercolordarkmode,
 #docsifythisurlbuilder #coverpagecolordarkmodep {
@@ -747,6 +828,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-top: 0.125rem !important;
   vertical-align: top !important;
   box-sizing: border-box !important;
+  border-radius: 8px;
 }
 
 /* Ensure stacked dropdowns align with adjacent inputs */
@@ -781,7 +863,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
 @media only screen and (max-width: 510px) {
   #docsifythisurlfield {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -839,21 +921,24 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 
 #docsifythisurlfield:focus {
   border-color: var(--dt-link-color) !important;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
-/* Select and input styling with dropdown indicators */
+/* Select and input styling with dropdown indicators - FIXED */
 select, input[type="text"], input[type="number"] {
   border: 1px solid var(--dt-border-color) !important;
-  background: var(--dt-bg-primary) !important;
+  background-color: var(--dt-bg-primary) !important;
   color: var(--dt-text-primary) !important;
   transition: all var(--dt-transition-fast);
   font-family: var(--dt-font-system);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
-/* Dropdown indicator for select elements */
+/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) - FIXED */
 select {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg ' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   background-position: right 8px center !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
@@ -861,31 +946,25 @@ select {
   appearance: none !important;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  select {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e2e8f0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
-  }
+  border-radius: 8px;
 }
 
 select:focus, input[type="text"]:focus, input[type="number"]:focus {
-  border-color: var(--dt-link-color) !important;
-  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
+  border-color: rgba(79, 70, 229, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
   outline: none !important;
 }
 
-/* Section headers in builder */
+/* Section headers in builder - Purple in both modes */
 #docsifythisurlbuilder h2 {
-  font-weight: 500;
   color: var(--dt-link-color);
+  letter-spacing: -0.02em;
 }
 
 #docsifythisurlbuilder h3, #docsifythisurlbuilder h3 a {
-  font-weight: 500;
-  margin-top: .75rem;
-  margin-bottom: 0.50rem;
-  color: var(--dt-link-color)!important;
+  color: var(--dt-link-color) !important;
+  letter-spacing: -0.02em;
 }
 
 /* Reset button styling */
@@ -895,12 +974,19 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   border: 1px solid var(--dt-border-color);
   padding: 8px 16px;
   border-radius: 8px;
-  font-weight: 400;
+  font-weight: 500;
   transition: all var(--dt-transition-fast);
+  font-family: var(--dt-font-system);
 }
 
 #docsifythisurlbuilderrestoredefaultsbutton input:hover {
   background: var(--dt-text-muted);
   color: white;
   transform: translateY(-1px);
+  box-shadow: var(--dt-shadow-hover);
+}
+
+/* Dark Mode - Headers now inherit purple from global rules above */
+@media (prefers-color-scheme: dark) {
+  /* No need for explicit header colors here - inherited from global rules */
 }
