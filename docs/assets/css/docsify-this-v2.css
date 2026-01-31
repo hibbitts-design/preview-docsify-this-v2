@@ -71,7 +71,7 @@
     background: #737985 !important;
   }
 
-  /* FIXED: Changed background to background-color so it doesn't override the SVG arrow */
+  /* Changed background to background-color so it doesn't override the SVG arrow */
   #docsifythisurlbuilder input[type="text"],
   #docsifythisurlbuilder input[type="url"],
   #docsifythisurlbuilder input[type="number"],
@@ -81,7 +81,7 @@
     border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* FIXED: Explicit dark mode select arrow with light color (#e2e8f0) */
+  /* Explicit dark mode select arrow with light color (#e2e8f0) */
   #docsifythisurlbuilder select,
   select {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e2e8f0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
@@ -120,7 +120,6 @@
   margin-bottom: 0.125rem;
 }
 
-/* CSS generated/assisted by Anthropic Claude AI */
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
@@ -342,9 +341,10 @@ input[type="checkbox"] {
   box-shadow: var(--dt-shadow) !important;
 }
 
-/* UPDATED: Purple headers in both light and dark mode for consistency */
+/* Slate-purple hybrid headers (88% slate, 12% purple) */
 #docsifythisurlbuilder h2 {
-  color: var(--dt-link-color);
+  color: #5a6070;
+  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-top: 0.5rem;
@@ -356,15 +356,19 @@ input[type="checkbox"] {
   margin-bottom: 0.75rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--dt-link-color) !important;
+  color: #5a6070;
+  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
 }
 
 #docsifythisurlbuilder h3 a.anchor {
-  color: var(--dt-link-color) !important;
+  color: #5a6070;
+  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
 }
 
 #docsifythisurlbuilder h3 a.anchor:hover {
   text-decoration: none !important;
+  color: var(--dt-link-color) !important;
+  opacity: 0.9;
 }
 
 .docsifythiscustomdetails summary {
@@ -433,8 +437,8 @@ input[type="color"]:focus {
 }
 
 #docsifythisurlfield:focus {
-  border-color: var(--dt-link-color) !important;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
+  border-color: rgba(79, 70, 229, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08), 
               inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
@@ -488,21 +492,23 @@ input[type="color"]:focus {
   font-weight: 600;
   letter-spacing: -0.01em;
   border: none;
-  box-shadow: 0 1px 2px 0 rgba(22, 163, 74, 0.15), 
-              0 3px 6px 0 rgba(22, 163, 74, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(22, 163, 74, 0.1), 
+              0 4px 6px -1px rgba(22, 163, 74, 0.1),
+              0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  border-radius: 8px;
   -webkit-appearance: none;
   white-space: normal;
   overflow: visible;
   word-wrap: break-word;
   text-align: center;
   transform: translateY(0);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px 0 rgba(22, 163, 74, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(22, 163, 74, 0.25),
+              0 4px 6px -2px rgba(22, 163, 74, 0.1);
   filter: brightness(1.05);
 }
 
@@ -527,7 +533,7 @@ input[type="color"]:focus {
   font-weight: 600;
   letter-spacing: -0.01em;
   border: 1px solid rgba(79, 70, 229, 0.2);
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-appearance: none;
   white-space: normal;
   overflow: visible;
@@ -874,22 +880,30 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 #banner > div {
-  background: linear-gradient(135deg, #fefbf3 0%, #fef7e0 100%) !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 12px !important;
-  padding: 16px !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, rgba(254, 251, 243, 0.9) 0%, rgba(254, 247, 224, 0.9) 100%) !important;
+  border: 1px solid rgba(229, 231, 235, 0.5) !important;
+  border-radius: 16px !important;
+  padding: 20px 24px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 #banner a {
-  background: #fef3c7 !important;
+  background: rgba(254, 243, 199, 0.8) !important;
   color: #92400e !important;
-  border: 1px solid #e5d5b7 !important;
+  border: 1px solid rgba(226, 213, 183, 0.6) !important;
   border-radius: 8px !important;
   transition: all var(--dt-transition-fast);
-  padding: 6px 12px !important;
+  padding: 8px 16px !important;
   text-decoration: none !important;
   font-weight: 500 !important;
+}
+
+#banner a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(146, 64, 14, 0.15);
+  background: rgba(254, 243, 199, 1) !important;
 }
 
 /* Header improvements */
@@ -920,13 +934,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   transition: all var(--dt-transition-fast);
 }
 
-#docsifythisurlfield:focus {
-  border-color: var(--dt-link-color) !important;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
-              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
-}
-
-/* Select and input styling with dropdown indicators - FIXED */
+/* Select and input styling with dropdown indicators */
 select, input[type="text"], input[type="number"] {
   border: 1px solid var(--dt-border-color) !important;
   background-color: var(--dt-bg-primary) !important;
@@ -934,12 +942,13 @@ select, input[type="text"], input[type="number"] {
   transition: all var(--dt-transition-fast);
   font-family: var(--dt-font-system);
   border-radius: 8px;
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.04), 
+              0 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
-/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) - FIXED */
+/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) */
 select {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg ' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   background-position: right 8px center !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
@@ -955,17 +964,6 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
               inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
   outline: none !important;
-}
-
-/* Section headers in builder - Purple in both modes */
-#docsifythisurlbuilder h2 {
-  color: var(--dt-link-color);
-  letter-spacing: -0.02em;
-}
-
-#docsifythisurlbuilder h3, #docsifythisurlbuilder h3 a {
-  color: var(--dt-link-color) !important;
-  letter-spacing: -0.02em;
 }
 
 /* Reset button styling */
@@ -987,7 +985,44 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   box-shadow: var(--dt-shadow-hover);
 }
 
-/* Dark Mode - Headers now inherit purple from global rules above */
+/* Dark Mode - Slate-purple hybrid headers with purple hint */
 @media (prefers-color-scheme: dark) {
-  /* No need for explicit header colors here - inherited from global rules */
+  #docsifythisurlbuilder h2,
+  #docsifythisurlbuilder h3,
+  #docsifythisurlbuilder h3 a,
+  #docsifythisurlbuilder h3 a.anchor {
+    color: #8585a3;
+    color: color-mix(in srgb, #94a3b8 90%, var(--dt-link-color) 10%);
+  }
+  
+  #docsifythisurlbuilder h3 a.anchor:hover {
+    color: var(--dt-link-color) !important;
+    opacity: 1;
+  }
+  
+  /* Dark glass effect for banner */
+  #banner > div {
+    background: linear-gradient(135deg, rgba(30, 30, 35, 0.8) 0%, rgba(45, 45, 50, 0.8) 100%) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  #banner a {
+    background: rgba(146, 64, 14, 0.3) !important;
+    color: #fcd34d !important;
+    border-color: rgba(146, 64, 14, 0.5) !important;
+  }
+  
+  #banner a:hover {
+    background: rgba(146, 64, 14, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input inner shadows for dark mode depth */
+  #docsifythisurlbuilder input[type="text"]:not(#docsifythisurlfield),
+  #docsifythisurlbuilder input[type="url"],
+  #docsifythisurlbuilder input[type="number"],
+  #docsifythisurlbuilder select {
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+                0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
 }
