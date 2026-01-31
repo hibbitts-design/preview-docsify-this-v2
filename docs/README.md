@@ -107,7 +107,7 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (at bottom of page by default)</label></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-right: -8px;"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (at bottom of page by default)</label></div>
 
 <div id="docsifythisurlbuildershowhidelink"><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
 
