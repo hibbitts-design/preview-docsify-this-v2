@@ -28,10 +28,10 @@ body {
 </div>
 
 <div id="banner">
-  <div style="background: #fdf4d3; border: 2px solid #f0e4b3; border-radius: 8px; padding: 12px; margin: 20px 0; display: flex; align-items: center; gap: 12px;">
-    <div style="flex: 1;">
-      <strong style="color: #8b6914; font-size: 17px;">This is a preview of Docsify-This v2.0</strong>
-      <div style="color: #666; margin-top: 2px; font-size: 16px; display: block;">
+  <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid #fcd34d; border-radius: 16px; padding: 20px 24px; margin: 24px 0; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.6);">
+    <div style="flex: 1; min-width: 0;">
+      <strong style="color: #92400e;">This is a preview of Docsify-This v2.0</strong>
+      <div style="color: #475569; margin-top: 2px; font-size: 18px; display: block;">
         <style>
           @media (max-width: 768px) {
             .hide-on-mobile {
@@ -39,10 +39,10 @@ body {
             }
           }
         </style>
-        <span class="hide-on-mobile">URLs generated here are temporary and will need to be updated when v2.0 is released.</span>
+        <span class="hide-on-mobile">Generated URLs are temporary and will need to be updated when v2.0 releases.</span>
       </div>
     </div>
-    <a href="https://docsify-this.net" style="background: #b8941f; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: normal; overflow-wrap: break-word; word-break: break-word;">Switch to v1.0</a>
+    <a href="https://docsify-this.net" style="background: #d97706; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.2s ease; flex-shrink: 0;">Switch to v1.0</a>
   </div>
 </div>
 
