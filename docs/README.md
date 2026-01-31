@@ -52,7 +52,7 @@ This open-source web app built with [Docsify](https://docsify.js.org), a magical
 
 <div id="docsifythisurlbuilder">
 
-<h2 style="margin-top:0px;">Web Page Builder</h2>
+## Web Page Builder
 
 <p style="margin-bottom:-8px;">Transform your online Markdown files into styled, responsive web pages using the form below. Share the resulting page as a standalone link or embed it into almost any platform.</p>
 

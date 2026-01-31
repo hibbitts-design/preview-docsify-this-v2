@@ -71,7 +71,7 @@
     background: #737985 !important;
   }
 
-  /* Changed background to background-color so it doesn't override the SVG arrow */
+  /* FIXED: Changed background to background-color so it doesn't override the SVG arrow */
   #docsifythisurlbuilder input[type="text"],
   #docsifythisurlbuilder input[type="url"],
   #docsifythisurlbuilder input[type="number"],
@@ -81,7 +81,7 @@
     border-color: rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* Explicit dark mode select arrow with light color (#e2e8f0) */
+  /* FIXED: Explicit dark mode select arrow with light color (#e2e8f0) */
   #docsifythisurlbuilder select,
   select {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e2e8f0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
@@ -120,6 +120,7 @@
   margin-bottom: 0.125rem;
 }
 
+/* CSS generated/assisted by Anthropic Claude AI */
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
@@ -341,12 +342,21 @@ input[type="checkbox"] {
   box-shadow: var(--dt-shadow) !important;
 }
 
-/* Slate-purple hybrid headers (88% slate, 12% purple) */
-#docsifythisurlbuilder h2 {
+/* UPDATED: Slate-purple hybrid headers (88% slate, 12% purple) - static, no hover effects */
+#docsifythisurlbuilder h2,
+#docsifythisurlbuilder h3,
+#docsifythisurlbuilder h2 a,
+#docsifythisurlbuilder h2 a.anchor,
+#docsifythisurlbuilder h3 a,
+#docsifythisurlbuilder h3 a.anchor {
   color: #5a6070;
   color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
   font-weight: 600;
   letter-spacing: -0.02em;
+  text-decoration: none !important;
+}
+
+#docsifythisurlbuilder h2 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -354,21 +364,19 @@ input[type="checkbox"] {
 #docsifythisurlbuilder h3 {
   margin-top: 1.5rem !important;
   margin-bottom: 0.75rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #5a6070;
-  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
 }
 
-#docsifythisurlbuilder h3 a.anchor {
-  color: #5a6070;
-  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%);
-}
-
+/* No hover effects - appearance stays identical */
+#docsifythisurlbuilder h2:hover,
+#docsifythisurlbuilder h3:hover,
+#docsifythisurlbuilder h2 a:hover,
+#docsifythisurlbuilder h2 a.anchor:hover,
+#docsifythisurlbuilder h3 a:hover,
 #docsifythisurlbuilder h3 a.anchor:hover {
+  color: #5a6070 !important;
+  color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%) !important;
   text-decoration: none !important;
-  color: var(--dt-link-color) !important;
-  opacity: 0.9;
+  opacity: 1 !important;
 }
 
 .docsifythiscustomdetails summary {
@@ -934,7 +942,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   transition: all var(--dt-transition-fast);
 }
 
-/* Select and input styling with dropdown indicators */
+/* Select and input styling with dropdown indicators - FIXED */
 select, input[type="text"], input[type="number"] {
   border: 1px solid var(--dt-border-color) !important;
   background-color: var(--dt-bg-primary) !important;
@@ -946,7 +954,7 @@ select, input[type="text"], input[type="number"] {
               0 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
-/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) */
+/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) - FIXED */
 select {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   background-position: right 8px center !important;
@@ -985,37 +993,53 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   box-shadow: var(--dt-shadow-hover);
 }
 
-/* Dark Mode - Slate-purple hybrid headers with purple hint */
+/* Light mode - more purple (80% slate, 20% purple) */
+#docsifythisurlbuilder h2,
+#docsifythisurlbuilder h3,
+#docsifythisurlbuilder h2 a,
+#docsifythisurlbuilder h2 a.anchor,
+#docsifythisurlbuilder h3 a,
+#docsifythisurlbuilder h3 a.anchor {
+  color: #5a6070;
+  color: color-mix(in srgb, #334155 75%, var(--dt-link-color) 25%);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none !important;
+}
+
+/* No hover effects - keep static */
+#docsifythisurlbuilder h2:hover,
+#docsifythisurlbuilder h3:hover,
+#docsifythisurlbuilder h2 a:hover,
+#docsifythisurlbuilder h2 a.anchor:hover,
+#docsifythisurlbuilder h3 a:hover,
+#docsifythisurlbuilder h3 a.anchor:hover {
+  color: #5a6070 !important;
+  color: color-mix(in srgb, #334155 75%, var(--dt-link-color) 25%) !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Dark mode - more purple (75% slate, 25% purple) */
 @media (prefers-color-scheme: dark) {
   #docsifythisurlbuilder h2,
+  #docsifythisurlbuilder h2 a,
+  #docsifythisurlbuilder h2 a.anchor,
   #docsifythisurlbuilder h3,
-  #docsifythisurlbuilder h3 a,
-  #docsifythisurlbuilder h3 a.anchor {
-    color: #8585a3;
-    color: color-mix(in srgb, #94a3b8 90%, var(--dt-link-color) 10%);
-  }
-  
+  #docsifythisurlbuilder h3 a, 
+  #docsifythisurlbuilder h3 a.anchor,
+  #docsifythisurlbuilder h2:hover,
+  #docsifythisurlbuilder h3:hover,
+  #docsifythisurlbuilder h2 a:hover,
+  #docsifythisurlbuilder h2 a.anchor:hover,
+  #docsifythisurlbuilder h3 a:hover,
   #docsifythisurlbuilder h3 a.anchor:hover {
-    color: var(--dt-link-color) !important;
-    opacity: 1;
+    color: #8585a3 !important; /* Add !important to override conflicts */
+    color: color-mix(in srgb, #94a3b8 75%, var(--dt-link-color) 25%) !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
   }
-  
-  /* Dark glass effect for banner */
-  #banner > div {
-    background: linear-gradient(135deg, rgba(30, 30, 35, 0.8) 0%, rgba(45, 45, 50, 0.8) 100%) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-  }
-  
-  #banner a {
-    background: rgba(146, 64, 14, 0.3) !important;
-    color: #fcd34d !important;
-    border-color: rgba(146, 64, 14, 0.5) !important;
-  }
-  
-  #banner a:hover {
-    background: rgba(146, 64, 14, 0.4) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
+}
   
   /* Input inner shadows for dark mode depth */
   #docsifythisurlbuilder input[type="text"]:not(#docsifythisurlfield),
