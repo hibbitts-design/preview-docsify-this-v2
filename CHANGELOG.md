@@ -34,7 +34,7 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.11.0] - XX/XX/2026
+## [1.11.0] - 02/01/2026
 
 **New:**
 * Add Inter font choice, which also enables rendering Grav CMS Helios page content with visual consistency
