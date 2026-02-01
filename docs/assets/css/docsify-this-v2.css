@@ -719,7 +719,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 #docsifythisurlbuilder #coverpagecolor,
 #docsifythisurlbuilder #linkcolordarkmode,
 #docsifythisurlbuilder #linkhovercolordarkmode,
-#docsifythisurlbuilder #coverpagecolordarkmodep {
+#docsifythisurlbuilder #coverpagecolordarkmode {
   margin-bottom: 0px;
 }
 
