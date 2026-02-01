@@ -3,7 +3,7 @@
 :root #docsifythis {
   /* Core brand color */
   --dt-accent-color: #16a34a;
-  
+
   /* Light theme colors */
   --dt-bg-primary: #ffffff;
   --dt-bg-secondary: #f1f5f9;
@@ -14,18 +14,18 @@
   --dt-border-color: #e8eaed;
   --dt-border-strong: #374151;
   --dt-link-color: #4f46e5;
-  --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 
-               0 1px 3px 0 rgba(0, 0, 0, 0.05), 
-               0 4px 8px -2px rgba(0, 0, 0, 0.04);
-  --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
-                     0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  
+  --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+    0 1px 3px 0 rgba(0, 0, 0, 0.05),
+    0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
   /* Typography improvements */
   --dt-font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --dt-letter-spacing-tight: -0.025em;
   --dt-letter-spacing-normal: 0;
   --dt-letter-spacing-wide: 0.025em;
-  
+
   /* Transition speeds */
   --dt-transition-fast: 0.15s ease-out;
 
@@ -41,10 +41,10 @@
     --dt-text-muted: #94a3b8;
     --dt-border-color: #3c4043;
     --dt-border-strong: #4b5563;
-    --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 
-                 0 4px 8px -2px rgba(0, 0, 0, 0.3);
-    --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
-                       0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    --dt-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
+      0 4px 8px -2px rgba(0, 0, 0, 0.3);
+    --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+      0 10px 15px -3px rgba(0, 0, 0, 0.4);
     --dt-link-color: #818cf8;
   }
 
@@ -58,20 +58,19 @@
 
   #docsifythisurlbuilder {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; 
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 
-                0 4px 20px -4px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04),
+      0 4px 20px -4px rgba(0, 0, 0, 0.5) !important;
   }
 
   #docsifythisurlbuilder input[type="checkbox"] {
     border-color: #737985 !important;
   }
-  
+
   input.toggle:where([type=checkbox], [type=radio]):before {
     background: #737985 !important;
   }
 
-  /* FIXED: Changed background to background-color so it doesn't override the SVG arrow */
   #docsifythisurlbuilder input[type="text"],
   #docsifythisurlbuilder input[type="url"],
   #docsifythisurlbuilder input[type="number"],
@@ -120,12 +119,13 @@
   margin-bottom: 0.125rem;
 }
 
-/* CSS generated/assisted by Anthropic Claude AI */
+/* CSS originally generated/assisted by Anthropic Claude AI */
 /* --- Global transitions --- */
 #docsifythisurlbuilder a,
 #docsifythisurlbuilder button {
   transition: background-color var(--dt-transition-fast), color var(--dt-transition-fast), border-color var(--dt-transition-fast), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
 #docsifythisurlbuilder input[type="color"],
@@ -134,7 +134,8 @@
 #docsifythisurlbuilder select {
   transition: border-color var(--dt-transition-fast), box-shadow var(--dt-transition-fast), transform 0.2s ease;
 }
-[type="radio"] + img,
+
+[type="radio"]+img,
 input[type="checkbox"] {
   transition: opacity var(--dt-transition-fast), transform var(--dt-transition-fast), filter 0.2s ease;
 }
@@ -155,34 +156,35 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-/* CSS generated/assisted by Anthropic Claude AI */
+/* CSS originally generated/assisted by Anthropic Claude AI */
 @media screen and (max-width: 768px) {
+
   /* FALLBACK: For browsers that don't support :has() */
   .stackedlabeldropdown[data-fontsize="true"] {
     display: block;
     clear: both;
     margin-top: 10px;
   }
-  
+
   .stackedlabeldropdown[data-lineheight="true"] {
     display: inline-block;
     margin-left: 15px;
     margin-top: 0;
   }
-  
+
   /* MODERN: For browsers that support :has() */
   .stackedlabeldropdown:has(label[for="fontsize"]) {
     display: block;
     clear: both;
     margin-top: 10px;
   }
-  
+
   .stackedlabeldropdown:has(label[for="lineheight"]) {
     display: inline-block;
     margin-left: 15px;
     margin-top: 0;
   }
-  
+
   .stackedlabeldropdown select {
     width: auto !important;
     max-width: none !important;
@@ -202,8 +204,8 @@ input[type="checkbox"] {
   opacity: 1;
 }
 
-.markdown-section .docsify-copy-code-button > .error,
-.markdown-section .docsify-copy-code-button > .success {
+.markdown-section .docsify-copy-code-button>.error,
+.markdown-section .docsify-copy-code-button>.success {
   padding: 0.2em 0.35em;
   font-size: 0.8em;
 }
@@ -342,7 +344,6 @@ input[type="checkbox"] {
   box-shadow: var(--dt-shadow) !important;
 }
 
-/* UPDATED: Slate-purple hybrid headers (88% slate, 12% purple) - static, no hover effects */
 #docsifythisurlbuilder h2,
 #docsifythisurlbuilder h3,
 #docsifythisurlbuilder h2 a,
@@ -428,8 +429,8 @@ input[type="url"]:focus,
 input[type="color"]:focus {
   outline: none;
   border-color: rgba(79, 70, 229, 0.4);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
-              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 #docsifythisurlfield {
@@ -446,8 +447,8 @@ input[type="color"]:focus {
 
 #docsifythisurlfield:focus {
   border-color: rgba(79, 70, 229, 0.6) !important;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08), 
-              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
 #docsifythisurlbuilder #browserTabTitle {
@@ -500,9 +501,9 @@ input[type="color"]:focus {
   font-weight: 600;
   letter-spacing: -0.01em;
   border: none;
-  box-shadow: 0 1px 2px 0 rgba(22, 163, 74, 0.1), 
-              0 4px 6px -1px rgba(22, 163, 74, 0.1),
-              0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  box-shadow: 0 1px 2px 0 rgba(22, 163, 74, 0.1),
+    0 4px 6px -1px rgba(22, 163, 74, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   border-radius: 8px;
   -webkit-appearance: none;
   white-space: normal;
@@ -516,7 +517,7 @@ input[type="color"]:focus {
 #docsifythisurlbuilder .docsifythisurlbuilderprimarybutton:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px -5px rgba(22, 163, 74, 0.25),
-              0 4px 6px -2px rgba(22, 163, 74, 0.1);
+    0 4px 6px -2px rgba(22, 163, 74, 0.1);
   filter: brightness(1.05);
 }
 
@@ -624,8 +625,8 @@ input[type="color"]:focus {
 #docsifythisurlbuilder input[type="number"]:focus {
   outline: none;
   border-color: rgba(79, 70, 229, 0.4);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
-              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 #docsifythisurlbuilder figcaption {
@@ -830,11 +831,11 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 #docsifythisurlbuilder #fontPreview {
-  margin-top: 2px!important;
+  margin-top: 2px !important;
 }
 
 
-/* Align form elements horizontally - override inline styles */
+/* Align form elements horizontally */
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
 #docsifythisurlbuilder input[type="color"],
@@ -887,7 +888,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin: 20px 0;
 }
 
-#banner > div {
+#banner>div {
   background: linear-gradient(135deg, rgba(254, 251, 243, 0.9) 0%, rgba(254, 247, 224, 0.9) 100%) !important;
   border: 1px solid rgba(229, 231, 235, 0.5) !important;
   border-radius: 16px !important;
@@ -942,19 +943,21 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   transition: all var(--dt-transition-fast);
 }
 
-/* Select and input styling with dropdown indicators - FIXED */
-select, input[type="text"], input[type="number"] {
+/* Select and input styling with dropdown indicators */
+select,
+input[type="text"],
+input[type="number"] {
   border: 1px solid var(--dt-border-color) !important;
   background-color: var(--dt-bg-primary) !important;
   color: var(--dt-text-primary) !important;
   transition: all var(--dt-transition-fast);
   font-family: var(--dt-font-system);
   border-radius: 8px;
-  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.04), 
-              0 1px 0 0 rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.04),
+    0 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
-/* Dropdown indicator for select elements - Light mode (dark gray arrow #334155) - FIXED */
+/* Dropdown indicator for select elements */
 select {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   background-position: right 8px center !important;
@@ -967,10 +970,12 @@ select {
   border-radius: 8px;
 }
 
-select:focus, input[type="text"]:focus, input[type="number"]:focus {
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
   border-color: rgba(79, 70, 229, 0.4) !important;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08), 
-              inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.02) !important;
   outline: none !important;
 }
 
@@ -993,7 +998,7 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   box-shadow: var(--dt-shadow-hover);
 }
 
-/* Light mode - more purple (80% slate, 20% purple) */
+/* Light mode */
 #docsifythisurlbuilder h2,
 #docsifythisurlbuilder h3,
 #docsifythisurlbuilder h2 a,
@@ -1020,13 +1025,14 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   opacity: 1 !important;
 }
 
-/* Dark mode - more purple (75% slate, 25% purple) */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
+
   #docsifythisurlbuilder h2,
   #docsifythisurlbuilder h2 a,
   #docsifythisurlbuilder h2 a.anchor,
   #docsifythisurlbuilder h3,
-  #docsifythisurlbuilder h3 a, 
+  #docsifythisurlbuilder h3 a,
   #docsifythisurlbuilder h3 a.anchor,
   #docsifythisurlbuilder h2:hover,
   #docsifythisurlbuilder h3:hover,
@@ -1034,19 +1040,19 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
   #docsifythisurlbuilder h2 a.anchor:hover,
   #docsifythisurlbuilder h3 a:hover,
   #docsifythisurlbuilder h3 a.anchor:hover {
-    color: #8585a3 !important; /* Add !important to override conflicts */
+    color: #8585a3 !important;
     color: color-mix(in srgb, #94a3b8 75%, var(--dt-link-color) 25%) !important;
     text-decoration: none !important;
     opacity: 1 !important;
   }
 }
-  
-  /* Input inner shadows for dark mode depth */
-  #docsifythisurlbuilder input[type="text"]:not(#docsifythisurlfield),
-  #docsifythisurlbuilder input[type="url"],
-  #docsifythisurlbuilder input[type="number"],
-  #docsifythisurlbuilder select {
-    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2),
-                0 1px 0 0 rgba(255, 255, 255, 0.05);
-  }
+
+/* Input inner shadows for dark mode depth */
+#docsifythisurlbuilder input[type="text"]:not(#docsifythisurlfield),
+#docsifythisurlbuilder input[type="url"],
+#docsifythisurlbuilder input[type="number"],
+#docsifythisurlbuilder select {
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+    0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
 }
