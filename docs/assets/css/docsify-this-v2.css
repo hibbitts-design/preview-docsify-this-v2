@@ -97,7 +97,7 @@
 }
 
 #docsifythis p {
-  line-height: 1.65;
+  line-height: 1.5;
   letter-spacing: var(--dt-letter-spacing-normal);
   margin-bottom: .5rem;
   color: var(--dt-text-secondary);
