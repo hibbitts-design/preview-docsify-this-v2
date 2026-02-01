@@ -39,7 +39,7 @@ body {
             }
           }
         </style>
-        <span class="hide-on-mobile">Generated URLs are temporary and will need to be updated when v2.0 releases.</span>
+        <span class="hide-on-mobile">Preview URLs are temporary and will need to be updated when v2.0 releases.</span>
       </div>
     </div>
     <a href="https://docsify-this.net" style="background: #d97706; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.2s ease; flex-shrink: 0;">Switch to v1.0</a>
