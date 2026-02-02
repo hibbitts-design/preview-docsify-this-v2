@@ -28,10 +28,10 @@ body {
 </div>
 
 <div id="banner">
-  <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid #fcd34d; border-radius: 16px; padding: 20px 24px; margin: 24px 0; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.6);">
+  <div style="background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%); border: 1px solid #e7e5e4; border-radius: 16px; padding: 20px 24px; margin: 24px 0; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.6);">
     <div style="flex: 1; min-width: 0;">
       <strong style="color: #92400e;">This is a preview of Docsify-This v2.0</strong>
-      <div style="color: #475569; margin-top: 2px; font-size: 18px; display: block;">
+      <div style="color: #57534e; margin-top: 2px; font-size: 18px; display: block;">
         <style>
           @media (max-width: 768px) {
             .hide-on-mobile {
