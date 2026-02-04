@@ -295,15 +295,19 @@ input[type="checkbox"] {
   margin-top: 2px;
 }
 
+.docsifythisheader .logoandtext {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .docsifythisheader .logoandtext img {
-  float: left;
   height: 54px;
-  vertical-align: middle;
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }
 
-.docsifythisheader .logoandtext img:hover {
+#docsifythis .docsifythisheader .logoandtext img:hover {
   opacity: 1;
 }
 
@@ -868,13 +872,17 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 @media only screen and (max-width: 480px) {
-  .docsifythisheader .logoandtext h1 {
-    font-size: 1.8rem !important;
-    line-height: 35px !important;
+  #docsifythis .docsifythisheader .logoandtext h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
   .docsifythisheader .logoandtext img {
     height: 35px;
+  }
+  
+  .docsifythisheader .logoandtext {
+    gap: 6px; 
   }
 }
 
