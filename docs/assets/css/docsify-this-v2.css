@@ -22,8 +22,8 @@
     0 10px 15px -3px rgba(0, 0, 0, 0.05);
 
   /* Card specific - for high contrast */
-  --dt-card-bg: #fafaf9;
-  --dt-card-bg-dark: #262626;
+  --dt-card-bg: #fafbfc;
+  --dt-card-bg-dark: #18181b;
   --dt-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 
                     0 4px 16px rgba(0, 0, 0, 0.03);
   --dt-card-shadow-dark: 0 4px 24px rgba(0, 0, 0, 0.4);
