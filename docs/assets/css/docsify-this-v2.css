@@ -21,6 +21,13 @@
   --dt-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
     0 10px 15px -3px rgba(0, 0, 0, 0.05);
 
+  /* Card specific - for high contrast */
+  --dt-card-bg: #fafaf9;
+  --dt-card-bg-dark: #262626;
+  --dt-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 
+                    0 4px 16px rgba(0, 0, 0, 0.03);
+  --dt-card-shadow-dark: 0 4px 24px rgba(0, 0, 0, 0.4);
+
   /* Typography improvements */
   --dt-font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --dt-letter-spacing-tight: -0.025em;
@@ -55,13 +62,6 @@
   #docsifythis summary,
   #docsifythis .copy-link {
     color: #1ba1ee;
-  }
-
-  #docsifythisurlbuilder {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04),
-      0 4px 20px -4px rgba(0, 0, 0, 0.5) !important;
   }
 
   #docsifythisurlbuilder input[type="checkbox"] {
@@ -344,9 +344,9 @@ input[type="checkbox"] {
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
-  background: var(--dt-bg-secondary);
+  background: var(--dt-card-bg);  /* Changed from var(--dt-bg-secondary) */
   border: 1px solid var(--dt-border-color) !important;
-  box-shadow: var(--dt-shadow) !important;
+  box-shadow: var(--dt-card-shadow) !important;  /* Changed from var(--dt-shadow) */
 }
 
 #docsifythisurlbuilder h2,
@@ -447,6 +447,7 @@ input[type="color"]:focus {
   border-radius: 12px !important;
   border-width: 2px !important;
   border-color: rgba(148, 163, 184, 0.4) !important;
+  background-color: var(--dt-bg-primary) !important;
   letter-spacing: -0.01em;
 }
 
@@ -968,7 +969,7 @@ input[type="number"] {
 
 /* Dropdown indicator for select elements */
 select {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg ' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23334155' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   background-position: right 8px center !important;
   background-repeat: no-repeat !important;
   background-size: 16px !important;
@@ -1037,6 +1038,12 @@ input[type="number"]:focus {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
 
+  #docsifythisurlbuilder {
+    background: var(--dt-card-bg-dark);
+    border: 1px solid var(--dt-border-color) !important;
+    box-shadow: var(--dt-card-shadow-dark) !important;
+  }
+
   #docsifythisurlbuilder h2,
   #docsifythisurlbuilder h2 a,
   #docsifythisurlbuilder h2 a.anchor,
@@ -1063,5 +1070,4 @@ input[type="number"]:focus {
 #docsifythisurlbuilder select {
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2),
     0 1px 0 0 rgba(255, 255, 255, 0.05);
-}
 }
