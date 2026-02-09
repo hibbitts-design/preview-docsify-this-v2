@@ -476,6 +476,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 ### [6. Support and Policies](/?id=_6-support-and-policies)
 
 - [Privacy Policy Summary](/?id=privacy-policy-summary)
+- [Content Responsibility](/?id=content-responsibility)
 - [Contact and Support](/?id=contact-and-support)
 
 </div>
@@ -2547,6 +2548,7 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 ### 6. Support and Policies
 
 - [Privacy Policy Summary](#privacy-policy-summary)
+- [Content Responsibility](#content-responsibility)
 - [Contact and Support](#contact-and-support)
 
 ---
@@ -2560,6 +2562,12 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - The open source JavaScript tools [Mermaid](https://mermaid.js.org/) and [MathJax](https://www.mathjax.org/) are automatically loaded via [jsDelivr](https://www.jsdelivr.com/terms) when displaying remote Markdown files
 - The web service [Hypothes.is](https://web.hypothes.is/privacy/) is only loaded if chosen when displaying remote Markdown files
 - The web service [Embed.ly](https://embed.ly/legal/privacy) is only loaded if [Embedly Card](https://embed.ly/cards) elements are present in remote Markdown files
+
+---
+
+#### Content Responsibility
+
+**You are solely responsible for content you display via this service.** Docsify-This renders content from URLs you provide but does not host, store, or control that content. Do not use this service to display illegal content. To report problematic content, contact the platform hosting the displayed source content.
 
 ---
 
