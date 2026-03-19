@@ -1326,18 +1326,14 @@
                 fileExt = getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true));
               }
 
+              /* Javascript generated/assisted by Anthropic Claude AI */
               // PATCH START: Workaround for Docsify upstream bug - relative path handling in sub-documents
               // Bug report: https://github.com/docsifyjs/docsify/issues/2430
               // Mirrors Docsify's own 'relativePath' config option name — enable with URL parameter: ?relative-paths=true
               // When fixed upstream, remove all PATCH blocks and restore the original lastSegment line in Block 2
               var useRelativePaths = new URLSearchParams(window.location.search).get('relative-paths') === 'true';
-              // PATCH END
-
-              // PATCH START: Workaround for Docsify upstream bug - relative path handling in sub-documents
-              // Bug report: https://github.com/docsifyjs/docsify/issues/2430
               // currentPageDir defaults to '' — when ?relative-paths=true is not set, prepending '' is a no-op
               // Hash is empty on initial load when sidebar is processed, so sidebar links are always unaffected
-
               // Default to empty string so Block 2 normalization is safe to run for everyone
               var currentPageDir = '';
               if (useRelativePaths) {
