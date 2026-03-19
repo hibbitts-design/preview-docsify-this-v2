@@ -401,6 +401,8 @@ Page layout:
 
 <div id="docsifythisurlbuilderrestoredefaultsbutton"><input style="border-color: #8e8f9d; white-space: normal; overflow-wrap: break-word; word-break: break-word;" type="button" id="btn_4" value="Reset to Defaults" onclick="restoreAllDefaults()"/></div>
 
+<input type="checkbox" id="relative-paths" name="relative-paths" style="display:none;">
+
 </div>
 
 </div>
