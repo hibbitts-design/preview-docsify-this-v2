@@ -683,11 +683,6 @@
             }
           }
 
-          var getRelativePaths = document.getElementById("relative-paths");
-          if (getRelativePaths.checked) {
-            var URLparms = URLparms + '&relative-paths=true';
-          }
-
           const parts = url.split(/[?&]/);
           let queryString = '';
           if (parts.length > 1) {
@@ -2238,11 +2233,6 @@
               document.getElementById('coverpagecolordarkmode').value = coverpagecolordarkmode;
               document.getElementById("coverpagecolordarkmodepreview").style.borderColor = coverpagecolordarkmode;
               document.getElementById("coverpagecolordarkmodepreview").style.backgroundColor = coverpagecolordarkmode;
-            }
-
-            relativePaths = getURLParameterByName(['relative-paths', 'relativePaths'], null, null, window.location.href, true);
-            if (relativePaths) {
-              document.getElementById('relative-paths').checked = true;
             }
 
             if (!(getURLParameterByName('id'))) {
