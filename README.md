@@ -62,7 +62,6 @@
   </tr>
 </table>
 
-
 Content stays in the Markdown files you already have, wherever they are hosted. Publish as standalone pages or embed into Canvas, Moodle, WordPress, or almost any platform – one source, many destinations.
 
 </div>
