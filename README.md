@@ -5,10 +5,13 @@
 | ⚠️  | **This is a preview-only repository. View the main project repository at https://github.com/hibbitts-design/docsify-this.** |
 | --- | :-------------------------------------------------------------------------------------------------------------------------- |
 
+</div>
 
 # Docsify-This
 
 <p><em>Instantly publish Markdown files as styled web pages – no setup or hosting required.</em></p>
+
+<div style="display:none;">
 
 [![Docsify Discord Chat](https://img.shields.io/discord/713647066802421792.svg?logo=discord&colorB=7289DA&label=Docsify%20Discord%20Chat)](https://discord.gg/docsify) [![GitHub Stars](https://img.shields.io/github/stars/hibbitts-design/docsify-this?style=flat-square&logo=github&logoColor=white&label=Stars)](https://github.com/hibbitts-design/docsify-this) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/docsify-this?style=flat-square&label=Release)](https://github.com/hibbitts-design/docsify-this/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/docsify-this/blob/main/LICENSE)
 
