@@ -95,8 +95,6 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 
 ## Everything You Need to Know about Docsify-This
 
-<div style="display: none;">
-
 <h3><a href="#1-introduction-and-overview-1">1. Introduction and Overview</a></h3>
 <ul>
   <li><a href="#what-problem-does-docsify-this-solve">What Problem Does Docsify-This Solve?</a></li>
