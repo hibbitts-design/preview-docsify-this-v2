@@ -453,7 +453,7 @@ input[type="color"]:focus {
 #docsifythisurlfield {
   width: 100%;
   vertical-align: middle;
-  min-height: 100px;
+  min-height: 64px;
   padding: min(15px, 5%) min(15px, 5%);
   font-size: 22px;
   border-radius: 12px !important;
@@ -461,6 +461,12 @@ input[type="color"]:focus {
   border-color: rgba(148, 163, 184, 0.4) !important;
   background-color: var(--dt-bg-primary) !important;
   letter-spacing: -0.01em;
+}
+
+@supports (-moz-appearance: none) {
+  #docsifythisurlfield {
+    min-height: 100px;
+  }
 }
 
 #docsifythisurlfield:focus {
