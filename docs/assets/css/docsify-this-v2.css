@@ -453,7 +453,7 @@ input[type="color"]:focus {
 #docsifythisurlfield {
   width: 100%;
   vertical-align: middle;
-  min-height: 64px;
+  min-height: 100px;
   padding: min(15px, 5%) min(15px, 5%);
   font-size: 22px;
   border-radius: 12px !important;
