@@ -20,6 +20,8 @@
 }
 .markdown-section {
   flex: 1 1 0%;
+  min-width: 0;
+  max-width: var(--content-max-width, 840px);
   margin-left: 20px; /* DOCSIFY v5 */
   margin-right: 20px; /* DOCSIFY v5 */
 }
@@ -125,6 +127,8 @@ aside.nav.nothing {
   }
   .markdown-section {
     margin: 0 auto;
+    min-width: 0;
+    max-width: var(--content-max-width, 840px);
   }
 }
 
