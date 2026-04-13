@@ -30,9 +30,20 @@
 * Added variable for applying Docsify v5 core theme defaults
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
 * Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
+* Move responsive table layout to core CSS so tables render correctly
+* Improve toc and toc-narrow display
 
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
+
+## [1.11.2] - XX/XX/2026
+
+**Improved:**
+* Updated ReadMe
+
+**Bugfix:**
+* Workaround for Docsify upstream bug - relative path handling in sub-documents (`relative-paths=true`)
+* Skip currentPageDir prefix for root-anchored links starting with #/ (i.e. ToC links)
 
 ## [1.11.1] - 03/17/2026☘️
 
