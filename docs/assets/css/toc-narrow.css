@@ -43,7 +43,7 @@ aside.nav.nothing {
   padding-left: 5px;
   position: -webkit-sticky;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 100vh;
   top: 0;
   bottom: auto;
@@ -126,9 +126,12 @@ aside.nav.nothing {
     padding-right: 0;
   }
   .markdown-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
-    min-width: 0;
-    max-width: var(--content-max-width, 840px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
