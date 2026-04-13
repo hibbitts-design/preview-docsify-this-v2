@@ -647,6 +647,57 @@ aside#__sidebar:has(.sidebar-nav > [class*="card-image-sidebar"]:first-child) .a
   }
 }
 
+/* Responsive table layout - desktop */
+.markdown-section .table-wrapper td::before {
+    display: none;
+}
+
+/* Responsive table layout - mobile */
+@media (max-width: 30em) {
+    .markdown-section .table-wrapper tbody,
+    .markdown-section .table-wrapper tr,
+    .markdown-section .table-wrapper td {
+        display: block;
+    }
+
+    .markdown-section .table-wrapper th {
+        display: none;
+    }
+
+    .markdown-section .table-wrapper th,
+    .markdown-section .table-wrapper td {
+        border: none;
+    }
+
+    .markdown-section .table-wrapper td {
+        padding: .35em 0 .35em 8em;
+        position: relative;
+        text-align: left !important;
+    }
+
+    .markdown-section .table-wrapper td:first-child {
+        padding-top: .7em;
+    }
+
+    .markdown-section .table-wrapper td:last-child {
+        padding-bottom: .7em;
+    }
+
+    .markdown-section .table-wrapper td::before {
+        display: inline-block;
+        float: left;
+        width: 8em;
+        margin-left: -8em;
+        padding-left: 0.5em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .markdown-section .table-wrapper td:empty::before {
+        display: none;
+    }
+}
+
 /* CSS generated/assisted by Anthropic Claude AI */
 .markdown-section .card-list {
   display: grid;

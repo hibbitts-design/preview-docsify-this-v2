@@ -153,7 +153,7 @@
     }
 
     if (((getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) && (getURLParameterByName('basePath'))) {
-      document.querySelectorAll('style').forEach(style => style.remove());
+      document.querySelectorAll('link[href*="theme.css"]').forEach(el => el.remove());
       const body = document.body;
       // body.classList.add('sidebar-group-box');
     } else {
@@ -1366,8 +1366,8 @@
                   // Skip for in-page anchor links (e.g. '?id=my-heading') — those don't need correction
 
                   // Only treat as relative if the href did NOT start with '#/'
-                  const isAbsolute = href.startsWith('#/');
-                  const fullPath = (linkPath.startsWith('?id') || isAbsolute)
+                  const alreadyAbsolute = currentPageDir && linkPath.startsWith(currentPageDir);
+                  const fullPath = (linkPath.startsWith('?id') || alreadyAbsolute)
                     ? linkPath
                     : currentPageDir + linkPath;
 
