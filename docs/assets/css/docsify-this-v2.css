@@ -62,6 +62,7 @@
   #docsifythis summary,
   #docsifythis .copy-link {
     color: var(--dt-link-color);
+    text-decoration-color: var(--dt-link-color);
   }
 
   #docsifythisurlbuilder input[type="checkbox"] {
