@@ -1173,7 +1173,7 @@
       ext: getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true)),
       executeScript: true,
       sidebarExpandCollapse: {
-        accordion: (getURLParameterByName('sidebarExpandCollapse.accordion') || true),
+        accordion: (getURLParameterByName(['sidebar-collapse', 'sidebarCollapse']) || true),
       },
 
       // SIDEBAR NAVIGATION
