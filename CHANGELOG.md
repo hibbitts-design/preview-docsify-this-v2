@@ -36,15 +36,19 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.11.2] - XX/XX/2026
+## [1.11.2] - 06/03/2026
+
+**New:**
+* Add llms.txt file to improve LLM knowledge of Docsify-This
 
 **Improved:**
 * Updated ReadMe
-* Enhance search results display with page grouping, section titles, smart deduplication, and keyboard navigation
+* Enhanced search results display with page grouping, section titles, smart deduplication, and keyboard navigation
 
 **Bugfix:**
 * Workaround for Docsify upstream bug - relative path handling in sub-documents (`relative-paths=true`)
 * Skip currentPageDir prefix for root-anchored links starting with #/ (i.e. ToC links)
+* Remove unused favicon link
 
 ## [1.11.1] - 03/17/2026☘️
 
