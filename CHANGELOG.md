@@ -5,19 +5,20 @@
 **New:**
 * Built with the modernized and refactored Docsify v5 platform
 * Adoption of Docsify v5's new theme system for enhanced customization and a modern user interface
-* Option to display pages using the new Docsify v5 core theme
 * Use of Marked.js v16+ (from Docsify v5) for markdown rendering, providing improved compatibility and rendering capabilities
+* Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
+* Option to display pages using the new Docsify v5 core theme
 * Refreshed Web Page Builder UI
 * Support of optional docsify-theme parameter (`docsify-theme=true`) to apply Docsify v5 core theme defaults
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
-* Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
 * Added support of optional sidebar-collapse parameter (`sidebar-collapse=true`) to make top-level sidebar sections collapsible
 
 **Improved:**
-* Updated ReadMe
 * Default font Source Sans Pro replaced with the latest version (Source Sans 3)
 * Removed unneeded legacy fonts
+* Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
+* Updated ReadMe
 * Overall refined visual layout of various Markdown elements
 * Skip-link to content button, accessible via tab key (now via Docsify v5)
 * Aria attributes for Sidebar toggle button and current page link (now via Docsify v5)
@@ -29,7 +30,6 @@
 * Improved search results, which exclude Markdown formatting syntax (via Docsify v5)
 * Added variable for applying Docsify v5 core theme defaults
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
-* Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
 * Move responsive table layout to core CSS so tables render correctly
 * Improve toc and toc-narrow display
 
