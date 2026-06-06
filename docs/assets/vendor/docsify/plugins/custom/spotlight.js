@@ -1,12 +1,26 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
 // Activate by adding &spotlight=true to any Docsify-This URL.
+// Configure which headings are spotlight-aware with &spotlight-headings=h2,h3
 
 (function() {
     'use strict';
 
     // Only run if the URL explicitly requests spotlight mode
     if (!location.search.includes('spotlight=true')) return;
+
+    // --- HEADING CONFIGURATION ---
+    // Parse spotlight-headings from URL, fallback to h2,h3
+    function getSpotlightHeadings() {
+        const match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
+        if (match) {
+            return decodeURIComponent(match[1]).split(',').map(h => h.trim().toLowerCase());
+        }
+        return ['h2', 'h3'];
+    }
+
+    const HEADING_TAGS = getSpotlightHeadings();
+    const HEADING_SELECTOR = HEADING_TAGS.join(',');
 
     let spotlightOn = true;
     const PADDING = 10;
@@ -117,7 +131,7 @@
         if (!id) return;
 
         const target = document.getElementById(id);
-        if (!target || (target.tagName !== 'H2' && target.tagName !== 'H3')) return;
+        if (!target || !HEADING_TAGS.includes(target.tagName.toLowerCase())) return;
         if (!hasAnchorLink(target)) return;
 
         e.preventDefault();
@@ -129,20 +143,14 @@
     }, true);
 
     // --- ANCHOR LINK DETECTION ---
-    // Only treat headings as navigable sections if they have an associated anchor link.
-    // This skips raw HTML headers used purely for formatting.
     function hasAnchorLink(heading) {
         if (!heading.id) return false;
-
-        // Anchor is typically a child <a> inside the heading (standard Docsify)
         if (heading.querySelector('a[href^="#"]')) return true;
 
-        // Some themes place the anchor as the immediately preceding sibling
         const prev = heading.previousElementSibling;
         if (prev && prev.tagName === 'A' && prev.getAttribute('href')?.includes(heading.id)) {
             return true;
         }
-
         return false;
     }
 
@@ -179,28 +187,36 @@
         let id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
 
         const el = id && document.getElementById(id);
-        if (el && (el.tagName === 'H2' || el.tagName === 'H3') && hasAnchorLink(el)) return el;
+        if (el && HEADING_TAGS.includes(el.tagName.toLowerCase()) && hasAnchorLink(el)) return el;
         return null;
     }
 
-    function getParentH2(h3) {
-        let prev = h3.previousElementSibling;
+    function getParentHeading(heading) {
+        const myLevel = parseInt(heading.tagName[1]);
+        let prev = heading.previousElementSibling;
         while (prev) {
-            if (prev.tagName === 'H2' && hasAnchorLink(prev)) return prev;
+            const prevLevel = parseInt(prev.tagName[1]);
+            if (HEADING_TAGS.includes(prev.tagName.toLowerCase()) && prevLevel < myLevel && hasAnchorLink(prev)) {
+                return prev;
+            }
             prev = prev.previousElementSibling;
         }
         return null;
     }
 
-    function getFirstH3(h2) {
-        let next = h2.nextElementSibling;
+    function getFirstChildHeading(heading) {
+        const myLevel = parseInt(heading.tagName[1]);
+        let next = heading.nextElementSibling;
         let paragraphs = 0;
-        while (next && next.tagName !== 'H2') {
-            if (next.tagName === 'H3' && hasAnchorLink(next)) {
-                return paragraphs <= 1 ? next : null;
-            }
+        while (next && !HEADING_TAGS.includes(next.tagName.toLowerCase())) {
             if (next.tagName === 'P') paragraphs++;
             next = next.nextElementSibling;
+        }
+        if (next && HEADING_TAGS.includes(next.tagName.toLowerCase())) {
+            const childLevel = parseInt(next.tagName[1]);
+            if (childLevel > myLevel && paragraphs <= 1 && hasAnchorLink(next)) {
+                return next;
+            }
         }
         return null;
     }
@@ -208,18 +224,14 @@
     function applySpotlight() {
         if (!spotlightOn) return;
 
-        // Only consider headings that have anchor links
-        const allHeadings = [...document.querySelectorAll('h2, h3')].filter(hasAnchorLink);
+        const allHeadings = [...document.querySelectorAll(HEADING_SELECTOR)].filter(hasAnchorLink);
         if (allHeadings.length === 0) return;
 
         const scrollPos = window.scrollY + window.innerHeight * 0.25;
 
-        // Start with the hash heading, but verify it still matches the scroll position
         let active = getHashHeading();
         const scrollActive = findActive(allHeadings, scrollPos);
 
-        // If the hash heading and scroll detection disagree, the user has scrolled
-        // away from the clicked section — trust the scroll position instead
         if (active && scrollActive && active !== scrollActive) {
             active = null;
         }
@@ -240,16 +252,19 @@
             });
         }
 
-        let parentH2 = null;
-        if (active.tagName === 'H3') parentH2 = getParentH2(active);
+        let parentHeading = null;
+        if (parseInt(active.tagName[1]) > 2) {
+            parentHeading = getParentHeading(active);
+        }
 
-        let firstH3 = null;
-        if (active.tagName === 'H2') firstH3 = getFirstH3(active);
+        let firstChild = null;
+        const child = getFirstChildHeading(active);
+        if (child) firstChild = child;
 
         sections.forEach(section => {
             const isActive = section.heading === active ||
-                             section.heading === parentH2 ||
-                             section.heading === firstH3;
+                             section.heading === parentHeading ||
+                             section.heading === firstChild;
 
             section.elements.forEach(el => {
                 el.classList.add(isActive ? 'section-focus' : 'section-dim');
