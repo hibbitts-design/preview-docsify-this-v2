@@ -1,6 +1,6 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
-// Activate by adding &spotlight=true to any Docsify-This URL
+// Activate by adding &spotlight=true to any Docsify-This URL.
 // Configure which headings are spotlight-aware with &spotlight-headings=h2,h3
 
 (function() {
@@ -21,6 +21,7 @@
 
     let spotlightOn = true;
     const PADDING = 10;
+    let ignoreNextHashchange = false;
 
     // --- STYLES ---
     const css = `
@@ -115,8 +116,7 @@
     });
 
     // --- INSTANT NAVIGATION ---
-    // Passive handler: scrolls to target and applies spotlight without
-    // interfering with Docsify's router or URL management.
+    // Intercept heading clicks to jump instantly without Docsify's smooth scroll
     window.addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (!link) return;
@@ -140,8 +140,17 @@
         if (!target || !HEADING_TAGS.includes(target.tagName.toLowerCase())) return;
         if (!hasAnchorLink(target)) return;
 
-        // Let Docsify handle the URL and routing; we only scroll and spotlight
+        // Block Docsify's smooth scroll and jump instantly
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
         window.scrollTo(0, target.offsetTop - PADDING);
+
+        // Update URL in Docsify's native hash format for reload support
+        const newUrl = location.pathname + location.search + '#/?id=' + id;
+        ignoreNextHashchange = true;
+        history.replaceState(null, null, newUrl);
+
         applySpotlight();
     }, true);
 
@@ -294,7 +303,11 @@
 
     // --- HASHCHANGE HANDLER ---
     window.addEventListener('hashchange', () => {
-        setTimeout(applySpotlight, 150);
+        if (ignoreNextHashchange) {
+            ignoreNextHashchange = false;
+            return;
+        }
+        setTimeout(applySpotlight, 50);
     });
 
     // --- DARK MODE ---
