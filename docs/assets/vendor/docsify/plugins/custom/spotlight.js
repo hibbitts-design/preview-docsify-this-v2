@@ -1,7 +1,6 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
 // Activate by adding &spotlight=true to any Docsify-This URL.
-// Assisted by Kimi (Moonshot AI)
 
 (function() {
     'use strict';
@@ -105,7 +104,6 @@
     });
 
     // --- INSTANT NAVIGATION ---
-    // Intercept in-page heading links for immediate spotlight update
     window.addEventListener('click', (e) => {
         const link = e.target.closest('a[href^="#"]');
         if (!link) return;
@@ -120,6 +118,7 @@
 
         const target = document.getElementById(id);
         if (!target || (target.tagName !== 'H2' && target.tagName !== 'H3')) return;
+        if (!hasAnchorLink(target)) return;
 
         e.preventDefault();
         e.stopPropagation();
@@ -128,6 +127,24 @@
         history.replaceState(null, null, href);
         applySpotlight();
     }, true);
+
+    // --- ANCHOR LINK DETECTION ---
+    // Only treat headings as navigable sections if they have an associated anchor link.
+    // This skips raw HTML headers used purely for formatting.
+    function hasAnchorLink(heading) {
+        if (!heading.id) return false;
+
+        // Anchor is typically a child <a> inside the heading (standard Docsify)
+        if (heading.querySelector('a[href^="#"]')) return true;
+
+        // Some themes place the anchor as the immediately preceding sibling
+        const prev = heading.previousElementSibling;
+        if (prev && prev.tagName === 'A' && prev.getAttribute('href')?.includes(heading.id)) {
+            return true;
+        }
+
+        return false;
+    }
 
     // --- SPOTLIGHT LOGIC ---
 
@@ -162,14 +179,14 @@
         let id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
 
         const el = id && document.getElementById(id);
-        if (el && (el.tagName === 'H2' || el.tagName === 'H3')) return el;
+        if (el && (el.tagName === 'H2' || el.tagName === 'H3') && hasAnchorLink(el)) return el;
         return null;
     }
 
     function getParentH2(h3) {
         let prev = h3.previousElementSibling;
         while (prev) {
-            if (prev.tagName === 'H2') return prev;
+            if (prev.tagName === 'H2' && hasAnchorLink(prev)) return prev;
             prev = prev.previousElementSibling;
         }
         return null;
@@ -179,7 +196,9 @@
         let next = h2.nextElementSibling;
         let paragraphs = 0;
         while (next && next.tagName !== 'H2') {
-            if (next.tagName === 'H3') return paragraphs <= 1 ? next : null;
+            if (next.tagName === 'H3' && hasAnchorLink(next)) {
+                return paragraphs <= 1 ? next : null;
+            }
             if (next.tagName === 'P') paragraphs++;
             next = next.nextElementSibling;
         }
@@ -189,12 +208,15 @@
     function applySpotlight() {
         if (!spotlightOn) return;
 
-        const headings = document.querySelectorAll('h2, h3');
+        // Only consider headings that have anchor links
+        const allHeadings = [...document.querySelectorAll('h2, h3')].filter(hasAnchorLink);
+        if (allHeadings.length === 0) return;
+
         const scrollPos = window.scrollY + window.innerHeight * 0.25;
 
         // Start with the hash heading, but verify it still matches the scroll position
         let active = getHashHeading();
-        const scrollActive = findActive(headings, scrollPos);
+        const scrollActive = findActive(allHeadings, scrollPos);
 
         // If the hash heading and scroll detection disagree, the user has scrolled
         // away from the clicked section — trust the scroll position instead
@@ -211,10 +233,10 @@
         clearSpotlight();
 
         const sections = [];
-        for (let i = 0; i < headings.length; i++) {
+        for (let i = 0; i < allHeadings.length; i++) {
             sections.push({
-                heading: headings[i],
-                elements: collectUntil(headings[i], headings[i + 1] || null)
+                heading: allHeadings[i],
+                elements: collectUntil(allHeadings[i], allHeadings[i + 1] || null)
             });
         }
 
@@ -285,7 +307,6 @@
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
         hook.doneEach(() => {
-            // Ensure button exists after each route change
             if (!document.getElementById('spotlight-toggle')) {
                 document.body.appendChild(btn);
             }
