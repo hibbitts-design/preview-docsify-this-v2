@@ -21,6 +21,7 @@
 
     let spotlightOn = true;
     const PADDING = 10;
+    const STORAGE_KEY = 'docsify-spotlight-scroll';
 
     // --- STYLES ---
     const css = `
@@ -117,6 +118,7 @@
 
     // --- INSTANT NAVIGATION ---
     // Intercepts heading anchor clicks for instant scroll without animation.
+    // Stores scroll position in sessionStorage for reload persistence.
     document.addEventListener('click', (e) => {
         let link = e.target.closest('a');
         let heading = null;
@@ -158,6 +160,17 @@
         // Stop browser default AND Docsify's handler
         e.preventDefault();
         e.stopPropagation();
+
+        // Store scroll position for reload persistence
+        try {
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
+                id: id,
+                y: targetY,
+                url: location.href
+            }));
+        } catch (e) {
+            // Storage may be unavailable (private mode, etc.)
+        }
 
         // Instant scroll to target
         window.scrollTo(0, targetY);
@@ -363,6 +376,33 @@
         snap();
     }
 
+    // --- RESTORE SCROLL POSITION ---
+    // Restores scroll position from sessionStorage after page load/reload.
+    function restoreScrollPosition() {
+        try {
+            const stored = sessionStorage.getItem(STORAGE_KEY);
+            if (!stored) return;
+
+            const data = JSON.parse(stored);
+            // Only restore if URL matches (prevents restoring across different pages)
+            if (data.url && data.url.split('#')[0] === location.href.split('#')[0]) {
+                if (data.id) {
+                    const target = document.getElementById(data.id);
+                    if (target) {
+                        const targetY = Math.round(target.getBoundingClientRect().top) + window.pageYOffset - PADDING;
+                        window.scrollTo(0, targetY);
+                        snapToTarget(targetY, 600);
+                    }
+                } else if (data.y !== undefined) {
+                    window.scrollTo(0, data.y);
+                    snapToTarget(data.y, 600);
+                }
+            }
+        } catch (e) {
+            // Storage may be unavailable or data invalid
+        }
+    }
+
     // --- DOCSIFY PLUGIN HOOK ---
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
@@ -371,14 +411,8 @@
                 document.body.appendChild(btn);
             }
             updateTheme();
-            // Handle initial page load with hash - instant scroll to target
-            const hashTarget = getHashHeading();
-            if (hashTarget) {
-                const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                window.scrollTo(0, targetY);
-                // Snap for 600ms to override Docsify's smooth scroll
-                snapToTarget(targetY, 600);
-            }
+            // Restore scroll position from previous session
+            restoreScrollPosition();
             applySpotlight();
         });
 
@@ -386,14 +420,8 @@
             if (!document.getElementById('spotlight-toggle')) {
                 document.body.appendChild(btn);
             }
-            // Handle page navigation with hash - instant scroll to target
-            const hashTarget = getHashHeading();
-            if (hashTarget) {
-                const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                window.scrollTo(0, targetY);
-                // Snap for 600ms to override Docsify's smooth scroll
-                snapToTarget(targetY, 600);
-            }
+            // Restore scroll position after page navigation
+            restoreScrollPosition();
             applySpotlight();
             updateTheme();
         });
