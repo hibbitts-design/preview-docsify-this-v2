@@ -7,18 +7,22 @@
 (function() {
     'use strict';
 
-    if (!location.search.includes('spotlight=true')) return;
+    if (location.search.indexOf('spotlight=true') === -1) return;
 
-    // --- INSTANT SCROLL OVERRIDE ---
-    // Docsify uses scrollIntoView for anchor navigation. We force it to
-    // 'auto' behavior so jumps are instant, without touching any URLs,
-    // click events, or other navigation mechanisms.
+    // --- INSTANT SCROLL OVERRIDES ---
+    // Force all programmatic scrolling to be instant. We clone option objects
+    // so we never mutate arguments that callers might reuse.
     try {
         var origScrollIntoView = Element.prototype.scrollIntoView;
         Element.prototype.scrollIntoView = function() {
             var args = Array.prototype.slice.call(arguments);
             if (args.length > 0 && typeof args[0] === 'object' && args[0] !== null) {
-                args[0] = Object.assign({}, args[0], { behavior: 'auto' });
+                var opts = {};
+                for (var key in args[0]) {
+                    if (args[0].hasOwnProperty(key)) opts[key] = args[0][key];
+                }
+                opts.behavior = 'auto';
+                args[0] = opts;
             }
             return origScrollIntoView.apply(this, args);
         };
@@ -26,11 +30,46 @@
         if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: scrollIntoView patch failed', e);
     }
 
+    try {
+        var origScrollTo = window.scrollTo;
+        window.scrollTo = function(x, y) {
+            if (typeof x === 'object' && x !== null) {
+                var opts = {};
+                for (var key in x) {
+                    if (x.hasOwnProperty(key)) opts[key] = x[key];
+                }
+                opts.behavior = 'auto';
+                return origScrollTo.call(window, opts);
+            }
+            return origScrollTo.call(window, x, y);
+        };
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: scrollTo patch failed', e);
+    }
+
+    try {
+        var origScrollBy = window.scrollBy;
+        window.scrollBy = function(x, y) {
+            if (typeof x === 'object' && x !== null) {
+                var opts = {};
+                for (var key in x) {
+                    if (x.hasOwnProperty(key)) opts[key] = x[key];
+                }
+                opts.behavior = 'auto';
+                return origScrollBy.call(window, opts);
+            }
+            return origScrollBy.call(window, x, y);
+        };
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: scrollBy patch failed', e);
+    }
+
     // --- HEADING CONFIG ---
     function getSpotlightHeadings() {
         var match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
         if (match) {
-            return decodeURIComponent(match[1]).split(',').map(function(h) { return h.trim().toLowerCase(); });
+            var parsed = decodeURIComponent(match[1]).split(',').map(function(h) { return h.trim().toLowerCase(); }).filter(function(h) { return h.length > 0; });
+            if (parsed.length > 0) return parsed;
         }
         return ['h2', 'h3'];
     }
@@ -42,7 +81,7 @@
 
     // --- STYLES ---
     var css = [
-        'html { scroll-behavior: auto !important; }',
+        'html, body { scroll-behavior: auto !important; }',
         '.section-dim {',
         '    opacity: 0.25;',
         '    filter: grayscale(0.4);',
@@ -133,7 +172,11 @@
     btn.addEventListener('click', function() {
         spotlightOn = !spotlightOn;
         btn.textContent = spotlightOn ? 'Spotlight: On' : 'Spotlight: Off';
-        btn.classList.toggle('active', spotlightOn);
+        if (spotlightOn) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
         btn.setAttribute('aria-pressed', spotlightOn);
         spotlightOn ? applySpotlight() : clearSpotlight();
     });
@@ -153,9 +196,10 @@
     // --- SPOTLIGHT LOGIC ---
 
     function clearSpotlight() {
-        document.querySelectorAll('.section-focus, .section-dim').forEach(function(el) {
-            el.classList.remove('section-focus', 'section-dim');
-        });
+        var nodes = document.querySelectorAll('.section-focus, .section-dim');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].classList.remove('section-focus', 'section-dim');
+        }
     }
 
     function collectUntil(start, end) {
@@ -300,7 +344,8 @@
     }, { passive: true });
 
     // --- HASHCHANGE HANDLER ---
-    // Docsify/browser handles scrolling. We just re-apply spotlight.
+    // Docsify/browser handles scrolling instantly via our monkey-patches.
+    // We just re-apply spotlight after the jump settles.
     window.addEventListener('hashchange', function() {
         setTimeout(applySpotlight, 50);
     });
@@ -336,7 +381,11 @@
 
     function updateTheme() {
         try {
-            btn.classList.toggle('dark-mode', isDark());
+            if (isDark()) {
+                btn.classList.add('dark-mode');
+            } else {
+                btn.classList.remove('dark-mode');
+            }
         } catch (e) {
             // ignore
         }
