@@ -1,5 +1,6 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
+// Assisted by Kimi (Moonshot AI)
 // Activate by adding &spotlight=true to any Docsify-This URL
 // Configure which headings are spotlight-aware with &spotlight-headings=h2,h3
 
@@ -22,6 +23,7 @@
     let spotlightOn = true;
     const PADDING = 10;
     const STORAGE_KEY = 'docsify-spotlight-scroll';
+    let activeSnapId = null;
 
     // --- STYLES ---
     const css = `
@@ -111,7 +113,11 @@
     btn.addEventListener('click', () => {
         spotlightOn = !spotlightOn;
         btn.textContent = spotlightOn ? 'Spotlight: On' : 'Spotlight: Off';
-        btn.classList.toggle('active', spotlightOn);
+        if (spotlightOn) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
         btn.setAttribute('aria-pressed', spotlightOn);
         spotlightOn ? applySpotlight() : clearSpotlight();
     });
@@ -162,25 +168,20 @@
         e.stopPropagation();
 
         // Update URL hash's ?id= parameter for reload persistence (v1)
-        // Use full URL string replacement for maximum compatibility
         const currentHash = location.hash;
         if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
             const newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
             const newUrl = location.href.split('#')[0] + newHash;
-            try {
-                history.replaceState(null, '', newUrl);
-            } catch (e) {
-                // Fallback: update hash directly (may trigger hashchange)
-                location.hash = newHash;
-            }
+            history.replaceState(null, '', newUrl);
         }
 
         // Store in sessionStorage as fallback
         try {
+            const strippedUrl = location.href.split('?')[0].split('#')[0];
             sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
                 id: id,
                 y: targetY,
-                url: location.href
+                url: strippedUrl
             }));
         } catch (e) {
             // Storage may be unavailable
@@ -198,7 +199,8 @@
         if (heading.querySelector('a[href^="#"]')) return true;
 
         const prev = heading.previousElementSibling;
-        if (prev && prev.tagName === 'A' && prev.getAttribute('href')?.includes(heading.id)) {
+        const href = prev && prev.tagName === 'A' && prev.getAttribute('href');
+        if (href && href.indexOf(heading.id) !== -1) {
             return true;
         }
         return false;
@@ -400,15 +402,21 @@
     }
 
     function updateTheme() {
-        btn.classList.toggle('dark-mode', isDark());
+        if (isDark()) {
+            btn.classList.add('dark-mode');
+        } else {
+            btn.classList.remove('dark-mode');
+        }
     }
 
     // --- SNAP TO TARGET ---
     // Forces scroll position to target for a short duration to override
     // any smooth-scroll animation that may be running.
     function snapToTarget(targetY, duration) {
+        const thisSnapId = ++activeSnapId;
         const startTime = Date.now();
         function snap() {
+            if (thisSnapId !== activeSnapId) return; // Cancelled by newer snap
             const elapsed = Date.now() - startTime;
             if (elapsed < duration) {
                 if (Math.abs(window.scrollY - targetY) > 2) {
@@ -428,8 +436,9 @@
             if (!stored) return;
 
             const data = JSON.parse(stored);
+            const currentUrl = location.href.split('?')[0].split('#')[0];
             // Only restore if URL pathname matches (ignores query parameters and hash)
-            if (data.url && data.url.split('?')[0].split('#')[0] === location.href.split('?')[0].split('#')[0]) {
+            if (data.url && data.url === currentUrl) {
                 if (data.id) {
                     const target = document.getElementById(data.id);
                     if (target) {
