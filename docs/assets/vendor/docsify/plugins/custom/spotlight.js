@@ -21,6 +21,7 @@
 
     let spotlightOn = true;
     const PADDING = 10;
+    const STORAGE_KEY = 'docsify-spotlight-scroll';
 
     // --- STYLES ---
     const css = `
@@ -117,6 +118,7 @@
 
     // --- INSTANT NAVIGATION ---
     // Intercepts heading anchor clicks for instant scroll without animation.
+    // Updates URL hash's ?id= parameter for reload persistence in v1.
     document.addEventListener('click', (e) => {
         let link = e.target.closest('a');
         let heading = null;
@@ -158,6 +160,31 @@
         // Stop browser default AND Docsify's handler
         e.preventDefault();
         e.stopPropagation();
+
+        // Update URL hash's ?id= parameter for reload persistence (v1)
+        // Use full URL string replacement for maximum compatibility
+        const currentHash = location.hash;
+        if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
+            const newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
+            const newUrl = location.href.split('#')[0] + newHash;
+            try {
+                history.replaceState(null, '', newUrl);
+            } catch (e) {
+                // Fallback: update hash directly (may trigger hashchange)
+                location.hash = newHash;
+            }
+        }
+
+        // Store in sessionStorage as fallback
+        try {
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
+                id: id,
+                y: targetY,
+                url: location.href
+            }));
+        } catch (e) {
+            // Storage may be unavailable
+        }
 
         // Instant scroll to target
         window.scrollTo(0, targetY);
@@ -217,15 +244,45 @@
     }
 
     function getHashHeading() {
+        let id = null;
+
+        // Check hash first (v1 format: #/?id=section)
         let hash = location.hash.replace(/^#/, '');
-        if (!hash) return null;
+        if (hash) {
+            const match = hash.match(/[?&]id=([^&]+)/);
+            if (match) id = decodeURIComponent(match[1]);
+        }
 
-        const match = hash.match(/[?&]id=([^&]+)/);
-        let id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
+        // Check query parameter if no hash id (v2 or other)
+        if (!id) {
+            const searchMatch = location.search.match(/[?&]id=([^&]+)/);
+            if (searchMatch) id = decodeURIComponent(searchMatch[1]);
+        }
 
-        const el = id && document.getElementById(id);
+        if (!id) return null;
+
+        const el = document.getElementById(id);
         if (el && HEADING_TAGS.includes(el.tagName.toLowerCase()) && hasAnchorLink(el)) return el;
         return null;
+    }
+
+    // Get hash target without hasAnchorLink check (for scroll restoration)
+    function getHashTarget() {
+        let id = null;
+
+        let hash = location.hash.replace(/^#/, '');
+        if (hash) {
+            const match = hash.match(/[?&]id=([^&]+)/);
+            if (match) id = decodeURIComponent(match[1]);
+        }
+
+        if (!id) {
+            const searchMatch = location.search.match(/[?&]id=([^&]+)/);
+            if (searchMatch) id = decodeURIComponent(searchMatch[1]);
+        }
+
+        if (!id) return null;
+        return document.getElementById(id);
     }
 
     function getParentHeading(heading) {
@@ -363,6 +420,33 @@
         snap();
     }
 
+    // --- RESTORE SCROLL POSITION ---
+    // Restores scroll position from sessionStorage after page load/reload.
+    function restoreScrollPosition() {
+        try {
+            const stored = sessionStorage.getItem(STORAGE_KEY);
+            if (!stored) return;
+
+            const data = JSON.parse(stored);
+            // Only restore if URL pathname matches (ignores query parameters and hash)
+            if (data.url && data.url.split('?')[0].split('#')[0] === location.href.split('?')[0].split('#')[0]) {
+                if (data.id) {
+                    const target = document.getElementById(data.id);
+                    if (target) {
+                        const targetY = Math.round(target.getBoundingClientRect().top) + window.pageYOffset - PADDING;
+                        window.scrollTo(0, targetY);
+                        snapToTarget(targetY, 600);
+                    }
+                } else if (data.y !== undefined) {
+                    window.scrollTo(0, data.y);
+                    snapToTarget(data.y, 600);
+                }
+            }
+        } catch (e) {
+            // Storage may be unavailable or data invalid
+        }
+    }
+
     // --- DOCSIFY PLUGIN HOOK ---
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
@@ -371,14 +455,6 @@
                 document.body.appendChild(btn);
             }
             updateTheme();
-            // Handle initial page load with hash - instant scroll to target
-            const hashTarget = getHashHeading();
-            if (hashTarget) {
-                const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                window.scrollTo(0, targetY);
-                // Snap for 600ms to override Docsify's smooth scroll
-                snapToTarget(targetY, 600);
-            }
             applySpotlight();
         });
 
@@ -386,16 +462,22 @@
             if (!document.getElementById('spotlight-toggle')) {
                 document.body.appendChild(btn);
             }
-            // Handle page navigation with hash - instant scroll to target
-            const hashTarget = getHashHeading();
-            if (hashTarget) {
-                const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                window.scrollTo(0, targetY);
-                // Snap for 600ms to override Docsify's smooth scroll
-                snapToTarget(targetY, 600);
-            }
-            applySpotlight();
             updateTheme();
+
+            // Delayed scroll restoration to ensure content is fully rendered
+            setTimeout(() => {
+                // First, try to scroll to hash target (v1)
+                const hashTarget = getHashTarget();
+                if (hashTarget) {
+                    const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
+                    window.scrollTo(0, targetY);
+                    snapToTarget(targetY, 600);
+                } else {
+                    // Fall back to sessionStorage
+                    restoreScrollPosition();
+                }
+                applySpotlight();
+            }, 100);
         });
     });
 })();
