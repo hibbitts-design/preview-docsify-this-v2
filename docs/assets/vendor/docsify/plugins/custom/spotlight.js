@@ -8,106 +8,128 @@
 
     if (!location.search.includes('spotlight=true')) return;
 
+    // --- INSTANT SCROLL OVERRIDE ---
+    // Docsify uses scrollIntoView for anchor navigation. We force it to
+    // 'auto' behavior so jumps are instant, without touching any URLs,
+    // click events, or other navigation mechanisms.
+    try {
+        var origScrollIntoView = Element.prototype.scrollIntoView;
+        Element.prototype.scrollIntoView = function() {
+            var args = Array.prototype.slice.call(arguments);
+            if (args.length > 0 && typeof args[0] === 'object' && args[0] !== null) {
+                args[0] = Object.assign({}, args[0], { behavior: 'auto' });
+            }
+            return origScrollIntoView.apply(this, args);
+        };
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: scrollIntoView patch failed', e);
+    }
+
+    // --- HEADING CONFIG ---
     function getSpotlightHeadings() {
-        const match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
+        var match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
         if (match) {
-            return decodeURIComponent(match[1]).split(',').map(h => h.trim().toLowerCase());
+            return decodeURIComponent(match[1]).split(',').map(function(h) { return h.trim().toLowerCase(); });
         }
         return ['h2', 'h3'];
     }
 
-    const HEADING_TAGS = getSpotlightHeadings();
-    const HEADING_SELECTOR = HEADING_TAGS.join(',');
+    var HEADING_TAGS = getSpotlightHeadings();
+    var HEADING_SELECTOR = HEADING_TAGS.join(',');
 
-    let spotlightOn = true;
-    const PADDING = 10;
-    let ignoreNextHashchange = false;
+    var spotlightOn = true;
 
     // --- STYLES ---
-    const css = `
-        .section-dim {
-            opacity: 0.25;
-            filter: grayscale(0.4);
-            transition: opacity 0.35s ease, filter 0.35s ease;
-        }
-        .section-focus {
-            opacity: 1;
-            filter: grayscale(0);
-            transition: opacity 0.35s ease, filter 0.35s ease;
-        }
-        .section-dim h1, .section-dim h2, .section-dim h3,
-        .section-dim h4, .section-dim h5, .section-dim h6 {
-            opacity: 0.55;
-        }
-        .section-dim h2 { opacity: 0.45; }
-        .section-dim h3 { opacity: 0.40; }
+    var css = [
+        'html { scroll-behavior: auto !important; }',
+        '.section-dim {',
+        '    opacity: 0.25;',
+        '    filter: grayscale(0.4);',
+        '    transition: opacity 0.35s ease, filter 0.35s ease;',
+        '}',
+        '.section-focus {',
+        '    opacity: 1;',
+        '    filter: grayscale(0);',
+        '    transition: opacity 0.35s ease, filter 0.35s ease;',
+        '}',
+        '.section-dim h1, .section-dim h2, .section-dim h3,',
+        '.section-dim h4, .section-dim h5, .section-dim h6 {',
+        '    opacity: 0.55;',
+        '}',
+        '.section-dim h2 { opacity: 0.45; }',
+        '.section-dim h3 { opacity: 0.40; }',
+        '#spotlight-toggle {',
+        '    position: fixed;',
+        '    top: 12px;',
+        '    right: 12px;',
+        '    z-index: 9999;',
+        '    padding: 4px 10px;',
+        '    font-size: 11px;',
+        "    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;",
+        '    line-height: 1.4;',
+        '    letter-spacing: 0.02em;',
+        '    border: none;',
+        '    border-radius: 4px;',
+        '    background: rgba(200, 200, 200, 0.4);',
+        '    color: #666;',
+        '    cursor: pointer;',
+        '    transition: all 0.25s ease;',
+        '}',
+        '#spotlight-toggle:hover {',
+        '    background: rgba(180, 180, 180, 0.6);',
+        '    color: #444;',
+        '}',
+        '#spotlight-toggle.active {',
+        '    background: rgba(100, 100, 100, 0.25);',
+        '    color: #333;',
+        '}',
+        '#spotlight-toggle.dark-mode {',
+        '    background: rgba(80, 80, 80, 0.5);',
+        '    color: #bbb;',
+        '}',
+        '#spotlight-toggle.dark-mode:hover {',
+        '    background: rgba(120, 120, 120, 0.6);',
+        '    color: #eee;',
+        '}',
+        '#spotlight-toggle.dark-mode.active {',
+        '    background: rgba(200, 200, 200, 0.15);',
+        '    color: #fff;',
+        '}',
+        '@media (prefers-color-scheme: dark) {',
+        '    #spotlight-toggle {',
+        '        background: rgba(80, 80, 80, 0.5);',
+        '        color: #bbb;',
+        '    }',
+        '    #spotlight-toggle:hover {',
+        '        background: rgba(120, 120, 120, 0.6);',
+        '        color: #eee;',
+        '    }',
+        '    #spotlight-toggle.active {',
+        '        background: rgba(200, 200, 200, 0.15);',
+        '        color: #fff;',
+        '    }',
+        '}'
+    ].join('\n');
 
-        #spotlight-toggle {
-            position: fixed;
-            top: 12px;
-            right: 12px;
-            z-index: 9999;
-            padding: 4px 10px;
-            font-size: 11px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.4;
-            letter-spacing: 0.02em;
-            border: none;
-            border-radius: 4px;
-            background: rgba(200, 200, 200, 0.4);
-            color: #666;
-            cursor: pointer;
-            transition: all 0.25s ease;
+    try {
+        var style = document.createElement('style');
+        style.textContent = css;
+        if (document.head) {
+            document.head.appendChild(style);
         }
-        #spotlight-toggle:hover {
-            background: rgba(180, 180, 180, 0.6);
-            color: #444;
-        }
-        #spotlight-toggle.active {
-            background: rgba(100, 100, 100, 0.25);
-            color: #333;
-        }
-        #spotlight-toggle.dark-mode {
-            background: rgba(80, 80, 80, 0.5);
-            color: #bbb;
-        }
-        #spotlight-toggle.dark-mode:hover {
-            background: rgba(120, 120, 120, 0.6);
-            color: #eee;
-        }
-        #spotlight-toggle.dark-mode.active {
-            background: rgba(200, 200, 200, 0.15);
-            color: #fff;
-        }
-        @media (prefers-color-scheme: dark) {
-            #spotlight-toggle {
-                background: rgba(80, 80, 80, 0.5);
-                color: #bbb;
-            }
-            #spotlight-toggle:hover {
-                background: rgba(120, 120, 120, 0.6);
-                color: #eee;
-            }
-            #spotlight-toggle.active {
-                background: rgba(200, 200, 200, 0.15);
-                color: #fff;
-            }
-        }
-    `;
-
-    const style = document.createElement('style');
-    style.textContent = css;
-    document.head.appendChild(style);
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: style injection failed', e);
+    }
 
     // --- TOGGLE BUTTON ---
-    const btn = document.createElement('button');
+    var btn = document.createElement('button');
     btn.id = 'spotlight-toggle';
     btn.textContent = 'Spotlight: On';
     btn.className = 'active';
     btn.setAttribute('aria-label', 'Toggle section spotlight mode');
     btn.setAttribute('aria-pressed', 'true');
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', function() {
         spotlightOn = !spotlightOn;
         btn.textContent = spotlightOn ? 'Spotlight: On' : 'Spotlight: Off';
         btn.classList.toggle('active', spotlightOn);
@@ -115,52 +137,13 @@
         spotlightOn ? applySpotlight() : clearSpotlight();
     });
 
-    // --- INSTANT NAVIGATION ---
-    // Intercept heading clicks to jump instantly without Docsify's smooth scroll
-    window.addEventListener('click', (e) => {
-        const link = e.target.closest('a');
-        if (!link) return;
-
-        const href = link.getAttribute('href');
-        if (!href) return;
-
-        let id = null;
-        if (href.startsWith('#')) {
-            let hash = href.replace(/^#/, '');
-            const match = hash.match(/[?&]id=([^&]+)/);
-            id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
-        } else if (href.includes('?id=') || href.includes('&id=')) {
-            const match = href.match(/[?&]id=([^&]+)/);
-            if (match) id = decodeURIComponent(match[1]);
-        }
-
-        if (!id) return;
-
-        const target = document.getElementById(id);
-        if (!target || !HEADING_TAGS.includes(target.tagName.toLowerCase())) return;
-        if (!hasAnchorLink(target)) return;
-
-        // Block Docsify's smooth scroll and jump instantly
-        e.preventDefault();
-        e.stopImmediatePropagation();
-
-        window.scrollTo(0, target.offsetTop - PADDING);
-
-        // Update URL in Docsify's native hash format for reload support
-        const newUrl = location.pathname + location.search + '#/?id=' + id;
-        ignoreNextHashchange = true;
-        history.replaceState(null, null, newUrl);
-
-        applySpotlight();
-    }, true);
-
     // --- ANCHOR LINK DETECTION ---
     function hasAnchorLink(heading) {
-        if (!heading.id) return false;
+        if (!heading || !heading.id) return false;
         if (heading.querySelector('a[href^="#"]')) return true;
 
-        const prev = heading.previousElementSibling;
-        if (prev && prev.tagName === 'A' && prev.getAttribute('href')?.includes(heading.id)) {
+        var prev = heading.previousElementSibling;
+        if (prev && prev.tagName === 'A' && prev.getAttribute('href') && prev.getAttribute('href').indexOf(heading.id) !== -1) {
             return true;
         }
         return false;
@@ -169,14 +152,16 @@
     // --- SPOTLIGHT LOGIC ---
 
     function clearSpotlight() {
-        document.querySelectorAll('.section-focus, .section-dim').forEach(el => {
+        document.querySelectorAll('.section-focus, .section-dim').forEach(function(el) {
             el.classList.remove('section-focus', 'section-dim');
         });
     }
 
     function collectUntil(start, end) {
-        const list = [start];
-        let next = start.nextElementSibling;
+        var list = [];
+        if (!start) return list;
+        list.push(start);
+        var next = start.nextElementSibling;
         while (next && next !== end) {
             list.push(next);
             next = next.nextElementSibling;
@@ -185,19 +170,21 @@
     }
 
     function findActive(headings) {
-        const viewportTop = window.scrollY + 2;
-        const viewportCenter = window.scrollY + (window.innerHeight * 0.25);
+        if (!headings || headings.length === 0) return null;
+        var viewportTop = window.scrollY + 2;
+        var viewportCenter = window.scrollY + (window.innerHeight * 0.25);
 
-        for (let i = 0; i < headings.length; i++) {
-            const h = headings[i];
-            const hBottom = h.offsetTop + h.offsetHeight;
+        for (var i = 0; i < headings.length; i++) {
+            var h = headings[i];
+            if (!h) continue;
+            var hBottom = h.offsetTop + h.offsetHeight;
             if (h.offsetTop <= viewportTop + 50 && hBottom > viewportTop) {
                 return h;
             }
         }
 
-        for (let i = headings.length - 1; i >= 0; i--) {
-            if (headings[i].offsetTop <= viewportCenter) {
+        for (var i = headings.length - 1; i >= 0; i--) {
+            if (headings[i] && headings[i].offsetTop <= viewportCenter) {
                 return headings[i];
             }
         }
@@ -206,23 +193,30 @@
     }
 
     function getHashHeading() {
-        let hash = location.hash.replace(/^#/, '');
+        var hash = location.hash.replace(/^#/, '');
         if (!hash) return null;
 
-        const match = hash.match(/[?&]id=([^&]+)/);
-        let id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
+        var match = hash.match(/[?&]id=([^&]+)/);
+        var id = match ? decodeURIComponent(match[1]) : hash.replace(/^\//, '').split(/[?&]/)[0];
 
-        const el = id && document.getElementById(id);
-        if (el && HEADING_TAGS.includes(el.tagName.toLowerCase()) && hasAnchorLink(el)) return el;
+        if (!id) return null;
+        try {
+            var el = document.getElementById(id);
+            if (el && HEADING_TAGS.indexOf(el.tagName.toLowerCase()) !== -1 && hasAnchorLink(el)) return el;
+        } catch (e) {
+            // Invalid id for getElementById (defensive)
+        }
         return null;
     }
 
     function getParentHeading(heading) {
-        const myLevel = parseInt(heading.tagName[1]);
-        let prev = heading.previousElementSibling;
+        if (!heading) return null;
+        var myLevel = parseInt(heading.tagName[1], 10);
+        if (isNaN(myLevel)) return null;
+        var prev = heading.previousElementSibling;
         while (prev) {
-            const prevLevel = parseInt(prev.tagName[1]);
-            if (HEADING_TAGS.includes(prev.tagName.toLowerCase()) && prevLevel < myLevel && hasAnchorLink(prev)) {
+            var prevLevel = parseInt(prev.tagName[1], 10);
+            if (!isNaN(prevLevel) && HEADING_TAGS.indexOf(prev.tagName.toLowerCase()) !== -1 && prevLevel < myLevel && hasAnchorLink(prev)) {
                 return prev;
             }
             prev = prev.previousElementSibling;
@@ -231,16 +225,18 @@
     }
 
     function getFirstChildHeading(heading) {
-        const myLevel = parseInt(heading.tagName[1]);
-        let next = heading.nextElementSibling;
-        let paragraphs = 0;
-        while (next && !HEADING_TAGS.includes(next.tagName.toLowerCase())) {
+        if (!heading) return null;
+        var myLevel = parseInt(heading.tagName[1], 10);
+        if (isNaN(myLevel)) return null;
+        var next = heading.nextElementSibling;
+        var paragraphs = 0;
+        while (next && HEADING_TAGS.indexOf(next.tagName.toLowerCase()) === -1) {
             if (next.tagName === 'P') paragraphs++;
             next = next.nextElementSibling;
         }
-        if (next && HEADING_TAGS.includes(next.tagName.toLowerCase())) {
-            const childLevel = parseInt(next.tagName[1]);
-            if (childLevel > myLevel && paragraphs <= 1 && hasAnchorLink(next)) {
+        if (next && HEADING_TAGS.indexOf(next.tagName.toLowerCase()) !== -1) {
+            var childLevel = parseInt(next.tagName[1], 10);
+            if (!isNaN(childLevel) && childLevel > myLevel && paragraphs <= 1 && hasAnchorLink(next)) {
                 return next;
             }
         }
@@ -250,10 +246,10 @@
     function applySpotlight() {
         if (!spotlightOn) return;
 
-        const allHeadings = [...document.querySelectorAll(HEADING_SELECTOR)].filter(hasAnchorLink);
+        var allHeadings = Array.prototype.slice.call(document.querySelectorAll(HEADING_SELECTOR)).filter(hasAnchorLink);
         if (allHeadings.length === 0) return;
 
-        let active = findActive(allHeadings);
+        var active = findActive(allHeadings);
 
         if (!active) {
             active = getHashHeading();
@@ -263,37 +259,38 @@
 
         clearSpotlight();
 
-        const sections = [];
-        for (let i = 0; i < allHeadings.length; i++) {
+        var sections = [];
+        for (var i = 0; i < allHeadings.length; i++) {
             sections.push({
                 heading: allHeadings[i],
                 elements: collectUntil(allHeadings[i], allHeadings[i + 1] || null)
             });
         }
 
-        let parentHeading = null;
-        if (parseInt(active.tagName[1]) > 2) {
+        var parentHeading = null;
+        var activeLevel = parseInt(active.tagName[1], 10);
+        if (!isNaN(activeLevel) && activeLevel > 2) {
             parentHeading = getParentHeading(active);
         }
 
-        let firstChild = getFirstChildHeading(active);
+        var firstChild = getFirstChildHeading(active);
 
-        sections.forEach(section => {
-            const isActive = section.heading === active ||
-                             section.heading === parentHeading ||
-                             section.heading === firstChild;
+        sections.forEach(function(section) {
+            var isActive = section.heading === active ||
+                           section.heading === parentHeading ||
+                           section.heading === firstChild;
 
-            section.elements.forEach(el => {
-                el.classList.add(isActive ? 'section-focus' : 'section-dim');
+            section.elements.forEach(function(el) {
+                if (el) el.classList.add(isActive ? 'section-focus' : 'section-dim');
             });
         });
     }
 
     // --- SCROLL HANDLER ---
-    let waiting = false;
-    window.addEventListener('scroll', () => {
+    var waiting = false;
+    window.addEventListener('scroll', function() {
         if (!waiting) {
-            window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(function() {
                 applySpotlight();
                 waiting = false;
             });
@@ -302,52 +299,72 @@
     }, { passive: true });
 
     // --- HASHCHANGE HANDLER ---
-    window.addEventListener('hashchange', () => {
-        if (ignoreNextHashchange) {
-            ignoreNextHashchange = false;
-            return;
-        }
+    // Docsify/browser handles scrolling. We just re-apply spotlight.
+    window.addEventListener('hashchange', function() {
         setTimeout(applySpotlight, 50);
     });
 
     // --- DARK MODE ---
     function isDark() {
-        const url = location.href.toLowerCase();
-        if (url.includes('dark-mode=on') || url.includes('dark-mode=true')) return true;
+        try {
+            var url = location.href.toLowerCase();
+            if (url.indexOf('dark-mode=on') !== -1 || url.indexOf('dark-mode=true') !== -1) return true;
 
-        const body = document.body.classList;
-        const html = document.documentElement.classList;
-        if (body.contains('dark') || body.contains('theme-dark') || body.contains('docsify-dark') ||
-            html.contains('dark') || html.contains('theme-dark')) return true;
+            var body = document.body.classList;
+            var html = document.documentElement.classList;
+            if (body.contains('dark') || body.contains('theme-dark') || body.contains('docsify-dark') ||
+                html.contains('dark') || html.contains('theme-dark')) return true;
 
-        if (document.body.getAttribute('data-theme') === 'dark' ||
-            document.documentElement.getAttribute('data-theme') === 'dark') return true;
+            if (document.body.getAttribute('data-theme') === 'dark' ||
+                document.documentElement.getAttribute('data-theme') === 'dark') return true;
 
-        const bg = window.getComputedStyle(document.body).backgroundColor;
-        if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
-            const rgb = bg.match(/\d+/g);
-            if (rgb) {
-                const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-                if (brightness < 80) return true;
+            var bg = window.getComputedStyle(document.body).backgroundColor;
+            if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+                var rgb = bg.match(/\d+/g);
+                if (rgb) {
+                    var brightness = (parseInt(rgb[0], 10) * 299 + parseInt(rgb[1], 10) * 587 + parseInt(rgb[2], 10) * 114) / 1000;
+                    if (brightness < 80) return true;
+                }
             }
-        }
 
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch (e) {
+            return false;
+        }
     }
 
     function updateTheme() {
-        btn.classList.toggle('dark-mode', isDark());
+        try {
+            btn.classList.toggle('dark-mode', isDark());
+        } catch (e) {
+            // ignore
+        }
+    }
+
+    function initSpotlight() {
+        try {
+            if (!document.getElementById('spotlight-toggle')) {
+                document.body.appendChild(btn);
+            }
+            updateTheme();
+            applySpotlight();
+        } catch (e) {
+            if (typeof console !== 'undefined' && console.warn) console.warn('Spotlight: init failed', e);
+        }
     }
 
     // --- DOCSIFY PLUGIN HOOK ---
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
-        hook.doneEach(() => {
-            if (!document.getElementById('spotlight-toggle')) {
-                document.body.appendChild(btn);
-            }
-            applySpotlight();
-            updateTheme();
+        hook.ready(function() {
+            initSpotlight();
+            // Retry a few times in case Docsify is still settling content
+            setTimeout(initSpotlight, 100);
+            setTimeout(initSpotlight, 300);
+        });
+
+        hook.doneEach(function() {
+            initSpotlight();
         });
     });
 })();
