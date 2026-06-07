@@ -1,6 +1,5 @@
 // docsify-spotlight.js
 // Docsify plugin: Section Spotlight Mode
-// Assisted by Kimi (Moonshot AI)
 // Activate by adding &spotlight=true to any Docsify-This URL
 // Configure which headings are spotlight-aware with &spotlight-headings=h2,h3
 
