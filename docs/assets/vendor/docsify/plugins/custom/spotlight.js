@@ -309,14 +309,12 @@
     function getFirstChildHeading(heading) {
         const myLevel = parseInt(heading.tagName[1], 10);
         let next = heading.nextElementSibling;
-        let paragraphs = 0;
         while (next && !HEADING_TAGS.includes(next.tagName.toLowerCase())) {
-            if (next.tagName === 'P') paragraphs++;
             next = next.nextElementSibling;
         }
         if (next && HEADING_TAGS.includes(next.tagName.toLowerCase())) {
             const childLevel = parseInt(next.tagName[1], 10);
-            if (childLevel > myLevel && paragraphs <= 1 && hasAnchorLink(next)) {
+            if (childLevel > myLevel && hasAnchorLink(next)) {
                 return next;
             }
         }
