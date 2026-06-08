@@ -10,6 +10,9 @@
 
     if (!location.search.includes('spotlight=true')) return;
 
+    // Disable browser-native scroll restoration to prevent smooth-scroll on reload
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
     // --- CONFIG ---
     function getSpotlightHeadings() {
         const match = location.search.match(/[?&]spotlight-headings=([^&]+)/);
@@ -423,9 +426,7 @@
         function snap() {
             if (thisSnapId !== activeSnapId) return;
             if (Date.now() - startTime < duration) {
-                if (Math.abs(window.scrollY - targetY) > 2) {
-                    window.scrollTo(0, targetY);
-                }
+                window.scrollTo(0, targetY);
                 requestAnimationFrame(snap);
             }
         }
