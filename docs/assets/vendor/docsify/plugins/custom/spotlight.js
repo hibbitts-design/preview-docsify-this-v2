@@ -28,6 +28,7 @@
 
     let spotlightOn = true;
     let activeSnapId = 0;
+    let lastClickedId = null;
 
     // --- STYLES ---
     const style = document.createElement('style');
@@ -205,6 +206,7 @@
             // Private mode — ignore
         }
 
+        lastClickedId = id;
         window.scrollTo(0, targetY);
         applySpotlight();
     }, true);
@@ -326,7 +328,17 @@
         const allHeadings = [...document.querySelectorAll(HEADING_SELECTOR)].filter(hasAnchorLink);
         if (allHeadings.length === 0) return;
 
-        let active = findActive(allHeadings) || findTargetByHash(true);
+        let active = null;
+        if (lastClickedId) {
+            const clicked = document.getElementById(lastClickedId);
+            if (clicked && HEADING_TAGS.includes(clicked.tagName.toLowerCase()) && hasAnchorLink(clicked)) {
+                active = clicked;
+            }
+            lastClickedId = null;
+        }
+        if (!active) {
+            active = findActive(allHeadings) || findTargetByHash(true);
+        }
         if (!active) return;
 
         clearSpotlight();
