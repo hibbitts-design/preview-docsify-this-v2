@@ -456,6 +456,13 @@
             const stored = sessionStorage.getItem(STORAGE_KEY);
             if (!stored) return;
 
+            // Only restore if current URL has a section ID
+            const hasId = (location.search + location.hash).includes('?id=') || (location.search + location.hash).includes('&id=');
+            if (!hasId) {
+                sessionStorage.removeItem(STORAGE_KEY);
+                return;
+            }
+
             const data = JSON.parse(stored);
             const currentUrl = location.href.split('?')[0].split('#')[0];
             if (data.url && data.url === currentUrl) {
