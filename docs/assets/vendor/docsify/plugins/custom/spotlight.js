@@ -32,6 +32,7 @@
     let spotlightOn = true;
     let activeSnapId = 0;
     let lastClickedId = null;
+    let lastClickedTime = 0;
 
     // --- STYLES ---
     const style = document.createElement('style');
@@ -191,8 +192,15 @@
 
         // Update URL hash for reload persistence (v1 format: #/?id=section)
         const currentHash = location.hash;
-        if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
-            const newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
+        if (currentHash) {
+            let newHash;
+            if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
+                newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
+            } else if (currentHash.includes('?')) {
+                newHash = currentHash + '&id=' + id;
+            } else {
+                newHash = currentHash + '?id=' + id;
+            }
             history.replaceState(null, '', location.href.split('#')[0] + newHash);
         }
 
@@ -208,6 +216,7 @@
         }
 
         lastClickedId = id;
+        lastClickedTime = Date.now();
         window.scrollTo(0, targetY);
         applySpotlight();
     }, true);
@@ -333,15 +342,20 @@
         if (allHeadings.length === 0) return;
 
         let active = null;
-        if (lastClickedId) {
+        if (lastClickedId && Date.now() - lastClickedTime < 150) {
             const clicked = document.getElementById(lastClickedId);
             if (clicked && HEADING_TAGS.includes(clicked.tagName.toLowerCase()) && hasAnchorLink(clicked)) {
                 active = clicked;
             }
+        }
+        if (active) {
             lastClickedId = null;
         }
         if (!active) {
             active = findActive(allHeadings) || findTargetByHash(true);
+        }
+        if (!active && allHeadings.length > 0) {
+            active = allHeadings[0];
         }
         if (!active) return;
 
