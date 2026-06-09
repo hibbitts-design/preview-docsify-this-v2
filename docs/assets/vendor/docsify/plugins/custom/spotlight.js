@@ -33,6 +33,7 @@
     let activeSnapId = 0;
     let lastClickedId = null;
     let lastClickedTime = 0;
+    let firstLoad = true;
 
     // --- STYLES ---
     const style = document.createElement('style');
@@ -484,13 +485,19 @@
         hook.doneEach(() => {
             initUI();
             setTimeout(() => {
-                const hashTarget = findTargetByHash(false);
-                if (hashTarget) {
-                    const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                    window.scrollTo(0, targetY);
-                    snapToTarget(targetY, 600);
+                if (firstLoad) {
+                    // Hard reload: start at top, ignore previous hash
+                    window.scrollTo(0, 0);
+                    firstLoad = false;
                 } else {
-                    restoreScrollPosition();
+                    const hashTarget = findTargetByHash(false);
+                    if (hashTarget) {
+                        const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
+                        window.scrollTo(0, targetY);
+                        snapToTarget(targetY, 600);
+                    } else {
+                        restoreScrollPosition();
+                    }
                 }
                 applySpotlight();
             }, 100);
