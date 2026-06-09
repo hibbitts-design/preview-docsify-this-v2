@@ -207,11 +207,11 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pageCopyButton"/><label for="pageCopyButton">Include Copy Page button for accessing Markdown content</label></div>
-
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show alternative text of images as captions</label></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on currently viewed section (dims surrounding content)</label></div>
 
 <hr>
 
@@ -264,9 +264,9 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
 
-<hr>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pageCopyButton"/><label for="pageCopyButton">Include Copy Page button for accessing Markdown content</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on currently viewed section (dims surrounding content)</label></div>
+<hr>
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
