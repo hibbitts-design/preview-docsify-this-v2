@@ -33,7 +33,6 @@
     let activeSnapId = 0;
     let lastClickedId = null;
     let lastClickedTime = 0;
-    let firstLoad = true;
 
     // --- STYLES ---
     const style = document.createElement('style');
@@ -193,8 +192,15 @@
 
         // Update URL hash for reload persistence (v1 format: #/?id=section)
         const currentHash = location.hash;
-        if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
-            const newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
+        if (currentHash) {
+            let newHash;
+            if (currentHash.includes('?id=') || currentHash.includes('&id=')) {
+                newHash = currentHash.replace(/([?&])id=[^&]*/, '$1id=' + id);
+            } else if (currentHash.includes('?')) {
+                newHash = currentHash + '&id=' + id;
+            } else {
+                newHash = currentHash + '?id=' + id;
+            }
             history.replaceState(null, '', location.href.split('#')[0] + newHash);
         }
 
@@ -348,6 +354,9 @@
         if (!active) {
             active = findActive(allHeadings) || findTargetByHash(true);
         }
+        if (!active && allHeadings.length > 0) {
+            active = allHeadings[0];
+        }
         if (!active) return;
 
         clearSpotlight();
@@ -485,19 +494,13 @@
         hook.doneEach(() => {
             initUI();
             setTimeout(() => {
-                if (firstLoad) {
-                    // Hard reload: start at top, ignore previous hash
-                    window.scrollTo(0, 0);
-                    firstLoad = false;
+                const hashTarget = findTargetByHash(false);
+                if (hashTarget) {
+                    const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
+                    window.scrollTo(0, targetY);
+                    snapToTarget(targetY, 600);
                 } else {
-                    const hashTarget = findTargetByHash(false);
-                    if (hashTarget) {
-                        const targetY = Math.round(hashTarget.getBoundingClientRect().top) + window.pageYOffset - PADDING;
-                        window.scrollTo(0, targetY);
-                        snapToTarget(targetY, 600);
-                    } else {
-                        restoreScrollPosition();
-                    }
+                    restoreScrollPosition();
                 }
                 applySpotlight();
             }, 100);
