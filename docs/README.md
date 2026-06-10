@@ -207,17 +207,11 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on currently viewed section (dims surrounding content)</label></div>
-
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
-
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show alternative text of images as captions</label></div>
-
-<hr>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on current heading (dims surrounding content)</label></div>
 
 <div class="clearfix">
 
-<div class='stackedlabeldropdown' style="margin-top: -4px;">
+<div class='stackedlabeldropdown'>
   <label for="maxWidthValue">Content maximum width:</label>
   <div style="display: flex; gap: 10px; ">
     <input type="number" id="maxWidthValue" name="maxWidthValue"
@@ -236,6 +230,12 @@ Page layout:
 </div>
 
 </div>
+
+<hr>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
+
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show image alternative text as captions</label></div>
 
 ### Navigation Display Options
 
