@@ -124,7 +124,7 @@ Page layout:
 
 <div id="docsifythisurlbuilderoptionsDiv" style='display: none'>
 
-<div class="builder-section">
+<div class="builder-section" style='margin-top: 12px'>
 
 ### Page Style and Behavior
 
