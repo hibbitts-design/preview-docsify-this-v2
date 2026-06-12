@@ -93,7 +93,7 @@ This open-source web app built with [Docsify](https://docsify.js.org), a magical
     }
 }
 </style>
-<input class="docsifythisurlbuilderprimarybutton" style="margin-top: -4px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/></br>
+<input class="docsifythisurlbuilderprimarybutton" style="margin-top: -4px;" type="button" id="btn_1" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/><br>
 
 Page layout:
 
@@ -102,19 +102,19 @@ Page layout:
 <label>
   <input type="radio" name="pagestyle" id="stylecontentonly" aria-label="Page Content Only" checked/>
   <img style="padding: 1px;" src="images/contentonly.png" alt="Page Content Only"/>
-  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Content Only</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;">Content Only</figcaption>
 </label>
 
 <label>
   <input type="radio" name="pagestyle" id="styletoc" aria-label="Page with Table of Contents"/>
   <img style="padding: 1px;" src="images/toc.png" alt="Page with Table of Contents"/>
-  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Table of Contents</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;">Table of Contents</figcaption>
 </label>
 
 <label>
   <input type="radio" name="pagestyle" id="stylesidebar" aria-label="Page with Docsify Sidebar (collapsible)"/>
   <img style="padding: 1px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)"/>
-  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Docsify Sidebar</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;">Docsify Sidebar</figcaption>
 </label>
 
 </div>
@@ -237,9 +237,9 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pageCopyButton"/><label for="pageCopyButton">Include Copy Page button for accessing Markdown content</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages"><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show image alternative text as captions</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"><label for="imageCaptions">Show image alternative text as captions</label></div>
 
 ### Navigation Display Options
 
@@ -310,7 +310,7 @@ Page layout:
 
 <div class="clearfix">
 
-  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovercolor">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
 
   <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover text decoration:</label>
   <select class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 120px;">
