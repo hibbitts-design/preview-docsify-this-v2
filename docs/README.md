@@ -325,7 +325,7 @@ Page layout:
 
   <div class='stackedlabeldropdown' style="margin-top:-6px;">
   <label for="linkhovertextdecoration">Link hover text decoration:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d;width: 60px;" class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration">
+  <select style="border-radius: 7px;border-color: #8e8f9d;width: 120px;" class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration">
     <option value="none">None</option>
     <option disabled="disabled">----</option>
     <option value="underline">Underline</option>

@@ -2120,6 +2120,11 @@ span #docsifythisurlfield {
   margin-left: var(--dt-spacing-xs);
 }
 
+#docsifythisurlbuilder #linkhovercolorpreview,
+#docsifythisurlbuilder #linkhovercolordarkmodepreview {
+  background-color: var(--dt-input-bg) !important;
+}
+
 #docsifythisurlbuilderrestoredefaultsbutton {
   font-family: inherit;
   font-size: inherit;
