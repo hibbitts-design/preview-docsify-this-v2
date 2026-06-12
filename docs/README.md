@@ -129,8 +129,6 @@ Page layout:
 
 ### Page Style and Behavior
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
 
 <div class="pagefontsettings">
@@ -213,8 +211,6 @@ Page layout:
 
 ### Page Display Options
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="spotlight"/><label for="spotlight">Enable spotlight to focus on current heading (dims surrounding content)</label></div>
 
 <div class="clearfix">
@@ -251,8 +247,6 @@ Page layout:
 
 ### Navigation Display Options
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline">Headings to include in table of contents (at least one required):</div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1" /><label for="toch1">Heading 1 (h1)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h2 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch2" checked><label for="toch2">Heading 2 (h2)</label></div>
@@ -271,8 +265,6 @@ Page layout:
 <div class="builder-section">
 
 ### Dark Theme
-
-<hr>
 
 <div class="clearfix">
 
@@ -300,8 +292,6 @@ Page layout:
 
 ### Dark Theme Link Colors
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div>
@@ -311,8 +301,6 @@ Page layout:
 <div class="builder-section">
 
 ### Link Style and Behavior
-
-<hr>
 
 <div class="clearfix">
 
@@ -357,8 +345,6 @@ Page layout:
 
 ### Custom Page Options
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline">Add '←Back' link URL (displayed at top of page):<br><input placeholder="https://example.com" aria-label="Add back link URL (displayed at top of page)" type="url" maxlength="200" value="" id="backLink" name="backLink"></div>
 
 <div class="docsifythisurlbuilderoptionsline">Add page title (as H1 header at top of page):<br><input aria-label="Add page title (as H1 header at top of page)" type="text" maxlength="200" value="" id="pageTitle" name="pageTitle"></div>
@@ -375,8 +361,6 @@ Page layout:
 
 ### Docsify Custom Files
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline">Load and display additional <a href="https://docsify.js.org/#/more-pages" target="_blank">Docsify</a> custom files (must be located at root level of remote files):</div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar"><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)</label></div>
@@ -389,8 +373,6 @@ Page layout:
 <div class="builder-section">
 
 ### Docsify Custom Sidebar Options
-
-<hr>
 
 <div class="docsifythisurlbuilderoptionsline">Website name displayed in Sidebar:<br><input aria-label="Website name displayed in Sidebar" type="text" maxlength="80" value="" id="siteName" name="siteName"/></div>
 
@@ -406,8 +388,6 @@ Page layout:
 
 ### Docsify Custom Navbar Options
 
-<hr>
-
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar"/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
 </div>
@@ -415,8 +395,6 @@ Page layout:
 <div class="builder-section">
 
 ### Docsify Custom Coverpage Colors
-
-<hr>
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris/><span id="coverpagecolorpreview"></span></div>
 
@@ -427,8 +405,6 @@ Page layout:
 <div class="builder-section">
 
 ### Theme Overrides
-
-<hr>
 
 <div class="docsifythisurlbuilderoptionsline">
   <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">

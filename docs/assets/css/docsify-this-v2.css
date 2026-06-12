@@ -409,8 +409,6 @@ input[type="checkbox"] {
 
 #docsifythisurlbuilder .builder-section h3 {
   margin-top: 0 !important;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #cdd5e0;
   margin-bottom: 10px;
 }
 
@@ -1069,10 +1067,6 @@ input[type="number"]:focus {
   #docsifythisurlbuilder .builder-section {
     background: #1e2d42;
     border-color: #2e4060;
-  }
-
-  #docsifythisurlbuilder .builder-section h3 {
-    border-bottom-color: #2e4060;
   }
 }
 
