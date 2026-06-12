@@ -2727,7 +2727,7 @@
 
   <!-- Experimental responsive tables -->
   <script>
-     if ((window.$docsify['basePath'] === undefined) || (!(getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'false'))) {
+    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'true')) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-responsive-tables.js"><\/script>');
     }
   </script>
