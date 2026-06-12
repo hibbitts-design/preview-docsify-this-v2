@@ -88,13 +88,13 @@
   select {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e2e8f0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
   }
-  
+
   /* Dark mode secondary button adjustments */
   #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton {
     background-color: rgba(129, 140, 248, 0.1);
     border-color: rgba(129, 140, 248, 0.3);
   }
-  
+
   #docsifythisurlbuilder .docsifythisurlbuildersecondarybutton:hover {
     background-color: rgba(129, 140, 248, 0.15);
     border-color: rgba(129, 140, 248, 0.4);
@@ -357,9 +357,9 @@ input[type="checkbox"] {
   padding-bottom: calc(14px + (16 - 12) * (100vw - 400px) / (800 - 400));
   padding-right: calc(16px + (16 - 12) * (100vw - 400px) / (800 - 400));
   border-radius: 16px;
-  background: var(--dt-card-bg);  /* Changed from var(--dt-bg-secondary) */
+  background: var(--dt-card-bg);
   border: 1px solid var(--dt-border-color) !important;
-  box-shadow: var(--dt-card-shadow) !important;  /* Changed from var(--dt-shadow) */
+  box-shadow: var(--dt-card-shadow) !important;
 }
 
 #docsifythisurlbuilder h2,
@@ -396,6 +396,26 @@ input[type="checkbox"] {
   color: color-mix(in srgb, #334155 88%, var(--dt-link-color) 12%) !important;
   text-decoration: none !important;
   opacity: 1 !important;
+}
+
+/* Section cards - light mode */
+#docsifythisurlbuilder .builder-section {
+  background: #f0f4f8;
+  border: 1px solid #dde3ec;
+  border-radius: 10px;
+  padding: 14px 16px 6px;
+  margin-bottom: 14px;
+}
+
+#docsifythisurlbuilder .builder-section h3 {
+  margin-top: 0 !important;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cdd5e0;
+  margin-bottom: 10px;
+}
+
+#docsifythisurlbuilder .builder-section hr {
+  display: none;
 }
 
 .docsifythiscustomdetails summary {
@@ -789,7 +809,6 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   background-color: transparent;
 }
 
-
 #docsifythisurlbuilder #coverpagecolordarkmodepreview {
   border: solid 4px #20587d;
   background-color: #20587d;
@@ -859,7 +878,6 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   margin-top: 2px !important;
 }
 
-
 /* Align form elements horizontally */
 #docsifythisurlbuilder input[type="text"],
 #docsifythisurlbuilder input[type="url"],
@@ -900,9 +918,9 @@ input.toggle:where([type=checkbox], [type=radio]):before {
   .docsifythisheader .logoandtext img {
     height: 35px;
   }
-  
+
   .docsifythisheader .logoandtext {
-    gap: 6px; 
+    gap: 6px;
   }
 }
 
@@ -1045,6 +1063,16 @@ input[type="number"]:focus {
     color: color-mix(in srgb, #94a3b8 75%, var(--dt-link-color) 25%) !important;
     text-decoration: none !important;
     opacity: 1 !important;
+  }
+
+  /* Section cards - dark mode */
+  #docsifythisurlbuilder .builder-section {
+    background: #1e2d42;
+    border-color: #2e4060;
+  }
+
+  #docsifythisurlbuilder .builder-section h3 {
+    border-bottom-color: #2e4060;
   }
 }
 
