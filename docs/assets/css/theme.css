@@ -1789,8 +1789,6 @@ body .docsify-pagination-container {
 
 #docsifythisurlbuilder .builder-section h3 {
   margin-top: 0;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #d1d9e6;
   margin-bottom: 10px;
 }
 
@@ -2243,10 +2241,6 @@ span #docsifythisurlfield {
   #docsifythisurlbuilder .builder-section {
     background: #243044;
     border: 1px solid var(--dt-border-color-dark);
-  }
-
-  #docsifythisurlbuilder .builder-section h3 {
-    border-bottom-color: #3e4f6a;
   }
 
   #docsifythisurlfield {
