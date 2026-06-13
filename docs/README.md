@@ -221,7 +221,7 @@ Page layout:
     <input type="number" id="maxWidthValue" name="maxWidthValue"
       style="width: 85px; height: 38px; vertical-align: top;"
       value="840" step="10">
-    <select style="height: 38px; vertical-align: top; width: 120px; margin-top: -8px; margin-bottom: -4px;"
+    <select style="height: 38px; vertical-align: top; width: 170px; margin-top: -8px; margin-bottom: -4px;"
         id="maxWidthValueUnit" name="maxWidthValueUnit" value="px" onchange="updateMaxWidthStep()">
       <option value="px" data-step="20" selected>Pixels (px)</option>
       <option value="%" data-step="10">Percent (%)</option>
