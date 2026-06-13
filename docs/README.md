@@ -311,7 +311,7 @@ Page layout:
 
 <div class='stackedlabeldropdown'>
   <label for="linktextdecoration">Link text decoration:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d;width: 60px;" class="docsifythisurlbuilderoptionsline" id="linktextdecoration" name="linktextdecoration">
+  <select style="border-radius: 7px;border-color: #8e8f9d;" class="docsifythisurlbuilderoptionsline" id="linktextdecoration" name="linktextdecoration">
     <option value="underline">Underline</option>
     <option disabled="disabled">----</option>
     <option value="none">None</option>
@@ -337,7 +337,7 @@ Page layout:
 
 <div class='stackedlabeldropdown' style="margin-top:-11px;">
 <label for="externalLinkTarget">External link target:</label>
-<select style="border-radius: 7px;border-color: #8e8f9d;width: 60px;" class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget">
+<select style="border-radius: 7px;border-color: #8e8f9d;" class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget">
   <option value="_top">Same window or tab</option>
   <option disabled="disabled">----</option>
   <option value="_blank">New window or tab</option>
