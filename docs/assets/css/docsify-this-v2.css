@@ -205,6 +205,19 @@ input[type="checkbox"] {
   }
 }
 
+@media (min-width: 481px) {
+  #docsifythisurlbuilder .stackedlabeldropdown:has(#maxWidthValue) > div:last-child {
+    margin-top: -8px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #docsifythisurlbuilder #maxWidthValueUnit {
+    margin-top: -2px !important;
+  }
+}
+
 .markdown-section .docsify-copy-code-button {
   padding: 0.35em 0.5em;
   background: var(--dt-text-primary);
@@ -403,7 +416,7 @@ input[type="checkbox"] {
   background: #f0f4f8;
   border: 1px solid #dde3ec;
   border-radius: 10px;
-  padding: 14px 16px 6px;
+  padding: 14px 16px 12px;
   margin-bottom: 14px;
 }
 

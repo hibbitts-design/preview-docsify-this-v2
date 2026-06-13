@@ -187,7 +187,7 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline">Page link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;">Page link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="clearfix">
 
@@ -217,18 +217,18 @@ Page layout:
 
 <div class='stackedlabeldropdown'>
   <label for="maxWidthValue">Content maximum width:</label>
-  <div style="display: flex; gap: 10px; ">
+  <div style="display: flex; gap: 4px; row-gap: 0px; flex-wrap: wrap; margin-left: -2px;">
     <input type="number" id="maxWidthValue" name="maxWidthValue"
-       style="width: 85px; height: 38px; vertical-align: top; "
-       value="840" step="10">
-    <select style="height: 38px; vertical-align: top; "
+      style="width: 85px; height: 38px; vertical-align: top;"
+      value="840" step="10">
+    <select style="height: 38px; vertical-align: top; width: 120px; margin-top: -8px; margin-bottom: -4px;"
         id="maxWidthValueUnit" name="maxWidthValueUnit" value="px" onchange="updateMaxWidthStep()">
       <option value="px" data-step="20" selected>Pixels (px)</option>
       <option value="%" data-step="10">Percent (%)</option>
       <option value="ch" data-step="5">Characters (ch)</option>
     </select>
   </div>
-  <div style="margin-top: -8px; opacity: 0.7; line-height: 1.4;">
+  <div style="margin-top: 8px; margin-bottom: 2px; opacity: 0.7; line-height: 1.4;">
   Embedding or presenting content? Try 100% for embeds and 80% for presentations
   </div>
 </div>
