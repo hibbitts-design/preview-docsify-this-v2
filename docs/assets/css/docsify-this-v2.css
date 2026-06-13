@@ -732,7 +732,7 @@ input.toggle:where([type=checkbox], [type=radio]):before {
 }
 
 #docsifythisurlbuilder input[type="checkbox"]~label {
-  width: 90%;
+  width: calc(100% - 30px);
   padding-left: 0.23rem;
   display: inline-block;
   vertical-align: top;
