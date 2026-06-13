@@ -1,5 +1,6 @@
 <style>
 html {
+  overflow-x: hidden;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   background-attachment: fixed;
   min-height: 100%;
@@ -11,10 +12,10 @@ body {
 
 #docs-zone {
   background: #ffffff;
-  margin-top: 4rem;
-  padding-block: 2rem;
-  box-shadow: 0 -2px 0 100vw #e2e8f0, 0 0 0 100vw #ffffff;
-  clip-path: inset(-2px -100vw 0);
+  margin: 4rem -9999px 0;
+  padding: 2rem 9999px;
+  overflow: hidden;
+  border-top: 2px solid #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +25,7 @@ body {
   }
   #docs-zone {
     background: #0f172a;
-    box-shadow: 0 -2px 0 100vw #334155, 0 0 0 100vw #0f172a;
+    border-top-color: #334155;
   }
 }
 </style>
