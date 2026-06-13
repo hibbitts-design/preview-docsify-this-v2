@@ -429,6 +429,17 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* Fix color input + preview span alignment */
+#docsifythisurlbuilder input[data-coloris] {
+  width: 100px;
+  box-sizing: border-box;
+}
+
+#docsifythisurlbuilder input[data-coloris] + span[id$="preview"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .docsifythiscustomdetails summary {
   list-style: none;
   display: flex;
