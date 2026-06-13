@@ -1783,7 +1783,7 @@ body .docsify-pagination-container {
 #docsifythisurlbuilder .builder-section {
   background: #f1f4f8;
   border-radius: var(--dt-radius-lg);
-  padding: 14px 16px 6px;
+  padding: 14px 16px 12px;
   margin-bottom: 14px;
 }
 
