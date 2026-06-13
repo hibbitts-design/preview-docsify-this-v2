@@ -126,13 +126,13 @@ Page layout:
 
 <div id="docsifythisurlbuilderoptionsDiv" style='display: none'>
 
-<div class="builder-section" style='margin-top: 10px'>
+<section class="builder-section" style='margin-top: 10px'>
 
 ### Page Style and Behavior
 
 <div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
 
-<div class="pagefontsettings">
+<div class="pagefontsettings clearfix">
 
 <div class="stackedlabeldropdown">
   <label for="fontfamily">Page font family:</label>
@@ -206,9 +206,9 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Page Display Options
 
@@ -223,7 +223,7 @@ Page layout:
       style="width: 85px; height: 38px; vertical-align: top;"
       value="840" step="10">
     <select style="height: 38px; vertical-align: top; width: 170px; margin-top: -8px; margin-bottom: -4px;"
-        id="maxWidthValueUnit" name="maxWidthValueUnit" value="px" onchange="updateMaxWidthStep()">
+        id="maxWidthValueUnit" name="maxWidthValueUnit" onchange="updateMaxWidthStep()">
       <option value="px" data-step="20" selected>Pixels (px)</option>
       <option value="%" data-step="10">Percent (%)</option>
       <option value="ch" data-step="5">Characters (ch)</option>
@@ -242,13 +242,13 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"><label for="imageCaptions">Show image alternative text as captions</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Navigation Display Options
 
-<div class="docsifythisurlbuilderoptionsline">Headings to include in table of contents (at least one required):</div>
+<div class="docsifythisurlbuilderoptionsline" >Headings to include in table of contents (at least one required):</div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1" /><label for="toch1">Heading 1 (h1)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h2 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch2" checked><label for="toch2">Heading 2 (h2)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h3 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch3"/><label for="toch3">Heading 3 (h3)</label></div>
@@ -261,9 +261,9 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Maximum Header depth (1-6) for Docsify Sidebar:<br><input aria-label="Maximum Header depth (1-6) for Docsify Sidebar" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"/></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Dark Theme
 
@@ -283,7 +283,7 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
-</div>
+</section>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 16px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
@@ -291,7 +291,7 @@ Page layout:
 
 <div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Link Style and Behavior
 
@@ -309,15 +309,15 @@ Page layout:
 
 <div class="clearfix">
 
-  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovercolor">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovercolor">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
 
-  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovercolordarkmode">Link hover color for dark theme:</label><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div></div>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovercolordarkmode">Link hover color for dark theme:</label><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div></div>
 
 </div>
 
 <div class="clearfix">
 
-  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover text decoration:</label>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovertextdecoration">Link hover text decoration:</label>
   <select class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 120px;">
     <option value="none">None</option>
     <option disabled="disabled">──</option>
@@ -328,7 +328,7 @@ Page layout:
 
 <div class="clearfix">
 
-<div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;">
+<div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline">
 <label for="externalLinkTarget">External link target:</label>
 <select class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget" style="width: 210px;">
   <option value="_top">Same window or tab</option>
@@ -338,9 +338,9 @@ Page layout:
 
 </div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Custom Page Options
 
@@ -354,9 +354,9 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Docsify Custom Files
 
@@ -367,9 +367,9 @@ Page layout:
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter"><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Docsify Custom Sidebar Options
 
@@ -381,17 +381,17 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Docsify Custom Navbar Options
 
 <div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar"/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Docsify Custom Coverpage Colors
 
@@ -399,26 +399,25 @@ Page layout:
 
 <div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
 
-</div>
+</section>
 
-<div class="builder-section">
+<section class="builder-section">
 
 ### Theme Overrides
 
 <div class="docsifythisurlbuilderoptionsline">
   <input class="docsifythisurlbuildercheckbox" type="checkbox" id="docsifyV5coretheme" onclick="disableEnableThemeStyleOptions()">
-  <label for="docsifyV5coretheme">Use Docsify v5 core theme style defaults instead of Docsify-This styling
-    <details class="docsifythiscustomdetails">
-      <summary aria-label="More information about using Docsify v5 Core Theme">
-        <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16"/>
-        <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
-      </summary>
-      <p>This applies the Docsify v5 core theme defaults, removing Docsify-This and Web Page Builder theme styling. To adjust the visual appearance after publishing manually add URL parameters, for example <code>&font-family=Merriweather,serif</code>, <code>&theme-color=CC0000</code>, <code>&link-color=CC0000</code>, or <code>&max-width=910px</code>.</p>
-    </details>
-  </label>
+  <label for="docsifyV5coretheme">Use Docsify v5 core theme style defaults instead of Docsify-This styling</label>
+  <details class="docsifythiscustomdetails">
+    <summary aria-label="More information about using Docsify v5 Core Theme">
+      <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16"/>
+      <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
+    </summary>
+    <p>This applies the Docsify v5 core theme defaults, removing Docsify-This and Web Page Builder theme styling. To adjust the visual appearance after publishing manually add URL parameters, for example <code>&font-family=Merriweather,serif</code>, <code>&theme-color=CC0000</code>, <code>&link-color=CC0000</code>, or <code>&max-width=910px</code>.</p>
+  </details>
 </div>
 
-</div>
+</section>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;margin-bottom: 8px;" type="button" id="btn_3" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
