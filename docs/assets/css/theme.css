@@ -1782,6 +1782,7 @@ body .docsify-pagination-container {
 /* ADDED: Section cards */
 #docsifythisurlbuilder .builder-section {
   background: #f1f4f8;
+  border: 1px solid #dde3ec;
   border-radius: var(--dt-radius-lg);
   padding: 14px 16px 12px;
   margin-bottom: 14px;
