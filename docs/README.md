@@ -11,10 +11,10 @@ body {
 
 #docs-zone {
   background: #ffffff;
-  margin: 4rem -9999px;
-  padding: 2rem 9999px;
-  overflow: hidden;
-  border-top: 2px solid #e2e8f0;
+  margin-top: 4rem;
+  padding-block: 2rem;
+  box-shadow: 0 -2px 0 100vw #e2e8f0, 0 0 0 100vw #ffffff;
+  clip-path: inset(-2px -100vw 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +24,7 @@ body {
   }
   #docs-zone {
     background: #0f172a;
-    border-top-color: #334155;
+    box-shadow: 0 -2px 0 100vw #334155, 0 0 0 100vw #0f172a;
   }
 }
 </style>
@@ -292,9 +292,9 @@ Page layout:
 
 ### Dark Theme Link Colors
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Link hover color for dark theme:<br><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div>
 
 </div>
 
