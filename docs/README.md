@@ -135,7 +135,7 @@ Page layout:
 <div class="pagefontsettings clearfix">
 
 <div class="stackedlabeldropdown">
-  <label for="fontfamily">Page font family:</label>
+  <label for="fontfamily">Font family:</label>
   <select style="display: inline-block; vertical-align: middle; margin-right: 4px;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
     <option value="Source%20Sans%203,Helvetica%20Neue,sans-serif">Source Sans 3</option>
     <option disabled="disabled">----</option>
@@ -188,12 +188,12 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;">Page link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;">Link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="clearfix">
 
 <div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:8px;'>
-  <label for="headerweight">Page headers font weight:</label>
+  <label for="headerweight">Headers font weight:</label>
   <select class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
     <option value="600">Semi Bold (600)</option>
     <option disabled="disabled">──</option>
@@ -270,7 +270,7 @@ Page layout:
 <div class="clearfix">
 
 <div class="docsifythisurlbuilderoptionsline" style="margin-top:-10px;"><div class="stackedlabeldropdown">
-  <label for="enableDarkmode">Dark theme mode:</label>
+  <label for="enableDarkmode">Dark mode:</label>
   <select class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
     <option disabled="disabled">──</option>
@@ -281,7 +281,7 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Link color (dark theme):<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
 </section>
 
@@ -311,7 +311,7 @@ Page layout:
 
   <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovercolor">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
 
-  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovercolordarkmode">Link hover color for dark theme:</label><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div></div>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline"><label for="linkhovercolordarkmode">Link hover color (dark theme):</label><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div></div>
 
 </div>
 
