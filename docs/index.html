@@ -2290,7 +2290,7 @@
               const x = window.scrollX;
               const y = window.scrollY;
               selectText();
-              window.scrollTo(x, y);
+              setTimeout(() => window.scrollTo(x, y), 50);
             }
 
           });
