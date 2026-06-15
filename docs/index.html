@@ -770,7 +770,7 @@
 
     function selectText() {
       const input = document.getElementById('docsifythisurlfield');
-      input.focus();
+      input.focus({ preventScroll: true });
       input.select();
     }
 
@@ -2290,7 +2290,7 @@
               const x = window.scrollX;
               const y = window.scrollY;
               selectText();
-              setTimeout(() => window.scrollTo(x, y), 50);
+              window.scrollTo(x, y);
             }
 
           });
