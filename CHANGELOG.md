@@ -32,6 +32,7 @@
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
 * Move responsive table layout to core CSS so tables render correctly
 * Improve toc and toc-narrow display
+* Point docsify CDN links at self-hosted fork
 
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
